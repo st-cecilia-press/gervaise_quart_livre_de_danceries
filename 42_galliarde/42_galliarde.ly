@@ -10,7 +10,7 @@ global= {
 }
 
 \header{
-  title = "Galliard 31"
+  title = "42 Galliard"
   subtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
   meter = ""
   poet = ""
