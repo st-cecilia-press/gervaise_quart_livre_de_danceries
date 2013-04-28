@@ -45,7 +45,7 @@ ppMusicTwo = \relative c'' {
 ppMusicThree =  \relative c' {  
 \clef tenor
    \repeat volta 2 {
-      r2 42 c4 d e1 e2 e2 e2 e2 d1 d2 b2 b b c1 c2 c1 
+      r2 r2 c4 d e1 e2 e2 e2 e2 d1 d2 b2 b b c1 c2 c1 
       a2 a1 g2 c1 e2 d1 c2 b a1 g g2 g1
    }
    \repeat volta 2 {
