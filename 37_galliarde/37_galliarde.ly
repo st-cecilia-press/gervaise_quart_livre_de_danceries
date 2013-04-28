@@ -34,20 +34,7 @@ ppMusicOne = \relative c'' {
    
 }
 
-
-ppMusicTwo =  \relative c' {  
-\clef alto
-   \repeat volta 2 {
-      r2 b2 b b g1 b2 c1 b2 a1
-   }
-   \repeat volta 2 {
-      r2 d2 d d e1 e2 fs1 g2 f1 %niquerio: Not sure if the mark in here is an fs or a mistake
-   }
-   \repeat volta 2 {
-      r2 b,2 b b c2. b4 a2 g2 a1 g1
-   }
-}
-ppMusicThree = \relative c' {
+ppMusicTwo = \relative c' {
 \clef alto
    \repeat volta 2 {
       r2 d2 d2 d c1 d2 a1 d2 d d
@@ -60,6 +47,19 @@ ppMusicThree = \relative c' {
    }
 }
 
+
+ppMusicThree =  \relative c' {  
+\clef alto
+   \repeat volta 2 {
+      r2 b2 b b g1 b2 c1 b2 a1
+   }
+   \repeat volta 2 {
+      r2 d2 d d e1 e2 fs1 g2 f1 %niquerio: Not sure if the mark in here is an fs or a mistake
+   }
+   \repeat volta 2 {
+      r2 b,2 b b c2. b4 a2 g2 a1 g1
+   }
+}
 ppMusicFour = \relative c' {
 \clef bass
    \repeat volta 2 {

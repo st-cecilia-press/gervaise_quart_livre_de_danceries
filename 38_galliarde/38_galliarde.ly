@@ -31,23 +31,23 @@ ppMusicOne = \relative c' {
    
 }
 
-
-ppMusicTwo =  \relative c' {  
-\clef alto
-   \repeat volta 2 {
-      r2 a2 a b c b4 a g2 bf2 a1 g1
-   }
-   \repeat volta 2 {
-      r2 g2 g f2 g1 g2 e'2 e f d1 g,2 f2 f f g2. a4 b2 a2 b g g1
-   }
-}
-ppMusicThree = \relative c' {
+ppMusicTwo = \relative c' {
 \clef alto
    \repeat volta 2 {
       r2 c2 c d e c4 d e f g1 f2 g1
    }
    \repeat volta 2 {
       r2 d2 d2 f e1 d2 c2. b4 c a b2 g2 r2 d'2 d f2 e1 d2 c1 b2 c1
+   }
+}
+
+ppMusicThree =  \relative c' {  
+\clef alto
+   \repeat volta 2 {
+      r2 a2 a b c b4 a g2 bf2 a1 g1
+   }
+   \repeat volta 2 {
+      r2 g2 g f2 g1 g2 e'2 e f d1 g,2 f2 f f g2. a4 b2 a2 b g g1
    }
 }
 
