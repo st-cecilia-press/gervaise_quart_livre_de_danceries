@@ -5,12 +5,12 @@
 ppTempo = #(ly:make-moment 165 2)
 
 global= {
-  \key c \major
+  \key g \mixolydian
   \time 3/2
 }
 
 \header{
-  title = "Galliard 28"
+  title = "24 Galliard"
   subtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
   meter = ""
   poet = ""
@@ -21,43 +21,53 @@ global= {
 
 
 ppMusicOne = \relative c'' {  
-   \clef soprano
+   \clef treble
    \repeat volta 2 {
+      g4 a b2 c b a b c1 b2 a1 a2   
    }
    \repeat volta 2 {
+      d1 c2 d4 c4 b2 a b2 c1 b2 a1
    }
    \repeat volta 2 {
+      r2 b2 b b c2. b4 a2 g1 f2 g1
    }
-   
 }
-
 
 ppMusicTwo =  \relative c' {  
 \clef alto
    \repeat volta 2 {
+      d2 g g g f g a1 g2 f1 f2
    }
    \repeat volta 2 {
+      a1 a2 a g f g a1 g2 f1
    }
    \repeat volta 2 {
+      r2 d2 g g g1 f4 e d c d1 b1
    }
 }
 ppMusicThree = \relative c' {
-\clef alto
+\clef tenor
    \repeat volta 2 {
+      b4 c d2 e d d d f1 d2 d1 d2
    }
    \repeat volta 2 {
+      f1 f2 f d d d f1 d2 d1
    }
    \repeat volta 2 {
+      r2 b2 d d e2. d4 c2 b a1 g1
    }
 }
 
-ppMusicFour = \relative c {
+ppMusicFour = \relative c' {
 \clef bass
    \repeat volta 2 {
+      g2 g c,2 g'2 d2 g f1 g2 d1 d2
    }
    \repeat volta 2 {
+      d1 f2 f g d g f1 g2 d1
    }
    \repeat volta 2 {
+      r2 g2 g4 f e d c2 c f2 g d1 g,1
    }
 }
 
