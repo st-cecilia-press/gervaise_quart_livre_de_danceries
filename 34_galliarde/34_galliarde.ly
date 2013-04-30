@@ -10,7 +10,7 @@ global= {
 }
 
 \header{
-  title = "34 Galliard"
+  title = "34 Galliarde"
   subtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
   meter = ""
   poet = ""
@@ -21,8 +21,8 @@ global= {
 
 
 scMusicOneClefOrig = 
-scMusicOneClefModern = 
-ppMusicOne = \relative c' {  
+scMusicOneClefModern = ef treble
+"ppMusicOne = \relative c' {  
    \clef soprano
    \repeat volta 2 {
       f2 g a1 a2 g1 f2 e1 e2 r2
@@ -59,9 +59,9 @@ ppMusicThree =  \relative c' {
    }
 }
 
-scMusicFourClefOrig = 
-scMusicFourClefModern = 
-ppMusicFour = \relative c {
+scMusicFourClefOrig = ef bass
+"scMusicFourClefModern = ef bass
+"ppMusicFour = \relative c {
 \clef bass
    \repeat volta 2 {
       d2 c f1 f,2 c'1 d2 a1 a2 r2

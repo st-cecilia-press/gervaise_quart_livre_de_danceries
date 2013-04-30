@@ -10,7 +10,7 @@ global= {
 }
 
 \header{
-  title = "39 Galliard"
+  title = "39 Galliarde"
   subtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
   meter = ""
   poet = ""
@@ -20,10 +20,9 @@ global= {
 }
 
 
-scMusicOneClefOrig = 
-scMusicOneClefModern = 
+scMusicOneClefOrig = \clef soprano
+scMusicOneClefModern = \clef treble
 ppMusicOne = \relative c'' {  
-   \clef soprano
    \repeat volta 2 {
       r2 e2 e | d c1 b2 a g2 f e1 r2 c'2 c c c1 b2 a1 g2 a1
    }
@@ -36,10 +35,9 @@ ppMusicOne = \relative c'' {
    
 }
 
-scMusicTwoClefOrig = 
-scMusicTwoClefModern = 
+scMusicTwoClefOrig = \clef alto
+scMusicTwoClefModern = \clef treble
 ppMusicTwo = \relative c'' {
-\clef alto
    \repeat volta 2 {
       r2 g2 g g g1 g2 e e c c1 r2 c2 c c c1 f2 d2 e1 c
    }
@@ -51,10 +49,9 @@ ppMusicTwo = \relative c'' {
    }
 }
 
-scMusicThreeClefOrig = 
-scMusicThreeClefModern = 
+scMusicThreeClefOrig = \clef tenor
+scMusicThreeClefModern = \clef "G_8" 
 ppMusicThree =  \relative c' {  
-\clef tenor
    \repeat volta 2 {
       r2 c2 c d e1 d2 c b a g1 r2 e'2 e e e1 d4 c b a b1 a
    }
@@ -66,10 +63,9 @@ ppMusicThree =  \relative c' {
    }
 }
 
-scMusicFourClefOrig = 
-scMusicFourClefModern = 
+scMusicFourClefOrig = \clef bass
+scMusicFourClefModern = \clef bass
 ppMusicFour = \relative c {
-\clef bass
    \repeat volta 2 {
       r2 c2 c g'2 c,1 g'2 a2 e f c1 r2 c2 c c c1 d2 f2 e1 a,1
    }
