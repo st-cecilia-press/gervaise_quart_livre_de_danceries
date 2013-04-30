@@ -4,7 +4,7 @@
 #(set-global-staff-size 18)
 ppTempo = #(ly:make-moment 165 2)
 
-global= {
+global = {
   \key f \major
   \time 4/2
 }
