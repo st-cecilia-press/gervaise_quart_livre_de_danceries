@@ -22,10 +22,9 @@ global= {
 }
 
 
-scMusicOneClefOrig = 
-scMusicOneClefModern = ef treble
-"ppMusicOne = \relative c' {  
-   \clef treble
+scMusicOneClefOrig = \clef treble
+scMusicOneClefModern = \clef treble
+ppMusicOne = \relative c' {  
    \repeat volta 2 {
       f4 g a2 a4 bf c2 d4 e f2 e2. d4 c bf a2 g1 f1 g2 f1 f2
    }
@@ -40,10 +39,9 @@ scMusicOneClefModern = ef treble
 }
 
 
-scMusicTwoClefOrig = 
-scMusicTwoClefModern = 
+scMusicTwoClefOrig = \clef alto
+scMusicTwoClefModern = \clef treble
 ppMusicTwo =  \relative c' {  
-\clef alto
    \repeat volta 2 {
       c2 f f e d1 g1 e2 c ef2. d4 c bf c1 a1 a2
    }
@@ -55,10 +53,9 @@ ppMusicTwo =  \relative c' {
       f'2 f4 f d2 d e1 ef2 e4 e c2 d g,2 c2 g2 g4 g g2 g2 r2 a2 d c c4 bf a g a1
    }
 }
-scMusicThreeClefOrig = 
-scMusicThreeClefModern = 
+scMusicThreeClefOrig = \clef tenor
+scMusicThreeClefModern = \clef "G_8"
 ppMusicThree = \relative c' {
-\clef tenor
    \repeat volta 2 {
       a2 a f2 g4 a bf1 g2 c1 f,2 bf2. a4 g f g1 f f2  
    }
@@ -71,10 +68,9 @@ ppMusicThree = \relative c' {
    }
 }
 
-scMusicFourClefOrig = ef bass
-"scMusicFourClefModern = ef bass
-"ppMusicFour = \relative c {
-\clef bass
+scMusicFourClefOrig = \clef bass
+scMusicFourClefModern = \clef bass
+ppMusicFour = \relative c {
    \repeat volta 2 {
       f2 f d c bf1 c1 c2 f2 ef1 f2 c1 f,1 f2
    }
