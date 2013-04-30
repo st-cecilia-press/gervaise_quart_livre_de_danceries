@@ -7,8 +7,8 @@ do ly_file=$file;
     folder=`basename "$ly_file" .ly`;
     pdf_file_orig=${ly_file%.ly}-orig_clef.pdf
     pdf_file_modern=${ly_file%.ly}-modern_clef.pdf
-    if [( ! -e $pdf_file_modern ) [|| ( ! -e $pdf_file_orig ) || ( $ly_file -nt $pdf_file_modern ) || ($ly_file -nt $pdf_file_orig ]];
-    then $LILYPOND --output=./$folder $ly_file;
+    if [[( ! -e $pdf_file_modern ) || ( ! -e $pdf_file_orig ) || ( $ly_file -nt $pdf_file_modern ) || ($ly_file -nt $pdf_file_orig) ]];
+    then $LILYPOND --output=./$folder $ly_file; echo $LILYPOND;
     fi;
 done
 

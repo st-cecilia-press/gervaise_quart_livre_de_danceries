@@ -1,4 +1,4 @@
-\include "../../include/pp_functions.ly"
+\include "../include/pp_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
 #(set-global-staff-size 18)
@@ -78,6 +78,6 @@ ppChordLine = \chordmode {
 
 }
 
-\include "../../include/ppile_a4.ly"
+\include "../include/ppile_a4.ly"
 
 \version "2.12.0"  % necessary for upgrading to future LilyPond versions.
