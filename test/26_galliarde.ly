@@ -38,7 +38,7 @@ ppMusicOne = \relative c'' {
 
 
 scMusicTwoClefOrig = 
-scMusicTwoClefModern = 
+scMusicTwoClefModern = \clef treble 
 ppMusicTwo =  \relative c' {  
 \clef alto
    \repeat volta 2 {
@@ -49,7 +49,7 @@ ppMusicTwo =  \relative c' {
    }
 }
 scMusicThreeClefOrig = 
-scMusicThreeClefModern = 
+scMusicThreeClefModern = \clef "G_8" 
 ppMusicThree = \relative c' {
 \clef alto
    \repeat volta 2 {
