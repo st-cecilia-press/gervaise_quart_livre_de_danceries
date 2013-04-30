@@ -20,10 +20,10 @@ global= {
 }
 
 
-scMusicOneClefOrig = 
+scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble
 ppMusicOne = \relative c'' {  
-   \clef soprano
+   
    \repeat volta 2 {
       r2 b2 b b b1. b2 b4 g a b c1. c2 c b2 a b1 a g2 a1
    }
@@ -33,10 +33,10 @@ ppMusicOne = \relative c'' {
    
 }
 
-scMusicTwoClefOrig = 
-scMusicTwoClefModern = 
+scMusicTwoClefOrig = \clef alto
+scMusicTwoClefModern = \clef treble 
 ppMusicTwo = \relative c' {
-\clef alto
+
    \repeat volta 2 {
       r2 d2 d d g1. g2 g g c,1. e2 c g'2 e g2. f4 e d e1 c1 
    }
@@ -46,10 +46,10 @@ ppMusicTwo = \relative c' {
 }
 
 
-scMusicThreeClefOrig = 
-scMusicThreeClefModern = 
+scMusicThreeClefOrig = \clef tenor
+scMusicThreeClefModern = \clef "G_8" 
 ppMusicThree =  \relative c' {  
-\clef tenor
+
    \repeat volta 2 {
       r2 b2 b b d1. d2 d d c1. g2 a b c d2. c4 b a b2 b a1
    }

@@ -5,8 +5,7 @@ LILYPOND="lilypond --include $PWD/include"
 for file in `find . -mindepth 2 -name '*ly' | egrep -v '(include|42_galliarde)'`;
 do ly_file=$file;
     echo $ly_file
-    perl -pi -e 's/^scMusicTwoClefModern = \n/scMusicTwoClefModern = \\clef treble \n/' $ly_file
-    perl -pi -e 's/^scMusicThreeClefModern = \n/scMusicThreeClefModern = \\clef "G_8" \n/' $ly_file
+    perl -pi -e 's/^scMusicOneClefOrig = \n(.*)^\s*(\\clef.*$)/scMusicOneClefOrig = $2 \n$1/sm' $ly_file
 done
 
 # remake the pdf include list
