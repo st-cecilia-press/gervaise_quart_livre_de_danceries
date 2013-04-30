@@ -5,7 +5,9 @@ LILYPOND="lilypond --include $PWD/include"
 for file in `find . -mindepth 2 -name '*ly' | egrep -v '(include|42_galliarde)'`;
 do ly_file=$file;
     echo $ly_file
-    perl -pi -e 's/\cl/\\cl/g' $ly_file
+    perl -pi -e 's/^"ppMusic/ppMusic/g' $ly_file
+    perl -pi -e 's/^"scMusic/scMusic/g' $ly_file
+    perl -pi -e 's/^\\clef bass//' $ly_file
 done
 
 # remake the pdf include list

@@ -22,7 +22,7 @@ global= {
 
 scMusicOneClefOrig = 
 scMusicOneClefModern = \clef treble
-"ppMusicOne = \relative c'' {  
+ppMusicOne = \relative c'' {  
    \clef treble
    \repeat volta 2 {
       r2 d2 d c bf2. a4 g2 a g2. f4 e1. a2 bf g a g2. f4 f1 e2 f1
@@ -67,9 +67,9 @@ ppMusicThree = \relative c' {
 }
 
 scMusicFourClefOrig = \clef bass
-"scMusicFourClefModern = \clef bass
-"ppMusicFour = \relative c {
-\clef bass
+scMusicFourClefModern = \clef bass
+ppMusicFour = \relative c {
+
    \repeat volta 2 {
       r2 bf bf f' g1 g2 f g2 g2 c,1. f2 g c,2 f bf,2 c d c1 f1
    }
