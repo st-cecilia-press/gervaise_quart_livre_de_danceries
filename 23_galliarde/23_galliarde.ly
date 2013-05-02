@@ -3,11 +3,11 @@
 %added rest to superious, tenor and bass parts at end of B.
 %contratenor whole note in 23 may want to be a half note. Left it as whole for now. 
 
-\include "../include/pp_functions.ly"
+\include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
 #(set-global-staff-size 18)
-ppTempo = #(ly:make-moment 165 2)
+scTempo = #(ly:make-moment 165 2)
 
 global= {
   \key d \minor %Actually more like C dorian or something. I want one flat tho.
@@ -27,7 +27,7 @@ global= {
 
 scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble
-ppMusicOne = \relative c'' {  
+scMusicOne = \relative c'' {  
    \repeat volta 2 {
       \partial 2 a4 bf4 c1. c2. a4 bf c d1. d2 ef2 d c1 c2 c1 bf4 a 
          bf1 bf2 bf1 a4 bf c1. c2 c4 a bf c d1. d2
@@ -42,7 +42,7 @@ ppMusicOne = \relative c'' {
 
 scMusicTwoClefOrig = \clef mezzosoprano
 scMusicTwoClefModern = \clef treble
-ppMusicTwo =  \relative c' {  
+scMusicTwo =  \relative c' {  
    \repeat volta 2 {
       \partial 2 f2 ef1. e2 e e d1 d2 d g2 f e1. e2 e c d1 d2 d1 c2 g'1. g2 g a bf1 bf2
       bf2 bf bf g1 g2 g1 g2 e1 e2 c1 r2
@@ -53,7 +53,7 @@ ppMusicTwo =  \relative c' {
 }
 scMusicThreeClefOrig = \clef alto 
 scMusicThreeClefModern = \clef "G_8"
-ppMusicThree = \relative c {
+scMusicThree = \relative c {
    \repeat volta 2 {
       \partial 2 f2 g1. g2 g g bf1 bf2 bf bf bf g1. g2 g g g1 g2 g1 d'2 
          ef1. e2 e1 f f2 f g f
@@ -66,7 +66,7 @@ ppMusicThree = \relative c {
 
 scMusicFourClefOrig = \clef bass
 scMusicFourClefModern = \clef bass
-ppMusicFour = \relative c {
+scMusicFour = \relative c {
    \repeat volta 2 {
       \partial 2 d2 c1. c2 c c bf1 bf2 bf ef bf c1. c2 c c g1 g2 g1 g2 c1. c2 c1 bf1 bf2
       bf2 ef2 bf c1 c2 g1 g2 c1 c2 c1 r2
@@ -77,10 +77,10 @@ ppMusicFour = \relative c {
 }
 
 
-ppChordLine = \chordmode {
+scChordLine = \chordmode {
 
 }
 
-\include "../include/ppile_a4.ly"
+\include "../include/sc_a4.ly"
 
 \version "2.12.0"  % necessary for upgrading to future LilyPond versions.

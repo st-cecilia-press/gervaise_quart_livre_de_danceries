@@ -1,8 +1,8 @@
-\include "../include/pp_functions.ly"
+\include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
 #(set-global-staff-size 18)
-ppTempo = #(ly:make-moment 165 2)
+scTempo = #(ly:make-moment 165 2)
 
 global= {
   \key g \dorian
@@ -22,7 +22,7 @@ global= {
 
 scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble
-ppMusicOne = \relative c' {  
+scMusicOne = \relative c' {  
    
    \repeat volta 2 {
       e2 e d e2. f4 g2 a g4 f e d e1 e2
@@ -36,7 +36,7 @@ ppMusicOne = \relative c' {
 
 scMusicTwoClefOrig = \clef alto
 scMusicTwoClefModern = \clef treble 
-ppMusicTwo =  \relative c'' {  
+scMusicTwo =  \relative c'' {  
 
    \repeat volta 2 {
       g2 g f2 g4 f e d e2 f2 d1 c1 c2
@@ -49,7 +49,7 @@ ppMusicTwo =  \relative c'' {
 }
 scMusicThreeClefOrig = \clef tenor
 scMusicThreeClefModern = \clef "G_8" 
-ppMusicThree = \relative c' {
+scMusicThree = \relative c' {
 
    \repeat volta 2 {
       c2 c a c2. b8 a g2 c2 b4 a g f g1 g2 
@@ -61,7 +61,7 @@ ppMusicThree = \relative c' {
 
 scMusicFourClefOrig = \clef bass
 scMusicFourClefModern = \clef bass
-ppMusicFour = \relative c {
+scMusicFour = \relative c {
 
    \repeat volta 2 {
       c2 c d c1. f,2 g g c1 r2
@@ -72,10 +72,10 @@ ppMusicFour = \relative c {
 }
 
 
-ppChordLine = \chordmode {
+scChordLine = \chordmode {
 
 }
 
-\include "../include/ppile_a4.ly"
+\include "../include/sc_a4.ly"
 
 \version "2.12.0"  % necessary for upgrading to future LilyPond versions.

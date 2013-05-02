@@ -2,7 +2,7 @@
 
 #LILYPOND="/Applications/LilyPond.app/Contents/Resources/bin/lilypond --include $PWD/include"
 LILYPOND="lilypond --include $PWD/include"
-for file in `find . -mindepth 2 -name '*ly' | egrep -v '(include)'`;
+for file in `find . -mindepth 2 -name '*ly' | egrep -v '(include|pavane|test)'`;
 do ly_file=$file;
     folder=`basename "$ly_file" .ly`;
 
