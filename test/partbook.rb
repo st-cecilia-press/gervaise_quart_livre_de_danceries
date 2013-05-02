@@ -9,4 +9,5 @@ def get_file_as_string(filename)
 end
 
 galliarde = get_file_as_string('35_galliarde.ly')
-puts galliarde
+galliarde.gsub!(scMusic,ascMusic)
+

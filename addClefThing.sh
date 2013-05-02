@@ -4,11 +4,13 @@
 LILYPOND="lilypond --include $PWD/include"
 for file in `find . -mindepth 2 -name '*ly' | egrep -v '(include)'`;
 do ly_file=$file;
-#    perl -pi -e 's/^ppTempo/scTempo/g' $ly_file
-    perl -pi -e 's/pp_functions/sc_functions/g' $ly_file
-    perl -pi -e 's/ppile_a4/sc_a4/g' $ly_file
-#    perl -pi -e 's/^ppMusic/scMusic/g' $ly_file
-#    perl -pi -e 's/^ppChordLine/scChordLine/g' $ly_file
+    perl -pi -e 's/^\s+title/scTitle/' $ly_file
+    perl -pi -e 's/^\s+subtitle/scSubtitle/' $ly_file
+    perl -pi -e 's/^\s+meter/scMeter/' $ly_file
+    perl -pi -e 's/^\s+composer/scComposer/' $ly_file
+    perl -pi -e 's/^\s+copyright/scCopyright/' $ly_file
+    perl -pi -e 's/^\s+tagline/scTagline/' $ly_file
+    perl -ni -e 'print unless /header/' $ly_file
 done
 
 # remake the pdf include list

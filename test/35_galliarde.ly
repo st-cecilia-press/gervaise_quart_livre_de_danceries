@@ -4,21 +4,18 @@
 #(set-global-staff-size 18)
 scTempo = #(ly:make-moment 165 2)
 
-global= {
+scGlobal= {
   \key c \major
   \time 3/2
 }
 
-\header{
-  title = "35 Galliarde"
-  subtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-  meter = ""
-  poet = ""
-  composer = "Claude Gervaise"
-  copyright = ""
-  tagline = ""
-}
-
+scTitle = "35 Galliarde"
+scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+scMeter = ""
+scPoet = ""
+scComposer = "Claude Gervaise"
+scCopyright = ""
+scTagline = ""
 
 scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble
