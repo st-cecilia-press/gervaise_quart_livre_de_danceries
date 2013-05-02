@@ -9,14 +9,13 @@ global = {
   \time 4/2
 }
 
-\header{
-  title = "Pavane 1"
-  subtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-  meter = ""
-  poet = ""
-  composer = "Claude Gervaise"
-  copyright = ""
-  tagline = ""
+scTitle = "Pavane 1"
+scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+scMeter = ""
+scPoet = ""
+scComposer = "Claude Gervaise"
+scCopyright = ""
+scTagline = ""
 }
 
 

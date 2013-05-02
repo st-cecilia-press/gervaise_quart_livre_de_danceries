@@ -9,14 +9,13 @@ global= {
   \time 3/2
 }
 
-\header{
-  title = "Galliard 30"
-  subtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-  meter = ""
-  poet = ""
-  composer = "Claude Gervaise"
-  copyright = ""
-  tagline = ""
+scTitle = "Galliard 30"
+scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+scMeter = ""
+scPoet = ""
+scComposer = "Claude Gervaise"
+scCopyright = ""
+scTagline = ""
 }
 
 
