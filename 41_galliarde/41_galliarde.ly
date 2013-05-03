@@ -4,20 +4,18 @@
 #(set-global-staff-size 18)
 scTempo = #(ly:make-moment 165 2)
 
-global= {
+scGlobal= {
   \key a \minor
   \time 3/2
 }
 
-scTitle = "Galliard 30"
+scTitle = "41 Galliard"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
 scComposer = "Claude Gervaise"
 scCopyright = ""
 scTagline = ""
-}
-
 
 scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble

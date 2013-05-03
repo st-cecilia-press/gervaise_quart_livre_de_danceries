@@ -6,7 +6,7 @@
 #(set-global-staff-size 18)
 scTempo = #(ly:make-moment 165 2)
 
-global= {
+scGlobal= {
   \key c \major
   \time 3/2
 }
@@ -18,8 +18,6 @@ scPoet = ""
 scComposer = "Claude Gervaise"
 scCopyright = ""
 scTagline = ""
-}
-
 
 scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble
