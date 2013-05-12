@@ -91,7 +91,16 @@ EOS
 lilyFiles = [] 
 folders = Dir['./*/']
 folders.delete_if{|x| x !~ /\d\d/}
-folders.delete_if{|x| x =~ /pavane/}
+folders.delete_if{|x| x =~ /pavane_galliarde/}
+folders.delete_if{|x| x =~ /10_pavane/}
+folders.delete_if{|x| x =~ /11_pavane/}
+folders.delete_if{|x| x =~ /12_pavane/}
+folders.delete_if{|x| x =~ /13_pavane/}
+folders.delete_if{|x| x =~ /14_pavane/}
+folders.delete_if{|x| x =~ /15_pavane/}
+folders.delete_if{|x| x =~ /16_pavane/}
+folders.delete_if{|x| x =~ /17_pavane/}
+folders.delete_if{|x| x =~ /18_pavane/}
 folders.sort!
 folders.each do |folder|
    file = File.basename(folder)
