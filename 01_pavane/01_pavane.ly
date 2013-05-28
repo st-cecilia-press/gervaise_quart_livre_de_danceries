@@ -9,7 +9,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "Pavane 1"
+scTitle = "01 Pavane "
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
