@@ -89,27 +89,35 @@ bassusOrig = <<EOS
   }
 EOS
 lilyFiles = [] 
-folders = Dir['./*/']
-folders.delete_if{|x| x !~ /\d\d/}
-folders.delete_if{|x| x =~ /pavane_galliarde/}
-folders.delete_if{|x| x =~ /10_pavane/}
-folders.delete_if{|x| x =~ /11_pavane/}
-folders.delete_if{|x| x =~ /12_pavane/}
-folders.delete_if{|x| x =~ /13_pavane/}
-folders.delete_if{|x| x =~ /14_pavane/}
-folders.delete_if{|x| x =~ /15_pavane/}
-folders.delete_if{|x| x =~ /16_pavane/}
-folders.delete_if{|x| x =~ /17_pavane/}
-folders.delete_if{|x| x =~ /18_pavane/}
-folders.sort!
+#Massage Files to include only ready directories.
+#Should figure out how to specify this out of here...
+f = File.open('ready_files')
+folders = f.readlines
+folders.delete_if{|x| x =~ /#/}
+#folders = Dir['./*/']
+#folders.delete_if{|x| x !~ /\d\d/}
+#folders.delete_if{|x| x =~ /pavane_galliarde/}
+#folders.delete_if{|x| x =~ /10_pavane/}
+#folders.delete_if{|x| x =~ /11_pavane/}
+#folders.delete_if{|x| x =~ /12_pavane/}
+#folders.delete_if{|x| x =~ /13_pavane/}
+#folders.delete_if{|x| x =~ /14_pavane/}
+#folders.delete_if{|x| x =~ /15_pavane/}
+#folders.delete_if{|x| x =~ /16_pavane/}
+#folders.delete_if{|x| x =~ /17_pavane/}
+#folders.delete_if{|x| x =~ /18_pavane/}
+#folders.sort!
+#put appropriate filenames in array
 folders.each do |folder|
-   file = File.basename(folder)
-   lilyFiles.push("#{folder}#{file}.ly")
+   file = folder.chomp
+   lilyFiles.push("./#{file}/#{file}.ly")
+#   puts "./#{file}/#{file}.ly"
 end
 
 File.open("part_book.ly","w") do |f|
    index = 'a'
    f.puts intro
+#Put in all variables from files with appropriate prefixes.
    lilyFiles.each do |lily| 
       open(lily, 'r').each do |l|
          if  l =~ /include/ then
@@ -139,6 +147,7 @@ File.open("part_book.ly","w") do |f|
       index.next!
    end
 
+   #For creating score contexts.
    hsh = { cantusOrig => {:number => 'One', :clef => 'Orig'},
            altusOrig => {:number => 'Two', :clef => 'Orig'},
            tenorOrig => {:number => 'Three', :clef => 'Orig'},
