@@ -33,8 +33,12 @@ scMusicTwoClefOrig = \clef alto
 scMusicTwoClefModern = \clef treble 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
+       e2 d d e2. f4 g2 f2 e d c1. 
+       e2 e e c1 c2 a a1 a1.
    }
    \repeat volta 2 {
+       d2 d e f2. e4 d2 c4 b a2 a a1.
+       a2 d2 d d c4 b a2 g a1 f1.
    }
 }
 scMusicThreeClefOrig = \clef tenor 
@@ -49,11 +53,13 @@ scMusicThree = \relative c' {
 scMusicFourClefOrig = \clef bass
 scMusicFourClefModern = \clef bass
 scMusicFour = \relative c' {
+   \repeat volta 2 {
+       a2 d b a2. a4 e'2 f c d a1. a2 a c f,1 c'2 d a2 a d1.
+   }
+   \repeat volta 2 {
+       d2 d c f,1. c'2 d d a1. d2 d d g,2 g a b a1 d1.
+   }
 
-   \repeat volta 2 {
-   }
-   \repeat volta 2 {
-   }
 }
 
 
