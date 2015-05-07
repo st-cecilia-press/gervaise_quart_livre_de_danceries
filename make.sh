@@ -26,12 +26,12 @@ done < "./ready_files"
 
 while read f; do
     if [[ $f =~ ^# ]]; then continue; fi
-    clefs_modern_pdfs="$clefs_modern_pdfs./$f/$f_modern_clef.pdf\n"
-    clefs_orig_pdfs="$clefs_orig_pdfs./$f/$f_orig_clef.pdf\n"
+    clefs_modern_pdfs="$clefs_modern_pdfs./$f/${f}_modern_clef.pdf\n"
+    clefs_orig_pdfs="$clefs_orig_pdfs./$f/${f}_orig_clef.pdf\n"
 done < "./ready_files"
 
 #printf $clefs_modern_pdfs
-#echo $clefs_orig_pdfs
+#echo $clefs_orig_pdfs > temp.txt
 printf $clefs_modern_pdfs | perl -w scpdfs.pl > clefs_modern_pdfs.tex
 pdflatex clefs_modern.tex
 

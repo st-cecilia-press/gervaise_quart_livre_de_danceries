@@ -9,7 +9,7 @@ ascGlobal = {
   \time 4/2
 }
 
-ascTitle = "Pavane 1"
+ascTitle = "01 Pavane "
 ascSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 ascMeter = ""
 ascPoet = ""
