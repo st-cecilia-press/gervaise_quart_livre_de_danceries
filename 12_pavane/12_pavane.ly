@@ -35,7 +35,7 @@ scMusicOne = \relative c'' {
 
 
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
      f\breve d4 e f1 e2 f2 c c1 c\breve
