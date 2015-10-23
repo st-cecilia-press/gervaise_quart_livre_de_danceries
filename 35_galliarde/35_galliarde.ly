@@ -38,13 +38,13 @@ scMusicTwoClefModern = \clef treble
 scMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      r2 c2 c b4 a g1 g2 g'2 f2 e d1
+      c2 c b4 a g1 g2 g'2 f2 e d1 r2 
    }
    \repeat volta 2 {
-      r2 e2 e d c1 b2 c1 b2 c1
+      e2 e d c1 b2 c1 b2 c1 r2
    }
    \repeat volta 2 {
-      r2 c4 d e2 e d1 c2 c4 d e2 e d1 c2 c d e f1 e2 c1 b2 c1
+      c4 d e2 e d1 c2 c4 d e2 e d1 c2 c d e f1 e2 c1 b2 c1 r2 
    }
 }
 
@@ -59,7 +59,7 @@ scMusicThree =  \relative c' {
       g2 g g e2. f4 g2 g f f g1 g2
    }
    \repeat volta 2 {
-      g2 c2 c b1 g2 g c c b1 g2 g a2 g c2. b4 a2 f2 g1 g2
+      g2 c2 c b1 g2 g c c b1 g2 g a2 g c2. b4 a2 f2 g1 g2 r1
    }
 }
 
@@ -68,13 +68,13 @@ scMusicFourClefModern = \clef bass
 scMusicFour = \relative c {
 
    \repeat volta 2 {
-      r2 c2 f,2 g c1 c2 g bf c g1
+      c2 f,2 g c1 c2 g bf c g1 r2 
    }
    \repeat volta 2 {
-      r2 c2 c g a4 b c d e2 c d1 c
+      c2 c g a4 b c d e2 c d1 c r2 
    }
    \repeat volta 2 {
-      r2 c2 c c g1 c2 c c c g1 c2 c f,2 c'2 f,1 c'2 c d1 c1
+      c2 c c g1 c2 c c c g1 c2 c f,2 c'2 f,1 c'2 c d1 c1 r2 
    }
 }
 
