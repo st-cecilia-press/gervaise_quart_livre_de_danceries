@@ -8,7 +8,7 @@ intro = <<EOS
 EOS
 cantusModern = <<EOS
 \\book {
-  \\bookOutputSuffix "cantus_modern_clef"
+  \\bookOutputName "part_book_cantus_modern_clef"
   \\header{
     title = "Dances"
     subtitle = "Cantus Part in Modern Clefs" 
@@ -19,7 +19,7 @@ EOS
 
 altusModern = <<EOS
 \\book {
-  \\bookOutputSuffix "altus_modern_clef"
+  \\bookOutputName "part_book_altus_modern_clef"
   \\header{
     title = "Dances"
     subtitle = "Contratenor Part in Modern Clefs" 
@@ -29,7 +29,7 @@ altusModern = <<EOS
 EOS
 tenorModern = <<EOS
 \\book {
-  \\bookOutputSuffix "tenor_modern_clef"
+  \\bookOutputName "part_book_tenor_modern_clef"
   \\header{
     title = "Dances"
     subtitle = "Tenor Part in Modern Clefs" 
@@ -39,7 +39,7 @@ tenorModern = <<EOS
 EOS
 bassusModern = <<EOS
 \\book {
-  \\bookOutputSuffix "bassus_modern_clef"
+  \\bookOutputName "part_book_bassus_modern_clef"
   \\header{
     title = "Dances"
     subtitle = "Bassus Part in Modern Clefs" 
@@ -49,7 +49,7 @@ bassusModern = <<EOS
 EOS
 cantusOrig = <<EOS
 \\book {
-  \\bookOutputSuffix "cantus_orig_clef"
+  \\bookOutputName "part_book_cantus_orig_clef"
   \\header{
     title = "Dances"
     subtitle = "Cantus Part in Original Clefs" 
@@ -60,7 +60,7 @@ EOS
 
 altusOrig = <<EOS
 \\book {
-  \\bookOutputSuffix "altus_orig_clef"
+  \\bookOutputName "part_book_altus_orig_clef"
   \\header{
     title = "Dances"
     subtitle = "Contratenor Part in Original Clefs" 
@@ -70,7 +70,7 @@ altusOrig = <<EOS
 EOS
 tenorOrig = <<EOS
 \\book {
-  \\bookOutputSuffix "tenor_orig_clef"
+  \\bookOutputName "part_book_tenor_orig_clef"
   \\header{
     title = "Dances"
     subtitle = "Tenor Part in Original Clefs" 
@@ -80,7 +80,7 @@ tenorOrig = <<EOS
 EOS
 bassusOrig = <<EOS
 \\book {
-  \\bookOutputSuffix "bassus_orig_clef"
+  \\bookOutputName "part_book_bassus_orig_clef"
   \\header{
     title = "Dances"
     subtitle = "Bassus Part in Original Clefs" 

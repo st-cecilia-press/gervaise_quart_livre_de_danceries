@@ -91,4 +91,4 @@ scChordLine = \chordmode {
 
 \include "../include/sc_a4.ly"
 
-\version "2.12.0"  % necessary for upgrading to future LilyPond versions.
+\version "2.18.0"  % necessary for upgrading to future LilyPond versions.
