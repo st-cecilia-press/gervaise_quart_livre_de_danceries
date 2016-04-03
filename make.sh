@@ -10,15 +10,6 @@ while read folder; do
     if [[ $folder =~ ^# ]]; then continue; fi
     ly_file="./$folder/$folder.ly";
 
-#    pdf_file_orig="./$folder/$folder_orig_clef.pdf"
-#    pdf_file_orig_dash="./$folder/$folder-orig_clef.pdf"
-#
-#    pdf_file_modern="./$folder/$folder_modern_clef.pdf"
-#    pdf_file_modern_dash="./$folder/$folder-modern_clef.pdf"
-#
-#    midi_file_suffix="./$folder/$folder-orig_clef.midi"
-#    midi_file_no_suffix="./$folder/$folder.midi"
-#
     if [[( ! -e $pdf_file_modern ) || ( ! -e $pdf_file_orig ) || ( $ly_file -nt $pdf_file_modern ) || ($ly_file -nt $pdf_file_orig) ]];
     then $LILYPOND --output=./$folder $ly_file; 
     fi

@@ -1366,13 +1366,13 @@ rscMusicTwoClefModern = \clef treble
 rscMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      r2 c2 c b4 a g1 g2 g'2 f2 e d1
+      c2 c b4 a g1 g2 g'2 f2 e d1 r2 
    }
    \repeat volta 2 {
-      r2 e2 e d c1 b2 c1 b2 c1
+      e2 e d c1 b2 c1 b2 c1 r2
    }
    \repeat volta 2 {
-      r2 c4 d e2 e d1 c2 c4 d e2 e d1 c2 c d e f1 e2 c1 b2 c1
+      c4 d e2 e d1 c2 c4 d e2 e d1 c2 c d e f1 e2 c1 b2 c1 r2 
    }
 }
 
@@ -1387,7 +1387,7 @@ rscMusicThree =  \relative c' {
       g2 g g e2. f4 g2 g f f g1 g2
    }
    \repeat volta 2 {
-      g2 c2 c b1 g2 g c c b1 g2 g a2 g c2. b4 a2 f2 g1 g2
+      g2 c2 c b1 g2 g c c b1 g2 g a2 g c2. b4 a2 f2 g1 g2 r1
    }
 }
 
@@ -1396,13 +1396,13 @@ rscMusicFourClefModern = \clef bass
 rscMusicFour = \relative c {
 
    \repeat volta 2 {
-      r2 c2 f,2 g c1 c2 g bf c g1
+      c2 f,2 g c1 c2 g bf c g1 r2 
    }
    \repeat volta 2 {
-      r2 c2 c g a4 b c d e2 c d1 c
+      c2 c g a4 b c d e2 c d1 c r2 
    }
    \repeat volta 2 {
-      r2 c2 c c g1 c2 c c c g1 c2 c f,2 c'2 f,1 c'2 c d1 c1
+      c2 c c g1 c2 c c c g1 c2 c f,2 c'2 f,1 c'2 c d1 c1 r2 
    }
 }
 
@@ -1969,7 +1969,7 @@ yscChordLine = \chordmode {
 
 
 \book {
-  \bookOutputSuffix "cantus_orig_clef"
+  \bookOutputName "part_book_cantus_orig_clef"
   \header{
     title = "Dances"
     subtitle = "Cantus Part in Original Clefs" 
@@ -2128,7 +2128,7 @@ yscChordLine = \chordmode {
    }
 }
 \book {
-  \bookOutputSuffix "altus_orig_clef"
+  \bookOutputName "part_book_altus_orig_clef"
   \header{
     title = "Dances"
     subtitle = "Contratenor Part in Original Clefs" 
@@ -2287,7 +2287,7 @@ yscChordLine = \chordmode {
    }
 }
 \book {
-  \bookOutputSuffix "tenor_orig_clef"
+  \bookOutputName "part_book_tenor_orig_clef"
   \header{
     title = "Dances"
     subtitle = "Tenor Part in Original Clefs" 
@@ -2446,7 +2446,7 @@ yscChordLine = \chordmode {
    }
 }
 \book {
-  \bookOutputSuffix "bassus_orig_clef"
+  \bookOutputName "part_book_bassus_orig_clef"
   \header{
     title = "Dances"
     subtitle = "Bassus Part in Original Clefs" 
@@ -2605,7 +2605,7 @@ yscChordLine = \chordmode {
    }
 }
 \book {
-  \bookOutputSuffix "cantus_modern_clef"
+  \bookOutputName "part_book_cantus_modern_clef"
   \header{
     title = "Dances"
     subtitle = "Cantus Part in Modern Clefs" 
@@ -2764,7 +2764,7 @@ yscChordLine = \chordmode {
    }
 }
 \book {
-  \bookOutputSuffix "altus_modern_clef"
+  \bookOutputName "part_book_altus_modern_clef"
   \header{
     title = "Dances"
     subtitle = "Contratenor Part in Modern Clefs" 
@@ -2923,7 +2923,7 @@ yscChordLine = \chordmode {
    }
 }
 \book {
-  \bookOutputSuffix "tenor_modern_clef"
+  \bookOutputName "part_book_tenor_modern_clef"
   \header{
     title = "Dances"
     subtitle = "Tenor Part in Modern Clefs" 
@@ -3082,7 +3082,7 @@ yscChordLine = \chordmode {
    }
 }
 \book {
-  \bookOutputSuffix "bassus_modern_clef"
+  \bookOutputName "part_book_bassus_modern_clef"
   \header{
     title = "Dances"
     subtitle = "Bassus Part in Modern Clefs" 
