@@ -17,6 +17,7 @@ scComposer = "Claude Gervaise"
 scCopyright = ""
 scTagline = ""
 
+scMusicOneName = "Superius"
 scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
@@ -34,6 +35,7 @@ scMusicOne = \relative c'' {
 }
 
 
+scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
 scMusicTwoClefModern = \clef treble 
 scMusicTwo =  \relative c' {  
@@ -49,6 +51,7 @@ scMusicTwo =  \relative c' {
       e'\breve c2 f2 d2. e4 f2 e g1 e\breve g1 g2 g g1 d2 e f4 e d c d1 b\breve
    }
 }
+scMusicThreeName = "Tenor"
 scMusicThreeClefOrig = \clef tenor
 scMusicThreeClefModern = \clef "G_8" 
 scMusicThree = \relative c' {
@@ -63,6 +66,7 @@ scMusicThree = \relative c' {
    }
 }
 
+scMusicFourName = "Bassus"
 scMusicFourClefOrig = \clef bass
 scMusicFourClefModern = \clef bass
 scMusicFour = \relative c {

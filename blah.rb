@@ -2,7 +2,7 @@ require 'tempfile'
 require 'fileutils'
 
 lilyFiles = Dir.glob("[0-9]**/*.ly") 
-
+hsh = { 'One' => 'Superius', 'Two' => 'Contratenor', 'Three' => 'Tenor', 'Four' => 'Bassus', 'Five' => 'Quintus' }
 lilyFiles.each{ |path| 
   temp_file = Tempfile.new('foo')
   begin
@@ -10,7 +10,7 @@ lilyFiles.each{ |path|
       f.each_line do |line|
         match = /scMusic([[:upper:]][[:lower:]]+)ClefOrig/.match(line)
         if match 
-          temp_file.puts "scMusic#{match[1]}Name = \"\"\n" + line
+          temp_file.puts "scMusic#{match[1]}Name = \"#{hsh[match[1]]}\"\n" + line
         else 
           temp_file.puts line
         end
