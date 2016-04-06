@@ -5,7 +5,7 @@
 scTempo = #(ly:make-moment 165 2)
 
 scGlobal = {
-  \key f \major
+  \key c \major
   \time 3/2
 }
 
@@ -21,9 +21,11 @@ scMusicOneClefOrig =  \clef soprano
 scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
-   \repeat volta 2 {
+   \repeat volta 2 { d2 d d c2. b4 a2 g f e d1 r2
+                     b'2 b b a c b a g f4 e f1 r2
    }
    \repeat volta 2 {
+     d'2 d d c2. b4 a2 g f e d1 r2 c'2 a d4 c b2. b4 a2 g1 f2 g1.
    }
    
 }
