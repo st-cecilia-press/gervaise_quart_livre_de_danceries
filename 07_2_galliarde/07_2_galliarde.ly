@@ -21,11 +21,16 @@ scMusicOneName = "Superius"
 scMusicOneClefOrig = \clef soprano
 scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
+      \repeat volta 2 {
+     a2 f g2 a2. c4 b2 a g f e1. 
+     a2 a g f1 e2 d1 c2 d1 d2
+   }
+   \repeat volta 2 {
+     f2 f g a2. g4 f2 e d1 c1.
+     a'2 a a b2. d4 c2 d1 c2 d1 d2
+   }
    
-   \repeat volta 2 {
-   }
-   \repeat volta 2 {
-   }
+ 
    
 }
 
@@ -48,15 +53,19 @@ scMusicThreeClefOrig = \clef tenor
 scMusicThreeClefModern = \clef "G_8" 
 scMusicThree = \relative c' {
    \repeat volta 2 {
+     a2 a b c e e c c a a1.
+     c2 c c a1 g2 f e e d1.
    }
    \repeat volta 2 {
+     a'2 a c c2. b4 a2 g f f e1. 
+     f2 f f g2. f4 e2 d e1 d1.
    }
 }
 
 scMusicFourName = "Bassus"
 scMusicFourClefOrig = \clef bass
 scMusicFourClefModern = \clef bass
-scMusicFour = \relative c' {
+scMusicFour = \relative c {
    \repeat volta 2 {
        a2 d b a2. a4 e'2 f c d a1. a2 a c f,1 c'2 d a2 a d1.
    }

@@ -1,3 +1,5 @@
+%Superious B part. Fourth note should be dotted. added a repeated half note to make it fit.
+
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -23,10 +25,16 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
    \repeat volta 2 {
+     a1 f1. g2 a b c4 b a g f2 a1 g4 f e1 
+     a1 a2 a c4 b a g f2 e1 d c2 d\breve
    }
    \repeat volta 2 {
+     f1 f2 g2 a1. a2 a2. g4 f2 e d1 c1
+     c' c2 c a a  f2 b4 a g f f1  e2 f\breve 
    }
    \repeat volta 2 {
+     a1 g2 f e a2 c a b c d1 c\breve
+     a1 a2. g4 f2 d4 e f g a b c a d1 c2 d\breve
    }
    
 }
@@ -46,29 +54,30 @@ scMusicTwo =  \relative c' {
        f'1 e2 d c1 c d2 e f g e\breve
        e1 e2 e d4 e f e d2 d e g,2 a a a\breve
    }
-   \repeat volta 2 {
-   }
-   \repeat volta 2 {
-   }
-   \repeat volta 2 {
-   }
+
 }
 scMusicThreeName = "Tenor"
 scMusicThreeClefOrig = \clef tenor 
 scMusicThreeClefModern = \clef "G_8" 
 scMusicThree = \relative c' {
    \repeat volta 2 {
+     a1 a2 a d,2. e4 f2 g a4 b c b a g f e 
+     f1 g c a2 f g a1 g2 f e4 d e1 d\breve
    }
    \repeat volta 2 {
+    a'1 a2 c2 c1. c2 a2. g4 g2 e d g e1
+    e1 e2 e f4 g a b a2 g4 f g2 a g1 f\breve
    }
    \repeat volta 2 {
+     c'1 c2 a2 a1. c2 b a a g a1 e1 e2 e c1. c2 f2 f g4 f e d 
+     e2 e d\breve
    }
 }
 
 scMusicFourName = "Bassus"
 scMusicFourClefOrig = \clef bass
 scMusicFourClefModern = \clef bass
-scMusicFour = \relative c' {
+scMusicFour = \relative c {
 
    \repeat volta 2 {
        d1 d2. c4 bf1 a2 g c1 d\breve
