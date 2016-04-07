@@ -47,11 +47,11 @@ scMusicTwoClefModern = \clef treble
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
     f1 f2 e | d c4 b a2 g2 c2. d4 e1 c\breve
-    f1 f2 f | e e c e2. d4 c1 b2 c\breve
+    f1 f2 f | e e c e2 ~ e4 d4 c1 b2 c\breve
    }
    \repeat volta 2 {
        e1 e2 e f1. f2 g4 f  e d e1 c\breve
-       e1 f2 f g2. f4 e d c2. b4 a g a1 f\breve
+       e1 f2 f g2. f4 e d c2~ c4 b4 a g a1 f\breve
    }
 }
 scMusicThreeName = "Tenor"
@@ -60,11 +60,11 @@ scMusicThreeClefModern = \clef "G_8"
 scMusicThree = \relative c {
    \repeat volta 2 {
        d1 f2 g a1 d1 c2 b4 a b1 a\breve
-       a1 d2 d g,2 g a c2. b4 a g f1 g\breve
+       a1 d2 d g,2 g a c2 ~ c4 b4 a g f1 g\breve
    }
    \repeat volta 2 {
        g1 g2 g f4 e f g a2 d2 d c b1 a\breve 
-       a1 a2 a d2. c4 b a g1 f2 e1 d\breve
+       a1 a2 a d2. c4 b a g2 ~ g2 f2 e1 d\breve
    }
 }
 
@@ -79,15 +79,12 @@ scMusicFour = \relative c {
    }
    \repeat volta 2 {
       c1 c2 c d1. d2 g,2 a e'1 a,\breve
-      a1 d2. c4 b a g1 c1 d2 a1 d\breve
+      a1 d2. c4 b a g1 c2 ~ c2 d2 a1 d\breve
 
    }
 }
 
 
-scChordLine = \chordmode {
-
-}
 
 \include "../include/sc_a4.ly"
 
