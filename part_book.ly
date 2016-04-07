@@ -17,6 +17,7 @@ ascCopyright = "Claude Gervaise"
 scCopyright = ""
 ascTagline = ""
 
+ascMusicOneName = "Superius"
 ascMusicOneClefOrig = \clef soprano
 ascMusicOneClefModern = \clef treble
 ascMusicOne = \relative c'' {  
@@ -36,6 +37,7 @@ ascMusicOne = \relative c'' {
 }
 
 
+ascMusicTwoName = "Contratenor"
 ascMusicTwoClefOrig = \clef alto
 ascMusicTwoClefModern = \clef treble 
 ascMusicTwo =  \relative c' {  
@@ -51,6 +53,7 @@ ascMusicTwo =  \relative c' {
    }
    g\breve \bar "|."
 }
+ascMusicThreeName = "Tenor"
 ascMusicThreeClefOrig = \clef alto
 ascMusicThreeClefModern = \clef "G_8" 
 ascMusicThree = \relative c' {
@@ -67,6 +70,7 @@ ascMusicThree = \relative c' {
    bf\breve \bar "|."
 }
 
+ascMusicFourName = "Bassus"
 ascMusicFourClefOrig = \clef bass
 ascMusicFourClefModern = \clef bass
 ascMusicFour = \relative c' {
@@ -97,7 +101,7 @@ bscGlobal = {
   \time 4/2
 }
 
-bscTitle = "19 Pavane"
+bscTitle = "02 Pavane"
 bscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 bscMeter = ""
 bscPoet = ""
@@ -105,9 +109,2237 @@ bscCopyright = "Claude Gervaise"
 scCopyright = ""
 bscTagline = ""
 
+bscMusicOneName = "Superius"
 bscMusicOneClefOrig = \clef soprano
 bscMusicOneClefModern = \clef treble
 bscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     d1 d2 d c1. bf2 a g f e d1 d bf'1 bf2 bf a2. bf4 c2 bf2 a g f e fs1 fs1
+   }
+   \repeat volta 2 {
+     d'1 d2 c2 bf2. a4 g2 f e d e1 e 
+     c'1 a2 d4 c bf2. a4 g2 c4 bf4 a2 g1 f2 g1~ g\breve
+   }
+   
+}
+
+bscMusicTwoName = "Quintus"
+bscMusicTwoClefOrig = \clef soprano
+bscMusicTwoClefModern = \clef treble 
+bscMusicTwo =  \relative c'' {  
+     \repeat volta 2 {
+       bf1 bf2 bf c2. bf4 a2 g f g d g g1 g g g2 g a1 r2 d2 d bf2 c4 bf a g a1 a1 
+   }
+   \repeat volta 2 {
+       a1 d,2 f g1 d2 d' e  c d1 g, g g d2 a' g1. f4 e d2 g d'1 bf\breve
+   }
+  
+}
+
+bscMusicThreeName = "Contratenor"
+bscMusicThreeClefOrig = \clef alto 
+bscMusicThreeClefModern = \clef "treble" 
+bscMusicThree = \relative c' {
+   \repeat volta 2 {
+     f1 f2 f f1. d2 f2 e d c bf1 bf d1 d2 d d1 e4 c d e f2 d2 d c d1 d
+   }
+   \repeat volta 2 {
+     a1 bf2 c d bf4 c d e d2. c4 c1 bf2 c1 c e f2 f d1. e2 f 
+     c2 d d d\breve
+   }
+   
+}
+bscMusicFourName = "Tenor"
+bscMusicFourClefOrig = \clef tenor
+bscMusicFourClefModern = \clef "G_8"
+bscMusicFour = \relative c' {
+\repeat volta 2 {
+     bf1 bf2 bf a1. bf4 c d c bf a bf a g f g1 g g g2 g 
+     f1 g2 g a bf2 a a a1 a
+   }
+   \repeat volta 2 {
+     f1 g2 a bf g bf2. a4 g1 g g\breve g1 f2 f g2. a4
+     bf2 a4 g f2 g a1 g\breve
+   }
+   
+}
+
+bscMusicFiveName = "Bassus"
+bscMusicFiveClefOrig = \clef bass
+bscMusicFiveClefModern = \clef bass
+bscMusicFive = \relative c {
+\repeat volta 2 {
+     bf1 bf2 bf f'1. g2 d e bf c g1 g g g2 g d'1 c2 
+     g d' g, a a d1 d
+   }
+   \repeat volta 2 {
+     d2. c4 bf2 a g1 g2 bf2 c1 g c c c 
+     d2 d g, g' g c, d e d1 g1 g
+   }
+  
+}
+
+bscChordLine = \chordmode {
+
+}
+
+
+cscTempo = #(ly:make-moment 165 2)
+
+cscGlobal = {
+  \key f \major
+  \time 3/2
+}
+
+cscTitle = "02 Galliarde"
+cscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+cscMeter = ""
+cscPoet = ""
+cscCopyright = "Claude Gervaise"
+scCopyright = ""
+cscTagline = ""
+
+cscMusicOneName = "Superius"
+cscMusicOneClefOrig =  \clef soprano
+cscMusicOneClefModern = \clef treble
+cscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 { d2 d d c2. bf4 a2 g f e d1 r2
+                     bf'2 bf bf a c bf a g f4 e f1 r2
+   }
+   \repeat volta 2 {
+     d'2 d d c2. bf4 a2 g f e d1 r2 c'2 a d4 c bf2. bf4 a2 g1 f2 g1.
+   }
+   
+}
+
+
+cscMusicTwoName = "Contratenor"
+cscMusicTwoClefOrig = \clef alto 
+cscMusicTwoClefModern = \clef treble 
+cscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+     f2 f f f1. e2 d c bf1 r2
+     f'2 f f f2. e4 d2 f e c d1 r2
+   }
+   \repeat volta 2 {
+     f2 f f f1 f2. e4 d2 c4 bf4 a1 r2
+     e'2 f f d f2. e4 d c d1 bf1.
+   }
+}
+cscMusicThreeName = "Tenor"
+cscMusicThreeClefOrig =  \clef tenor
+cscMusicThreeClefModern = \clef "G_8" 
+cscMusicThree = \relative c' {
+   \repeat volta 2 {
+     bf2 bf bf a a c2. bf4 a2 a f1 r2 
+     d'2 d d c2 a bf4 c d c bf2 a4 g a1. 
+   }
+   \repeat volta 2 {
+     bf2 bf bf a4 g a bf c2 a bf g f1. 
+     g2 a a bf d c4 bf a g a1 g1.
+   }
+}
+
+cscMusicFourName = "Bassus"
+cscMusicFourClefOrig = \clef bass
+cscMusicFourClefModern = \clef bass
+cscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     bf2 bf bf f'1. c2 d a bf1 r2 bf2 bf bf f'2 f g 
+     d e1 d1 r2
+   }
+   \repeat volta 2 {
+     bf2 bf bf f'1. f2 bf,2 c d1 r2 c2 f2 d g d f g d1 g,1.
+   }
+}
+
+
+
+
+dscTempo = #(ly:make-moment 165 2)
+
+dscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+dscTitle = "03 Pavane"
+dscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+dscMeter = ""
+dscPoet = ""
+dscCopyright = "Claude Gervaise"
+scCopyright = ""
+dscTagline = ""
+
+dscMusicOneName = "Superius"
+dscMusicOneClefOrig = \clef treble
+dscMusicOneClefModern = \clef treble
+dscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     d1 d2 d e1. d2 c bf a1 g\breve 
+     bf1 c2 c a4 g a bf c2 c2 ~ c4 a4 d2 d c d\breve
+   }
+   \repeat volta 2 {
+     r2 d2 c1 ~ c2 bf2 a1 r2 d2 c1 ~ c2 bf2 a1 d2 d4 d d2 d f2. 
+     e4 d2 c bf2 a4 g d'2 d bf\breve
+   }
+   
+}
+
+
+dscMusicTwoName = "Quintus"
+dscMusicTwoClefOrig = \clef soprano
+dscMusicTwoClefModern = \clef treble 
+dscMusicTwo =  \relative c'' {  
+   \repeat volta 2 {
+     a1 bf2 bf g2. f4 g a bf2 a2 g g f g\breve
+     g1 g2 g2 f4 e f g a2 f2 e d e e d\breve
+   }
+   \repeat volta 2 {
+     r2 bf'2 a1~ a2 g2 g1 r2 bf2 a1 ~a2 g2 f1 f2 f4 f 
+     g2 g a a bf a4 g f d g2 g e g\breve
+   }
+}
+dscMusicThreeName = "Contratenor"
+dscMusicThreeClefOrig = \clef alto 
+dscMusicThreeClefModern = \clef treble
+dscMusicThree = \relative c' {
+   \repeat volta 2 {
+     f1 d2 bf2 c1. g'4 f e2 d4 c d2 d bf\breve
+     d1 c2 e d 1 c2 c a bf c c a\breve
+   }
+   \repeat volta 2 {
+     r2 f'2 f1~ f2 d2 d1 r2 f2 f1 ~ f2 d2
+     d1 d2 d4 d bf2 bf c f,2 g a bf c d1 d\breve
+   }
+}
+
+dscMusicFourName = "Tenor"
+dscMusicFourClefOrig = \clef tenor
+dscMusicFourClefModern = \clef "G_8"
+dscMusicFour = \relative c' {
+
+   \repeat volta 2 {
+     d2. c4 bf a g2 ~ g4 f4 e d c2 d e4 f g e4 f2 f d\breve
+     d1 e2 c f1. e2 f g a a f\breve
+   }
+   \repeat volta 2 {
+     r2 f2 a1 ~ a2 bf4 c d2 d, g f a1 ~ a2 bf4 c d2 d, a'2 a4 a g2 
+     bf2 a a d, e f g a1 g\breve
+   }
+}
+
+dscMusicFiveName = "Bassus"
+dscMusicFiveClefOrig = \clef bass
+dscMusicFiveClefModern = \clef bass
+dscMusicFive = \relative c {
+
+   \repeat volta 2 {
+     d1 g2 g c,1. bf2 c g d'2 d g,\breve
+     g1 c2 c d1 a2 c d bf a a d\breve
+   }
+   \repeat volta 2 {
+     r2 bf2 f'1 ~ f2 g2 d1 r2 bf2 f'1 ~ f2 g2 d1 d2 d4 d g2 g2 f4 e d c 
+     bf2 c d e d d g,\breve
+   }
+}
+
+dscChordLine = \chordmode {
+
+}
+
+
+escTempo = #(ly:make-moment 165 2)
+
+escGlobal = {
+  \key f \major
+  \time 3/2
+}
+
+escTitle = "03 Galliarde"
+escSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+escMeter = ""
+escPoet = ""
+escCopyright = "Claude Gervaise"
+scCopyright = ""
+escTagline = ""
+
+escMusicOneName = "Superius"
+escMusicOneClefOrig = \clef soprano
+escMusicOneClefModern = \clef treble
+escMusicOne = \relative c' {  
+   \partial 2
+   \repeat volta 2 {
+       d2 d1 d2 d g2 g f1 f2 f1 bf2 
+     a4 bf c bf a g g1 f2 g1 g2 g1
+   }
+   \repeat volta 2 {
+     a2 bf1 bf2 a bf g2 a1 a2 a1
+   }
+   \repeat volta 2 {
+     a2 g1 g2 f2 e2 c d1 d2 d1
+   }
+   \repeat volta 2 {
+     f2 e2. d4 e f g1 f2 g1 g2 g1
+   }
+   
+}
+
+
+escMusicTwoName = "Contratenor"
+escMusicTwoClefOrig = \clef alto
+escMusicTwoClefModern = \clef treble 
+escMusicTwo =  \relative c' {  
+    \partial 2 
+    \repeat volta 2 {
+     d2 d1 g,2 d'2 e e d1 d2 d1 
+      f2 f g f4 e d c d1 bf1 bf2 bf1
+   }
+   \repeat volta 2 {
+     d2 d1 d2 d d d d1 d2 d1
+   }
+   \repeat volta 2{
+     d2 bf1 bf2 bf c01 f,1 f2 f1
+   }
+   \repeat volta 2{
+     d'2 c1 c2 d2 d1 bf1 bf2 bf1
+   }
+}
+escMusicThreeName = "Tenor"
+escMusicThreeClefOrig = \clef tenor 
+escMusicThreeClefModern = \clef "G_8" 
+escMusicThree = \relative c' {
+   \partial 2
+   \repeat volta 2 {
+      a2 bf1 bf2 a2 bf c2 a1 a2 a1 d2 c4 d e d c bf a g a1 
+     g g2 g1
+   }
+   \repeat volta 2 {
+     f2 g1 g2 f2 g g f1 f2 f1
+   }
+   \repeat volta 2 {
+     f2 g2. f4 g a bf1 a2 bf1 bf2 bf1
+   }
+   \repeat volta 2 {
+     bf2 g1 g2 bf2 a1 g1 g2 g1
+   }
+}
+
+escMusicFourName = "Bassus"
+escMusicFourClefOrig = \clef bass
+escMusicFourClefModern = \clef bass
+escMusicFour = \relative c {
+  \partial 2
+   \repeat volta 2 {
+      d2 g1 g2 f2 e c d1 d2 d1 bf2 f' c f g d1 g,1 g2 g1
+   }
+   \repeat volta 2 {
+     d2 g1 g2 d'2 g,2 g d'1 d2 d1
+   }
+   \repeat volta 2 {
+     d2 e1 e2 d c c bf1 bf2 bf1
+   }
+   \repeat volta 2 {
+     bf2 c1 c2 g d'1 g,1 g2 g1
+   }
+}
+
+
+escChordLine = \chordmode {
+
+}
+
+
+fscTempo = #(ly:make-moment 165 2)
+
+fscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+fscTitle = "04 Pavane"
+fscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+fscMeter = ""
+fscPoet = ""
+fscCopyright = "Claude Gervaise"
+scCopyright = ""
+fscTagline = ""
+
+fscMusicOneName = "Superius"
+fscMusicOneClefOrig =  \clef soprano
+fscMusicOneClefModern = \clef treble
+fscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 { 
+     d\breve c1 c2. bf4 a2 bf1 a4 g f\breve
+     a1 c2 c g2. a4 bf4 c d2 c4 bf4 bf1 a2 bf\breve
+   }
+   \repeat volta 2 {
+     d1 d4 c bf a bf2 a2 g bf2. a4 a1 g2 a\breve
+     bf1 c2 d c4 bf a g a2 bf2 a4 g g1 f2 g\breve
+   }
+   
+}
+
+
+fscMusicTwoName = "Contratenor"
+fscMusicTwoClefOrig = \clef alto
+fscMusicTwoClefModern = \clef treble 
+fscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+     f\breve f1. e2. d4 d1 c2 d\breve
+     c2. d4 e f e2. d4 e f g2 d g f g f4 e d\breve
+   }
+   \repeat volta 2 {
+     d2. e4 f d g1 f2 g f f1 d1 d\breve d1 f2. e8 
+     d e2 f2. d4 g f e d c2 d1 bf\breve
+   }
+}
+fscMusicThreeName = "Tenor"
+fscMusicThreeClefOrig = \clef tenor
+fscMusicThreeClefModern = \clef "G_8" 
+fscMusicThree = \relative c' {
+   \repeat volta 2 {
+     bf\breve a1. g2 f1 g a\breve a1 a2 c2 c g d'1 
+     e2 d c1 bf\breve
+   }
+   \repeat volta 2 {
+     bf1 a2 g d'2. c4 bf2 d2. c4 bf a bf1 a\breve g1 
+     a2 bf2 a4 g f e d2 d' c4 bf a g a1 g\breve
+   }
+}
+
+fscMusicFourName = "Bassus"
+fscMusicFourClefOrig = \clef bass
+fscMusicFourClefModern = \clef bass
+fscMusicFour = \relative c {
+   \repeat volta 2 {
+     bf\breve f'1. c2 d bf e1 d\breve
+     a1 a2 a c1 g2 bf c d e f bf,\breve
+   }
+   \repeat volta 2 {
+     bf2. c4 d2 g,2 g d'2 e bf f'1 g d\breve g1 
+     f2 bf, c d d bf c e d1 g,\breve
+   }
+  
+}
+
+
+
+fscChordLine = \chordmode {
+
+}
+
+
+gscTempo = #(ly:make-moment 165 2)
+
+gscGlobal = {
+  \key f \major
+  \time 3/2
+}
+
+gscTitle = "04 Galliarde"
+gscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+gscMeter = ""
+gscPoet = ""
+gscCopyright = "Claude Gervaise"
+scCopyright = ""
+gscTagline = ""
+
+gscMusicOneName = "Superius"
+gscMusicOneClefOrig = \clef soprano 
+gscMusicOneClefModern = \clef treble
+gscMusicOne = \relative c'' {  
+   \partial 2
+   \repeat volta 2 {
+     d2 c1 c2 bf2 bf a4 g f1. a2 c c g d' c4 bf bf1 a2 bf1
+   }
+   \repeat volta 2 {
+     r2 d2 d d2~ d4 c4 bf a bf2~ bf g1 a1. bf2 c2 d c2. bf4 
+     a2 g1 f2 g1
+   }
+   
+}
+
+
+gscMusicTwoName = "Contratenor"
+gscMusicTwoClefOrig = \clef alto 
+gscMusicTwoClefModern = \clef treble 
+gscMusicTwo =  \relative c' {  
+   \partial 2
+   \repeat volta 2 {
+     f2 f1 f2 d2 d c d1 d2 f2 e4 d e f g2 f f e f1 d
+   }
+   \repeat volta 2 {
+    r2 f2 f f f1. f2  d2 d d1. d2 f2 f f1. d2 d d bf1
+   }
+}
+gscMusicThreeName = "Tenor"
+gscMusicThreeClefOrig = \clef alto
+gscMusicThreeClefModern = \clef "G_8" 
+gscMusicThree = \relative c' {
+   \partial 2
+   \repeat volta 2 {
+    bf2 a1 a2 bf g g a1. 
+    f4 g a bf c a bf2 bf f bf c1 bf
+   }
+   \repeat volta 2 {
+    r2 bf2 bf bf bf4 a bf c d c bf a bf1
+     a1. g2 a bf2 c1. bf2 a a g1
+     
+   }
+}
+
+gscMusicFourName = "Bassus"
+gscMusicFourClefOrig = \clef bass
+gscMusicFourClefModern = \clef bass
+gscMusicFour = \relative c {
+  \partial 2
+   \repeat volta 2 {
+     bf2 f'1 f2 g2 e2 e d1. d2 c2 c ef bf f'2 g f1 bf,
+   }
+   \repeat volta 2 {
+     r2 bf2 bf bf bf1. f'2 g g d1. 
+     g2 f bf, f'1. g2 d2 d g,1
+   }
+}
+
+
+gscChordLine = \chordmode {
+
+}
+
+
+%============================
+%
+%
+% MESSED UP!!!!!!!!!!
+%
+%
+%============================
+hscTempo = #(ly:make-moment 165 2)
+
+hscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+hscTitle = "05 Pavane"
+hscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+hscMeter = ""
+hscPoet = ""
+hscCopyright = "Claude Gervaise"
+scCopyright = ""
+hscTagline = ""
+
+hscMusicOneName = "Superius"
+hscMusicOneClefOrig =  \clef soprano
+hscMusicOneClefModern = \clef treble
+hscMusicOne = \relative c' {  
+   
+   \repeat volta 2 {
+       d1 d2 e f4 e f g a g b2. a4 a1 g2 a\breve
+       a1 a2 f c'2. b4 a2 g4 f g2 a1 g4 f e\breve
+   }
+   \repeat volta 2 {
+       c'1 c2 c a d d4 c b a b2 a1 g2 a\breve
+       c2. b4 a g f e d2 b'4 a g f e d e2 d1 c2 d\breve
+   }
+   
+}
+
+
+hscMusicTwoName = "Contratenor"
+hscMusicTwoClefOrig = \clef alto 
+hscMusicTwoClefModern = \clef treble 
+hscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+    f1 f2 e | d c4 b a2 g2 c2. d4 e1 c\breve
+    f1 f2 f | e e c e2 ~ e4 d4 c1 b2 c\breve
+   }
+   \repeat volta 2 {
+       e1 e2 e f1. f2 g4 f  e d e1 c\breve
+       e1 f2 f g2. f4 e d c2~ c4 b4 a g a1 f\breve
+   }
+}
+hscMusicThreeName = "Tenor"
+hscMusicThreeClefOrig = \clef tenor 
+hscMusicThreeClefModern = \clef "G_8" 
+hscMusicThree = \relative c {
+   \repeat volta 2 {
+       d1 f2 g a1 d1 c2 b4 a b1 a\breve
+       a1 d2 d g,2 g a c2 ~ c4 b4 a g f1 g\breve
+   }
+   \repeat volta 2 {
+       g1 g2 g f4 e f g a2 d2 d c b1 a\breve 
+       a1 a2 a d2. c4 b a g2 ~ g2 f2 e1 d\breve
+   }
+}
+
+hscMusicFourName = "Bassus"
+hscMusicFourClefOrig = \clef bass
+hscMusicFourClefModern = \clef bass
+hscMusicFour = \relative c {
+
+   \repeat volta 2 {
+      d1 d2 c f1. g2 a1 e a,\breve 
+      d1 d2 d c c f e4 d e2 f d1 c\breve
+   }
+   \repeat volta 2 {
+      c1 c2 c d1. d2 g,2 a e'1 a,\breve
+      a1 d2. c4 b a g1 c2 ~ c2 d2 a1 d\breve
+
+   }
+}
+
+
+
+
+iscTempo = #(ly:make-moment 165 2)
+
+iscGlobal = {
+  \key c \major
+  \time 3/1
+}
+
+iscTitle = "05 Galliarde"
+iscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+iscMeter = ""
+iscPoet = ""
+iscCopyright = "Claude Gervaise"
+scCopyright = ""
+iscTagline = ""
+
+iscMusicOneName = "Superius"
+iscMusicOneClefOrig =  \clef soprano
+iscMusicOneClefModern = \clef treble
+iscMusicOne = \relative c' {  
+   
+   \repeat volta 2 {
+    d1 d2 e f g2 a\breve g1 a\breve g1 a\breve.
+    a1 a f c'2 b a g f1 a\breve g2 f e\breve.
+   }
+   \repeat volta 2 {
+    c'1 c c a d2 c b a a\breve g1 a\breve.
+    c2 b a g f e d1 e2 f e d d\breve c1 d\breve.
+   }
+   \repeat volta 2 {
+   }
+   
+}
+
+
+iscMusicTwoName = "Contratenor"
+iscMusicTwoClefOrig = \clef alto 
+iscMusicTwoClefModern = \clef treble 
+iscMusicTwo =  \relative c' {  
+    \repeat volta 2{
+        f1 f f | f\breve g1 | e1 e\breve | c\breve.
+        d1 d d | e\breve d1 | c1 a\breve | c\breve.
+    }
+    \repeat volta 2{
+        g'1 g g | f a g | e1 e\breve | c\breve. | 
+        c1 c a | a b c2 b | a g a\breve | f\breve.
+    }
+}
+iscMusicThreeName = "Tenor"
+iscMusicThreeClefOrig = \clef tenor 
+iscMusicThreeClefModern = \clef "G_8" 
+iscMusicThree = \relative c' {
+   \repeat volta 2 {
+       a1 a a a\breve d1 c1 b\breve a\breve.
+       f1 f f e\breve f1 e f\breve g\breve. 
+   }
+   \repeat volta 2 {
+       e'1 e e c a d c1 b\breve a\breve. 
+       a1 a a f g\breve f1 e\breve d\breve.
+   }
+   \repeat volta 2 {
+   }
+}
+
+iscMusicFourName = "Bassus"
+iscMusicFourClefOrig = \clef bass
+iscMusicFourClefModern = \clef bass
+iscMusicFour = \relative c {
+    \repeat volta 2{
+        d1 d d | d\breve g,1 | a1 e'\breve | a,\breve.
+        d1 d d | c\breve d1 | a1 d\breve | c\breve.
+    }
+    \repeat volta 2{
+        c1 c c | f\breve g1 | a1 e\breve | a,\breve.
+        a1 a d | d g, c | d1 a\breve | d\breve.
+    }
+}
+
+
+iscChordLine = \chordmode {
+
+}
+
+
+jscTempo = #(ly:make-moment 165 2)
+
+jscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+jscTitle = "06 Pavane"
+jscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+jscMeter = ""
+jscPoet = ""
+jscCopyright = "Claude Gervaise"
+scCopyright = ""
+jscTagline = ""
+
+jscMusicOneName = "Superius"
+jscMusicOneClefOrig =  \clef soprano
+jscMusicOneClefModern = \clef treble
+jscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     b1 b2 b d1 d2 c b1 b a\breve
+     c1 c2 c b1 a2 g f g1 f2 g\breve
+   }
+   \repeat volta 2 {
+     d'1 d2 d b1 e1 d d c\breve
+     b1 b2 b c1. b2 a g1 f2 g\breve
+   }
+   
+}
+
+
+jscMusicTwoName = "Contratenor"
+jscMusicTwoClefOrig = \clef alto 
+jscMusicTwoClefModern = \clef treble 
+jscMusicTwo =  \relative c'' {  
+   \repeat volta 2 {
+     g1 g2 g g1 g2 e g1 g f\breve
+     g1 g2 g g1 f2 d d d d1 b\breve
+   }
+   \repeat volta 2 {
+     b1 a2 d d g g e f1 g e\breve
+     g1 g2 g g2. f4 e2 g f4 e d c d1 b\breve
+   }
+}
+jscMusicThreeName = "Tenor"
+jscMusicThreeClefOrig = \clef tenor 
+jscMusicThreeClefModern = \clef "G_8" 
+jscMusicThree = \relative c' {
+   \repeat volta 2 {
+     d1 d2 d b1 b2 c d1 d d\breve
+     e1 e2 e d2. c4 d2 b a g a1 g\breve
+   }
+   \repeat volta 2 {
+     g1 a2 a g1 g2 c2 a1 b c\breve
+     d1 d2 d e1 c2 d2~ d4 c4 b2 a1 g\breve
+   }
+}
+
+jscMusicFourName = "Quintus"
+jscMusicFourClefOrig = \clef bass
+jscMusicFourClefModern = \clef bass
+jscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     d1 d2 d g2. f8 e d2 e d1 g f\breve
+     e1 e2 e g1 d2. e4 f2 d f1 d\breve
+   }
+   \repeat volta 2 {
+     d1 f2 f d1 e2 g f2. e4 d2 d e\breve
+     d1 d2 d c4 d e f g2. f8 e d2 d f1 d\breve
+   }
+}
+
+jscMusicFiveName = "Bassus"
+jscMusicFiveClefOrig = \clef bass
+jscMusicFiveClefModern = \clef bass
+jscMusicFive = \relative c {
+
+   \repeat volta 2 {
+     g1 g2 g g1 g2 c g1 g d'\breve
+     c1 c2 c g1 d'2 g, d' g, d'1 g,\breve
+   }
+   \repeat volta 2 {
+     g1 d'2 d g,1 c d g, c\breve
+     g1 g2 g c1. g2 d'2 g, d'1 g,\breve
+   }
+}
+
+jscChordLine = \chordmode {
+
+}
+
+
+%  Moved rests to the end of the sections
+%
+kscTempo = #(ly:make-moment 165 2)
+
+kscGlobal = {
+  \key c \major
+  \time 3/2
+}
+
+kscTitle = "06 Galliarde"
+kscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+kscMeter = ""
+kscPoet = ""
+kscCopyright = "Claude Gervaise"
+scCopyright = ""
+kscTagline = ""
+
+kscMusicOneName = "Superius"
+kscMusicOneClefOrig = \clef soprano
+kscMusicOneClefModern = \clef treble
+kscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+      b2 b b d1 c2 ~ c2 b2 b a1 a4 b c1 c2 b a1 g2 g f g1 r2
+   }
+   \repeat volta 2 {
+      b4 c d2 d d1 d2 d c b a2. g4 a b c1 b2 c1 r2
+   }
+   \repeat volta 2{
+      b2 b b c2. b4 a2 g1 f2 g1 r2
+   }
+}
+
+
+kscMusicTwoName = "Contratenor"
+kscMusicTwoClefOrig =  \clef alto
+kscMusicTwoClefModern = \clef treble 
+kscMusicTwo =  \relative c'' {  
+   \repeat volta 2 {
+      g2 g g g1 e2~ e2 g2 g f1 f2 g1 g2 g f1 d2 d1 b r2
+   }
+   \repeat volta 2 {
+      g'2 g g g1 g2 g e g f1 f2 g g1 e r2
+   }
+   \repeat volta 2{
+      g2 g g e1 f2 d d1 b r2
+   }
+}
+kscMusicThreeName = "Tenor"
+kscMusicThreeClefOrig = \clef tenor 
+kscMusicThreeClefModern = \clef "G_8" 
+kscMusicThree = \relative c' {
+   \repeat volta 2 {
+      d2 d d b1 c2 ~ c2 d2 d d1 d2 e1 e2 d2 d2. c4 b2 a1 g r2
+   }
+   \repeat volta 2 {
+      d'2 d d b1 b2 b c d2 d1 d2 e d d c1 r2
+   }
+   \repeat volta 2 {
+      d2 d d c4 b a g f2 g a1 g r2
+   }
+}
+
+kscMusicFourName = "Bassus"
+kscMusicFourClefOrig = \clef bass
+kscMusicFourClefModern = \clef bass
+kscMusicFour = \relative c {
+
+   \repeat volta 2 {
+      g2 g g g1 c2 ~c2 g2 g d'1 d2 c1 c2 g2 d'1 g,2 d'1 g, r2
+   }
+   \repeat volta 2 {
+      g2 g g g1 g2 g c g d'1 d2 c g g c1 r2
+   }
+   \repeat volta 2{
+      g2 g g c1 d2 g,2 d'1 g, r2
+   }
+}
+
+
+kscChordLine = \chordmode {
+
+}
+
+
+%Superious B part. Fourth note should be dotted. added a repeated half note to make it fit.
+
+lscTempo = #(ly:make-moment 165 2)
+
+lscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+lscTitle = "07 Pavane"
+lscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+lscMeter = ""
+lscPoet = ""
+lscCopyright = "Claude Gervaise"
+scCopyright = ""
+lscTagline = ""
+
+lscMusicOneName = "Superius"
+lscMusicOneClefOrig =  \clef soprano
+lscMusicOneClefModern = \clef treble
+lscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     a1 f1. g2 a b c4 b a g f2 a1 g4 f e1 
+     a1 a2 a c4 b a g f2 e1 d c2 d\breve
+   }
+   \repeat volta 2 {
+     f1 f2 g2 a1. a2 a2. g4 f2 e d1 c1
+     c' c2 c a a  f2 b4 a g f f1  e2 f\breve 
+   }
+   \repeat volta 2 {
+     a1 g2 f e a2 c a b c d1 c\breve
+     a1 a2. g4 f2 d4 e f g a b c a d1 c2 d\breve
+   }
+   
+}
+
+
+lscMusicTwoName = "Contratenor"
+lscMusicTwoClefOrig = \clef alto 
+lscMusicTwoClefModern = \clef treble 
+lscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+       d1 d2 a2 d1 c2 b e1 d2 c1 b2 c1 e f2 f e4 d c b a2 b a g a1 a\breve
+   }
+   \repeat volta 2 {
+       d1 d2 e f1. e2 d c b g b1 a a g2 g c1. d2 ef4 d c b c1 a\breve
+   }
+   \repeat volta 2 {
+       f'1 e2 d c1 c d2 e f g e\breve
+       e1 e2 e d4 e f e d2 d e g,2 a a a\breve
+   }
+
+}
+lscMusicThreeName = "Tenor"
+lscMusicThreeClefOrig = \clef tenor 
+lscMusicThreeClefModern = \clef "G_8" 
+lscMusicThree = \relative c' {
+   \repeat volta 2 {
+     a1 a2 a d,2. e4 f2 g a4 b c b a g f e 
+     f1 g c a2 f g a1 g2 f e4 d e1 d\breve
+   }
+   \repeat volta 2 {
+    a'1 a2 c2 c1. c2 a2. g4 g2 e d g e1
+    e1 e2 e f4 g a b a2 g4 f g2 a g1 f\breve
+   }
+   \repeat volta 2 {
+     c'1 c2 a2 a1. c2 b a a g a1 e1 e2 e c1. c2 f2 f g4 f e d 
+     e2 e d\breve
+   }
+}
+
+lscMusicFourName = "Bassus"
+lscMusicFourClefOrig = \clef bass
+lscMusicFourClefModern = \clef bass
+lscMusicFour = \relative c {
+
+   \repeat volta 2 {
+       d1 d2. c4 bf1 a2 g c1 d\breve
+       c1 a d2 d c f,1 g2 a b a1 d\breve
+   }
+   \repeat volta 2 {
+       d1 d2 c f,1. c'2 d a bf2 c g1 a1 a c2 c 
+       f,2 f' f bf,2 ef2 f2 c1 f\breve
+   }
+   \repeat volta 2 {
+       f1 c2 d a f'2 f2. e4 d2 c b1 a\breve 
+       a1 a2 a d1. d2 c b a a d\breve
+   }
+}
+
+
+lscChordLine = \chordmode {
+
+}
+
+
+mscTempo = #(ly:make-moment 165 2)
+
+mscGlobal = {
+  \key c \major
+  \time 3/2
+}
+
+mscTitle = "07 Galliarde"
+mscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+mscMeter = ""
+mscPoet = ""
+mscCopyright = "Claude Gervaise"
+scCopyright = ""
+mscTagline = ""
+
+mscMusicOneName = "Superius"
+mscMusicOneClefOrig = \clef soprano
+mscMusicOneClefModern = \clef treble
+mscMusicOne = \relative c'' {  
+      \repeat volta 2 {
+     a2 f g2 a2. c4 b2 a g f e1. 
+     a2 a g f1 e2 d1 c2 d1 d2
+   }
+   \repeat volta 2 {
+     f2 f g a2. g4 f2 e d1 c1.
+     a'2 a a b2. d4 c2 d1 c2 d1 d2
+   }
+   
+ 
+   
+}
+
+
+mscMusicTwoName = "Contratenor"
+mscMusicTwoClefOrig = \clef alto 
+mscMusicTwoClefModern = \clef treble 
+mscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+       e2 d d e2. f4 g2 f2 e d c1. 
+       e2 e e c1 c2 a a1 a1.
+   }
+   \repeat volta 2 {
+       d2 d e f2. e4 d2 c4 b a2 a a1.
+       a2 d2 d d c4 b a2 g a1 f1.
+   }
+}
+mscMusicThreeName = "Tenor"
+mscMusicThreeClefOrig = \clef tenor 
+mscMusicThreeClefModern = \clef "G_8" 
+mscMusicThree = \relative c' {
+   \repeat volta 2 {
+     a2 a b c e e c c a a1.
+     c2 c c a1 g2 f e e d1.
+   }
+   \repeat volta 2 {
+     a'2 a c c2. b4 a2 g f f e1. 
+     f2 f f g2. f4 e2 d e1 d1.
+   }
+}
+
+mscMusicFourName = "Bassus"
+mscMusicFourClefOrig = \clef bass
+mscMusicFourClefModern = \clef bass
+mscMusicFour = \relative c {
+   \repeat volta 2 {
+       a2 d b a2. a4 e'2 f c d a1. a2 a c f,1 c'2 d a2 a d1.
+   }
+   \repeat volta 2 {
+       d2 d c f,1. c'2 d d a1. d2 d d g,2 g a b a1 d1.
+   }
+
+}
+
+
+mscChordLine = \chordmode {
+
+}
+
+
+%Superius B removed first semibreve and rest. Removed first minum
+% Bassus added a g breve in B part 4th measure to match galliard chord.
+% Contratenor changed B part 4th measure breve do d to match galliard chord.
+nscTempo = #(ly:make-moment 165 2)
+
+nscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+nscTitle = "08 Pavane"
+nscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+nscMeter = ""
+nscPoet = ""
+nscCopyright = "Claude Gervaise"
+scCopyright = ""
+nscTagline = ""
+
+nscMusicOneName = "Superius"
+nscMusicOneClefOrig =  \clef soprano
+nscMusicOneClefModern = \clef treble
+nscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     g\breve a1 g1 e e4 d e f g\breve
+     c1 c2 c b a g4 a b c d2 c1 b2 c\breve
+   }
+
+  \repeat volta 2 {
+     e2 e4 d c b c2 b1 c1 c2 b a1 g\breve
+     e1 g2 g a g1 f2 g f1 e4 d e\breve
+   }
+   
+}
+
+
+nscMusicTwoName = "Contratenor"
+nscMusicTwoClefOrig = \clef alto 
+nscMusicTwoClefModern = \clef treble 
+nscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+     e\breve f1 d1 c c d\breve
+     c2. d4 e f g2. f4 e d e2 f d g f d e\breve
+   }
+   \repeat volta 2 {
+     g1 g2 g g2. f4 e1 e2 d f f d\breve
+     g2. f4 e d e2 c4 d e f e2 d2. c4 c1 b2 c\breve
+   }
+}
+nscMusicThreeName = "Tenor"
+nscMusicThreeClefOrig = \clef tenor 
+nscMusicThreeClefModern = \clef "G_8" 
+nscMusicThree = \relative c' {
+   \repeat volta 2 {
+     c\breve c1 b g g4 f g a b\breve
+     e1 e2 e d c b4 c d e f2 e d d c\breve
+   }
+   \repeat volta 2 {
+     e1 e2 e d1 c2 g2. a4 b c d2 d  b\breve
+     c1 c2 c  a b c a g a f1 g\breve
+   }
+}
+
+nscMusicFourName = "Bassus"
+nscMusicFourClefOrig = \clef bass
+nscMusicFourClefModern = \clef bass
+nscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     c\breve f,1 g c1 c g\breve
+     a2. b4 c d e f g2 a e2 d1 e2 f g c,\breve
+   }
+   \repeat volta 2 {
+     c1 c2 c g1 c2. d4 e f g2 d1 g,\breve c1 c2 c 
+     f2 g c, d e f d1 c\breve
+   }
+}
+
+
+nscChordLine = \chordmode {
+
+}
+
+
+oscTempo = #(ly:make-moment 165 2)
+
+oscGlobal = {
+  \key c \major
+  \time 3/2
+}
+
+oscTitle = "08 Galliarde"
+oscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+oscMeter = ""
+oscPoet = ""
+oscCopyright = "Claude Gervaise"
+scCopyright = ""
+oscTagline = ""
+
+oscMusicOneName = "Superius"
+oscMusicOneClefOrig = \clef soprano 
+oscMusicOneClefModern = \clef treble
+oscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+      g2 g a2 g1 g2 e2. d4 e f g1 r2
+   }
+   \repeat volta 2 {
+      c2 b a g4 a b c d2 c1 b2 c1 r2
+   }
+   \repeat volta 2 {
+      e2 d c b1 c2 b a1 g1 r2 
+     e2 g g a1 a2 g f2. e8 d e1 r2
+   }
+   
+}
+
+
+oscMusicTwoName = "Contratenor"
+oscMusicTwoClefOrig = \clef alto 
+oscMusicTwoClefModern = \clef treble 
+oscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+     e2 e f e1 d2 c4 b c2 c d1 r2
+   }
+   \repeat volta 2 {
+     a'2 g f e g a g f d e1 r2
+   }
+   \repeat volta 2 {
+     g2 g c, g'1 g2 g f2. e4 d1 r2 
+     e2 e e f1 f2 e2 d d c1 r2
+   }
+}
+oscMusicThreeName = "Tenor"
+oscMusicThreeClefOrig = \clef tenor
+oscMusicThreeClefModern = \clef "G_8" 
+oscMusicThree = \relative c' {
+   \repeat volta 2 {
+     c2 c c c1 b2 a g4 f g a b1 r2
+   }
+   \repeat volta 2 {
+     e2 d c2 b4 c d e f e d c d1 c1 r2
+   }
+   \repeat volta 2 {
+     c2 b a g1 g2 d'2 d1 b1 r2 g2 g g c1 c2 c
+     a1 a1 r2
+   }
+}
+
+oscMusicFourName = "Bassus"
+oscMusicFourClefOrig = \clef bass
+oscMusicFourClefModern = \clef bass
+oscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     c2 c f,2 c'1 g2 a c c g1 r2
+   }
+   \repeat volta 2 {
+     a2 e'2 f g1 d2 e f g c,1 r2
+   }
+   \repeat volta 2 {
+     c2 g a e'1 c2 g2 d'1 g,1 r2 
+     c2 c c f,1 f2 c'2 d d a1 r2
+   }
+}
+
+
+oscChordLine = \chordmode {
+
+}
+
+
+pscTempo = #(ly:make-moment 165 2)
+
+pscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+pscTitle = "09 Pavane"
+pscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+pscMeter = ""
+pscPoet = ""
+pscCopyright = "Claude Gervaise"
+scCopyright = ""
+pscTagline = ""
+
+pscMusicOneName = "Superius"
+pscMusicOneClefOrig =  \clef soprano
+pscMusicOneClefModern = \clef treble
+pscMusicOne = \relative c' {  
+   
+   \repeat volta 2 {
+     e1 e2 f2 g1. g2 a2 g1 f2 g\breve
+     g1 f2 e d2. e4 f e d c b2 c1 b2 c\breve
+   }
+   \repeat volta 2 {
+     d1 e2 g1 f2 g2 a g e f1 e\breve
+     g1 g2 g d f c4 d e f e d d1 c2 d\breve
+   }
+   
+}
+
+
+pscMusicTwoName = "Contratenor"
+pscMusicTwoClefOrig = \clef alto 
+pscMusicTwoClefModern = \clef treble 
+pscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+     c1 c2 c d1 e f2 d2 d1 b\breve
+     d1 d2 c bf1 c2 a g f g1 g\breve
+   }
+   \repeat volta 2 {
+     b1 c2 c d1 d2 d b2 c c b c\breve
+     c1 b2 d2 d c1 c2 ~ c4 b4 a g a1 f\breve
+   }
+}
+pscMusicThreeName = "Tenor"
+pscMusicThreeClefOrig = \clef tenor 
+pscMusicThreeClefModern = \clef "G_8" 
+pscMusicThree = \relative c' {
+   \repeat volta 2 {
+     g1 a2 a b1 g2 c2 c b a a g\breve 
+     bf1 bf2 g2 g f4 g a g f e d2 c d1 c\breve
+   }
+   \repeat volta 2 {
+     g'1 g2 g a1 g2 f g2 a f f g\breve
+     g1 g2 bf2 f4 g a1 g2 a2 f2 e1 d\breve
+   }
+}
+
+pscMusicFourName = "Bassus"
+pscMusicFourClefOrig = \clef bass
+pscMusicFourClefModern = \clef bass
+pscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     c1 a2 a g1 c f,2 g d'1 g,\breve
+     g1 bf2 c g bf2 f1 g2 a g1 c\breve
+   }
+   \repeat volta 2 {
+     g1 c2 e d1 g,2 d'2 e c d d c\breve
+     c1 g2 g bf2 f4 g a bf c2~ c2 d2 a1 d\breve
+   }
+}
+
+
+pscChordLine = \chordmode {
+
+}
+
+
+%Moved rests to the end to make the pulse line up with the measures
+qscTempo = #(ly:make-moment 165 2)
+
+qscGlobal = {
+  \key c \major
+  \time 3/2
+}
+
+qscTitle = "09 Galliarde"
+qscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+qscMeter = ""
+qscPoet = ""
+qscCopyright = "Claude Gervaise"
+scCopyright = ""
+qscTagline = ""
+
+qscMusicOneName = "Superius"
+qscMusicOneClefOrig = \clef soprano
+qscMusicOneClefModern = \clef treble
+qscMusicOne = \relative c' {  
+   
+  \repeat volta 2 {
+    e2 e f2 g a4 b a g g1 f2 g1.
+    g2 f e d4 e f e d2 c1 b2 c1 r2
+   }
+   \repeat volta 2 {
+      d2 e f g a4 g f e e1 d2 e1.
+     g2 g g d f e4 d d1 c2 d1 d2
+   }
+}
+
+
+qscMusicTwoName = "Contratenor"
+qscMusicTwoClefOrig = \clef alto
+qscMusicTwoClefModern = \clef treble 
+qscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+     c2 c c c e1 d2 c a b1. 
+     c2 c c b a b4 a g f g1 g1 r2
+   }
+   \repeat volta 2 {
+     b2 c a b a2. b4 c2 c b4 a g1. 
+     b2 b b a2. b4 c b a g a1 f1 r2
+   }
+}
+qscMusicThreeName = "Tenor"
+qscMusicThreeClefOrig = \clef tenor 
+qscMusicThreeClefModern = \clef "G_8" 
+qscMusicThree = \relative c' {
+   \repeat volta 2 {
+     g2 g a g c1 b2 a1 g1. 
+     g2 a g2 g a4 g f e d c d1 c1. 
+   }
+   \repeat volta 2 {
+     g'2 g f d4 e f g a g f e f1 e1.
+     d2 g g f4 g a f g f e d e1 d1.
+   }
+}
+
+qscMusicFourName = "Bassus"
+qscMusicFourClefOrig = \clef bass
+qscMusicFourClefModern = \clef bass
+qscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     c2 c f, c' a1 b2 c d2 g,1. c2 f, c' g f b c g1 c1 r2
+     
+   }
+   \repeat volta 2 {
+     g2 c2 d g, d'1 c2 a b2 c1. g2 g4 a b c d1 c2 d a1 d r2
+   }
+}
+
+
+qscChordLine = \chordmode {
+
+}
+
+
+rscTempo = #(ly:make-moment 165 2)
+
+rscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+rscTitle = "10 Pavane"
+rscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+rscMeter = ""
+rscPoet = ""
+rscCopyright = "Claude Gervaise"
+scCopyright = ""
+rscTagline = ""
+
+rscMusicOneName = "Superius"
+rscMusicOneClefOrig = \clef soprano
+rscMusicOneClefModern = \clef treble
+rscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+       g\breve a2 g c1 b2 a g f e\breve c'1 c2 c a4 b c a b2 a2. g4 g1 f2 g\breve
+   }
+   \repeat volta 2 {
+       g1 g2 g a1 c b2 a g1 a\breve d1 c2 b a g f e2. d4 d1 c2 d\breve
+   }
+   \repeat volta 2 {
+       g1 g2 g a1 b2 d2. c4 c1 b2 c\breve c1 c2 c b4 a g f g2 a2. g4 g1 f2 g\breve
+   }
+   
+}
+
+
+rscMusicTwoName = "Contratenor"
+rscMusicTwoClefOrig = \clef alto
+rscMusicTwoClefModern = \clef treble 
+rscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+      e\breve f2 e c4 d e f g f e d e2 d c\breve
+      e1 e2 e f e g f e d4 c d1 b\breve
+      
+   }
+   \repeat volta 2 {
+     d1 d2 d f1 e e2 c4 d e1 f\breve f1 f2 d f e4 d c2. b4 a2 g a1 f\breve
+   }
+   \repeat volta 2 {
+      e'\breve c2 f2 d2. e4 f2 e g1 e\breve g1 g2 g g1 d2 e f4 e d c d1 b\breve
+   }
+}
+rscMusicThreeName = "Tenor"
+rscMusicThreeClefOrig = \clef tenor
+rscMusicThreeClefModern = \clef "G_8" 
+rscMusicThree = \relative c' {
+   \repeat volta 2 {
+       c\breve c2 c c4 b c d e d c b c b a g a\breve a1 a2 a f g d'2 c2 c b a1 g\breve
+   }
+   \repeat volta 2 {
+       bf1 bf2 bf a1. g4 f g2 a b1 d\breve a1 a2 d2. c4 b2 a2. g4 f2 e4 d e1 d\breve
+   }
+   \repeat volta 2 {
+       b'1 c2. d4 e2 d b1 c2 c d1 c\breve e1 e2 e d4 c b a b2 g2 c b a1 g\breve
+   }
+}
+
+rscMusicFourName = "Bassus"
+rscMusicFourClefOrig = \clef bass
+rscMusicFourClefModern = \clef bass
+rscMusicFour = \relative c {
+
+   \repeat volta 2 {
+       c\breve f,2 c'2 a a g a c d a\breve a1 a2 a d c g a c g d'1 g,\breve 
+   }
+   \repeat volta 2 {
+       g1 g2 g d'1 e e2 f e1 d\breve d1 f2 g d2 e f c d b a1 d\breve
+   }
+   \repeat volta 2 {
+       e1 c a2 d g, g'2 f a g1 c,\breve c1 c2 c g1 g2 c f,2 g2 d'1 g,\breve
+   }
+}
+
+
+rscChordLine = \chordmode {
+
+}
+
+
+sscTempo = #(ly:make-moment 165 2)
+
+sscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+sscTitle = "11 Pavane"
+sscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+sscMeter = ""
+sscPoet = ""
+sscCopyright = "Claude Gervaise"
+scCopyright = ""
+sscTagline = ""
+
+sscMusicOneName = "Superius"
+sscMusicOneClefOrig = \clef soprano
+sscMusicOneClefModern = \clef treble
+sscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+       c1 c2 g c2. b8 a g2 c2 b a g f e\breve g2. f4 e2 d d'2. c4 b a g f e d g1 f2 g\breve
+   }
+   \repeat volta 2 {
+       g1 e2 c c'2. b4 a2 g f2. e8 d e2 e d\breve a'1 a2 a g2. f4 g a b c d2 c1 b2 c\breve
+   }
+   \repeat volta 2 {
+       b1 b2 b a1 a2 g a g a g g\breve d2. e4 f g a b c2. b4 a2 g f g1 g2 g\breve
+   }
+   
+}
+
+
+sscMusicTwoName = "Contratenor"
+sscMusicTwoClefOrig = \clef alto 
+sscMusicTwoClefModern = \clef treble 
+sscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+       g'1 c,2 c c c c c g e' e4 c d2 g\breve e2. f4 g2 f g2. f8 e d4 c b a g2 d'2 d1 b\breve
+   }
+   \repeat volta 2 {
+       d1 c2 e c2. d4 e2 c a a a g g\breve f'1 f2 f c1 c2 d d g g1 e\breve
+   }
+   \repeat volta 2 {
+      g1 g2 g f1 f2 d f d f d d\breve g1 f2 f g1 f2 e d c d1 b\breve
+   }
+}
+sscMusicThreeName = "Tenor"
+sscMusicThreeClefOrig = \clef alto 
+sscMusicThreeClefModern = \clef "G_8" 
+sscMusicThree = \relative c' {
+   \repeat volta 2 {
+       e1 e2 e a,4 b c d e2 a,2 b c b4 g a b c\breve c1. a2 b4 g g'2. f4 e d c2 b a1 g\breve
+   }
+   \repeat volta 2 {
+       b1 g2 g'2. f4 e d c2 e b2. c8 b c2 c b\breve c1 c2 d e4 d e f g2 f e d1 r2 c\breve 
+       %rest is there to fix the not lining up. Doesn't sound right. Fix later!
+   }
+   \repeat volta 2 {
+       d1 d2 d d1 a2 b a b a b b\breve b2. c4 d2 d e2. d4 c2 b a g a1 g\breve
+   }
+}
+
+sscMusicFourName = "Bassus"
+sscMusicFourClefOrig = \clef bass
+sscMusicFourClefModern = \clef bass
+sscMusicFour = \relative c {
+
+   \repeat volta 2 {
+      c1 a2 c2 f,4 g a b c2 f,2 g a e'2 d c\breve c1 c2 d g,1 g2 g c g d'1 g,\breve 
+   }
+   \repeat volta 2 {
+       g1 c2 c a1 a2 c d d a c g\breve f1 f2 f c'1 c2 g bf2 c g1 c\breve
+   }
+   \repeat volta 2 {
+       g1 g2 g d'1 d2 g,2 d'2 g,2 d' g, g\breve g1 d'2 d c1 f2 g d e d1 g,\breve
+   }
+}
+
+sscMusicFiveName = "Quintus"
+sscMusicFiveClefOrig = \clef varbaritone
+sscMusicFiveClefModern = \clef bass
+sscMusicFive = \relative c' {
+
+   \repeat volta 2 {
+       g1 a2 e f f e f d c g' d e g g1 g g2 d2 g1 g2 g g g d f d\breve
+   }
+   \repeat volta 2 {
+       g1 g2 g c,1 c2 g'2 d f c c d\breve f1 c2 f2 e1 e2 d2 d e g1 g\breve
+   }
+   \repeat volta 2 {
+       g1 d2 d f1 f2 g f g f g g\breve g1 a2 d,2 g e a e f c f1 d\breve
+   }
+}
+
+sscChordLine = \chordmode {
+
+}
+
+
+tscTempo = #(ly:make-moment 165 2)
+
+tscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+tscTitle = "12 Pavane"
+tscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+tscMeter = ""
+tscPoet = ""
+tscCopyright = "Claude Gervaise"
+scCopyright = ""
+tscTagline = ""
+
+tscMusicOneName = "Superius"
+tscMusicOneClefOrig =  \clef soprano
+tscMusicOneClefModern = \clef treble
+tscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     c\breve d1 c2. bf4 a2 g4 f g1 f\breve
+   }
+   \repeat volta 2 {
+     c'1. bf2 a2 c bf2. a4 g2 g f e4 d e\breve
+   }
+   \repeat volta 2 {
+     a2. bf4 c2. bf8 a g2 bf a g2. f4 f1 e2 f\breve
+   }
+   
+}
+
+
+tscMusicTwoName = "Contratenor"
+tscMusicTwoClefOrig = \clef alto 
+tscMusicTwoClefModern = \clef "G_8" 
+tscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+     f\breve d4 e f1 e2 f2 c c1 c\breve
+   }
+   \repeat volta 2 {
+     c1 f2 d c1 f,2 f'2 c e d1 g\breve
+   }
+   \repeat volta 2 {
+     c,1 c2. d4 e2 f1 e4 d c2 d c1 c\breve
+   }
+}
+tscMusicThreeName = "Tenor"
+tscMusicThreeClefOrig = \clef alto 
+tscMusicThreeClefModern = \clef "G_8" 
+tscMusicThree = \relative c' {
+   \repeat volta 2 {
+     c1 c4 bf a g f2 f' c1 c2 f1 e2 f\breve 
+   }
+   \repeat volta 2 {
+     e2. d4 c2 d f2. e4 d1 e2 c1 bf2 c\breve
+   }
+   \repeat volta 2 {
+     f1 e2. d4 c2 d c c2. bf4 a2 g1 f\breve
+   }
+}
+
+tscMusicFourName = "Bassus"
+tscMusicFourClefOrig = \clef bass
+tscMusicFourClefModern = \clef bass
+tscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     f\breve g2. f4 e1 d2 f e1 d\breve
+   }
+   \repeat volta 2 {
+     e1 f2 d2. e4 f2 g bf,2 e c d1 e\breve
+   }
+   \repeat volta 2 {
+     d2. c4 a bf c d e2 bf2 d e c d a e'2 f\breve
+   }
+}
+
+tscMusicFiveName = "Quintus"
+tscMusicFiveClefOrig = \clef bass
+tscMusicFiveClefModern = \clef bass
+tscMusicFive = \relative c, {
+
+   \repeat volta 2 {
+     f\breve bf1 c f,2 f c'1 f,\breve
+   }
+   \repeat volta 2 {
+     c'1 f,2 bf f1 bf c d c\breve
+   }
+   \repeat volta 2 {
+     f,1 c'1. bf2 f c'1 f,2 c'1 f,\breve
+   }
+}
+
+tscChordLine = \chordmode {
+
+}
+
+
+uscTempo = #(ly:make-moment 165 2)
+
+uscGlobal = {
+  \key c \major
+  \time 4/2
+}
+
+uscTitle = "13 Pavane"
+uscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+uscMeter = ""
+uscPoet = ""
+uscCopyright = "Claude Gervaise"
+scCopyright = ""
+uscTagline = ""
+
+uscMusicOneName = "Superius"
+uscMusicOneClefOrig = \clef soprano
+uscMusicOneClefModern = \clef treble
+uscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     c1 b2 a g2. f4 e2 g a2 g f1 e\breve 
+     g1 a2 g2 e2. f4 g2 a g c1 b2 c\breve
+   }
+   \repeat volta 2 {
+     g1 g2 g c2 c,4 d e f g a b g a b c2. b8 a g\breve
+     e2. f4 g2 a g a e a g e f1 e\breve
+   }
+   \repeat volta 2 {
+     c'1 c2 c b d2. c4 b a g2. a8 b c1 b\breve
+     g1 g2 g f a2. g4 f e d2 g1 f2 g\breve 
+   }
+   
+}
+
+
+uscMusicTwoName = "Contratenor"
+uscMusicTwoClefOrig = \clef alto
+uscMusicTwoClefModern = \clef "G_8" 
+uscMusicTwo =  \relative c'' {  
+   \repeat volta 2 {
+     g1 g2 e2 e4 c d2 g e f e d d g\breve
+     e1 f2 d a4 b c a b2 c g e' g1 g\breve
+   }
+   \repeat volta 2 {
+     c,1 c2 b a e' c4 d e f g2 f c c c\breve
+     g1 c2 c c a g c g g' d d g\breve
+   }
+   \repeat volta 2 {
+     c,2. d4 e d e f g1 d2 d e e a f g\breve
+     e1 d2 d d2. c8 b a2 d2 d d d1 b\breve
+   }
+}
+uscMusicThreeName = "Tenor"
+uscMusicThreeClefOrig = \clef alto
+uscMusicThreeClefModern = \clef "G_8" 
+uscMusicThree = \relative c' {
+   \repeat volta 2 {
+     e1 d2 c b4 g a b c1 c2 c a2. b4 c\breve
+     c1. b2 c4 d e c4 d2 a e' c d1 c\breve
+   }
+   \repeat volta 2 {
+     e1 e2 d2 c2. b8 a g4 a b c d2 d e f e\breve
+     c2. d4 e2 f e f c f e4 d c b a2. b4 c\breve
+   }
+   \repeat volta 2 {
+     e2. d4 c2 c d d g2. f4 e d c b a2 c d\breve 
+       c1 b2 b a1 d2. c4 b a g2 a1 g\breve
+   }
+}
+
+uscMusicFourName = "Bassus"
+uscMusicFourClefOrig = \clef varbaritone
+uscMusicFourClefModern = \clef bass
+uscMusicFour = \relative c' {
+
+   \repeat volta 2 {
+     g1 g2 c, g' d e e c e f d e\breve
+     e1 c2 g' c, c g' c, e a d, d e\breve
+   }
+   \repeat volta 2 {
+     e1 e2 g e a e e d f e c e\breve
+     e1 e2 c2 e c e c e g c c g\breve
+   }
+   \repeat volta 2 {
+     a1 a2 a d, d d g g g f c g'\breve
+     g1 g2 d f1 f2 d f g d f d\breve
+   }
+}
+
+uscMusicFiveName = "Quintus"
+uscMusicFiveClefOrig = \clef bass
+uscMusicFiveClefModern = \clef bass
+uscMusicFive = \relative c {
+
+   \repeat volta 2 {
+     c1 g2 a e'2 d c c f, c'2 d1 c\breve
+     c1 f,2 g a1 g2 f c' a g1 c\breve
+   }
+   \repeat volta 2 {
+     c1 c2 g2 a2. b4 c2 c g d' c f, c'\breve
+     c1 c2 f, c' f, c' f, c' c d1 c\breve
+   }
+   \repeat volta 2 {
+     a1 a2 a g1 g2 g c1 f,2 a g\breve
+     c1 g2 g d'1 d2 d d g, d'1 g,\breve
+   }
+   
+}
+
+uscChordLine = \chordmode {
+
+}
+
+
+vscTempo = #(ly:make-moment 165 2)
+
+vscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+vscTitle = "14 Pavane"
+vscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+vscMeter = ""
+vscPoet = ""
+vscCopyright = "Claude Gervaise"
+scCopyright = ""
+vscTagline = ""
+
+vscMusicOneName = "Superius"
+vscMusicOneClefOrig =  \clef soprano
+vscMusicOneClefModern = \clef treble
+vscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+     a1. a2 a1 a2 bf2 a2 a g1 f\breve
+     d1 d2 g2 f2. g8 a bf2 a2 ~ a4 g4 g1 f2 g\breve
+   }
+   \repeat volta 2 {
+     f1 e2 e d1 e2 a2 g2 f g1 f\breve
+     f2 g e f d1 c2 c d g1 f2 g\breve
+   }
+   \repeat volta 2 {
+     f2 f g2. f4 g a bf2 c2 d g,1. g2 g\breve
+     d'2. c4 bf2 a2 bf1. a2 ~ a4 g4 g1 f2 g\breve
+   }
+   
+}
+
+
+vscMusicTwoName = "Contratenor"
+vscMusicTwoClefOrig = \clef alto
+vscMusicTwoClefModern = \clef treble 
+vscMusicTwo =  \relative c' {  
+   \repeat volta 2 { 
+     f1. f2 f1. f2 f f d1 d\breve
+     f,1 f2 c'2 a f bf e e c d1 bf\breve
+   }
+   \repeat volta 2 {
+     d1 g2 g g1 g2 f e d1 c2 d\breve
+     bf2 g g f f'1 e2. f4 g2 e d1 bf\breve
+   }
+   \repeat volta 2 {
+     a2 a g g c2. d4 e c g'2 g,2 g2. a4 bf c d\breve
+     bf1 f'2 e d2. c4 bf2 f'2 d e d1 bf\breve
+   }
+}
+vscMusicThreeName = "Tenor"
+vscMusicThreeClefOrig = \clef alto 
+vscMusicThreeClefModern = \clef "G_8" 
+vscMusicThree = \relative c' {
+   \repeat volta 2 {
+     d1. d2 c1. d2 c a bf1 a\breve
+     f'1. e2 d1. c2 ~ c4 bf4 a g a1 g\breve
+   }
+   \repeat volta 2 {
+     a2. bf4 c2 c bf2. a4 g2 c2 bf a1 g2 a\breve
+     d2 bf c a bf2. a4 g2 a bf c a1 g\breve
+   }
+   \repeat volta 2 {
+     d'2. c4 bf2 bf e2. d4 c2 bf c e1 d4 c bf\breve
+     f'2. e4 d2 c bf2. a4 g2 a bf c a1 g\breve
+   }
+}
+
+vscMusicFourName = "Bassus"
+vscMusicFourClefOrig = \clef bass
+vscMusicFourClefModern = \clef bass
+vscMusicFour = \relative c {
+
+   \repeat volta 2 {
+     d1. d2 f1. bf,2 f'2 f g1 d\breve
+     bf1. c2 d1 g,2 c e1 d g,\breve
+   }
+   \repeat volta 2 {
+     d'1 c2 c g'1 c,2  f2 g d e1 d\breve
+     bf2 e c d bf1 c2 a g c d1 g,\breve
+   }
+   \repeat volta 2 {
+     d'2 d e2. d4 c2 bf a g c c c1 g\breve
+     bf1. c2 d1 ef2 f g c, d1 g,\breve
+   }
+}
+
+
+vscChordLine = \chordmode {
+
+}
+
+
+wscTempo = #(ly:make-moment 165 2)
+
+wscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+wscTitle = "15 Pavane"
+wscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+wscMeter = ""
+wscPoet = ""
+wscCopyright = "Claude Gervaise"
+scCopyright = ""
+wscTagline = ""
+
+wscMusicOneName = "Superius"
+wscMusicOneClefOrig = \clef soprano
+wscMusicOneClefModern = \clef treble
+wscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+    g\breve a2. g4 a bf c1 bf4 a bf1 a\breve c2. bf4 a2 d c4 bf a g f2 a g4 f f1 e2 f\breve
+   }
+   \repeat volta 2 {
+    d'1. bf2 c2. bf4 a2 c bf4 a g f g1 a\breve
+   }
+   \repeat volta 2 {
+    bf1. a2 g4 a bf c d2. c4 bf a g f8 e f1 e\breve g1 f2 f e1 d4 e f g a2 f1 e2 f\breve
+   }
+   
+}
+
+
+wscMusicTwoName = "Contratenor"
+wscMusicTwoClefOrig = \clef alto
+wscMusicTwoClefModern = \clef treble 
+wscMusicTwo =  \relative c' { 
+ 
+   \repeat volta 2 {
+    c1 d2 bf c f1 e2 f c1 bf2 c\breve f1. f2 f f,4 g a bf c2 g d' c1 a\breve
+   }
+   \repeat volta 2 {
+    bf1 bf2 d c1 f2 g1 f4 e d2. e4 f\breve
+   }
+   \repeat volta 2 {
+    d1 g2 f g g, a a bf c f,1 g\breve e'1 d2 d g g,4 a bf1 a2. bf4 c1 a\breve
+   }
+}
+
+
+wscMusicThreeName = "Tenor"
+wscMusicThreeClefOrig = \clef alto
+wscMusicThreeClefModern = \clef "G_8" 
+wscMusicThree = \relative c' {
+
+   \repeat volta 2 {
+    g2. a4 bf c d e f2 c1 c2 c f1 e2 f\breve a2. g4 f e d c8 bf a2. bf8 c d2 a bf a g1 f\breve
+   }
+   \repeat volta 2 {
+    f'1. f2 f e4 d c d e c d c c1 bf2 c\breve
+   }
+   \repeat volta 2 {
+    bf1 d2 d g, g' f2. e4 d c c1 bf2 c\breve c1 a2 bf c4 d e c f2 f,2. g4 a f g1 f\breve
+   }
+}
+
+
+wscMusicFourName = "Bassus"
+wscMusicFourClefOrig = \clef bass
+wscMusicFourClefModern = \clef bass
+wscMusicFour = \relative c' {
+
+   \repeat volta 2 {
+    c,1 g'2 g f1 f2 c f a g1 f\breve f1. bf,2 f'2. e4 d2 f ef f c1 f,\breve
+   }
+   \repeat volta 2 {
+    bf1. bf2 f'1. c2 g' c, g'1 f\breve
+   }
+   \repeat volta 2 {
+    g1. d2 ef1 d g2 c, d1 c\breve c1 d2 d c1 bf4 c d e f2 d c1 f,\breve
+   }
+}
+
+
+wscChordLine = \chordmode {
+
+}
+
+
+xscTempo = #(ly:make-moment 165 2)
+
+xscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+xscTitle = "16 Pavane"
+xscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+xscMeter = ""
+xscPoet = ""
+xscCopyright = "Claude Gervaise"
+scCopyright = ""
+xscTagline = ""
+
+xscMusicOneName = "Superius"
+xscMusicOneClefOrig = \clef soprano
+xscMusicOneClefModern = \clef treble
+xscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+    f,1. g4 a bf1. a2 g f g1 a\breve f1. g4 a bf2. a4 g2 f e f1 e2 f\breve
+   }
+   \repeat volta 2 {
+    d1 e2 e f1 r2 d2 e1 f e\breve
+   }
+   \repeat volta 2 {
+    f2. e4 f2 g e1 r2 f g f f e f\breve
+   }
+   \repeat volta 2 {
+    c'1. bf2 a1. g2 f1 d e\breve c'1. bf2 a2. g4 f2 e d f1 e2 f\breve
+   }
+   
+}
+
+
+xscMusicTwoName = "Contratenor"
+xscMusicTwoClefOrig = \clef alto
+xscMusicTwoClefModern = \clef "g_8" 
+xscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+    c1. d4 e f1 f2 f c a c1 c\breve c1. d4 e f2. e4 d1 c2 bf c1 a\breve
+   }
+   \repeat volta 2 {
+    f1 c'2 c a1 r2 d2. c4 c1 bf2 c\breve
+   }
+   \repeat volta 2 {
+    c2. c4 c2 g g1 r2 c e c c1 a\breve
+   }
+   \repeat volta 2 {
+    g'1 a2 f f1. d2 d1 f c\breve g'1 a2 f2. e4 d1 e2 f bf, c1 a\breve
+   }
+}
+
+
+xscMusicThreeName = "Tenor"
+xscMusicThreeClefOrig = \clef alto
+xscMusicThreeClefModern = \clef "G_8" 
+xscMusicThree = \relative c' {
+   \repeat volta 2 {
+    a1. bf4 c d1 d2 d e f1 e2 f\breve a,1. bf4 c d2 d4 d bf2 a g f g1 f\breve
+   }
+   \repeat volta 2 {
+    bf1 g2 g f1 r2 bf g1 f g\breve
+   }
+   \repeat volta 2 {
+    a2. g4 a2 bf c1 r2 a bf a g g f\breve
+   }
+   \repeat volta 2 {
+    e'1. d2 c1 c2 bf a1 bf g\breve e'1. d2 c bf a4 f g a bf a g f g1 f\breve
+   }
+
+}
+
+xscMusicFourName = "Bassus"
+xscMusicFourClefOrig = \clef varbaritone
+xscMusicFourClefModern = \clef bass
+xscMusicFour = \relative c' {
+
+   \repeat volta 2 {
+    f,\breve bf, c2 d c1 f\breve f bf,1 bf2 bf c d c1 f\breve
+   }
+   \repeat volta 2 {
+    bf,1 c2 c d1 r2 bf c1 d c\breve
+   }
+   \repeat volta 2 {
+    f2. c4 f2 e c1 f e2 f c1 f\breve
+   }
+   \repeat volta 2 {
+    c'2. bf4 a2 bf f1. g2 d1 bf c\breve c'2. bf4 a2 bf f g d c bf d c1 f\breve
+   }
+}
+
+
+xscChordLine = \chordmode {
+
+}
+
+
+yscTempo = #(ly:make-moment 165 2)
+
+yscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+yscTitle = "17 Pavane"
+yscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+yscMeter = ""
+yscPoet = ""
+yscCopyright = "Claude Gervaise"
+scCopyright = ""
+yscTagline = ""
+
+yscMusicOneName = "Superius"
+yscMusicOneClefOrig = \clef soprano
+yscMusicOneClefModern = \clef treble
+yscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+    g2. a4 bf2 c bf2. a4 g2 bf a g1 f2 g\breve c2. c4 bf2 a g2. a4 bf2 bf a2. g8 f g1 f\breve
+   }
+   \repeat volta 2 {
+    f2. g4 a2 f bf2. a4 g2 a bf d1 c2 d\breve g,2 g c a bf2. a4 g2 a bf c2. bf4 a g a\breve
+   }
+   \repeat volta 2 {
+    g1 g2 g bf1 bf2 bf a c2. bf4 a g f\breve g2. a4 bf2 bf a2. bf4 c2 bf2. a4 g1 f2 g\breve
+   }
+   
+}
+
+
+yscMusicTwoName = "Contratenor"
+yscMusicTwoClefOrig = \clef alto 
+yscMusicTwoClefModern = \clef treble 
+yscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+    bf2. c4 d2 e d2. c4 bf c d bf c bf a g a1 g\breve g2. a4 bf c d2 bf4 c d e f2 e4 d c2 d1 c2 d\breve
+   }
+   \repeat volta 2 {
+    a1 a2 a bf2. c4 d e f2 d1 e d\breve bf2 c1 d2. c4 bf2. g4 d'1 c2 d2. c8 bf c\breve
+   }
+   \repeat volta 2 {
+    c1 c2 c bf1 bf2 bf c2. bf4 a2 g a\breve bf2. c4 d2 c4 bf c2. d4 e2 d2. c4 bf2 a1 g\breve
+   }
+}
+yscMusicThreeName = "Tenor"
+yscMusicThreeClefOrig = \clef alto 
+yscMusicThreeClefModern = \clef "G_8" 
+yscMusicThree = \relative c' {
+   \repeat volta 2 {
+    d1 g2 g g2. f8 e d2. e4 f2 c d1 d c2. d4 e f g2 d f ef1 d2 g, a a1 g2 a\breve
+   }
+   \repeat volta 2 {
+    d1 d2 d d2. c4 bf2 c bf4 g g'2 a1 f bf,2. c4 d2 g f4 e d c bf a g1 f'2 g f1 e2 f\breve
+   }
+   \repeat volta 2 {
+    e1 e2 e d1 d2 g f2. e4 d2 c d\breve d2. c4 bf c d e f2 f g d f e d1 d\breve
+   }
+}
+
+yscMusicFourName = "Bassus"
+yscMusicFourClefOrig = \clef bass
+yscMusicFourClefModern = \clef bass
+yscMusicFour = \relative c' {
+
+   \repeat volta 2 {
+    g1 g2 c, g'1 g2 g f e d1 g, c c4 d e f g2 d ef %added flat to e to avoid sounding awful when played against e flat in tenor
+    d4 c bf c d e f2 d e1 d\breve
+   }
+   \repeat volta 2 {
+    d1 d2 d g1 g2 f g bf a1 d,2 d g1. e2 f f g2. f4 e2 d g a g1 f\breve
+   }
+   \repeat volta 2 {
+    c1 c2 c g'1 g2 g a2. g4 f2 e d\breve g1 g2 g f2. e8 d c2 g' f g d1 g,\breve
+   }
+}
+
+
+yscChordLine = \chordmode {
+
+}
+
+
+zscTempo = #(ly:make-moment 165 2)
+
+zscGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+zscTitle = "18 Pavane"
+zscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+zscMeter = ""
+zscPoet = ""
+zscCopyright = "Claude Gervaise"
+scCopyright = ""
+zscTagline = ""
+
+zscMusicOneName = "Superius"
+zscMusicOneClefOrig =  \clef soprano
+zscMusicOneClefModern = \clef treble
+zscMusicOne = \relative c'' {  
+   
+   \repeat volta 2 {
+    g\breve f1 g4 a bf g a1. g2 f f g4 a bf g a1. g2 f4 g a bf a g f e f\breve f1 r
+   }
+   \repeat volta 2 {
+    bf1 bf2 a4 g a2 d c a bf1 bf2 a4 g a2 d c a bf1 bf2 a4 g a1 g f\breve f1 r
+   }
+   \repeat volta 2 {
+    a1 c2. bf4 a1d2. c4 bf2 d c2. bf4 a1 d2. c4 bf2 d c2. bf4 a2 g1 f2 g\breve g1 g
+   }
+   
+}
+
+
+zscMusicTwoName = "Contratenor"
+zscMusicTwoClefOrig = \clef alto 
+zscMusicTwoClefModern = \clef treble 
+zscMusicTwo =  \relative c' {  
+   \repeat volta 2 {
+    d\breve d1 d4 c d e f1 f2 e d1 d4 c d e f1 f2 e d1 bf2 c d\breve d1 r
+   }
+   \repeat volta 2 {
+    d4 c d e f2 f f d r f d4 c d e f2 f f d r f d4 c d e f2 f f f, g1 a\breve a1 r
+   }
+   \repeat volta 2 {
+    f'1 f2 e4 d c2 f2. e4 d2 d g2. f4 e2 c f2. e4 d2 d g2. f4 e2 f4 e d c d1 bf2 d2. c4 bf a bf\breve
+   }
+}
+zscMusicThreeName = "Tenor"
+zscMusicThreeClefOrig = \clef alto 
+zscMusicThreeClefModern = \clef "G_8" 
+zscMusicThree = \relative c' {
+   \repeat volta 2 {
+    bf1 bf a bf4 g a bf c1. bf2 a1 bf4 g a bf c1. bf2 a a bf a4 g a\breve a1 r
+   }
+   \repeat volta 2 {
+    bf4 a bf c d2 d c bf c1 bf4 a bf c d2 d c bf c1 bf4 a bf c d2 bf a d d c d1 d d r
+   }
+   \repeat volta 2 {
+    c1. c2 f2. e4 d1 g2. f4 e2 g f2. e4 d2 d g2. f4 e d c1 bf2 a1 g2 bf2. a4 bf c d\breve
+   }
+}
+
+zscMusicFourName = "Bassus"
+zscMusicFourClefOrig = \clef bass
+zscMusicFourClefModern = \clef bass
+zscMusicFour = \relative c' {
+
+   \repeat volta 2 {
+    g\breve d1 g f1. g2 d1 g f1. g2 d f ef1 d\breve d1 r
+   }
+   \repeat volta 2 {
+    g1 d4 c d e f2 g a f g1 d4 c d e f2 g a f g1 d4 c d e f2 d ef1 d\breve d1 r
+   }
+   \repeat volta 2 {
+    f\breve f2 f bf2. a4 g2 g c, c f f bf2. a4 g2 g c, c f g d1 g,\breve g1 r
+   }
+}
+
+
+zscChordLine = \chordmode {
+
+}
+
+
+aascTempo = #(ly:make-moment 165 2)
+
+aascGlobal = {
+  \key f \major
+  \time 4/2
+}
+
+aascTitle = "19 Pavane"
+aascSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+aascMeter = ""
+aascPoet = ""
+aascCopyright = "Claude Gervaise"
+scCopyright = ""
+aascTagline = ""
+
+aascMusicOneName = "Superius"
+aascMusicOneClefOrig = \clef soprano
+aascMusicOneClefModern = \clef treble
+aascMusicOne = \relative c'' {  
    
    \repeat volta 2 {
      g1 g2 g2 | d'1 d2 d2 | c2. bf4 a2 bf2 | g\breve 
@@ -123,9 +2355,10 @@ bscMusicOne = \relative c'' {
 }
 
 
-bscMusicTwoClefOrig = \clef mezzosoprano 
-bscMusicTwoClefModern = \clef treble 
-bscMusicTwo =  \relative c'' {  
+aascMusicTwoName = "Contratenor"
+aascMusicTwoClefOrig = \clef mezzosoprano 
+aascMusicTwoClefModern = \clef treble 
+aascMusicTwo =  \relative c'' {  
    \repeat volta 2 {
       bf1 bf2 a4 g | a1 a2 a | a e2 f2 d2 | e\breve
       g1 a2 g2 | c,2 a'2 g2 e | f4 e d c d1 | bf\breve
@@ -138,9 +2371,10 @@ bscMusicTwo =  \relative c'' {
       a'1. g2 | f1 ef1 | d2 c2 d1 | bf\breve
    }
 }
-bscMusicThreeClefOrig = \clef alto 
-bscMusicThreeClefModern = \clef "G_8" 
-bscMusicThree = \relative c' {
+aascMusicThreeName = "Tenor"
+aascMusicThreeClefOrig = \clef alto 
+aascMusicThreeClefModern = \clef "G_8" 
+aascMusicThree = \relative c' {
    \repeat volta 2 {
       d1 d2 d | f1 f2 f | e c1 bf2 | c\breve
       d2. e4 f2 g | e f d c2~ | c2 bf2 a1 | g\breve
@@ -154,9 +2388,10 @@ bscMusicThree = \relative c' {
    }
 }
 
-bscMusicFourClefOrig = \clef varbaritone
-bscMusicFourClefModern = \clef bass
-bscMusicFour = \relative c' {
+aascMusicFourName = "Bassus"
+aascMusicFourClefOrig = \clef varbaritone
+aascMusicFourClefModern = \clef bass
+aascMusicFour = \relative c' {
 
    \repeat volta 2 {
       g1 g2 f4 e | d2. e4 f2 g | a2. g4 f2 g2 | c,\breve
@@ -172,31 +2407,32 @@ bscMusicFour = \relative c' {
 }
 
 
-bscChordLine = \chordmode {
+aascChordLine = \chordmode {
 
 }
 
 
 %added half rest at end of bottom 3 parts.
 %tiny modification for fun.
-cscTempo = #(ly:make-moment 165 2)
+abscTempo = #(ly:make-moment 165 2)
 
-cscGlobal= {
+abscGlobal= {
   \key c \major
   \time 3/2
 }
 
-cscTitle = "20 Galliarde"
-cscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-cscMeter = ""
-cscPoet = ""
-cscCopyright = "Claude Gervaise"
+abscTitle = "20 Galliarde"
+abscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+abscMeter = ""
+abscPoet = ""
+abscCopyright = "Claude Gervaise"
 scCopyright = ""
-cscTagline = ""
+abscTagline = ""
 
-cscMusicOneClefOrig = \clef soprano
-cscMusicOneClefModern = \clef treble
-cscMusicOne = \relative c'' {  
+abscMusicOneName = "Superius"
+abscMusicOneClefOrig = \clef soprano
+abscMusicOneClefModern = \clef treble
+abscMusicOne = \relative c'' {  
       \repeat volta 2 {
       b2 b b | b2. a4 g2 | c2 c b | c1 c2 | f,4 g a2 a | a1 a2~ | a2 g2 g | 
          f1 f2
@@ -210,9 +2446,10 @@ cscMusicOne = \relative c'' {
 }
 
 
-cscMusicTwoClefOrig = \clef alto
-cscMusicTwoClefModern = \clef treble
-cscMusicTwo =  \relative c'' {  
+abscMusicTwoName = "Contratenor"
+abscMusicTwoClefOrig = \clef alto
+abscMusicTwoClefModern = \clef treble
+abscMusicTwo =  \relative c'' {  
    \repeat volta 2 {
       g2 g g | d1 g2 | g g g | e1 e2 | c2 f2 f | e1 f2~ | f2 d2 d | d1 d2
    }
@@ -222,9 +2459,10 @@ cscMusicTwo =  \relative c'' {
          a2 a a | f2. f4 a2 | d,2 e1 | f2 g e2~ | e2 d1 | b r2
    }
 }
-cscMusicThreeClefOrig = \clef tenor
-cscMusicThreeClefModern = \clef "G_8"
-cscMusicThree = \relative c' {
+abscMusicThreeName = "Tenor"
+abscMusicThreeClefOrig = \clef tenor
+abscMusicThreeClefModern = \clef "G_8"
+abscMusicThree = \relative c' {
    \repeat volta 2 {
       d2 d d | b2. c4 d2 | e d d | c1 c2 | a4 b c2 d | c1 c2~ | c2 b2 b | a1 a2
    }
@@ -235,9 +2473,10 @@ cscMusicThree = \relative c' {
    }
 }
 
-cscMusicFourClefOrig = \clef bass
-cscMusicFourClefModern = \clef bass
-cscMusicFour = \relative c' {
+abscMusicFourName = "Bassus"
+abscMusicFourClefOrig = \clef bass
+abscMusicFourClefModern = \clef bass
+abscMusicFour = \relative c' {
    \repeat volta 2 {
       g2 g g | g1 g2 | c,2 g'2 g | c,1 c2 | f f d | a'2. g4 f2 | f g1 | d1 d2
    }
@@ -249,29 +2488,30 @@ cscMusicFour = \relative c' {
 }
 
 
-cscChordLine = \chordmode {
+abscChordLine = \chordmode {
 
 }
 
 
-dscTempo = #(ly:make-moment 165 2)
+acscTempo = #(ly:make-moment 165 2)
 
-dscGlobal= {
+acscGlobal= {
   \key f \major
   \time 3/2
 }
 
-dscTitle = "21 Galliarde"
-dscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-dscMeter = ""
-dscPoet = ""
-dscCopyright = "Claude Gervaise"
+acscTitle = "21 Galliarde"
+acscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+acscMeter = ""
+acscPoet = ""
+acscCopyright = "Claude Gervaise"
 scCopyright = ""
-dscTagline = ""
+acscTagline = ""
 
-dscMusicOneClefOrig = \clef treble
-dscMusicOneClefModern = \clef treble
-dscMusicOne = \relative c'' {  
+acscMusicOneName = "Superius"
+acscMusicOneClefOrig = \clef treble
+acscMusicOneClefModern = \clef treble
+acscMusicOne = \relative c'' {  
    \repeat volta 2 {
       d2 d c | bf1 d2 | d1 c2 | bf4 c d e d c | c1 bf2 | c1 c2 
    }
@@ -286,9 +2526,10 @@ dscMusicOne = \relative c'' {
 }
 
 
-dscMusicTwoClefOrig = \clef alto
-dscMusicTwoClefModern = \clef treble
-dscMusicTwo =  \relative c'' {  
+acscMusicTwoName = "Contratenor"
+acscMusicTwoClefOrig = \clef alto
+acscMusicTwoClefModern = \clef treble
+acscMusicTwo =  \relative c'' {  
    \repeat volta 2 {
       g2 f e | d1 d2 | d1 e4 f | g2 bf2. a4 | g4 f g1 | e e2
    }
@@ -300,9 +2541,10 @@ dscMusicTwo =  \relative c'' {
       c2 f f | e2. f4 g2 | c,2 d1 | g2 c,2 d2~ | d2 c1 | a1 a2
    }
 }
-dscMusicThreeClefOrig = \clef tenor
-dscMusicThreeClefModern = \clef "G_8"
-dscMusicThree = \relative c' {
+acscMusicThreeName = "Tenor"
+acscMusicThreeClefOrig = \clef tenor
+acscMusicThreeClefModern = \clef "G_8"
+acscMusicThree = \relative c' {
    \repeat volta 2 {
       g2 bf2 c | g1 g'2 | f1 e2 | d2 g2 f | e d1 | c1 c2
    }
@@ -315,9 +2557,10 @@ dscMusicThree = \relative c' {
    }
 }
 
-dscMusicFourClefOrig = \clef bass
-dscMusicFourClefModern = \clef bass
-dscMusicFour = \relative c {
+acscMusicFourName = "Bassus"
+acscMusicFourClefOrig = \clef bass
+acscMusicFourClefModern = \clef bass
+acscMusicFour = \relative c {
    \repeat volta 2 {
       r1. | r2 r2  g2 | bf1 c2 | g2. a4 bf2 | c g1 | c1 c2
    }
@@ -331,31 +2574,32 @@ dscMusicFour = \relative c {
 }
 
 
-dscChordLine = \chordmode {
+acscChordLine = \chordmode {
 
 }
 
 
 %removed beginning half note rest. B part definitely right. not sure about A and C in terms of stresses in the right place. 
 
-escTempo = #(ly:make-moment 165 2)
+adscTempo = #(ly:make-moment 165 2)
 
-escGlobal= {
+adscGlobal= {
   \key f \major
   \time 3/2
 }
 
-escTitle = "22 Galliarde"
-escSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-escMeter = ""
-escPoet = ""
-escCopyright = "Claude Gervaise"
+adscTitle = "22 Galliarde"
+adscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+adscMeter = ""
+adscPoet = ""
+adscCopyright = "Claude Gervaise"
 scCopyright = ""
-escTagline = ""
+adscTagline = ""
 
-escMusicOneClefOrig = \clef treble
-escMusicOneClefModern = \clef treble
-escMusicOne = \relative c' {  
+adscMusicOneName = "Superius"
+adscMusicOneClefOrig = \clef treble
+adscMusicOneClefModern = \clef treble
+adscMusicOne = \relative c' {  
    \repeat volta 2 {
       f4 g a2 a4 bf c2 d4 e f2 e2. d4 c bf a2 g1 f1 g2 f1 f2
    }
@@ -370,9 +2614,10 @@ escMusicOne = \relative c' {
 }
 
 
-escMusicTwoClefOrig = \clef alto
-escMusicTwoClefModern = \clef treble
-escMusicTwo =  \relative c' {  
+adscMusicTwoName = "Contratenor"
+adscMusicTwoClefOrig = \clef alto
+adscMusicTwoClefModern = \clef treble
+adscMusicTwo =  \relative c' {  
    \repeat volta 2 {
       c2 f f e d1 g1 e2 c ef2. d4 c bf c1 a1 a2
    }
@@ -384,9 +2629,10 @@ escMusicTwo =  \relative c' {
       f'2 f4 f d2 d e1 ef2 e4 e c2 d g,2 c2 g2 g4 g g2 g2 r2 a2 d c c4 bf a g a1
    }
 }
-escMusicThreeClefOrig = \clef tenor
-escMusicThreeClefModern = \clef "G_8"
-escMusicThree = \relative c' {
+adscMusicThreeName = "Tenor"
+adscMusicThreeClefOrig = \clef tenor
+adscMusicThreeClefModern = \clef "G_8"
+adscMusicThree = \relative c' {
    \repeat volta 2 {
       a2 a f2 g4 a bf1 g2 c1 f,2 bf2. a4 g f g1 f f2  
    }
@@ -399,9 +2645,10 @@ escMusicThree = \relative c' {
    }
 }
 
-escMusicFourClefOrig = \clef bass
-escMusicFourClefModern = \clef bass
-escMusicFour = \relative c {
+adscMusicFourName = "Bassus"
+adscMusicFourClefOrig = \clef bass
+adscMusicFourClefModern = \clef bass
+adscMusicFour = \relative c {
    \repeat volta 2 {
       f2 f d c bf1 c1 c2 f2 ef1 f2 c1 f,1 f2
    }
@@ -415,7 +2662,7 @@ escMusicFour = \relative c {
 }
 
 
-escChordLine = \chordmode {
+adscChordLine = \chordmode {
 
 }
 
@@ -425,24 +2672,25 @@ escChordLine = \chordmode {
 %added rest to superious, tenor and bass parts at end of B.
 %contratenor whole note in 23 may want to be a half note. Left it as whole for now. 
 
-fscTempo = #(ly:make-moment 165 2)
+aescTempo = #(ly:make-moment 165 2)
 
-fscGlobal= {
+aescGlobal= {
   \key d \minor %Actually more like C dorian or something. I want one flat tho.
   \time 3/2
 }
 
-fscTitle = "23 Galliarde"
-fscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-fscMeter = ""
-fscPoet = ""
-fscCopyright = "Claude Gervaise"
+aescTitle = "23 Galliarde"
+aescSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+aescMeter = ""
+aescPoet = ""
+aescCopyright = "Claude Gervaise"
 scCopyright = ""
-fscTagline = ""
+aescTagline = ""
 
-fscMusicOneClefOrig = \clef soprano
-fscMusicOneClefModern = \clef treble
-fscMusicOne = \relative c'' {  
+aescMusicOneName = "Superius"
+aescMusicOneClefOrig = \clef soprano
+aescMusicOneClefModern = \clef treble
+aescMusicOne = \relative c'' {  
    \repeat volta 2 {
       \partial 2 a4 bf4 c1. c2. a4 bf c d1. d2 ef2 d c1 c2 c1 bf4 a 
          bf1 bf2 bf1 a4 bf c1. c2 c4 a bf c d1. d2
@@ -455,9 +2703,10 @@ fscMusicOne = \relative c'' {
 }
 
 
-fscMusicTwoClefOrig = \clef mezzosoprano
-fscMusicTwoClefModern = \clef treble
-fscMusicTwo =  \relative c' {  
+aescMusicTwoName = "Contratenor"
+aescMusicTwoClefOrig = \clef mezzosoprano
+aescMusicTwoClefModern = \clef treble
+aescMusicTwo =  \relative c' {  
    \repeat volta 2 {
       \partial 2 f2 ef1. e2 e e d1 d2 d g2 f e1. e2 e c d1 d2 d1 c2 g'1. g2 g a bf1 bf2
       bf2 bf bf g1 g2 g1 g2 e1 e2 c1 r2
@@ -466,9 +2715,10 @@ fscMusicTwo =  \relative c' {
       c'1 bf2 bf1 bf g2 g g1. g2 g1 bf2 bf1 g2 a g1 e1 e2 e1
    }
 }
-fscMusicThreeClefOrig = \clef alto 
-fscMusicThreeClefModern = \clef "G_8"
-fscMusicThree = \relative c {
+aescMusicThreeName = "Tenor"
+aescMusicThreeClefOrig = \clef alto 
+aescMusicThreeClefModern = \clef "G_8"
+aescMusicThree = \relative c {
    \repeat volta 2 {
       \partial 2 f2 g1. g2 g g bf1 bf2 bf bf bf g1. g2 g g g1 g2 g1 d'2 
          ef1. e2 e1 f f2 f g f
@@ -479,9 +2729,10 @@ fscMusicThree = \relative c {
    }
 }
 
-fscMusicFourClefOrig = \clef bass
-fscMusicFourClefModern = \clef bass
-fscMusicFour = \relative c {
+aescMusicFourName = "Bassus"
+aescMusicFourClefOrig = \clef bass
+aescMusicFourClefModern = \clef bass
+aescMusicFour = \relative c {
    \repeat volta 2 {
       \partial 2 d2 c1. c2 c c bf1 bf2 bf ef bf c1. c2 c c g1 g2 g1 g2 c1. c2 c1 bf1 bf2
       bf2 ef2 bf c1 c2 g1 g2 c1 c2 c1 r2
@@ -492,29 +2743,30 @@ fscMusicFour = \relative c {
 }
 
 
-fscChordLine = \chordmode {
+aescChordLine = \chordmode {
 
 }
 
 
-gscTempo = #(ly:make-moment 165 2)
+afscTempo = #(ly:make-moment 165 2)
 
-gscGlobal= {
+afscGlobal= {
   \key g \mixolydian
   \time 3/2
 }
 
-gscTitle = "24 Galliarde"
-gscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-gscMeter = ""
-gscPoet = ""
-gscCopyright = "Claude Gervaise"
+afscTitle = "24 Galliarde"
+afscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+afscMeter = ""
+afscPoet = ""
+afscCopyright = "Claude Gervaise"
 scCopyright = ""
-gscTagline = ""
+afscTagline = ""
 
-gscMusicOneClefOrig = \clef treble
-gscMusicOneClefModern = \clef treble
-gscMusicOne = \relative c'' {  
+afscMusicOneName = "Superius"
+afscMusicOneClefOrig = \clef treble
+afscMusicOneClefModern = \clef treble
+afscMusicOne = \relative c'' {  
    \repeat volta 2 {
       g4 a b2 c b a b c1 b2 a1 a2   
    }
@@ -526,9 +2778,10 @@ gscMusicOne = \relative c'' {
    }
 }
 
-gscMusicTwoClefOrig = \clef alto
-gscMusicTwoClefModern = \clef treble
-gscMusicTwo =  \relative c' {  
+afscMusicTwoName = "Contratenor"
+afscMusicTwoClefOrig = \clef alto
+afscMusicTwoClefModern = \clef treble
+afscMusicTwo =  \relative c' {  
    \repeat volta 2 {
       d2 g g g f g a1 g2 f1 f2
    }
@@ -539,9 +2792,10 @@ gscMusicTwo =  \relative c' {
       r2 d2 g g g1 f4 e d c d1 b1
    }
 }
-gscMusicThreeClefOrig = \clef tenor
-gscMusicThreeClefModern = \clef "G_8"
-gscMusicThree = \relative c' {
+afscMusicThreeName = "Tenor"
+afscMusicThreeClefOrig = \clef tenor
+afscMusicThreeClefModern = \clef "G_8"
+afscMusicThree = \relative c' {
    \repeat volta 2 {
       b4 c d2 e d d d f1 d2 d1 d2
    }
@@ -553,9 +2807,10 @@ gscMusicThree = \relative c' {
    }
 }
 
-gscMusicFourClefOrig = \clef bass
-gscMusicFourClefModern = \clef bass
-gscMusicFour = \relative c' {
+afscMusicFourName = "Bassus"
+afscMusicFourClefOrig = \clef bass
+afscMusicFourClefModern = \clef bass
+afscMusicFour = \relative c' {
    \repeat volta 2 {
       g2 g c,2 g'2 d2 g f1 g2 d1 d2
    }
@@ -568,31 +2823,32 @@ gscMusicFour = \relative c' {
 }
 
 
-gscChordLine = \chordmode {
+afscChordLine = \chordmode {
 
 }
 
 
 %removed half rest at beginning of Superious, contratenor and bassus. Added a half rest before the signum
 
-hscTempo = #(ly:make-moment 165 2)
+agscTempo = #(ly:make-moment 165 2)
 
-hscGlobal= {
+agscGlobal= {
   \key g \dorian
   \time 3/2
 }
 
-hscTitle = "25 Galliarde"
-hscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-hscMeter = ""
-hscPoet = ""
-hscCopyright = "Claude Gervaise"
+agscTitle = "25 Galliarde"
+agscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+agscMeter = ""
+agscPoet = ""
+agscCopyright = "Claude Gervaise"
 scCopyright = ""
-hscTagline = ""
+agscTagline = ""
 
-hscMusicOneClefOrig = \clef treble
-hscMusicOneClefModern = \clef treble
-hscMusicOne = \relative c'' {  
+agscMusicOneName = "Superius"
+agscMusicOneClefOrig = \clef treble
+agscMusicOneClefModern = \clef treble
+agscMusicOne = \relative c'' {  
    \repeat volta 2 {
       d2 d g f2. f4 e2 d c bf a2. d4 c2 bf2 a2. g4 f2. e4 d1 d d d2 
    }
@@ -605,9 +2861,10 @@ hscMusicOne = \relative c'' {
 }
 
 
-hscMusicTwoClefOrig = \clef alto
-hscMusicTwoClefModern = \clef treble 
-hscMusicTwo =  \relative c' {  
+agscMusicTwoName = "Contratenor"
+agscMusicTwoClefOrig = \clef alto
+agscMusicTwoClefModern = \clef treble 
+agscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
       bf2 bf g2 a2. a'4 a2 f2 a g f2. f4 f2 f f d d2. c4 bf1 a bf bf2
@@ -618,9 +2875,10 @@ hscMusicTwo =  \relative c' {
          g1 e2 f f d d f e c d1 bf1
    }
 }
-hscMusicThreeClefOrig = \clef tenor
-hscMusicThreeClefModern = \clef "G_8" 
-hscMusicThree = \relative c' {
+agscMusicThreeName = "Tenor"
+agscMusicThreeClefOrig = \clef tenor
+agscMusicThreeClefModern = \clef "G_8" 
+agscMusicThree = \relative c' {
 
    \repeat volta 2 {
       g2 bf2 c2 d2. d4 c2 d f2 d2 d2. d4 a2 d2 c bf a2. g4 f2 g1 f2 g1 g2
@@ -632,9 +2890,10 @@ hscMusicThree = \relative c' {
    }
 }
 
-hscMusicFourClefOrig = \clef bass
-hscMusicFourClefModern = \clef bass
-hscMusicFour = \relative c' {
+agscMusicFourName = "Bassus"
+agscMusicFourClefOrig = \clef bass
+agscMusicFourClefModern = \clef bass
+agscMusicFour = \relative c' {
    \repeat volta 2 {
       g2 g e d2. d4 a'2 bf f g d2. d4 f2 bf,2 f'2 g d a bf g d'1 g, g2
    }
@@ -648,7 +2907,7 @@ hscMusicFour = \relative c' {
 }
 
 
-hscChordLine = \chordmode {
+agscChordLine = \chordmode {
 
 }
 
@@ -656,24 +2915,25 @@ hscChordLine = \chordmode {
 %Took out beginning two half rests added half measure to the end of each line
 % Made b in contraTenor measure 10 flat
 
-iscTempo = #(ly:make-moment 165 2)
+ahscTempo = #(ly:make-moment 165 2)
 
-iscGlobal= {
+ahscGlobal= {
   \key g \dorian
   \time 3/2
 }
 
-iscTitle = "26 Galliarde"
-iscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-iscMeter = ""
-iscPoet = ""
-iscCopyright = "Claude Gervaise"
+ahscTitle = "26 Galliarde"
+ahscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+ahscMeter = ""
+ahscPoet = ""
+ahscCopyright = "Claude Gervaise"
 scCopyright = ""
-iscTagline = ""
+ahscTagline = ""
 
-iscMusicOneClefOrig = \clef treble
-iscMusicOneClefModern = \clef treble
-iscMusicOne = \relative c'' {  
+ahscMusicOneName = "Superius"
+ahscMusicOneClefOrig = \clef treble
+ahscMusicOneClefModern = \clef treble
+ahscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       g4 a bf2 c d1 bf2 d4 e f2 g2 f2. e4 d2 bf4 c d2 d c2. bf4 a2 g1 f2 g1 r2
@@ -685,9 +2945,10 @@ iscMusicOne = \relative c'' {
 }
 
 
-iscMusicTwoClefOrig = \clef alto
-iscMusicTwoClefModern = \clef treble 
-iscMusicTwo =  \relative c' {  
+ahscMusicTwoName = "Contratenor"
+ahscMusicTwoClefOrig = \clef alto
+ahscMusicTwoClefModern = \clef treble 
+ahscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
       d2 g e d1. d2 d c d1 d2 g f4 e f g a2 f2. e4 d c d2 d b1 r2
@@ -696,9 +2957,10 @@ iscMusicTwo =  \relative c' {
       d2 d  bf f'1 f2 f f f d1 d2 f2 f f f1 f4 e d c d2 d b1 r2
    }
 }
-iscMusicThreeClefOrig = \clef alto
-iscMusicThreeClefModern = \clef "G_8" 
-iscMusicThree = \relative c' {
+ahscMusicThreeName = "Tenor"
+ahscMusicThreeClefOrig = \clef alto
+ahscMusicThreeClefModern = \clef "G_8" 
+ahscMusicThree = \relative c' {
 
    \repeat volta 2 {
       bf4 c d2 c bf1. bf2 a g a1 a2 g2 bf2 bf a4 bf c d c bf a g a2 a g1 r2
@@ -708,9 +2970,10 @@ iscMusicThree = \relative c' {
    }
 }
 
-iscMusicFourClefOrig = \clef bass
-iscMusicFourClefModern = \clef bass
-iscMusicFour = \relative c' {
+ahscMusicFourName = "Bassus"
+ahscMusicFourClefOrig = \clef bass
+ahscMusicFourClefModern = \clef bass
+ahscMusicFour = \relative c' {
 
    \repeat volta 2 {
       g2 g c, g'1. g2 f e d1 d2 ef bf2 bf f'1. g2 d2 d g,1 r2
@@ -721,29 +2984,30 @@ iscMusicFour = \relative c' {
 }
 
 
-iscChordLine = \chordmode {
+ahscChordLine = \chordmode {
 
 }
 
 
-jscTempo = #(ly:make-moment 165 2)
+aiscTempo = #(ly:make-moment 165 2)
 
-jscGlobal= {
+aiscGlobal= {
   \key f \major
   \time 3/2
 }
 
-jscTitle = "27 Galliarde"
-jscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-jscMeter = ""
-jscPoet = ""
-jscCopyright = "Claude Gervaise"
+aiscTitle = "27 Galliarde"
+aiscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+aiscMeter = ""
+aiscPoet = ""
+aiscCopyright = "Claude Gervaise"
 scCopyright = ""
-jscTagline = ""
+aiscTagline = ""
 
-jscMusicOneClefOrig = \clef treble
-jscMusicOneClefModern = \clef treble
-jscMusicOne = \relative c'' {  
+aiscMusicOneName = "Superius"
+aiscMusicOneClefOrig = \clef treble
+aiscMusicOneClefModern = \clef treble
+aiscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       r2 d2 d c bf2. a4 g2 a g2. f4 e1. a2 bf g a g2. f4 f1 e2 f1
@@ -758,9 +3022,10 @@ jscMusicOne = \relative c'' {
 }
 
 
-jscMusicTwoClefOrig = \clef alto
-jscMusicTwoClefModern = \clef treble 
-jscMusicTwo =  \relative c' {  
+aiscMusicTwoName = "Contratenor"
+aiscMusicTwoClefOrig = \clef alto
+aiscMusicTwoClefModern = \clef treble 
+aiscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
       r2 f2 f f bf,2. c4 d e f2 e d c1. a2 d2 e f d c bf c1 a1
@@ -772,9 +3037,10 @@ jscMusicTwo =  \relative c' {
       r2 d2 d d f e2. d4 c bf c1 a
    }
 }
-jscMusicThreeClefOrig = \clef tenor
-jscMusicThreeClefModern = \clef "G_8" 
-jscMusicThree = \relative c' {
+aiscMusicThreeName = "Tenor"
+aiscMusicThreeClefOrig = \clef tenor
+aiscMusicThreeClefModern = \clef "G_8" 
+aiscMusicThree = \relative c' {
 
    \repeat volta 2 {
       r2 bf2 bf a d2. c4 bf2 c2 c bf c1. c2 bf c a2 bf a g4 f g1 f1
@@ -787,9 +3053,10 @@ jscMusicThree = \relative c' {
    }
 }
 
-jscMusicFourClefOrig = \clef bass
-jscMusicFourClefModern = \clef bass
-jscMusicFour = \relative c {
+aiscMusicFourName = "Bassus"
+aiscMusicFourClefOrig = \clef bass
+aiscMusicFourClefModern = \clef bass
+aiscMusicFour = \relative c {
 
    \repeat volta 2 {
       r2 bf bf f' g1 g2 f g2 g2 c,1. f2 g c,2 f bf,2 c d c1 f1
@@ -803,29 +3070,30 @@ jscMusicFour = \relative c {
 }
 
 
-jscChordLine = \chordmode {
+aiscChordLine = \chordmode {
 
 }
 
 
-kscTempo = #(ly:make-moment 165 2)
+ajscTempo = #(ly:make-moment 165 2)
 
-kscGlobal= {
+ajscGlobal= {
   \key g \dorian
   \time 3/2
 }
 
-kscTitle = "28 Galliarde"
-kscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-kscMeter = ""
-kscPoet = ""
-kscCopyright = "Claude Gervaise"
+ajscTitle = "28 Galliarde"
+ajscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+ajscMeter = ""
+ajscPoet = ""
+ajscCopyright = "Claude Gervaise"
 scCopyright = ""
-kscTagline = ""
+ajscTagline = ""
 
-kscMusicOneClefOrig = \clef soprano
-kscMusicOneClefModern = \clef treble
-kscMusicOne = \relative c'' {  
+ajscMusicOneName = "Superius"
+ajscMusicOneClefOrig = \clef soprano
+ajscMusicOneClefModern = \clef treble
+ajscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       r2 r2 g4^\signumcongruentiae a bf1 bf2 bf c2 c d1 d2 d1 ef2 d1 c2 bf1 a2 bf1 bf2 bf1
@@ -838,9 +3106,10 @@ kscMusicOne = \relative c'' {
 }
 
 
-kscMusicTwoClefOrig = \clef alto
-kscMusicTwoClefModern = \clef treble 
-kscMusicTwo =  \relative c' {  
+ajscMusicTwoName = "Contratenor"
+ajscMusicTwoClefOrig = \clef alto
+ajscMusicTwoClefModern = \clef treble 
+ajscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
       r2 r2 d2 d1. d2 f2 f f1 f2 f1 g2 f1 f2 d2 f1 d1 d2 d1
@@ -852,9 +3121,10 @@ kscMusicTwo =  \relative c' {
    \repeat volta 2 {
    }
 }
-kscMusicThreeClefOrig = \clef alto
-kscMusicThreeClefModern = \clef "G_8" 
-kscMusicThree = \relative c' {
+ajscMusicThreeName = "Tenor"
+ajscMusicThreeClefOrig = \clef alto
+ajscMusicThreeClefModern = \clef "G_8" 
+ajscMusicThree = \relative c' {
 
    \repeat volta 2 {
       r2 r2 bf2 bf1. bf2 a2 a bf1 bf2 bf1 g4 a bf1 a2 bf2 c1 bf1 bf2 bf1
@@ -867,9 +3137,10 @@ kscMusicThree = \relative c' {
    }
 }
 
-kscMusicFourClefOrig = \clef bass
-kscMusicFourClefModern = \clef bass
-kscMusicFour = \relative c' {
+ajscMusicFourName = "Bassus"
+ajscMusicFourClefOrig = \clef bass
+ajscMusicFourClefModern = \clef bass
+ajscMusicFour = \relative c' {
 
    \repeat volta 2 {
       r2 r2 g2^\signumcongruentiae g1. g2 f2 f bf,1 bf2 bf1 ef2 bf1 f'2 g f1 bf,1 bf2 bf1
@@ -881,29 +3152,30 @@ kscMusicFour = \relative c' {
 }
 
 
-kscChordLine = \chordmode {
+ajscChordLine = \chordmode {
 
 }
 
 
-lscTempo = #(ly:make-moment 165 2)
+akscTempo = #(ly:make-moment 165 2)
 
-lscGlobal= {
+akscGlobal= {
   \key d \minor
   \time 3/2
 }
 
-lscTitle = "29 Galliarde"
-lscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-lscMeter = ""
-lscPoet = ""
-lscCopyright = "Claude Gervaise"
+akscTitle = "29 Galliarde"
+akscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+akscMeter = ""
+akscPoet = ""
+akscCopyright = "Claude Gervaise"
 scCopyright = ""
-lscTagline = ""
+akscTagline = ""
 
-lscMusicOneClefOrig = \clef soprano
-lscMusicOneClefModern = \clef treble
-lscMusicOne = \relative c' {  
+akscMusicOneName = "Superius"
+akscMusicOneClefOrig = \clef soprano
+akscMusicOneClefModern = \clef treble
+akscMusicOne = \relative c' {  
    
    \repeat volta 2 {
       e2 e e f1 f2 g1 g2 a1 a2  
@@ -915,9 +3187,10 @@ lscMusicOne = \relative c' {
 }
 
 
-lscMusicTwoClefOrig = \clef alto
-lscMusicTwoClefModern = \clef treble 
-lscMusicTwo =  \relative c' {  
+akscMusicTwoName = "Contratenor"
+akscMusicTwoClefOrig = \clef alto
+akscMusicTwoClefModern = \clef treble 
+akscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
       c2 c c c1 f2 e2. d4 e2 f1 f2
@@ -926,9 +3199,10 @@ lscMusicTwo =  \relative c' {
       f2 f e d4 e f d e d d1 c2 d1 d2 c f e d4 e f d e d d1 c2 d1 d2
    }
 }
-lscMusicThreeClefOrig = \clef tenor
-lscMusicThreeClefModern = \clef "G_8" 
-lscMusicThree = \relative c' {
+akscMusicThreeName = "Tenor"
+akscMusicThreeClefOrig = \clef tenor
+akscMusicThreeClefModern = \clef "G_8" 
+akscMusicThree = \relative c' {
 
    \repeat volta 2 {
       g2 g g a1 a2 c1 c2 a1 f2
@@ -938,9 +3212,10 @@ lscMusicThree = \relative c' {
    }
 }
 
-lscMusicFourClefOrig = \clef bass
-lscMusicFourClefModern = \clef bass
-lscMusicFour = \relative c {
+akscMusicFourName = "Bassus"
+akscMusicFourClefOrig = \clef bass
+akscMusicFourClefModern = \clef bass
+akscMusicFour = \relative c {
 
    \repeat volta 2 {
       c2 c c f1 f2 c1 c2 f,1 f2
@@ -951,29 +3226,30 @@ lscMusicFour = \relative c {
 }
 
 
-lscChordLine = \chordmode {
+akscChordLine = \chordmode {
 
 }
 
 
-mscTempo = #(ly:make-moment 165 2)
+alscTempo = #(ly:make-moment 165 2)
 
-mscGlobal= {
+alscGlobal= {
   \key d \minor
   \time 3/2
 }
 
-mscTitle = "30 Galliarde"
-mscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-mscMeter = ""
-mscPoet = ""
-mscCopyright = "Claude Gervaise"
+alscTitle = "30 Galliarde"
+alscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+alscMeter = ""
+alscPoet = ""
+alscCopyright = "Claude Gervaise"
 scCopyright = ""
-mscTagline = ""
+alscTagline = ""
 
-mscMusicOneClefOrig = \clef soprano
-mscMusicOneClefModern = \clef treble
-mscMusicOne = \relative c' {  
+alscMusicOneName = "Superius"
+alscMusicOneClefOrig = \clef soprano
+alscMusicOneClefModern = \clef treble
+alscMusicOne = \relative c' {  
    
    \repeat volta 2 {
       e2 f g1 g2 f1 f2 e1 e2 r2 %last rest to make it fit
@@ -987,9 +3263,10 @@ mscMusicOne = \relative c' {
 }
 
 
-mscMusicTwoClefOrig = \clef alto
-mscMusicTwoClefModern = \clef treble 
-mscMusicTwo =  \relative c' {  
+alscMusicTwoName = "Contratenor"
+alscMusicTwoClefOrig = \clef alto
+alscMusicTwoClefModern = \clef treble 
+alscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
       c2 d e1 c2 d1 bf2 c1 c2 r2
@@ -1000,9 +3277,10 @@ mscMusicTwo =  \relative c' {
    \repeat volta 2 {
    }
 }
-mscMusicThreeClefOrig = \clef tenor
-mscMusicThreeClefModern = \clef "G_8" 
-mscMusicThree = \relative c' {
+alscMusicThreeName = "Tenor"
+alscMusicThreeClefOrig = \clef tenor
+alscMusicThreeClefModern = \clef "G_8" 
+alscMusicThree = \relative c' {
 
    \repeat volta 2 {
       g2 a c1 g2 a1 f2 g1 g2 r2 %last rest to make it fit
@@ -1014,9 +3292,10 @@ mscMusicThree = \relative c' {
    }
 }
 
-mscMusicFourClefOrig = \clef bass
-mscMusicFourClefModern = \clef bass
-mscMusicFour = \relative c {
+alscMusicFourName = "Bassus"
+alscMusicFourClefOrig = \clef bass
+alscMusicFourClefModern = \clef bass
+alscMusicFour = \relative c {
 
    \repeat volta 2 {
       c2 f c1 e2 d1 d2 c1 c2 r2 %last rest to make it fit
@@ -1029,29 +3308,30 @@ mscMusicFour = \relative c {
 }
 
 
-mscChordLine = \chordmode {
+alscChordLine = \chordmode {
 
 }
 
 
-nscTempo = #(ly:make-moment 165 2)
+amscTempo = #(ly:make-moment 165 2)
 
-nscGlobal= {
+amscGlobal= {
   \key g \dorian
   \time 3/2
 }
 
-nscTitle = "31 Galliarde"
-nscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-nscMeter = ""
-nscPoet = ""
-nscCopyright = "Claude Gervaise"
+amscTitle = "31 Galliarde"
+amscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+amscMeter = ""
+amscPoet = ""
+amscCopyright = "Claude Gervaise"
 scCopyright = ""
-nscTagline = ""
+amscTagline = ""
 
-nscMusicOneClefOrig = \clef soprano
-nscMusicOneClefModern = \clef treble
-nscMusicOne = \relative c' {  
+amscMusicOneName = "Superius"
+amscMusicOneClefOrig = \clef soprano
+amscMusicOneClefModern = \clef treble
+amscMusicOne = \relative c' {  
    
    \repeat volta 2 {
       e2 e d e2. f4 g2 a g4 f e d e1 e2
@@ -1063,9 +3343,10 @@ nscMusicOne = \relative c' {
 }
 
 
-nscMusicTwoClefOrig = \clef alto
-nscMusicTwoClefModern = \clef treble 
-nscMusicTwo =  \relative c'' {  
+amscMusicTwoName = "Contratenor"
+amscMusicTwoClefOrig = \clef alto
+amscMusicTwoClefModern = \clef treble 
+amscMusicTwo =  \relative c'' {  
 
    \repeat volta 2 {
       g2 g f2 g4 f e d e2 f2 d1 c1 c2
@@ -1076,9 +3357,10 @@ nscMusicTwo =  \relative c'' {
    \repeat volta 2 {
    }
 }
-nscMusicThreeClefOrig = \clef tenor
-nscMusicThreeClefModern = \clef "G_8" 
-nscMusicThree = \relative c' {
+amscMusicThreeName = "Tenor"
+amscMusicThreeClefOrig = \clef tenor
+amscMusicThreeClefModern = \clef "G_8" 
+amscMusicThree = \relative c' {
 
    \repeat volta 2 {
       c2 c a c2. b8 a g2 c2 b4 a g f g1 g2 
@@ -1088,9 +3370,10 @@ nscMusicThree = \relative c' {
    }
 }
 
-nscMusicFourClefOrig = \clef bass
-nscMusicFourClefModern = \clef bass
-nscMusicFour = \relative c {
+amscMusicFourName = "Bassus"
+amscMusicFourClefOrig = \clef bass
+amscMusicFourClefModern = \clef bass
+amscMusicFour = \relative c {
 
    \repeat volta 2 {
       c2 c d c1. f,2 g g c1 r2
@@ -1101,29 +3384,30 @@ nscMusicFour = \relative c {
 }
 
 
-nscChordLine = \chordmode {
+amscChordLine = \chordmode {
 
 }
 
 
-oscTempo = #(ly:make-moment 165 2)
+anscTempo = #(ly:make-moment 165 2)
 
-oscGlobal= {
+anscGlobal= {
   \key f \major
   \time 3/2
 }
 
-oscTitle = "32 Galliarde"
-oscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-oscMeter = ""
-oscPoet = ""
-oscCopyright = "Claude Gervaise"
+anscTitle = "32 Galliarde"
+anscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+anscMeter = ""
+anscPoet = ""
+anscCopyright = "Claude Gervaise"
 scCopyright = ""
-oscTagline = ""
+anscTagline = ""
 
-oscMusicOneClefOrig = \clef soprano
-oscMusicOneClefModern = \clef treble
-oscMusicOne = \relative c' {  
+anscMusicOneName = "Superius"
+anscMusicOneClefOrig = \clef soprano
+anscMusicOneClefModern = \clef treble
+anscMusicOne = \relative c' {  
    
    \repeat volta 2 {
       e2 e e f1 f2 g1 g2 a1 a2
@@ -1138,9 +3422,10 @@ oscMusicOne = \relative c' {
 }
 
 
-oscMusicTwoClefOrig = \clef alto
-oscMusicTwoClefModern = \clef treble 
-oscMusicTwo =  \relative c' {  
+anscMusicTwoName = "Contratenor"
+anscMusicTwoClefOrig = \clef alto
+anscMusicTwoClefModern = \clef treble 
+anscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
       c2 c c d1 d2 e1 e2 f2 f r2 
@@ -1152,9 +3437,10 @@ oscMusicTwo =  \relative c' {
       r2 c2 d e1 e2 d1 d2 c1 c2
    }
 }
-oscMusicThreeClefOrig = \clef tenor
-oscMusicThreeClefModern = \clef "G_8" 
-oscMusicThree = \relative c' {
+anscMusicThreeName = "Tenor"
+anscMusicThreeClefOrig = \clef tenor
+anscMusicThreeClefModern = \clef "G_8" 
+anscMusicThree = \relative c' {
 
    \repeat volta 2 {
       a2 a a a1 a2 c1 c2 a2 a r2
@@ -1167,9 +3453,10 @@ oscMusicThree = \relative c' {
    }
 }
 
-oscMusicFourClefOrig = \clef bass
-oscMusicFourClefModern = \clef bass
-oscMusicFour = \relative c {
+anscMusicFourName = "Bassus"
+anscMusicFourClefOrig = \clef bass
+anscMusicFourClefModern = \clef bass
+anscMusicFour = \relative c {
 
    \repeat volta 2 {
       a2 a a d1 d2 c1 c2 f,2 f r2
@@ -1183,29 +3470,30 @@ oscMusicFour = \relative c {
 }
 
 
-oscChordLine = \chordmode {
+anscChordLine = \chordmode {
 
 }
 
 
-pscTempo = #(ly:make-moment 165 2)
+aoscTempo = #(ly:make-moment 165 2)
 
-pscGlobal= {
+aoscGlobal= {
   \key a \minor
   \time 3/2
 }
 
-pscTitle = "33 Galliarde"
-pscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-pscMeter = ""
-pscPoet = ""
-pscCopyright = "Claude Gervaise"
+aoscTitle = "33 Galliarde"
+aoscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+aoscMeter = ""
+aoscPoet = ""
+aoscCopyright = "Claude Gervaise"
 scCopyright = ""
-pscTagline = ""
+aoscTagline = ""
 
-pscMusicOneClefOrig = \clef soprano
-pscMusicOneClefModern = \clef treble
-pscMusicOne = \relative c'' {  
+aoscMusicOneName = "Superius"
+aoscMusicOneClefOrig = \clef soprano
+aoscMusicOneClefModern = \clef treble
+aoscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       r2 b2 b b b1. b2 b4 g a b c1. c2 c b2 a b1 a g2 a1
@@ -1216,9 +3504,10 @@ pscMusicOne = \relative c'' {
    
 }
 
-pscMusicTwoClefOrig = \clef alto
-pscMusicTwoClefModern = \clef treble 
-pscMusicTwo = \relative c' {
+aoscMusicTwoName = "Contratenor"
+aoscMusicTwoClefOrig = \clef alto
+aoscMusicTwoClefModern = \clef treble 
+aoscMusicTwo = \relative c' {
 
    \repeat volta 2 {
       r2 d2 d d g1. g2 g g c,1. e2 c g'2 e g2. f4 e d e1 c1 
@@ -1229,9 +3518,10 @@ pscMusicTwo = \relative c' {
 }
 
 
-pscMusicThreeClefOrig = \clef tenor
-pscMusicThreeClefModern = \clef "G_8" 
-pscMusicThree =  \relative c' {  
+aoscMusicThreeName = "Tenor"
+aoscMusicThreeClefOrig = \clef tenor
+aoscMusicThreeClefModern = \clef "G_8" 
+aoscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
       r2 b2 b b d1. d2 d d c1. g2 a b c d2. c4 b a b2 b a1
@@ -1240,9 +3530,10 @@ pscMusicThree =  \relative c' {
       r2 b2 b4 a b c d1 b1 c2 c b1 r2 a1 g2 c2 b g2 a b b a1 
    }
 }
-pscMusicFourClefOrig = \clef bass
-pscMusicFourClefModern = \clef bass
-pscMusicFour = \relative c {
+aoscMusicFourName = "Bassus"
+aoscMusicFourClefOrig = \clef bass
+aoscMusicFourClefModern = \clef bass
+aoscMusicFour = \relative c {
 
    \repeat volta 2 {
       r2 g2 g g g1. g2 g g c1. c2 c g a g1 a2 e'2 e a,1 
@@ -1253,29 +3544,30 @@ pscMusicFour = \relative c {
 }
 
 
-pscChordLine = \chordmode {
+aoscChordLine = \chordmode {
 
 }
 
 
-qscTempo = #(ly:make-moment 165 2)
+apscTempo = #(ly:make-moment 165 2)
 
-qscGlobal= {
+apscGlobal= {
   \key a \minor
   \time 3/2
 }
 
-qscTitle = "34 Galliarde"
-qscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-qscMeter = ""
-qscPoet = ""
-qscCopyright = "Claude Gervaise"
+apscTitle = "34 Galliarde"
+apscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+apscMeter = ""
+apscPoet = ""
+apscCopyright = "Claude Gervaise"
 scCopyright = ""
-qscTagline = ""
+apscTagline = ""
 
-qscMusicOneClefOrig = \clef soprano
-qscMusicOneClefModern = \clef treble
-qscMusicOne = \relative c' {  
+apscMusicOneName = "Superius"
+apscMusicOneClefOrig = \clef soprano
+apscMusicOneClefModern = \clef treble
+apscMusicOne = \relative c' {  
    
    \repeat volta 2 {
       f2 g a1 a2 g1 f2 e1 e2 r2
@@ -1288,9 +3580,10 @@ qscMusicOne = \relative c' {
    
 }
 
-qscMusicTwoClefOrig = \clef alto
-qscMusicTwoClefModern = \clef treble 
-qscMusicTwo = \relative c' {
+apscMusicTwoName = "Contratenor"
+apscMusicTwoClefOrig = \clef alto
+apscMusicTwoClefModern = \clef treble 
+apscMusicTwo = \relative c' {
 
    \repeat volta 2 {
       d2 e f1 f2 e1 d2 c1 c2 r2
@@ -1300,9 +3593,10 @@ qscMusicTwo = \relative c' {
    }
 }
 
-qscMusicThreeClefOrig = \clef alto
-qscMusicThreeClefModern = \clef "G_8" 
-qscMusicThree =  \relative c' {  
+apscMusicThreeName = "Tenor"
+apscMusicThreeClefOrig = \clef alto
+apscMusicThreeClefModern = \clef "G_8" 
+apscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
       a2 c c1 c2 c2. b4 a g a1 a2 r2
@@ -1312,9 +3606,10 @@ qscMusicThree =  \relative c' {
    }
 }
 
-qscMusicFourClefOrig = \clef bass
-qscMusicFourClefModern = \clef bass
-qscMusicFour = \relative c {
+apscMusicFourName = "Bassus"
+apscMusicFourClefOrig = \clef bass
+apscMusicFourClefModern = \clef bass
+apscMusicFour = \relative c {
 
    \repeat volta 2 {
       d2 c f1 f,2 c'1 d2 a1 a2 r2
@@ -1325,29 +3620,30 @@ qscMusicFour = \relative c {
 }
 
 
-qscChordLine = \chordmode {
+apscChordLine = \chordmode {
 
 }
 
 
-rscTempo = #(ly:make-moment 165 2)
+aqscTempo = #(ly:make-moment 165 2)
 
-rscGlobal= {
+aqscGlobal= {
   \key c \major
   \time 3/2
 }
 
-rscTitle = "35 Galliarde"
-rscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-rscMeter = ""
-rscPoet = ""
-rscCopyright = "Claude Gervaise"
+aqscTitle = "35 Galliarde"
+aqscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+aqscMeter = ""
+aqscPoet = ""
+aqscCopyright = "Claude Gervaise"
 scCopyright = ""
-rscTagline = ""
+aqscTagline = ""
 
-rscMusicOneClefOrig = \clef soprano
-rscMusicOneClefModern = \clef treble
-rscMusicOne = \relative c'' {  
+aqscMusicOneName = "Superius"
+aqscMusicOneClefOrig = \clef soprano
+aqscMusicOneClefModern = \clef treble
+aqscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       c2 a b c1 c2 d d c b1 b2
@@ -1361,9 +3657,10 @@ rscMusicOne = \relative c'' {
    
 }
 
-rscMusicTwoClefOrig = \clef alto
-rscMusicTwoClefModern = \clef treble 
-rscMusicTwo = \relative c' {
+aqscMusicTwoName = "Contratenor"
+aqscMusicTwoClefOrig = \clef alto
+aqscMusicTwoClefModern = \clef treble 
+aqscMusicTwo = \relative c' {
 
    \repeat volta 2 {
       c2 c b4 a g1 g2 g'2 f2 e d1 r2 
@@ -1376,9 +3673,10 @@ rscMusicTwo = \relative c' {
    }
 }
 
-rscMusicThreeClefOrig = \clef tenor
-rscMusicThreeClefModern = \clef "G_8" 
-rscMusicThree =  \relative c' {  
+aqscMusicThreeName = "Tenor"
+aqscMusicThreeClefOrig = \clef tenor
+aqscMusicThreeClefModern = \clef "G_8" 
+aqscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
       e2 f d c1 c2 bf2. a4 g f g1 g2
@@ -1391,9 +3689,10 @@ rscMusicThree =  \relative c' {
    }
 }
 
-rscMusicFourClefOrig = \clef bass
-rscMusicFourClefModern = \clef bass
-rscMusicFour = \relative c {
+aqscMusicFourName = "Bassus"
+aqscMusicFourClefOrig = \clef bass
+aqscMusicFourClefModern = \clef bass
+aqscMusicFour = \relative c {
 
    \repeat volta 2 {
       c2 f,2 g c1 c2 g bf c g1 r2 
@@ -1407,29 +3706,30 @@ rscMusicFour = \relative c {
 }
 
 
-rscChordLine = \chordmode {
+aqscChordLine = \chordmode {
 
 }
 
 
-sscTempo = #(ly:make-moment 165 2)
+arscTempo = #(ly:make-moment 165 2)
 
-sscGlobal= {
+arscGlobal= {
   \key a \minor
   \time 3/2
 }
 
-sscTitle = "36 Galliarde"
-sscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-sscMeter = ""
-sscPoet = ""
-sscCopyright = "Claude Gervaise"
+arscTitle = "36 Galliarde"
+arscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+arscMeter = ""
+arscPoet = ""
+arscCopyright = "Claude Gervaise"
 scCopyright = ""
-sscTagline = ""
+arscTagline = ""
 
-sscMusicOneClefOrig = \clef soprano
-sscMusicOneClefModern = \clef treble
-sscMusicOne = \relative c'' {  
+arscMusicOneName = "Superius"
+arscMusicOneClefOrig = \clef soprano
+arscMusicOneClefModern = \clef treble
+arscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       c1 b2 | b a2 c2 | b1 a2 | g1 g2
@@ -1444,9 +3744,10 @@ sscMusicOne = \relative c'' {
    
 }
 
-sscMusicTwoClefOrig = \clef alto
-sscMusicTwoClefModern = \clef treble 
-sscMusicTwo = \relative c' {
+arscMusicTwoName = "Contratenor"
+arscMusicTwoClefOrig = \clef alto
+arscMusicTwoClefModern = \clef treble 
+arscMusicTwo = \relative c' {
 
    \repeat volta 2 {
       e1 g2 | d2 f g2~ | g2 g2 f2 | e1 e2
@@ -1459,9 +3760,10 @@ sscMusicTwo = \relative c' {
    }
 }
 
-sscMusicThreeClefOrig = \clef alto
-sscMusicThreeClefModern = \clef "G_8" 
-sscMusicThree =  \relative c' {  
+arscMusicThreeName = "Tenor"
+arscMusicThreeClefOrig = \clef alto
+arscMusicThreeClefModern = \clef "G_8" 
+arscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
       c1 d2 | b2 c2 c | d1 c2 | b1 b2
@@ -1475,9 +3777,10 @@ sscMusicThree =  \relative c' {
    }
 }
 
-sscMusicFourClefOrig = \clef bass
-sscMusicFourClefModern = \clef bass
-sscMusicFour = \relative c {
+arscMusicFourName = "Bassus"
+arscMusicFourClefOrig = \clef bass
+arscMusicFourClefModern = \clef bass
+arscMusicFour = \relative c {
 
    \repeat volta 2 {
       c1 g'2 | g f c | g'1 a2 | e1 e2
@@ -1491,29 +3794,30 @@ sscMusicFour = \relative c {
 }
 
 
-sscChordLine = \chordmode {
+arscChordLine = \chordmode {
 
 }
 
 
-tscTempo = #(ly:make-moment 165 2)
+asscTempo = #(ly:make-moment 165 2)
 
-tscGlobal= {
+asscGlobal= {
   \key c \major
   \time 3/2
 }
 
-tscTitle = "37 Galliarde"
-tscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-tscMeter = ""
-tscPoet = ""
-tscCopyright = "Claude Gervaise"
+asscTitle = "37 Galliarde"
+asscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+asscMeter = ""
+asscPoet = ""
+asscCopyright = "Claude Gervaise"
 scCopyright = ""
-tscTagline = ""
+asscTagline = ""
 
-tscMusicOneClefOrig = \clef soprano
-tscMusicOneClefModern = \clef treble
-tscMusicOne = \relative c'' {  
+asscMusicOneName = "Superius"
+asscMusicOneClefOrig = \clef soprano
+asscMusicOneClefModern = \clef treble
+asscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       r2 g2 g | g e1 | g2 a1 | g2 f1
@@ -1527,9 +3831,10 @@ tscMusicOne = \relative c'' {
    
 }
 
-tscMusicTwoClefOrig = \clef alto
-tscMusicTwoClefModern = \clef "G_8" 
-tscMusicTwo = \relative c' {
+asscMusicTwoName = "Contratenor"
+asscMusicTwoClefOrig = \clef alto
+asscMusicTwoClefModern = \clef "G_8" 
+asscMusicTwo = \relative c' {
 
    \repeat volta 2 {
       r2 d2 d2 | d c1 | d2 a1 | d2 d d
@@ -1543,9 +3848,10 @@ tscMusicTwo = \relative c' {
 }
 
 
-tscMusicThreeClefOrig = \clef alto
-tscMusicThreeClefModern = \clef "G_8" 
-tscMusicThree =  \relative c' {  
+asscMusicThreeName = "Tenor"
+asscMusicThreeClefOrig = \clef alto
+asscMusicThreeClefModern = \clef "G_8" 
+asscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
       r2 b2 b | b g1 | b2 c1 | b2 a1
@@ -1557,9 +3863,10 @@ tscMusicThree =  \relative c' {
       r2 b,2 b | b c2. b4 | a2 g2 a2~ | a2 g1
    }
 }
-tscMusicFourClefOrig = \clef bass
-tscMusicFourClefModern = \clef bass
-tscMusicFour = \relative c' {
+asscMusicFourName = "Bassus"
+asscMusicFourClefOrig = \clef bass
+asscMusicFourClefModern = \clef bass
+asscMusicFour = \relative c' {
 
    \repeat volta 2 {
       r2 g2 g | g c,1 | g'2 f1 | g2 d1
@@ -1573,29 +3880,30 @@ tscMusicFour = \relative c' {
 }
 
 
-tscChordLine = \chordmode {
+asscChordLine = \chordmode {
 
 }
 
 
-uscTempo = #(ly:make-moment 165 2)
+atscTempo = #(ly:make-moment 165 2)
 
-uscGlobal= {
+atscGlobal= {
   \key c \major
   \time 3/2
 }
 
-uscTitle = "38 Galliarde"
-uscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-uscMeter = ""
-uscPoet = ""
-uscCopyright = "Claude Gervaise"
+atscTitle = "38 Galliarde"
+atscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+atscMeter = ""
+atscPoet = ""
+atscCopyright = "Claude Gervaise"
 scCopyright = ""
-uscTagline = ""
+atscTagline = ""
 
-uscMusicOneClefOrig = \clef soprano
-uscMusicOneClefModern = \clef treble
-uscMusicOne = \relative c' {  
+atscMusicOneName = "Superius"
+atscMusicOneClefOrig = \clef soprano
+atscMusicOneClefModern = \clef treble
+atscMusicOne = \relative c' {  
    
    \repeat volta 2 {
       r2 e2 e | g e2. f4 | g2 g f | d d1
@@ -1607,9 +3915,10 @@ uscMusicOne = \relative c' {
    
 }
 
-uscMusicTwoClefOrig = \clef alto
-uscMusicTwoClefModern = \clef "G_8" 
-uscMusicTwo = \relative c' {
+atscMusicTwoName = "Contratenor"
+atscMusicTwoClefOrig = \clef alto
+atscMusicTwoClefModern = \clef "G_8" 
+atscMusicTwo = \relative c' {
 
    \repeat volta 2 {
       r2 c2 c | d e c4 d | e f g1 | f2 g1
@@ -1619,9 +3928,10 @@ uscMusicTwo = \relative c' {
    }
 }
 
-uscMusicThreeClefOrig = \clef alto
-uscMusicThreeClefModern = \clef "G_8" 
-uscMusicThree =  \relative c' {  
+atscMusicThreeName = "Tenor"
+atscMusicThreeClefOrig = \clef alto
+atscMusicThreeClefModern = \clef "G_8" 
+atscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
       r2 a2 a | b c b4 a | g2 bf2 a2~ | a2 g1
@@ -1631,9 +3941,10 @@ uscMusicThree =  \relative c' {
    }
 }
 
-uscMusicFourClefOrig = \clef bass
-uscMusicFourClefModern = \clef bass
-uscMusicFour = \relative c {
+atscMusicFourName = "Bassus"
+atscMusicFourClefOrig = \clef bass
+atscMusicFourClefModern = \clef bass
+atscMusicFour = \relative c {
 
    \repeat volta 2 {
       r2 a2 a | g c1 | c2 g2 d'2~ | d2 g,1
@@ -1644,29 +3955,30 @@ uscMusicFour = \relative c {
 }
 
 
-uscChordLine = \chordmode {
+atscChordLine = \chordmode {
 
 }
 
 
-vscTempo = #(ly:make-moment 165 2)
+auscTempo = #(ly:make-moment 165 2)
 
-vscGlobal= {
+auscGlobal= {
   \key c \major
   \time 3/2
 }
 
-vscTitle = "39 Galliarde"
-vscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-vscMeter = ""
-vscPoet = ""
-vscCopyright = "Claude Gervaise"
+auscTitle = "39 Galliarde"
+auscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+auscMeter = ""
+auscPoet = ""
+auscCopyright = "Claude Gervaise"
 scCopyright = ""
-vscTagline = ""
+auscTagline = ""
 
-vscMusicOneClefOrig = \clef soprano
-vscMusicOneClefModern = \clef treble
-vscMusicOne = \relative c'' {  
+auscMusicOneName = "Superius"
+auscMusicOneClefOrig = \clef soprano
+auscMusicOneClefModern = \clef treble
+auscMusicOne = \relative c'' {  
    \repeat volta 2 {
       r2 e2 e | d c1 | b2 a g2 | f e1 | r2 c'2 c | c c1 | b2 a1 | g2 a1
    }
@@ -1679,9 +3991,10 @@ vscMusicOne = \relative c'' {
    
 }
 
-vscMusicTwoClefOrig = \clef alto
-vscMusicTwoClefModern = \clef treble
-vscMusicTwo = \relative c'' {
+auscMusicTwoName = "Contratenor"
+auscMusicTwoClefOrig = \clef alto
+auscMusicTwoClefModern = \clef treble
+auscMusicTwo = \relative c'' {
    \repeat volta 2 {
       r2 g2 g | g g1 | g2 e e | c c1 | r2 c2 c | c c1 | f2 d2 e2~ | e2 c1
    }
@@ -1693,9 +4006,10 @@ vscMusicTwo = \relative c'' {
    }
 }
 
-vscMusicThreeClefOrig = \clef tenor
-vscMusicThreeClefModern = \clef "G_8" 
-vscMusicThree =  \relative c' {  
+auscMusicThreeName = "Tenor"
+auscMusicThreeClefOrig = \clef tenor
+auscMusicThreeClefModern = \clef "G_8" 
+auscMusicThree =  \relative c' {  
    \repeat volta 2 {
       r2 c2 c | d e1 | d2 c b | a g1 | r2 e'2 e | e e1 | d4 c b a b2~ | b2 a1
    }
@@ -1707,9 +4021,10 @@ vscMusicThree =  \relative c' {
    }
 }
 
-vscMusicFourClefOrig = \clef bass
-vscMusicFourClefModern = \clef bass
-vscMusicFour = \relative c {
+auscMusicFourName = "Bassus"
+auscMusicFourClefOrig = \clef bass
+auscMusicFourClefModern = \clef bass
+auscMusicFour = \relative c {
    \repeat volta 2 {
       r2 c2 c | g'2 c,1 | g'2 a2 e | f c1 | r2 c2 c | c c1 | d2 f2 e2~ | e2 a,1
    }
@@ -1722,29 +4037,30 @@ vscMusicFour = \relative c {
 }
 
 
-vscChordLine = \chordmode {
+auscChordLine = \chordmode {
 
 }
 
 
-wscTempo = #(ly:make-moment 165 2)
+avscTempo = #(ly:make-moment 165 2)
 
-wscGlobal= {
+avscGlobal= {
   \key c \major
   \time 3/2
 }
 
-wscTitle = "40 Galliarde"
-wscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-wscMeter = ""
-wscPoet = ""
-wscCopyright = "Claude Gervaise"
+avscTitle = "40 Galliarde"
+avscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+avscMeter = ""
+avscPoet = ""
+avscCopyright = "Claude Gervaise"
 scCopyright = ""
-wscTagline = ""
+avscTagline = ""
 
-wscMusicOneClefOrig = \clef soprano
-wscMusicOneClefModern = \clef treble
-wscMusicOne = \relative c'' {  
+avscMusicOneName = "Superius"
+avscMusicOneClefOrig = \clef soprano
+avscMusicOneClefModern = \clef treble
+avscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       r2 c2 c | c b4 a b c | d2 c c | b c1
@@ -1758,9 +4074,10 @@ wscMusicOne = \relative c'' {
    
 }
 
-wscMusicTwoClefOrig = \clef alto
-wscMusicTwoClefModern = \clef treble 
-wscMusicTwo = \relative c' {
+avscMusicTwoName = "Contratenor"
+avscMusicTwoClefOrig = \clef alto
+avscMusicTwoClefModern = \clef treble 
+avscMusicTwo = \relative c' {
 
    \repeat volta 2 {
       r2 e2 f | e4 f g2 d2 | a'2 g a | g e1
@@ -1773,9 +4090,10 @@ wscMusicTwo = \relative c' {
    }
 }
 
-wscMusicThreeClefOrig = \clef alto
-wscMusicThreeClefModern = \clef "G_8" 
-wscMusicThree =  \relative c' {  
+avscMusicThreeName = "Tenor"
+avscMusicThreeClefOrig = \clef alto
+avscMusicThreeClefModern = \clef "G_8" 
+avscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
       r2 e2 a,4 b | c d e f g2 | f2 e d1 c1
@@ -1788,9 +4106,10 @@ wscMusicThree =  \relative c' {
    }
 }
 
-wscMusicFourClefOrig = \clef bass
-wscMusicFourClefModern = \clef bass
-wscMusicFour = \relative c {
+avscMusicFourName = "Bassus"
+avscMusicFourClefOrig = \clef bass
+avscMusicFourClefModern = \clef bass
+avscMusicFour = \relative c {
 
    \repeat volta 2 {
       r2 c2 f | a g1 | d2 e f | g c,1
@@ -1804,30 +4123,31 @@ wscMusicFour = \relative c {
 }
 
 
-wscChordLine = \chordmode {
+avscChordLine = \chordmode {
 
 }
 
 
 %Took out leading rests in A section.
-xscTempo = #(ly:make-moment 165 2)
+awscTempo = #(ly:make-moment 165 2)
 
-xscGlobal= {
+awscGlobal= {
   \key a \minor
   \time 3/2
 }
 
-xscTitle = "41 Galliard"
-xscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-xscMeter = ""
-xscPoet = ""
-xscCopyright = "Claude Gervaise"
+awscTitle = "41 Galliard"
+awscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+awscMeter = ""
+awscPoet = ""
+awscCopyright = "Claude Gervaise"
 scCopyright = ""
-xscTagline = ""
+awscTagline = ""
 
-xscMusicOneClefOrig = \clef soprano
-xscMusicOneClefModern = \clef treble
-xscMusicOne = \relative c'' {  
+awscMusicOneName = "Superius"
+awscMusicOneClefOrig = \clef soprano
+awscMusicOneClefModern = \clef treble
+awscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
       \partial 2 a4 b | c1 c2 | c2 c2 d4 c | b1 b2 | b1 g2 g1 g2 | g2. e4 f g4 | 
@@ -1841,9 +4161,10 @@ xscMusicOne = \relative c'' {
 }
 
 
-xscMusicTwoClefOrig = \clef alto
-xscMusicTwoClefModern = \clef "G_8" 
-xscMusicTwo = \relative c' {
+awscMusicTwoName = "Contratenor"
+awscMusicTwoClefOrig = \clef alto
+awscMusicTwoClefModern = \clef "G_8" 
+awscMusicTwo = \relative c' {
    \repeat volta 2 {
       \partial 2 e4 f | g1 g2 | g g g | g1 g2 | g g g | e1 e2 | e1 d2 | c1 c2 | 
          g1 g'2 | g1 f2 | e d c4 b | c1 c2 | c1
@@ -1854,9 +4175,10 @@ xscMusicTwo = \relative c' {
    }
 }
 
-xscMusicThreeClefOrig = \clef tenor
-xscMusicThreeClefModern = \clef "G_8"
-xscMusicThree =  \relative c' {  
+awscMusicThreeName = "Tenor"
+awscMusicThreeClefOrig = \clef tenor
+awscMusicThreeClefModern = \clef "G_8"
+awscMusicThree =  \relative c' {  
    \repeat volta 2 {
       \partial 2 c4 d | e1 e2 | e2 e2 e2 | d1 d2 | b2 b b | c1 c2 | c1 
       a2 | a1 g2 | c1 e2 | d1 c2 | b a1 | g g2 | g1
@@ -1867,9 +4189,10 @@ xscMusicThree =  \relative c' {
    }
 }
 
-xscMusicFourClefOrig = \clef bass
-xscMusicFourClefModern = \clef bass
-xscMusicFour = \relative c {
+awscMusicFourName = "Bassus"
+awscMusicFourClefOrig = \clef bass
+awscMusicFourClefModern = \clef bass
+awscMusicFour = \relative c {
    \repeat volta 2 {
       \partial 2 c2 | c1 c2 | c c c | g'1 g2 | g,2 g g | c1 c2 | c1 d2 | a1 c2 | 
          c1 c2 | g'1 a2 | e2 f1 | c1 c2 | c1
@@ -1881,29 +4204,30 @@ xscMusicFour = \relative c {
 }
 
 
-xscChordLine = \chordmode {
+awscChordLine = \chordmode {
 
 }
 
 
-yscTempo = #(ly:make-moment 165 2)
+axscTempo = #(ly:make-moment 165 2)
 
-yscGlobal= {
+axscGlobal= {
   \key c \major
   \time 3/2
 }
 
-yscTitle = "42 Galliard"
-yscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
-yscMeter = ""
-yscPoet = ""
-yscCopyright = "Claude Gervaise"
+axscTitle = "42 Galliard"
+axscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
+axscMeter = ""
+axscPoet = ""
+axscCopyright = "Claude Gervaise"
 scCopyright = ""
-yscTagline = ""
+axscTagline = ""
 
-yscMusicOneClefOrig = \clef soprano
-yscMusicOneClefModern = \clef treble 
-yscMusicOne = \relative c'' {  
+axscMusicOneName = "Superius"
+axscMusicOneClefOrig = \clef soprano
+axscMusicOneClefModern = \clef treble 
+axscMusicOne = \relative c'' {  
    \repeat volta 2 {
       c2 c1 | c2 c c | b4 a b1 | b2 b1 | c2 b1 | a2 g g |
       f2 g1 | g2 g1
@@ -1917,9 +4241,10 @@ yscMusicOne = \relative c'' {
    
 }
 
-yscMusicTwoClefOrig = \clef alto
-yscMusicTwoClefModern = \clef "G_8"
-yscMusicTwo = \relative c'' {
+axscMusicTwoName = "Contratenor"
+axscMusicTwoClefOrig = \clef alto
+axscMusicTwoClefModern = \clef "G_8"
+axscMusicTwo = \relative c'' {
    \repeat volta 2 {
       g2 g1 | g2 g g | g g1 | g2 g1 |
       g2 g1 | f4 e d c d2~ | d2 b1 | b2 b1
@@ -1932,9 +4257,10 @@ yscMusicTwo = \relative c'' {
    }
 }
 
-yscMusicThreeClefOrig = \clef tenor
-yscMusicThreeClefModern = \clef "G_8" 
-yscMusicThree =  \relative c' {  
+axscMusicThreeName = "Tenor"
+axscMusicThreeClefOrig = \clef tenor
+axscMusicThreeClefModern = \clef "G_8" 
+axscMusicThree =  \relative c' {  
    \repeat volta 2 {
       e2 e1 | e2 e2 e | e d1 | d2 d1 | c2 d2. c4 | d2 
       b2 a2~| a2 g1 | g2 g1
@@ -1947,9 +4273,10 @@ yscMusicThree =  \relative c' {
    }
 }
 
-yscMusicFourClefOrig = \clef bass
-yscMusicFourClefModern = \clef bass 
-yscMusicFour = \relative c {
+axscMusicFourName = "Bassus"
+axscMusicFourClefOrig = \clef bass
+axscMusicFourClefModern = \clef bass 
+axscMusicFour = \relative c {
    \repeat volta 2 {
       c2 c1 | c2 c c | c g1 | g2 g1
       c2 g1 | d'2 g, d'2~ | d2 g,1 | g2 g1
@@ -1963,7 +4290,7 @@ yscMusicFour = \relative c {
 }
 
 
-yscChordLine = \chordmode {
+axscChordLine = \chordmode {
 
 }
 
@@ -2126,6 +4453,156 @@ yscChordLine = \chordmode {
        \header { piece = \yscTitle }
        \layout { indent = 0\mm }
    }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicOneClefOrig \zscMusicOne >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicOneClefOrig \aascMusicOne >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicOneClefOrig \abscMusicOne >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicOneClefOrig \acscMusicOne >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicOneClefOrig \adscMusicOne >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicOneClefOrig \aescMusicOne >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicOneClefOrig \afscMusicOne >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicOneClefOrig \agscMusicOne >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicOneClefOrig \ahscMusicOne >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicOneClefOrig \aiscMusicOne >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicOneClefOrig \ajscMusicOne >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicOneClefOrig \akscMusicOne >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicOneClefOrig \alscMusicOne >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicOneClefOrig \amscMusicOne >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicOneClefOrig \anscMusicOne >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicOneClefOrig \aoscMusicOne >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicOneClefOrig \apscMusicOne >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicOneClefOrig \aqscMusicOne >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicOneClefOrig \arscMusicOne >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicOneClefOrig \asscMusicOne >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicOneClefOrig \atscMusicOne >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicOneClefOrig \auscMusicOne >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicOneClefOrig \avscMusicOne >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicOneClefOrig \awscMusicOne >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicOneClefOrig \axscMusicOne >>
+       \header { piece = \axscTitle }
+       \layout { indent = 0\mm }
+   }
 }
 \book {
   \bookOutputName "part_book_altus_orig_clef"
@@ -2283,6 +4760,156 @@ yscChordLine = \chordmode {
        \new Staff \with { \consists "Ambitus_engraver" } 
         << \yscGlobal \yscMusicTwoClefOrig \yscMusicTwo >>
        \header { piece = \yscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicTwoClefOrig \zscMusicTwo >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicTwoClefOrig \aascMusicTwo >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicTwoClefOrig \abscMusicTwo >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicTwoClefOrig \acscMusicTwo >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicTwoClefOrig \adscMusicTwo >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicTwoClefOrig \aescMusicTwo >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicTwoClefOrig \afscMusicTwo >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicTwoClefOrig \agscMusicTwo >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicTwoClefOrig \ahscMusicTwo >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicTwoClefOrig \aiscMusicTwo >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicTwoClefOrig \ajscMusicTwo >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicTwoClefOrig \akscMusicTwo >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicTwoClefOrig \alscMusicTwo >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicTwoClefOrig \amscMusicTwo >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicTwoClefOrig \anscMusicTwo >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicTwoClefOrig \aoscMusicTwo >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicTwoClefOrig \apscMusicTwo >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicTwoClefOrig \aqscMusicTwo >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicTwoClefOrig \arscMusicTwo >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicTwoClefOrig \asscMusicTwo >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicTwoClefOrig \atscMusicTwo >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicTwoClefOrig \auscMusicTwo >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicTwoClefOrig \avscMusicTwo >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicTwoClefOrig \awscMusicTwo >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicTwoClefOrig \axscMusicTwo >>
+       \header { piece = \axscTitle }
        \layout { indent = 0\mm }
    }
 }
@@ -2444,6 +5071,156 @@ yscChordLine = \chordmode {
        \header { piece = \yscTitle }
        \layout { indent = 0\mm }
    }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicThreeClefOrig \zscMusicThree >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicThreeClefOrig \aascMusicThree >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicThreeClefOrig \abscMusicThree >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicThreeClefOrig \acscMusicThree >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicThreeClefOrig \adscMusicThree >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicThreeClefOrig \aescMusicThree >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicThreeClefOrig \afscMusicThree >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicThreeClefOrig \agscMusicThree >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicThreeClefOrig \ahscMusicThree >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicThreeClefOrig \aiscMusicThree >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicThreeClefOrig \ajscMusicThree >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicThreeClefOrig \akscMusicThree >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicThreeClefOrig \alscMusicThree >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicThreeClefOrig \amscMusicThree >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicThreeClefOrig \anscMusicThree >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicThreeClefOrig \aoscMusicThree >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicThreeClefOrig \apscMusicThree >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicThreeClefOrig \aqscMusicThree >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicThreeClefOrig \arscMusicThree >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicThreeClefOrig \asscMusicThree >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicThreeClefOrig \atscMusicThree >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicThreeClefOrig \auscMusicThree >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicThreeClefOrig \avscMusicThree >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicThreeClefOrig \awscMusicThree >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicThreeClefOrig \axscMusicThree >>
+       \header { piece = \axscTitle }
+       \layout { indent = 0\mm }
+   }
 }
 \book {
   \bookOutputName "part_book_bassus_orig_clef"
@@ -2601,6 +5378,156 @@ yscChordLine = \chordmode {
        \new Staff \with { \consists "Ambitus_engraver" } 
         << \yscGlobal \yscMusicFourClefOrig \yscMusicFour >>
        \header { piece = \yscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicFourClefOrig \zscMusicFour >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicFourClefOrig \aascMusicFour >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicFourClefOrig \abscMusicFour >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicFourClefOrig \acscMusicFour >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicFourClefOrig \adscMusicFour >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicFourClefOrig \aescMusicFour >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicFourClefOrig \afscMusicFour >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicFourClefOrig \agscMusicFour >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicFourClefOrig \ahscMusicFour >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicFourClefOrig \aiscMusicFour >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicFourClefOrig \ajscMusicFour >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicFourClefOrig \akscMusicFour >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicFourClefOrig \alscMusicFour >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicFourClefOrig \amscMusicFour >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicFourClefOrig \anscMusicFour >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicFourClefOrig \aoscMusicFour >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicFourClefOrig \apscMusicFour >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicFourClefOrig \aqscMusicFour >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicFourClefOrig \arscMusicFour >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicFourClefOrig \asscMusicFour >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicFourClefOrig \atscMusicFour >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicFourClefOrig \auscMusicFour >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicFourClefOrig \avscMusicFour >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicFourClefOrig \awscMusicFour >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicFourClefOrig \axscMusicFour >>
+       \header { piece = \axscTitle }
        \layout { indent = 0\mm }
    }
 }
@@ -2762,6 +5689,156 @@ yscChordLine = \chordmode {
        \header { piece = \yscTitle }
        \layout { indent = 0\mm }
    }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicOneClefModern \zscMusicOne >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicOneClefModern \aascMusicOne >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicOneClefModern \abscMusicOne >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicOneClefModern \acscMusicOne >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicOneClefModern \adscMusicOne >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicOneClefModern \aescMusicOne >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicOneClefModern \afscMusicOne >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicOneClefModern \agscMusicOne >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicOneClefModern \ahscMusicOne >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicOneClefModern \aiscMusicOne >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicOneClefModern \ajscMusicOne >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicOneClefModern \akscMusicOne >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicOneClefModern \alscMusicOne >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicOneClefModern \amscMusicOne >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicOneClefModern \anscMusicOne >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicOneClefModern \aoscMusicOne >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicOneClefModern \apscMusicOne >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicOneClefModern \aqscMusicOne >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicOneClefModern \arscMusicOne >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicOneClefModern \asscMusicOne >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicOneClefModern \atscMusicOne >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicOneClefModern \auscMusicOne >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicOneClefModern \avscMusicOne >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicOneClefModern \awscMusicOne >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicOneClefModern \axscMusicOne >>
+       \header { piece = \axscTitle }
+       \layout { indent = 0\mm }
+   }
 }
 \book {
   \bookOutputName "part_book_altus_modern_clef"
@@ -2919,6 +5996,156 @@ yscChordLine = \chordmode {
        \new Staff \with { \consists "Ambitus_engraver" } 
         << \yscGlobal \yscMusicTwoClefModern \yscMusicTwo >>
        \header { piece = \yscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicTwoClefModern \zscMusicTwo >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicTwoClefModern \aascMusicTwo >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicTwoClefModern \abscMusicTwo >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicTwoClefModern \acscMusicTwo >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicTwoClefModern \adscMusicTwo >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicTwoClefModern \aescMusicTwo >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicTwoClefModern \afscMusicTwo >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicTwoClefModern \agscMusicTwo >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicTwoClefModern \ahscMusicTwo >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicTwoClefModern \aiscMusicTwo >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicTwoClefModern \ajscMusicTwo >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicTwoClefModern \akscMusicTwo >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicTwoClefModern \alscMusicTwo >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicTwoClefModern \amscMusicTwo >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicTwoClefModern \anscMusicTwo >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicTwoClefModern \aoscMusicTwo >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicTwoClefModern \apscMusicTwo >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicTwoClefModern \aqscMusicTwo >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicTwoClefModern \arscMusicTwo >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicTwoClefModern \asscMusicTwo >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicTwoClefModern \atscMusicTwo >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicTwoClefModern \auscMusicTwo >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicTwoClefModern \avscMusicTwo >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicTwoClefModern \awscMusicTwo >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicTwoClefModern \axscMusicTwo >>
+       \header { piece = \axscTitle }
        \layout { indent = 0\mm }
    }
 }
@@ -3080,6 +6307,156 @@ yscChordLine = \chordmode {
        \header { piece = \yscTitle }
        \layout { indent = 0\mm }
    }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicThreeClefModern \zscMusicThree >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicThreeClefModern \aascMusicThree >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicThreeClefModern \abscMusicThree >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicThreeClefModern \acscMusicThree >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicThreeClefModern \adscMusicThree >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicThreeClefModern \aescMusicThree >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicThreeClefModern \afscMusicThree >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicThreeClefModern \agscMusicThree >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicThreeClefModern \ahscMusicThree >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicThreeClefModern \aiscMusicThree >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicThreeClefModern \ajscMusicThree >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicThreeClefModern \akscMusicThree >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicThreeClefModern \alscMusicThree >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicThreeClefModern \amscMusicThree >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicThreeClefModern \anscMusicThree >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicThreeClefModern \aoscMusicThree >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicThreeClefModern \apscMusicThree >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicThreeClefModern \aqscMusicThree >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicThreeClefModern \arscMusicThree >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicThreeClefModern \asscMusicThree >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicThreeClefModern \atscMusicThree >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicThreeClefModern \auscMusicThree >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicThreeClefModern \avscMusicThree >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicThreeClefModern \awscMusicThree >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicThreeClefModern \axscMusicThree >>
+       \header { piece = \axscTitle }
+       \layout { indent = 0\mm }
+   }
 }
 \book {
   \bookOutputName "part_book_bassus_modern_clef"
@@ -3237,6 +6614,156 @@ yscChordLine = \chordmode {
        \new Staff \with { \consists "Ambitus_engraver" } 
         << \yscGlobal \yscMusicFourClefModern \yscMusicFour >>
        \header { piece = \yscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \zscGlobal \zscMusicFourClefModern \zscMusicFour >>
+       \header { piece = \zscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aascGlobal \aascMusicFourClefModern \aascMusicFour >>
+       \header { piece = \aascTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \abscGlobal \abscMusicFourClefModern \abscMusicFour >>
+       \header { piece = \abscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \acscGlobal \acscMusicFourClefModern \acscMusicFour >>
+       \header { piece = \acscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \adscGlobal \adscMusicFourClefModern \adscMusicFour >>
+       \header { piece = \adscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aescGlobal \aescMusicFourClefModern \aescMusicFour >>
+       \header { piece = \aescTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \afscGlobal \afscMusicFourClefModern \afscMusicFour >>
+       \header { piece = \afscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \agscGlobal \agscMusicFourClefModern \agscMusicFour >>
+       \header { piece = \agscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ahscGlobal \ahscMusicFourClefModern \ahscMusicFour >>
+       \header { piece = \ahscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aiscGlobal \aiscMusicFourClefModern \aiscMusicFour >>
+       \header { piece = \aiscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \ajscGlobal \ajscMusicFourClefModern \ajscMusicFour >>
+       \header { piece = \ajscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \akscGlobal \akscMusicFourClefModern \akscMusicFour >>
+       \header { piece = \akscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \alscGlobal \alscMusicFourClefModern \alscMusicFour >>
+       \header { piece = \alscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \amscGlobal \amscMusicFourClefModern \amscMusicFour >>
+       \header { piece = \amscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \anscGlobal \anscMusicFourClefModern \anscMusicFour >>
+       \header { piece = \anscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aoscGlobal \aoscMusicFourClefModern \aoscMusicFour >>
+       \header { piece = \aoscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \apscGlobal \apscMusicFourClefModern \apscMusicFour >>
+       \header { piece = \apscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \aqscGlobal \aqscMusicFourClefModern \aqscMusicFour >>
+       \header { piece = \aqscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \arscGlobal \arscMusicFourClefModern \arscMusicFour >>
+       \header { piece = \arscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \asscGlobal \asscMusicFourClefModern \asscMusicFour >>
+       \header { piece = \asscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \atscGlobal \atscMusicFourClefModern \atscMusicFour >>
+       \header { piece = \atscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \auscGlobal \auscMusicFourClefModern \auscMusicFour >>
+       \header { piece = \auscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \avscGlobal \avscMusicFourClefModern \avscMusicFour >>
+       \header { piece = \avscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \awscGlobal \awscMusicFourClefModern \awscMusicFour >>
+       \header { piece = \awscTitle }
+       \layout { indent = 0\mm }
+   }
+   \score {
+       \new Staff \with { \consists "Ambitus_engraver" } 
+        << \axscGlobal \axscMusicFourClefModern \axscMusicFour >>
+       \header { piece = \axscTitle }
        \layout { indent = 0\mm }
    }
 }
