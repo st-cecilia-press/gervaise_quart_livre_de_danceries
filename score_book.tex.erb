@@ -1,0 +1,66 @@
+require 'erb'
+def get_template()
+  %q{
+    \documentclass[11pt]{book}
+    \usepackage{pdfpages}
+    \usepackage{fancyhdr}
+    \usepackage{multicol}
+    \usepackage[utf8]{inputenc}
+    \usepackage[top=48pt,headheight=18pt,headsep=12pt,bottom=48pt,inner=48pt,outer=48pt]{geometry}
+    
+    \begin{document}
+    
+    \pagestyle{fancy}
+    
+    \fancyhf{}
+    
+    \fancyhead[LE,RO]{\thepage}
+    \fancyhead[RE,LO]{Gervaise - Quart Livre De Danceries - <%= @header %>}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{11pt plus 2pt minus 4pt}
+    
+    \begin{titlepage}
+        \centering
+        \vspace*{2.5cm}
+        {\scshape\LARGE Quart Livre De Danceries \par}
+        \vspace{1cm}
+        {\scshape\Large A quatre parties cõtenant XIX pavanes et XXXI gaillardes. En ung livre seul, veu et corrige par \textbf{Claude Gervaise} sçavant Musicien. \par}
+        \vspace{1cm}
+        {\scshape\LARGE Pierre Attaignant, August 19, 1550, Paris \par}
+        \vspace{2cm}
+        {\Huge <%=@title%>\par}
+        \vfill
+        {\large St. Cecilia Press}
+    \end{titlepage}
+    \setcounter{page}{1}
+    \includepdf[pages=-,pagecommand={},offset=0 -.12in,scale=0.95]{./<%=@lilyBook%>.pdf}
+    \end{document}
+  }
+end
+
+class TexBook
+  include ERB::Util
+
+  def initialize(lilyBook, title, header, template)
+    @lilyBook = lilyBook
+    @title = title
+    @header = header
+    @template = template
+  end
+
+  def render()
+    ERB.new(@template).result(binding)
+  end
+
+  def save(file)
+    File.open(file, "w+") do |f|
+      f.write(render)
+    end
+  end
+end
+book = TexBook.new('clefs_modern_1','Score in Modern Clefs','Modern Clefs', get_template)
+book.save('clefs_modern.tex')
+book = TexBook.new('clefs_orig_1','Score in Original Clefs','Original Clefs', get_template)
+book.save('clefs_orig.tex')

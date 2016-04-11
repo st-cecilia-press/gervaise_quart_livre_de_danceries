@@ -36,3 +36,15 @@ $LILYPOND part_book.ly
 $RUBY score_book.ly.erb
 $LILYPOND score_book_modern.ly
 $LILYPOND score_book_orig.ly
+$RUBY score_book.tex.erb
+pdflatex clefs_orig.tex
+pdflatex clefs_modern.tex
+rm clefs_orig_1.pdf
+rm clefs_modern_1.pdf
+rm clefs_modern.tex
+rm clefs_modern.log
+rm clefs_modern.aux
+rm clefs_orig.aux
+rm clefs_orig.tex
+rm clefs_orig.log
+

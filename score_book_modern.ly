@@ -4315,10 +4315,10 @@ axscChordLine = \chordmode {
 \book {
       \paper {
         tocItemMarkup = \tocItemWithDotsMarkup
-        top-margin = 0.5\in
         left-margin = 0.5\in
         right-margin = 0.5\in
         page-breaking = #ly:page-turn-breaking
+        print-page-number = ##f
       }
       \bookOutputName "clefs_modern_1"
       \header{

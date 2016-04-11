@@ -4,10 +4,10 @@ def get_template()
   %q{\book {
       \paper {
         tocItemMarkup = \tocItemWithDotsMarkup
-        top-margin = 0.5\in
         left-margin = 0.5\in
         right-margin = 0.5\in
         page-breaking = #ly:page-turn-breaking
+        print-page-number = ##f
       }
       \bookOutputName "<%=@bookName%>"
       \header{
@@ -128,5 +128,5 @@ score = ScoreFile.new(hsh, 'clefs_modern_1', 'Modern Clefs', 'Modern', get_templ
 score.save('score_book_modern.ly')
 
 hsh = writeBook('score_book_orig.ly')
-score = ScoreFile.new(hsh, 'clefs_orig', 'Original Clefs', 'Orig', get_template)
+score = ScoreFile.new(hsh, 'clefs_orig_1', 'Original Clefs', 'Orig', get_template)
 score.save('score_book_orig.ly')

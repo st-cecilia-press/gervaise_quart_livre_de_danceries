@@ -4320,9 +4320,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_superius_modern_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Superius Part in Modern Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -4888,9 +4888,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_superius_orig_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Superius Part in Original Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -5456,9 +5456,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_contratenor_modern_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Contratenor Part in Modern Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -6024,9 +6024,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_contratenor_orig_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Contratenor Part in Original Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -6592,9 +6592,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_tenor_modern_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Tenor Part in Modern Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -7160,9 +7160,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_tenor_orig_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Tenor Part in Original Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -7728,9 +7728,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_bassus_modern_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Bassus Part in Modern Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -8296,9 +8296,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_bassus_orig_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Bassus Part in Original Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -8864,9 +8864,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_quintus_modern_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Quintus Part in Modern Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       
@@ -8992,9 +8992,9 @@ axscChordLine = \chordmode {
       }
       \bookOutputName "part_book_quintus_orig_clef"
       \header{
-        title = "Dances"
+        title = "Quatre Livre de Danceries"
         subtitle = "Quintus Part in Original Clefs"
-        composer = "Gervaise"
+        composer = "Claude Gervaise (ca.1510 — after 1558)"
         tagline = ""
       }
       

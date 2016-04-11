@@ -1,7 +1,0 @@
-It's a file for you!
-
-I changed it!
-
-I am editing the thing.
-
-I edited it more! Everything is (hopefully) working now!
