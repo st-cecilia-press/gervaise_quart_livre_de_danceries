@@ -1,5 +1,5 @@
 %added half rest at end of bottom 3 parts.
-%tiny modification for fun.
+
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -28,9 +28,9 @@ scMusicOne = \relative c'' {
          f1 f2
    }
    \repeat volta 2 {
-      a2 a a | b4 a g a b c | d1 c2 | d2. d4 c2
+      a2 a a | b4 a g a b c | d1 \ficta cs2 | d2. d4 c2
       b2 c4 b a g | f2 d2 e2~ | e2 d1 | d1 d2 | a'2 a a | b4 a g a b c | d1 
-         c2 | d2. d4 c2 | b2 c4 b a g | f2 d2 e4 f | g1 f2 | g1 g2
+         c2 | d2. d4 c2 | b2 c4 b a g | f2 d2 e4 f | g1 \ficta fs2 | g1 g2
    }
    
 }

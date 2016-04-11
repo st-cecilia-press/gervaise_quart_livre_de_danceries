@@ -9,7 +9,7 @@ scGlobal = {
   \time 3/2
 }
 
-scTitle = "04 Galliarde"
+scTitle = "04 Galliarde 'L'oeil pres et loing'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -27,7 +27,7 @@ scMusicOne = \relative c'' {
    }
    \repeat volta 2 {
      r2 d2 d d2~ d4 c4 bf a bf2~ bf g1 a1. bf2 c2 d c2. bf4 
-     a2 g1 f2 g1
+     a2 g1 \ficta fs2 g1
    }
    
 }
@@ -35,7 +35,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \partial 2
    \repeat volta 2 {

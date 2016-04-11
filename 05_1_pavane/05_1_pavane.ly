@@ -1,10 +1,4 @@
-%============================
-%
-%
-% MESSED UP!!!!!!!!!!
-%
-%
-%============================
+
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -16,7 +10,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "05 Pavane"
+scTitle = "05 Pavane 'Qui Souhaitez'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -30,12 +24,12 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c' {  
    
    \repeat volta 2 {
-       d1 d2 e f4 e f g a g b2. a4 a1 g2 a\breve
+       d1 d2 e f4 e f g a g b2 ~ b4 a4 a1 \ficta gs2 a\breve
        a1 a2 f c'2. b4 a2 g4 f g2 a1 g4 f e\breve
    }
    \repeat volta 2 {
-       c'1 c2 c a d d4 c b a b2 a1 g2 a\breve
-       c2. b4 a g f e d2 b'4 a g f e d e2 d1 c2 d\breve
+       c'1 c2 c a d d4 c b a b2 a1 \ficta gs2 a\breve
+       c2. b4 a g f e d2 b'4 a g f e d e2 d1 \ficta cs2 d\breve
    }
    
 }
@@ -43,7 +37,7 @@ scMusicOne = \relative c' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
     f1 f2 e | d c4 b a2 g2 c2. d4 e1 c\breve

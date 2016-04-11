@@ -28,7 +28,7 @@ scMusicOne = \relative c'' {
    }
    \repeat volta 2 {
      d'1 d2 d b1 e1 d d c\breve
-     b1 b2 b c1. b2 a g1 f2 g\breve
+     b1 b2 b c1. b2 a g1 \ficta f2 g\breve
    }
    
 }
@@ -36,7 +36,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c'' {  
    \repeat volta 2 {
      g1 g2 g g1 g2 e g1 g f\breve

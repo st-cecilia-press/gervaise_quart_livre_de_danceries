@@ -34,7 +34,7 @@ scMusicOne = \relative c' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
 
    \repeat volta 2 {

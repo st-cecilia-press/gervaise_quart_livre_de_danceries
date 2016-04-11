@@ -10,7 +10,7 @@ scGlobal = {
   \time 3/2
 }
 
-scTitle = "09 Galliarde"
+scTitle = "09 Galliarde 'M'amye Est Tant Honneste et Saige'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -24,19 +24,19 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c' {  
    
   \repeat volta 2 {
-    e2 e f2 g a4 b a g g1 f2 g1.
+    e2 e f2 g a4 b a g g1 \ficta fs2 g1.
     g2 f e d4 e f e d2 c1 b2 c1 r2
    }
    \repeat volta 2 {
       d2 e f g a4 g f e e1 d2 e1.
-     g2 g g d f e4 d d1 c2 d1 d2
+     g2 g g d f e4 d d1 \ficta cs2 d1 d2
    }
 }
 
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
      c2 c c c e1 d2 c a b1. 

@@ -1,3 +1,5 @@
+%In Superius B part, added an e1 in measure 12 to match repeated semibreves in other parts
+
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -27,8 +29,8 @@ scMusicOne = \relative c'' {
    }
    \repeat volta 2 {
      d'1 d2 c2 bf2. a4 g2 f e d e1 e 
-     c'1 a2 d4 c bf2. a4 g2 c4 bf4 a2 g1 f2 g1~ g\breve
-   }
+     e c'1 a2 d4 c bf2. a4 g2 c4 bf4 a2 g1 \ficta fs2  g\breve
+  }
    
 }
 
@@ -47,7 +49,7 @@ scMusicTwo =  \relative c'' {
 
 scMusicThreeName = "Contratenor"
 scMusicThreeClefOrig = \clef alto 
-scMusicThreeClefModern = \clef "treble" 
+scMusicThreeClefModern = \clef "G_8" 
 scMusicThree = \relative c' {
    \repeat volta 2 {
      f1 f2 f f1. d2 f2 e d c bf1 bf d1 d2 d d1 e4 c d e f2 d2 d c d1 d

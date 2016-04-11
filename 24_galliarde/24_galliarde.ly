@@ -28,7 +28,7 @@ scMusicOne = \relative c'' {
       d1 c2 d4 c4 b2 a b2 c1 b2 a1
    }
    \repeat volta 2 {
-      r2 b2 b b c2. b4 a2 g1 f2 g1
+      r2 b2 b b c2. b4 a2 g1 \ficta fs2 g1
    }
 }
 
@@ -43,7 +43,7 @@ scMusicTwo =  \relative c' {
       a1 a2 a g f g a1 g2 f1
    }
    \repeat volta 2 {
-      r2 d2 g g g1 f4 e d c d1 b1
+      r2 d2 g g g1 f4 e d c d2 ~ d2 b1
    }
 }
 scMusicThreeName = "Tenor"
@@ -57,7 +57,7 @@ scMusicThree = \relative c' {
       f1 f2 f d d d f1 d2 d1
    }
    \repeat volta 2 {
-      r2 b2 d d e2. d4 c2 b a1 g1
+      r2 b2 d d e2. d4 c2 b a2 ~ a2 g1
    }
 }
 
@@ -72,7 +72,7 @@ scMusicFour = \relative c' {
       d1 f2 f g d g f1 g2 d1
    }
    \repeat volta 2 {
-      r2 g2 g4 f e d c2 c f2 g d1 g,1
+      r2 g2 g4 f e d c2 c f2 g d2 ~ d2 g,1
    }
 }
 

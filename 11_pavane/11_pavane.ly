@@ -1,7 +1,7 @@
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
-#(set-global-staff-size 18)
+#(set-global-staff-size 16)
 scTempo = #(ly:make-moment 165 2)
 
 scGlobal = {
@@ -9,7 +9,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "11 Pavane"
+scTitle = "11 Pavane 'Le Bon Vouloir'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -37,7 +37,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
        g'1 c,2 c c c c c g e' e4 c d2 g\breve e2. f4 g2 f g2. f8 e d4 c b a g2 d'2 d1 b\breve
@@ -57,34 +57,19 @@ scMusicThree = \relative c' {
        e1 e2 e a,4 b c d e2 a,2 b c b4 g a b c\breve c1. a2 b4 g g'2. f4 e d c2 b a1 g\breve
    }
    \repeat volta 2 {
-       b1 g2 g'2. f4 e d c2 e b2. c8 b c2 c b\breve c1 c2 d e4 d e f g2 f e d1 r2 c\breve 
-       %rest is there to fix the not lining up. Doesn't sound right. Fix later!
+       b1 g2 g'2. f4 e d c2 e b2. c8 b c2 c b\breve c1 c2 d e2. d4 e f g2 f e d1 c\breve 
+       
    }
    \repeat volta 2 {
        d1 d2 d d1 a2 b a b a b b\breve b2. c4 d2 d e2. d4 c2 b a g a1 g\breve
    }
 }
 
-scMusicFourName = "Bassus"
-scMusicFourClefOrig = \clef bass
+
+scMusicFourName = "Quintus"
+scMusicFourClefOrig = \clef varbaritone
 scMusicFourClefModern = \clef bass
-scMusicFour = \relative c {
-
-   \repeat volta 2 {
-      c1 a2 c2 f,4 g a b c2 f,2 g a e'2 d c\breve c1 c2 d g,1 g2 g c g d'1 g,\breve 
-   }
-   \repeat volta 2 {
-       g1 c2 c a1 a2 c d d a c g\breve f1 f2 f c'1 c2 g bf2 c g1 c\breve
-   }
-   \repeat volta 2 {
-       g1 g2 g d'1 d2 g,2 d'2 g,2 d' g, g\breve g1 d'2 d c1 f2 g d e d1 g,\breve
-   }
-}
-
-scMusicFiveName = "Quintus"
-scMusicFiveClefOrig = \clef varbaritone
-scMusicFiveClefModern = \clef bass
-scMusicFive = \relative c' {
+scMusicFour = \relative c' {
 
    \repeat volta 2 {
        g1 a2 e f f e f d c g' d e g g1 g g2 d2 g1 g2 g g g d f d\breve
@@ -97,6 +82,21 @@ scMusicFive = \relative c' {
    }
 }
 
+scMusicFiveName = "Bassus"
+scMusicFiveClefOrig = \clef bass
+scMusicFiveClefModern = \clef bass
+scMusicFive = \relative c {
+
+   \repeat volta 2 {
+      c1 a2 c2 f,4 g a b c2 f,2 g a e'2 d c\breve c1 c2 d g,1 g2 g c g d'1 g,\breve 
+   }
+   \repeat volta 2 {
+       g1 c2 c a1 a2 c d d a c g\breve f1 f2 f c'1 c2 g bf2 c g1 c\breve
+   }
+   \repeat volta 2 {
+       g1 g2 g d'1 d2 g,2 d'2 g,2 d' g, g\breve g1 d'2 d c1 f2 g d e d1 g,\breve
+   }
+}
 scChordLine = \chordmode {
 
 }

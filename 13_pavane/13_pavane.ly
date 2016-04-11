@@ -1,7 +1,7 @@
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
-#(set-global-staff-size 18)
+#(set-global-staff-size 16)
 scTempo = #(ly:make-moment 165 2)
 
 scGlobal = {
@@ -9,7 +9,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "13 Pavane"
+scTitle = "13 Pavane 'Pour Mon Plaisir'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""

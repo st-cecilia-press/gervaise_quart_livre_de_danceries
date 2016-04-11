@@ -1,3 +1,4 @@
+%A part measure 6 Contratenor flatted e to match held eflat in tenor line
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -23,13 +24,13 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-    g2. a4 bf2 c bf2. a4 g2 bf a g1 f2 g\breve c2. c4 bf2 a g2. a4 bf2 bf a2. g8 f g1 f\breve
+    g2. a4 bf2 c bf2. a4 g2 bf a g1 \ficta fs2 g\breve c2. c4 bf2 a g2. a4 bf2 bf a2. g8 f g1 f\breve
    }
    \repeat volta 2 {
-    f2. g4 a2 f bf2. a4 g2 a bf d1 c2 d\breve g,2 g c a bf2. a4 g2 a bf c2. bf4 a g a\breve
+    f2. g4 a2 f bf2. a4 g2 a bf d1 \ficta cs2 d\breve g,2 g c a bf2. a4 g2 a bf c2. bf4 a g a\breve
    }
    \repeat volta 2 {
-    g1 g2 g bf1 bf2 bf a c2. bf4 a g f\breve g2. a4 bf2 bf a2. bf4 c2 bf2. a4 g1 f2 g\breve
+    g1 g2 g bf1 bf2 bf a c2. bf4 a g f\breve g2. a4 bf2 bf a2. bf4 c2 bf2 ~ bf4 a4 g1 \ficta fs2 g\breve
    }
    
 }
@@ -37,16 +38,16 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
-    bf2. c4 d2 e d2. c4 bf c d bf c bf a g a1 g\breve g2. a4 bf c d2 bf4 c d e f2 e4 d c2 d1 c2 d\breve
+    bf2. c4 d2 e d2. c4 bf c d bf c bf a g a1 g\breve g2. a4 bf c d2 bf4 c d ef f2 e4 d c2 d1 c2 d\breve
    }
    \repeat volta 2 {
-    a1 a2 a bf2. c4 d e f2 d1 e d\breve bf2 c1 d2. c4 bf2. g4 d'1 c2 d2. c8 bf c\breve
+    a1 a2 a bf2. c4 d e f2 d1 e d\breve bf2 c1 d2 ~ d4 c4 bf2. g4 d'2 ~ d2 c2 d2. c8 bf c\breve
    }
    \repeat volta 2 {
-    c1 c2 c bf1 bf2 bf c2. bf4 a2 g a\breve bf2. c4 d2 c4 bf c2. d4 e2 d2. c4 bf2 a1 g\breve
+    c1 c2 c bf1 bf2 bf c2. bf4 a2 g a\breve bf2. c4 d2 c4 bf c2. d4 e2 d2~ d4 c4 bf2 a1 g\breve
    }
 }
 scMusicThreeName = "Tenor"
@@ -74,7 +75,7 @@ scMusicFour = \relative c' {
     d4 c bf c d e f2 d e1 d\breve
    }
    \repeat volta 2 {
-    d1 d2 d g1 g2 f g bf a1 d,2 d g1. e2 f f g2. f4 e2 d g a g1 f\breve
+    d1 d2 d g1 g2 f g bf a1 d,2 d g1 ~ g2 e2 f f g2. f4 e2 d g a g1 f\breve
    }
    \repeat volta 2 {
     c1 c2 c g'1 g2 g a2. g4 f2 e d\breve g1 g2 g f2. e8 d c2 g' f g d1 g,\breve

@@ -1,7 +1,7 @@
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
-#(set-global-staff-size 18)
+#(set-global-staff-size 16)
 scTempo = #(ly:make-moment 165 2)
 
 scGlobal = {
@@ -9,7 +9,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "01 Pavane "
+scTitle = "01 Pavane 'La Venissienne'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -25,12 +25,12 @@ scMusicOne = \relative c'' {
    \repeat volta 2 {
       g2. f4 g2 a bf d2. c4 bf2 a c c bf a4 g a bf c a bf c bf a g f g a bf c 
          d2 c bf a4 g f1. f2 f\breve bf1. bf2 bf1 bf c1. c2 c1
-      c2 bf4 a g2 d'2 c4 bf a g f2 g1 f2 g1. g2 g\breve
+      c2 bf4 a g2 d'2 c4 bf a g \ficta fs2 g1 \ficta fs!2 g1. g2 g\breve
    }
    \repeat volta 2 {
          g1 g2 d'4 c bf2 g2 g d'4 c bf2 g g c4 bf a2 f2 f c'4 bf a2 f2 f1 bf2. a4
       g4 a bf c d2 c4 bf c bf a g f1. f2 f1 f bf1. bf2 bf1 bf1 c1. c2 c1 c2 
-         bf4 a g2 d'2 c4 bf a g f2 g1 f2 g1. g2 
+         bf4 a g2 d'2 c4 bf a g f2 g1 \ficta fs2 g1. g2 
    }
    g\breve \bar "|."
    
@@ -39,7 +39,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
       d1. d2 d1 d c1. c2 c1 c2 a2 bf1. bf2 bf1 bf a1. a2 a1 a1 d1. d2 d1 d c1. c2 c1 c 

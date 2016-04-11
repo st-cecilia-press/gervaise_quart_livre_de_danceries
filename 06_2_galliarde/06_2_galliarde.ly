@@ -25,20 +25,20 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      b2 b b d1 c2 ~ c2 b2 b a1 a4 b c1 c2 b a1 g2 g f g1 r2
+      b2 b b d1 c2 ~ c2 b2 b a1 a4 b c1 c2 b a1 g2 g \ficta fs g1 r2
    }
    \repeat volta 2 {
       b4 c d2 d d1 d2 d c b a2. g4 a b c1 b2 c1 r2
    }
    \repeat volta 2{
-      b2 b b c2. b4 a2 g1 f2 g1 r2
+      b2 b b c2. b4 a2 g1 \ficta fs2 g1 r2
    }
 }
 
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig =  \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c'' {  
    \repeat volta 2 {
       g2 g g g1 e2~ e2 g2 g f1 f2 g1 g2 g f1 d2 d1 b r2

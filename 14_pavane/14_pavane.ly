@@ -5,7 +5,7 @@
 scTempo = #(ly:make-moment 165 2)
 
 scGlobal = {
-  \key f \major
+  \key g \dorian
   \time 4/2
 }
 
@@ -24,15 +24,15 @@ scMusicOne = \relative c'' {
    
    \repeat volta 2 {
      a1. a2 a1 a2 bf2 a2 a g1 f\breve
-     d1 d2 g2 f2. g8 a bf2 a2 ~ a4 g4 g1 f2 g\breve
+     d1 d2 g2 f2. g8 a bf2 a2 ~ a4 g4 g1 \ficta fs2 g\breve
    }
    \repeat volta 2 {
      f1 e2 e d1 e2 a2 g2 f g1 f\breve
-     f2 g e f d1 c2 c d g1 f2 g\breve
+     f2 g e f d1 c2 c d g1 \ficta fs2 g\breve
    }
    \repeat volta 2 {
      f2 f g2. f4 g a bf2 c2 d g,1. g2 g\breve
-     d'2. c4 bf2 a2 bf1. a2 ~ a4 g4 g1 f2 g\breve
+     d'2. c4 bf2 a2 bf1. a2 ~ a4 g4 g1 \ficta fs2 g\breve
    }
    
 }
@@ -40,7 +40,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 { 
      f1. f2 f1. f2 f f d1 d\breve

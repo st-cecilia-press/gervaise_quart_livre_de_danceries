@@ -1,4 +1,6 @@
-%Superious B part. Fourth note should be dotted. added a repeated half note to make it fit.
+%Superius B part. Fourth note should be dotted. added a repeated half note to make it fit.
+%Superius B part. Measure 14 added flat to b to match Bassus
+%Contratenor B part. Measure 11 added flat to b to match Bassus
 
 \include "../include/sc_functions.ly"
 \include "english.ly"
@@ -11,7 +13,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "07 Pavane"
+scTitle = "07 Pavane 'Vous Qui Voulez'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -25,16 +27,16 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-     a1 f1. g2 a b c4 b a g f2 a1 g4 f e1 
-     a1 a2 a c4 b a g f2 e1 d c2 d\breve
+     a1 f1 ~ f2 g2 a b c4 b a g f2 a2 ~ a2 g4 f e1 
+     a1 a2 a c4 b a g f2 e2 ~ e2 d1 \ficta cs2 d\breve
    }
    \repeat volta 2 {
      f1 f2 g2 a1. a2 a2. g4 f2 e d1 c1
-     c' c2 c a a  f2 b4 a g f f1  e2 f\breve 
+     c' c2 c a a  f2 bf4 a g f f1  e2 f\breve 
    }
    \repeat volta 2 {
      a1 g2 f e a2 c a b c d1 c\breve
-     a1 a2. g4 f2 d4 e f g a b c a d1 c2 d\breve
+     a1 a2. g4 f2 d4 e f g a b c a d1 \ficta cs2 d\breve
    }
    
 }
@@ -42,13 +44,13 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
-       d1 d2 a2 d1 c2 b e1 d2 c1 b2 c1 e f2 f e4 d c b a2 b a g a1 a\breve
+       d1 d2 a2 d1 c2 b e1 d2 c2 ~ c2 b2 c1 e f2 f e4 d c b a2 b a g a1 a\breve
    }
    \repeat volta 2 {
-       d1 d2 e f1. e2 d c b g b1 a a g2 g c1. d2 ef4 d c b c1 a\breve
+       d1 d2 e f1. e2 d c bf g b1 a a g2 g c1. d2 ef4 d c b c1 a\breve
    }
    \repeat volta 2 {
        f'1 e2 d c1 c d2 e f g e\breve
@@ -69,7 +71,7 @@ scMusicThree = \relative c' {
     e1 e2 e f4 g a b a2 g4 f g2 a g1 f\breve
    }
    \repeat volta 2 {
-     c'1 c2 a2 a1. c2 b a a g a1 e1 e2 e c1. c2 f2 f g4 f e d 
+     c'1 c2 a2 a1. c2 b a a g a1 e1 e2 e c1 ~ c2 c2 f2 f g4 f e d 
      e2 e d\breve
    }
 }
@@ -80,7 +82,7 @@ scMusicFourClefModern = \clef bass
 scMusicFour = \relative c {
 
    \repeat volta 2 {
-       d1 d2. c4 bf1 a2 g c1 d\breve
+       d1 d2. c4 bf1 a2 g c1 d1 ~ d1
        c1 a d2 d c f,1 g2 a b a1 d\breve
    }
    \repeat volta 2 {

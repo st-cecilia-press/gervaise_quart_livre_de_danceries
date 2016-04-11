@@ -29,7 +29,7 @@ scMusicOne = \relative c'' {
      c'1. bf2 a2 c bf2. a4 g2 g f e4 d e\breve
    }
    \repeat volta 2 {
-     a2. bf4 c2. bf8 a g2 bf a g2. f4 f1 e2 f\breve
+     a2. bf4 c2. bf8 a g2 bf a g2 ~ g4 f4 f1 e2 f\breve
    }
    
 }
@@ -60,27 +60,28 @@ scMusicThree = \relative c' {
      e2. d4 c2 d f2. e4 d1 e2 c1 bf2 c\breve
    }
    \repeat volta 2 {
-     f1 e2. d4 c2 d c c2. bf4 a2 g1 f\breve
+     f1 e2. d4 c2 d c c2 ~ c4 bf4 a2 g1 f\breve
    }
 }
 
-scMusicFourName = "Bassus"
-scMusicFourClefOrig = \clef bass
+scMusicFourName = "Quintus"
+scMusicFourClefOrig = \clef "varbaritone"
 scMusicFourClefModern = \clef bass
-scMusicFour = \relative c {
+scMusicFour = \relative c' {
 
    \repeat volta 2 {
-     f\breve g2. f4 e1 d2 f e1 d\breve
+     a\breve bf2. a4 g1 f2 a g1 f\breve
    }
    \repeat volta 2 {
-     e1 f2 d2. e4 f2 g bf,2 e c d1 e\breve
+     g1 a2 f2 ~ f4 g4 a2 bf2 d,2 g2 e f1 g\breve    
    }
    \repeat volta 2 {
-     d2. c4 a bf c d e2 bf2 d e c d a e'2 f\breve
+     f2. e4 c d e f g2 d2 f g e f c g'2 a\breve
+    
    }
 }
 
-scMusicFiveName = "Quintus"
+scMusicFiveName = "Bassus"
 scMusicFiveClefOrig = \clef bass
 scMusicFiveClefModern = \clef bass
 scMusicFive = \relative c, {
@@ -92,7 +93,7 @@ scMusicFive = \relative c, {
      c'1 f,2 bf f1 bf c d c\breve
    }
    \repeat volta 2 {
-     f,1 c'1. bf2 f c'1 f,2 c'1 f,\breve
+     f,1 c'1 ~ c2 bf2 f c'2 ~ c2 f,2 c'1 f,\breve
    }
 }
 

@@ -1,3 +1,4 @@
+%Moved rests to the end of the line
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -9,7 +10,7 @@ scGlobal = {
   \time 3/2
 }
 
-scTitle = "08 Galliarde"
+scTitle = "08 Galliarde 'Plus Revenir'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -38,7 +39,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
      e2 e f e1 d2 c4 b c2 c d1 r2

@@ -1,7 +1,8 @@
-\include "./include/sc_functions.ly"
-#(set-global-staff-size 18)
-\include "english.ly"
-#(set-default-paper-size "letter")
+
+  \include "./include/sc_functions.ly"
+  #(set-global-staff-size 18)
+  \include "english.ly"
+  #(set-default-paper-size "letter")
 ascTempo = #(ly:make-moment 165 2)
 
 ascGlobal = {
@@ -9,7 +10,7 @@ ascGlobal = {
   \time 4/2
 }
 
-ascTitle = "01 Pavane "
+ascTitle = "01 Pavane 'La Venissienne'"
 ascSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 ascMeter = ""
 ascPoet = ""
@@ -25,12 +26,12 @@ ascMusicOne = \relative c'' {
    \repeat volta 2 {
       g2. f4 g2 a bf d2. c4 bf2 a c c bf a4 g a bf c a bf c bf a g f g a bf c 
          d2 c bf a4 g f1. f2 f\breve bf1. bf2 bf1 bf c1. c2 c1
-      c2 bf4 a g2 d'2 c4 bf a g f2 g1 f2 g1. g2 g\breve
+      c2 bf4 a g2 d'2 c4 bf a g \ficta fs2 g1 \ficta fs!2 g1. g2 g\breve
    }
    \repeat volta 2 {
          g1 g2 d'4 c bf2 g2 g d'4 c bf2 g g c4 bf a2 f2 f c'4 bf a2 f2 f1 bf2. a4
       g4 a bf c d2 c4 bf c bf a g f1. f2 f1 f bf1. bf2 bf1 bf1 c1. c2 c1 c2 
-         bf4 a g2 d'2 c4 bf a g f2 g1 f2 g1. g2 
+         bf4 a g2 d'2 c4 bf a g f2 g1 \ficta fs2 g1. g2 
    }
    g\breve \bar "|."
    
@@ -39,7 +40,7 @@ ascMusicOne = \relative c'' {
 
 ascMusicTwoName = "Contratenor"
 ascMusicTwoClefOrig = \clef alto
-ascMusicTwoClefModern = \clef treble 
+ascMusicTwoClefModern = \clef "G_8" 
 ascMusicTwo =  \relative c' {  
    \repeat volta 2 {
       d1. d2 d1 d c1. c2 c1 c2 a2 bf1. bf2 bf1 bf a1. a2 a1 a1 d1. d2 d1 d c1. c2 c1 c 
@@ -94,6 +95,8 @@ ascChordLine = \chordmode {
 }
 
 
+%In Superius B part, added an e1 in measure 12 to match repeated semibreves in other parts
+
 bscTempo = #(ly:make-moment 165 2)
 
 bscGlobal = {
@@ -119,8 +122,8 @@ bscMusicOne = \relative c'' {
    }
    \repeat volta 2 {
      d'1 d2 c2 bf2. a4 g2 f e d e1 e 
-     c'1 a2 d4 c bf2. a4 g2 c4 bf4 a2 g1 f2 g1~ g\breve
-   }
+     e c'1 a2 d4 c bf2. a4 g2 c4 bf4 a2 g1 \ficta fs2  g\breve
+  }
    
 }
 
@@ -139,7 +142,7 @@ bscMusicTwo =  \relative c'' {
 
 bscMusicThreeName = "Contratenor"
 bscMusicThreeClefOrig = \clef alto 
-bscMusicThreeClefModern = \clef "treble" 
+bscMusicThreeClefModern = \clef "G_8" 
 bscMusicThree = \relative c' {
    \repeat volta 2 {
      f1 f2 f f1. d2 f2 e d c bf1 bf d1 d2 d d1 e4 c d e f2 d2 d c d1 d
@@ -209,7 +212,7 @@ cscMusicOne = \relative c'' {
                      bf'2 bf bf a c bf a g f4 e f1 r2
    }
    \repeat volta 2 {
-     d'2 d d c2. bf4 a2 g f e d1 r2 c'2 a d4 c bf2. bf4 a2 g1 f2 g1.
+     d'2 d d c2. bf4 a2 g f e d1 r2 c'2 a d4 c bf2. bf4 a2 g1 \ficta fs2 g1.
    }
    
 }
@@ -217,14 +220,14 @@ cscMusicOne = \relative c'' {
 
 cscMusicTwoName = "Contratenor"
 cscMusicTwoClefOrig = \clef alto 
-cscMusicTwoClefModern = \clef treble 
+cscMusicTwoClefModern = \clef "G_8" 
 cscMusicTwo =  \relative c' {  
    \repeat volta 2 {
      f2 f f f1. e2 d c bf1 r2
      f'2 f f f2. e4 d2 f e c d1 r2
    }
    \repeat volta 2 {
-     f2 f f f1 f2. e4 d2 c4 bf4 a1 r2
+     f2 f f f1 f2 ~ f4 e4 d2 c4 bf4 a1 r2
      e'2 f f d f2. e4 d c d1 bf1.
    }
 }
@@ -306,7 +309,7 @@ dscMusicTwo =  \relative c'' {
 }
 dscMusicThreeName = "Contratenor"
 dscMusicThreeClefOrig = \clef alto 
-dscMusicThreeClefModern = \clef treble
+dscMusicThreeClefModern = \clef "G_8"
 dscMusicThree = \relative c' {
    \repeat volta 2 {
      f1 d2 bf2 c1. g'4 f e2 d4 c d2 d bf\breve
@@ -375,7 +378,7 @@ escMusicOne = \relative c' {
    \partial 2
    \repeat volta 2 {
        d2 d1 d2 d g2 g f1 f2 f1 bf2 
-     a4 bf c bf a g g1 f2 g1 g2 g1
+     a4 bf c bf a g g1 \ficta fs2 g1 g2 g1
    }
    \repeat volta 2 {
      a2 bf1 bf2 a bf g2 a1 a2 a1
@@ -384,7 +387,7 @@ escMusicOne = \relative c' {
      a2 g1 g2 f2 e2 c d1 d2 d1
    }
    \repeat volta 2 {
-     f2 e2. d4 e f g1 f2 g1 g2 g1
+     f2 e2. d4 e f g1 \ficta fs2 g1 g2 g1
    }
    
 }
@@ -392,7 +395,7 @@ escMusicOne = \relative c' {
 
 escMusicTwoName = "Contratenor"
 escMusicTwoClefOrig = \clef alto
-escMusicTwoClefModern = \clef treble 
+escMusicTwoClefModern = \clef "G_8" 
 escMusicTwo =  \relative c' {  
     \partial 2 
     \repeat volta 2 {
@@ -438,7 +441,7 @@ escMusicFour = \relative c {
       d2 g1 g2 f2 e c d1 d2 d1 bf2 f' c f g d1 g,1 g2 g1
    }
    \repeat volta 2 {
-     d2 g1 g2 d'2 g,2 g d'1 d2 d1
+     d'2 g,1 g2 d'2 g,2 g d'1 d2 d1
    }
    \repeat volta 2 {
      d2 e1 e2 d c c bf1 bf2 bf1
@@ -461,7 +464,7 @@ fscGlobal = {
   \time 4/2
 }
 
-fscTitle = "04 Pavane"
+fscTitle = "04 Pavane 'L'oeil pres et loing'"
 fscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 fscMeter = ""
 fscPoet = ""
@@ -479,8 +482,8 @@ fscMusicOne = \relative c'' {
      a1 c2 c g2. a4 bf4 c d2 c4 bf4 bf1 a2 bf\breve
    }
    \repeat volta 2 {
-     d1 d4 c bf a bf2 a2 g bf2. a4 a1 g2 a\breve
-     bf1 c2 d c4 bf a g a2 bf2 a4 g g1 f2 g\breve
+     d1 d4 c bf a bf2 a2 g bf2~ bf4 a4 a1 g2 a\breve
+     bf1 c2 d c4 bf a g a2 bf2 a4 g g1 \ficta fs2 g\breve
    }
    
 }
@@ -488,14 +491,14 @@ fscMusicOne = \relative c'' {
 
 fscMusicTwoName = "Contratenor"
 fscMusicTwoClefOrig = \clef alto
-fscMusicTwoClefModern = \clef treble 
+fscMusicTwoClefModern = \clef "G_8" 
 fscMusicTwo =  \relative c' {  
    \repeat volta 2 {
-     f\breve f1. e2. d4 d1 c2 d\breve
-     c2. d4 e f e2. d4 e f g2 d g f g f4 e d\breve
+     f\breve f1. e2~ e4 d4 d1 c2 d\breve
+     c2. d4 e f e2~ e4 d4 e f g2 d g f g f4 e d\breve
    }
    \repeat volta 2 {
-     d2. e4 f d g1 f2 g f f1 d1 d\breve d1 f2. e8 
+     d2. e4 f d g2~ g2 f2 g f f1 d1 d\breve d1 f2. e8 
      d e2 f2. d4 g f e d c2 d1 bf\breve
    }
 }
@@ -508,7 +511,7 @@ fscMusicThree = \relative c' {
      e2 d c1 bf\breve
    }
    \repeat volta 2 {
-     bf1 a2 g d'2. c4 bf2 d2. c4 bf a bf1 a\breve g1 
+     bf1 a2 g d'2. c4 bf2 d2~ d4 c4 bf a bf1 a\breve g1 
      a2 bf2 a4 g f e d2 d' c4 bf a g a1 g\breve
    }
 }
@@ -542,7 +545,7 @@ gscGlobal = {
   \time 3/2
 }
 
-gscTitle = "04 Galliarde"
+gscTitle = "04 Galliarde 'L'oeil pres et loing'"
 gscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 gscMeter = ""
 gscPoet = ""
@@ -560,7 +563,7 @@ gscMusicOne = \relative c'' {
    }
    \repeat volta 2 {
      r2 d2 d d2~ d4 c4 bf a bf2~ bf g1 a1. bf2 c2 d c2. bf4 
-     a2 g1 f2 g1
+     a2 g1 \ficta fs2 g1
    }
    
 }
@@ -568,7 +571,7 @@ gscMusicOne = \relative c'' {
 
 gscMusicTwoName = "Contratenor"
 gscMusicTwoClefOrig = \clef alto 
-gscMusicTwoClefModern = \clef treble 
+gscMusicTwoClefModern = \clef "G_8" 
 gscMusicTwo =  \relative c' {  
    \partial 2
    \repeat volta 2 {
@@ -614,13 +617,7 @@ gscChordLine = \chordmode {
 }
 
 
-%============================
-%
-%
-% MESSED UP!!!!!!!!!!
-%
-%
-%============================
+
 hscTempo = #(ly:make-moment 165 2)
 
 hscGlobal = {
@@ -628,7 +625,7 @@ hscGlobal = {
   \time 4/2
 }
 
-hscTitle = "05 Pavane"
+hscTitle = "05 Pavane 'Qui Souhaitez'"
 hscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 hscMeter = ""
 hscPoet = ""
@@ -642,12 +639,12 @@ hscMusicOneClefModern = \clef treble
 hscMusicOne = \relative c' {  
    
    \repeat volta 2 {
-       d1 d2 e f4 e f g a g b2. a4 a1 g2 a\breve
+       d1 d2 e f4 e f g a g b2 ~ b4 a4 a1 \ficta gs2 a\breve
        a1 a2 f c'2. b4 a2 g4 f g2 a1 g4 f e\breve
    }
    \repeat volta 2 {
-       c'1 c2 c a d d4 c b a b2 a1 g2 a\breve
-       c2. b4 a g f e d2 b'4 a g f e d e2 d1 c2 d\breve
+       c'1 c2 c a d d4 c b a b2 a1 \ficta gs2 a\breve
+       c2. b4 a g f e d2 b'4 a g f e d e2 d1 \ficta cs2 d\breve
    }
    
 }
@@ -655,7 +652,7 @@ hscMusicOne = \relative c' {
 
 hscMusicTwoName = "Contratenor"
 hscMusicTwoClefOrig = \clef alto 
-hscMusicTwoClefModern = \clef treble 
+hscMusicTwoClefModern = \clef "G_8" 
 hscMusicTwo =  \relative c' {  
    \repeat volta 2 {
     f1 f2 e | d c4 b a2 g2 c2. d4 e1 c\breve
@@ -706,7 +703,7 @@ iscGlobal = {
   \time 3/1
 }
 
-iscTitle = "05 Galliarde"
+iscTitle = "05 Galliarde 'Qui Souhaitez'"
 iscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 iscMeter = ""
 iscPoet = ""
@@ -720,12 +717,12 @@ iscMusicOneClefModern = \clef treble
 iscMusicOne = \relative c' {  
    
    \repeat volta 2 {
-    d1 d2 e f g2 a\breve g1 a\breve g1 a\breve.
+    d1 d2 e f g2 a\breve g1 a\breve \ficta gs1 a\breve.
     a1 a f c'2 b a g f1 a\breve g2 f e\breve.
    }
    \repeat volta 2 {
-    c'1 c c a d2 c b a a\breve g1 a\breve.
-    c2 b a g f e d1 e2 f e d d\breve c1 d\breve.
+    c'1 c c a d2 c b a a\breve \ficta gs1 a\breve.
+    c2 b a g f e d1 e2 f e d d\breve \ficta cs1 d\breve.
    }
    \repeat volta 2 {
    }
@@ -735,7 +732,7 @@ iscMusicOne = \relative c' {
 
 iscMusicTwoName = "Contratenor"
 iscMusicTwoClefOrig = \clef alto 
-iscMusicTwoClefModern = \clef treble 
+iscMusicTwoClefModern = \clef "G_8" 
 iscMusicTwo =  \relative c' {  
     \repeat volta 2{
         f1 f f | f\breve g1 | e1 e\breve | c\breve.
@@ -808,7 +805,7 @@ jscMusicOne = \relative c'' {
    }
    \repeat volta 2 {
      d'1 d2 d b1 e1 d d c\breve
-     b1 b2 b c1. b2 a g1 f2 g\breve
+     b1 b2 b c1. b2 a g1 \ficta f2 g\breve
    }
    
 }
@@ -816,7 +813,7 @@ jscMusicOne = \relative c'' {
 
 jscMusicTwoName = "Contratenor"
 jscMusicTwoClefOrig = \clef alto 
-jscMusicTwoClefModern = \clef treble 
+jscMusicTwoClefModern = \clef "G_8" 
 jscMusicTwo =  \relative c'' {  
    \repeat volta 2 {
      g1 g2 g g1 g2 e g1 g f\breve
@@ -899,20 +896,20 @@ kscMusicOneClefModern = \clef treble
 kscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      b2 b b d1 c2 ~ c2 b2 b a1 a4 b c1 c2 b a1 g2 g f g1 r2
+      b2 b b d1 c2 ~ c2 b2 b a1 a4 b c1 c2 b a1 g2 g \ficta fs g1 r2
    }
    \repeat volta 2 {
       b4 c d2 d d1 d2 d c b a2. g4 a b c1 b2 c1 r2
    }
    \repeat volta 2{
-      b2 b b c2. b4 a2 g1 f2 g1 r2
+      b2 b b c2. b4 a2 g1 \ficta fs2 g1 r2
    }
 }
 
 
 kscMusicTwoName = "Contratenor"
 kscMusicTwoClefOrig =  \clef alto
-kscMusicTwoClefModern = \clef treble 
+kscMusicTwoClefModern = \clef "G_8" 
 kscMusicTwo =  \relative c'' {  
    \repeat volta 2 {
       g2 g g g1 e2~ e2 g2 g f1 f2 g1 g2 g f1 d2 d1 b r2
@@ -961,7 +958,9 @@ kscChordLine = \chordmode {
 }
 
 
-%Superious B part. Fourth note should be dotted. added a repeated half note to make it fit.
+%Superius B part. Fourth note should be dotted. added a repeated half note to make it fit.
+%Superius B part. Measure 14 added flat to b to match Bassus
+%Contratenor B part. Measure 11 added flat to b to match Bassus
 
 lscTempo = #(ly:make-moment 165 2)
 
@@ -970,7 +969,7 @@ lscGlobal = {
   \time 4/2
 }
 
-lscTitle = "07 Pavane"
+lscTitle = "07 Pavane 'Vous Qui Voulez'"
 lscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 lscMeter = ""
 lscPoet = ""
@@ -984,16 +983,16 @@ lscMusicOneClefModern = \clef treble
 lscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-     a1 f1. g2 a b c4 b a g f2 a1 g4 f e1 
-     a1 a2 a c4 b a g f2 e1 d c2 d\breve
+     a1 f1 ~ f2 g2 a b c4 b a g f2 a2 ~ a2 g4 f e1 
+     a1 a2 a c4 b a g f2 e2 ~ e2 d1 \ficta cs2 d\breve
    }
    \repeat volta 2 {
      f1 f2 g2 a1. a2 a2. g4 f2 e d1 c1
-     c' c2 c a a  f2 b4 a g f f1  e2 f\breve 
+     c' c2 c a a  f2 bf4 a g f f1  e2 f\breve 
    }
    \repeat volta 2 {
      a1 g2 f e a2 c a b c d1 c\breve
-     a1 a2. g4 f2 d4 e f g a b c a d1 c2 d\breve
+     a1 a2. g4 f2 d4 e f g a b c a d1 \ficta cs2 d\breve
    }
    
 }
@@ -1001,13 +1000,13 @@ lscMusicOne = \relative c'' {
 
 lscMusicTwoName = "Contratenor"
 lscMusicTwoClefOrig = \clef alto 
-lscMusicTwoClefModern = \clef treble 
+lscMusicTwoClefModern = \clef "G_8" 
 lscMusicTwo =  \relative c' {  
    \repeat volta 2 {
-       d1 d2 a2 d1 c2 b e1 d2 c1 b2 c1 e f2 f e4 d c b a2 b a g a1 a\breve
+       d1 d2 a2 d1 c2 b e1 d2 c2 ~ c2 b2 c1 e f2 f e4 d c b a2 b a g a1 a\breve
    }
    \repeat volta 2 {
-       d1 d2 e f1. e2 d c b g b1 a a g2 g c1. d2 ef4 d c b c1 a\breve
+       d1 d2 e f1. e2 d c bf g b1 a a g2 g c1. d2 ef4 d c b c1 a\breve
    }
    \repeat volta 2 {
        f'1 e2 d c1 c d2 e f g e\breve
@@ -1028,7 +1027,7 @@ lscMusicThree = \relative c' {
     e1 e2 e f4 g a b a2 g4 f g2 a g1 f\breve
    }
    \repeat volta 2 {
-     c'1 c2 a2 a1. c2 b a a g a1 e1 e2 e c1. c2 f2 f g4 f e d 
+     c'1 c2 a2 a1. c2 b a a g a1 e1 e2 e c1 ~ c2 c2 f2 f g4 f e d 
      e2 e d\breve
    }
 }
@@ -1039,7 +1038,7 @@ lscMusicFourClefModern = \clef bass
 lscMusicFour = \relative c {
 
    \repeat volta 2 {
-       d1 d2. c4 bf1 a2 g c1 d\breve
+       d1 d2. c4 bf1 a2 g c1 d1 ~ d1
        c1 a d2 d c f,1 g2 a b a1 d\breve
    }
    \repeat volta 2 {
@@ -1065,7 +1064,7 @@ mscGlobal = {
   \time 3/2
 }
 
-mscTitle = "07 Galliarde"
+mscTitle = "07 Galliarde 'Vous Qui Voulez'"
 mscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 mscMeter = ""
 mscPoet = ""
@@ -1079,11 +1078,11 @@ mscMusicOneClefModern = \clef treble
 mscMusicOne = \relative c'' {  
       \repeat volta 2 {
      a2 f g2 a2. c4 b2 a g f e1. 
-     a2 a g f1 e2 d1 c2 d1 d2
+     a2 a g f1 e2 d1 \ficta cs2 d1 d2
    }
    \repeat volta 2 {
      f2 f g a2. g4 f2 e d1 c1.
-     a'2 a a b2. d4 c2 d1 c2 d1 d2
+     a'2 a a b2. d4 \ficta cs2 d1 \ficta cs2 d1 d2
    }
    
  
@@ -1093,7 +1092,7 @@ mscMusicOne = \relative c'' {
 
 mscMusicTwoName = "Contratenor"
 mscMusicTwoClefOrig = \clef alto 
-mscMusicTwoClefModern = \clef treble 
+mscMusicTwoClefModern = \clef "G_8" 
 mscMusicTwo =  \relative c' {  
    \repeat volta 2 {
        e2 d d e2. f4 g2 f2 e d c1. 
@@ -1147,7 +1146,7 @@ nscGlobal = {
   \time 4/2
 }
 
-nscTitle = "08 Pavane"
+nscTitle = "08 Pavane 'Plus Revenir'"
 nscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 nscMeter = ""
 nscPoet = ""
@@ -1175,15 +1174,15 @@ nscMusicOne = \relative c'' {
 
 nscMusicTwoName = "Contratenor"
 nscMusicTwoClefOrig = \clef alto 
-nscMusicTwoClefModern = \clef treble 
+nscMusicTwoClefModern = \clef "G_8" 
 nscMusicTwo =  \relative c' {  
    \repeat volta 2 {
      e\breve f1 d1 c c d\breve
-     c2. d4 e f g2. f4 e d e2 f d g f d e\breve
+     c2. d4 e f g2 ~ g4 f4 e d e2 f d g f d e\breve
    }
    \repeat volta 2 {
      g1 g2 g g2. f4 e1 e2 d f f d\breve
-     g2. f4 e d e2 c4 d e f e2 d2. c4 c1 b2 c\breve
+     g2. f4 e d e2 c4 d e f e2 d2 ~ d4 c4 c1 b2 c\breve
    }
 }
 nscMusicThreeName = "Tenor"
@@ -1195,7 +1194,7 @@ nscMusicThree = \relative c' {
      e1 e2 e d c b4 c d e f2 e d d c\breve
    }
    \repeat volta 2 {
-     e1 e2 e d1 c2 g2. a4 b c d2 d  b\breve
+     e1 e2 e d1 c2 g2 ~ g4 a4 b c d2 d  b\breve
      c1 c2 c  a b c a g a f1 g\breve
    }
 }
@@ -1207,7 +1206,7 @@ nscMusicFour = \relative c {
 
    \repeat volta 2 {
      c\breve f,1 g c1 c g\breve
-     a2. b4 c d e f g2 a e2 d1 e2 f g c,\breve
+     a2. b4 c d e f g2 a e2 d2 ~ d2 e2 f g c,\breve
    }
    \repeat volta 2 {
      c1 c2 c g1 c2. d4 e f g2 d1 g,\breve c1 c2 c 
@@ -1221,6 +1220,7 @@ nscChordLine = \chordmode {
 }
 
 
+%Moved rests to the end of the line
 oscTempo = #(ly:make-moment 165 2)
 
 oscGlobal = {
@@ -1228,7 +1228,7 @@ oscGlobal = {
   \time 3/2
 }
 
-oscTitle = "08 Galliarde"
+oscTitle = "08 Galliarde 'Plus Revenir'"
 oscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 oscMeter = ""
 oscPoet = ""
@@ -1257,7 +1257,7 @@ oscMusicOne = \relative c'' {
 
 oscMusicTwoName = "Contratenor"
 oscMusicTwoClefOrig = \clef alto 
-oscMusicTwoClefModern = \clef treble 
+oscMusicTwoClefModern = \clef "G_8" 
 oscMusicTwo =  \relative c' {  
    \repeat volta 2 {
      e2 e f e1 d2 c4 b c2 c d1 r2
@@ -1316,7 +1316,7 @@ pscGlobal = {
   \time 4/2
 }
 
-pscTitle = "09 Pavane"
+pscTitle = "09 Pavane 'M'amye Est Tant Honneste et Saige'"
 pscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 pscMeter = ""
 pscPoet = ""
@@ -1330,12 +1330,12 @@ pscMusicOneClefModern = \clef treble
 pscMusicOne = \relative c' {  
    
    \repeat volta 2 {
-     e1 e2 f2 g1. g2 a2 g1 f2 g\breve
+     e1 e2 f2 g1. g2 a2 g1 \ficta fs2 g\breve
      g1 f2 e d2. e4 f e d c b2 c1 b2 c\breve
    }
    \repeat volta 2 {
-     d1 e2 g1 f2 g2 a g e f1 e\breve
-     g1 g2 g d f c4 d e f e d d1 c2 d\breve
+     d1 e2 g2 ~ g2 f2 g2 a g e f1 e\breve
+     g1 g2 g d f c4 d e f e d d1 \ficta cs2 d\breve
    }
    
 }
@@ -1343,7 +1343,7 @@ pscMusicOne = \relative c' {
 
 pscMusicTwoName = "Contratenor"
 pscMusicTwoClefOrig = \clef alto 
-pscMusicTwoClefModern = \clef treble 
+pscMusicTwoClefModern = \clef "G_8" 
 pscMusicTwo =  \relative c' {  
    \repeat volta 2 {
      c1 c2 c d1 e f2 d2 d1 b\breve
@@ -1397,7 +1397,7 @@ qscGlobal = {
   \time 3/2
 }
 
-qscTitle = "09 Galliarde"
+qscTitle = "09 Galliarde 'M'amye Est Tant Honneste et Saige'"
 qscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 qscMeter = ""
 qscPoet = ""
@@ -1411,19 +1411,19 @@ qscMusicOneClefModern = \clef treble
 qscMusicOne = \relative c' {  
    
   \repeat volta 2 {
-    e2 e f2 g a4 b a g g1 f2 g1.
+    e2 e f2 g a4 b a g g1 \ficta fs2 g1.
     g2 f e d4 e f e d2 c1 b2 c1 r2
    }
    \repeat volta 2 {
       d2 e f g a4 g f e e1 d2 e1.
-     g2 g g d f e4 d d1 c2 d1 d2
+     g2 g g d f e4 d d1 \ficta cs2 d1 d2
    }
 }
 
 
 qscMusicTwoName = "Contratenor"
 qscMusicTwoClefOrig = \clef alto
-qscMusicTwoClefModern = \clef treble 
+qscMusicTwoClefModern = \clef "G_8" 
 qscMusicTwo =  \relative c' {  
    \repeat volta 2 {
      c2 c c c e1 d2 c a b1. 
@@ -1475,7 +1475,7 @@ rscGlobal = {
   \time 4/2
 }
 
-rscTitle = "10 Pavane"
+rscTitle = "10 Pavane 'O Foible Esprit'"
 rscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 rscMeter = ""
 rscPoet = ""
@@ -1489,13 +1489,13 @@ rscMusicOneClefModern = \clef treble
 rscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-       g\breve a2 g c1 b2 a g f e\breve c'1 c2 c a4 b c a b2 a2. g4 g1 f2 g\breve
+       g\breve a2 g c1 b2 a g f e\breve c'1 c2 c a4 b c a b2 a2~ a4 g4 g1 \ficta fs2 g\breve
    }
    \repeat volta 2 {
-       g1 g2 g a1 c b2 a g1 a\breve d1 c2 b a g f e2. d4 d1 c2 d\breve
+     g1 g2 g a1 c b2 a g1 a\breve d1 c2 b a g f e2 ~ e4 d4 d1 \ficta cs2 d\breve
    }
    \repeat volta 2 {
-       g1 g2 g a1 b2 d2. c4 c1 b2 c\breve c1 c2 c b4 a g f g2 a2. g4 g1 f2 g\breve
+       g1 g2 g a1 b2 d2~ d4 c4 c1 b2 c\breve c1 c2 c b4 a g f g2 a2 ~ a4 g4 g1 \ficta fs2 g\breve
    }
    
 }
@@ -1503,7 +1503,7 @@ rscMusicOne = \relative c'' {
 
 rscMusicTwoName = "Contratenor"
 rscMusicTwoClefOrig = \clef alto
-rscMusicTwoClefModern = \clef treble 
+rscMusicTwoClefModern = \clef "G_8" 
 rscMusicTwo =  \relative c' {  
    \repeat volta 2 {
       e\breve f2 e c4 d e f g f e d e2 d c\breve
@@ -1525,7 +1525,7 @@ rscMusicThree = \relative c' {
        c\breve c2 c c4 b c d e d c b c b a g a\breve a1 a2 a f g d'2 c2 c b a1 g\breve
    }
    \repeat volta 2 {
-       bf1 bf2 bf a1. g4 f g2 a b1 d\breve a1 a2 d2. c4 b2 a2. g4 f2 e4 d e1 d\breve
+       bf1 bf2 bf a1. g4 f g2 a b1 d\breve a1 a2 d2 ~ d4 c4 b2 a2. g4 f2 e4 d e1 d\breve
    }
    \repeat volta 2 {
        b'1 c2. d4 e2 d b1 c2 c d1 c\breve e1 e2 e d4 c b a b2 g2 c b a1 g\breve
@@ -1561,7 +1561,7 @@ sscGlobal = {
   \time 4/2
 }
 
-sscTitle = "11 Pavane"
+sscTitle = "11 Pavane 'Le Bon Vouloir'"
 sscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 sscMeter = ""
 sscPoet = ""
@@ -1589,7 +1589,7 @@ sscMusicOne = \relative c'' {
 
 sscMusicTwoName = "Contratenor"
 sscMusicTwoClefOrig = \clef alto 
-sscMusicTwoClefModern = \clef treble 
+sscMusicTwoClefModern = \clef "G_8" 
 sscMusicTwo =  \relative c' {  
    \repeat volta 2 {
        g'1 c,2 c c c c c g e' e4 c d2 g\breve e2. f4 g2 f g2. f8 e d4 c b a g2 d'2 d1 b\breve
@@ -1609,34 +1609,19 @@ sscMusicThree = \relative c' {
        e1 e2 e a,4 b c d e2 a,2 b c b4 g a b c\breve c1. a2 b4 g g'2. f4 e d c2 b a1 g\breve
    }
    \repeat volta 2 {
-       b1 g2 g'2. f4 e d c2 e b2. c8 b c2 c b\breve c1 c2 d e4 d e f g2 f e d1 r2 c\breve 
-       %rest is there to fix the not lining up. Doesn't sound right. Fix later!
+       b1 g2 g'2. f4 e d c2 e b2. c8 b c2 c b\breve c1 c2 d e2. d4 e f g2 f e d1 c\breve 
+       
    }
    \repeat volta 2 {
        d1 d2 d d1 a2 b a b a b b\breve b2. c4 d2 d e2. d4 c2 b a g a1 g\breve
    }
 }
 
-sscMusicFourName = "Bassus"
-sscMusicFourClefOrig = \clef bass
+
+sscMusicFourName = "Quintus"
+sscMusicFourClefOrig = \clef varbaritone
 sscMusicFourClefModern = \clef bass
-sscMusicFour = \relative c {
-
-   \repeat volta 2 {
-      c1 a2 c2 f,4 g a b c2 f,2 g a e'2 d c\breve c1 c2 d g,1 g2 g c g d'1 g,\breve 
-   }
-   \repeat volta 2 {
-       g1 c2 c a1 a2 c d d a c g\breve f1 f2 f c'1 c2 g bf2 c g1 c\breve
-   }
-   \repeat volta 2 {
-       g1 g2 g d'1 d2 g,2 d'2 g,2 d' g, g\breve g1 d'2 d c1 f2 g d e d1 g,\breve
-   }
-}
-
-sscMusicFiveName = "Quintus"
-sscMusicFiveClefOrig = \clef varbaritone
-sscMusicFiveClefModern = \clef bass
-sscMusicFive = \relative c' {
+sscMusicFour = \relative c' {
 
    \repeat volta 2 {
        g1 a2 e f f e f d c g' d e g g1 g g2 d2 g1 g2 g g g d f d\breve
@@ -1649,6 +1634,21 @@ sscMusicFive = \relative c' {
    }
 }
 
+sscMusicFiveName = "Bassus"
+sscMusicFiveClefOrig = \clef bass
+sscMusicFiveClefModern = \clef bass
+sscMusicFive = \relative c {
+
+   \repeat volta 2 {
+      c1 a2 c2 f,4 g a b c2 f,2 g a e'2 d c\breve c1 c2 d g,1 g2 g c g d'1 g,\breve 
+   }
+   \repeat volta 2 {
+       g1 c2 c a1 a2 c d d a c g\breve f1 f2 f c'1 c2 g bf2 c g1 c\breve
+   }
+   \repeat volta 2 {
+       g1 g2 g d'1 d2 g,2 d'2 g,2 d' g, g\breve g1 d'2 d c1 f2 g d e d1 g,\breve
+   }
+}
 sscChordLine = \chordmode {
 
 }
@@ -1681,7 +1681,7 @@ tscMusicOne = \relative c'' {
      c'1. bf2 a2 c bf2. a4 g2 g f e4 d e\breve
    }
    \repeat volta 2 {
-     a2. bf4 c2. bf8 a g2 bf a g2. f4 f1 e2 f\breve
+     a2. bf4 c2. bf8 a g2 bf a g2 ~ g4 f4 f1 e2 f\breve
    }
    
 }
@@ -1712,27 +1712,28 @@ tscMusicThree = \relative c' {
      e2. d4 c2 d f2. e4 d1 e2 c1 bf2 c\breve
    }
    \repeat volta 2 {
-     f1 e2. d4 c2 d c c2. bf4 a2 g1 f\breve
+     f1 e2. d4 c2 d c c2 ~ c4 bf4 a2 g1 f\breve
    }
 }
 
-tscMusicFourName = "Bassus"
-tscMusicFourClefOrig = \clef bass
+tscMusicFourName = "Quintus"
+tscMusicFourClefOrig = \clef "varbaritone"
 tscMusicFourClefModern = \clef bass
-tscMusicFour = \relative c {
+tscMusicFour = \relative c' {
 
    \repeat volta 2 {
-     f\breve g2. f4 e1 d2 f e1 d\breve
+     a\breve bf2. a4 g1 f2 a g1 f\breve
    }
    \repeat volta 2 {
-     e1 f2 d2. e4 f2 g bf,2 e c d1 e\breve
+     g1 a2 f2 ~ f4 g4 a2 bf2 d,2 g2 e f1 g\breve    
    }
    \repeat volta 2 {
-     d2. c4 a bf c d e2 bf2 d e c d a e'2 f\breve
+     f2. e4 c d e f g2 d2 f g e f c g'2 a\breve
+    
    }
 }
 
-tscMusicFiveName = "Quintus"
+tscMusicFiveName = "Bassus"
 tscMusicFiveClefOrig = \clef bass
 tscMusicFiveClefModern = \clef bass
 tscMusicFive = \relative c, {
@@ -1744,7 +1745,7 @@ tscMusicFive = \relative c, {
      c'1 f,2 bf f1 bf c d c\breve
    }
    \repeat volta 2 {
-     f,1 c'1. bf2 f c'1 f,2 c'1 f,\breve
+     f,1 c'1 ~ c2 bf2 f c'2 ~ c2 f,2 c'1 f,\breve
    }
 }
 
@@ -1760,7 +1761,7 @@ uscGlobal = {
   \time 4/2
 }
 
-uscTitle = "13 Pavane"
+uscTitle = "13 Pavane 'Pour Mon Plaisir'"
 uscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 uscMeter = ""
 uscPoet = ""
@@ -1871,7 +1872,7 @@ uscChordLine = \chordmode {
 vscTempo = #(ly:make-moment 165 2)
 
 vscGlobal = {
-  \key f \major
+  \key g \dorian
   \time 4/2
 }
 
@@ -1890,15 +1891,15 @@ vscMusicOne = \relative c'' {
    
    \repeat volta 2 {
      a1. a2 a1 a2 bf2 a2 a g1 f\breve
-     d1 d2 g2 f2. g8 a bf2 a2 ~ a4 g4 g1 f2 g\breve
+     d1 d2 g2 f2. g8 a bf2 a2 ~ a4 g4 g1 \ficta fs2 g\breve
    }
    \repeat volta 2 {
      f1 e2 e d1 e2 a2 g2 f g1 f\breve
-     f2 g e f d1 c2 c d g1 f2 g\breve
+     f2 g e f d1 c2 c d g1 \ficta fs2 g\breve
    }
    \repeat volta 2 {
      f2 f g2. f4 g a bf2 c2 d g,1. g2 g\breve
-     d'2. c4 bf2 a2 bf1. a2 ~ a4 g4 g1 f2 g\breve
+     d'2. c4 bf2 a2 bf1. a2 ~ a4 g4 g1 \ficta fs2 g\breve
    }
    
 }
@@ -1906,7 +1907,7 @@ vscMusicOne = \relative c'' {
 
 vscMusicTwoName = "Contratenor"
 vscMusicTwoClefOrig = \clef alto
-vscMusicTwoClefModern = \clef treble 
+vscMusicTwoClefModern = \clef "G_8" 
 vscMusicTwo =  \relative c' {  
    \repeat volta 2 { 
      f1. f2 f1. f2 f f d1 d\breve
@@ -1985,7 +1986,7 @@ wscMusicOneClefModern = \clef treble
 wscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-    g\breve a2. g4 a bf c1 bf4 a bf1 a\breve c2. bf4 a2 d c4 bf a g f2 a g4 f f1 e2 f\breve
+    g\breve a2. g4 a bf c2 ~ c2 bf4 a bf1 a\breve c2. bf4 a2 d c4 bf a g f2 a g4 f f1 e2 f\breve
    }
    \repeat volta 2 {
     d'1. bf2 c2. bf4 a2 c bf4 a g f g1 a\breve
@@ -1999,14 +2000,14 @@ wscMusicOne = \relative c'' {
 
 wscMusicTwoName = "Contratenor"
 wscMusicTwoClefOrig = \clef alto
-wscMusicTwoClefModern = \clef treble 
+wscMusicTwoClefModern = \clef "G_8" 
 wscMusicTwo =  \relative c' { 
  
    \repeat volta 2 {
     c1 d2 bf c f1 e2 f c1 bf2 c\breve f1. f2 f f,4 g a bf c2 g d' c1 a\breve
    }
    \repeat volta 2 {
-    bf1 bf2 d c1 f2 g1 f4 e d2. e4 f\breve
+    bf1 bf2 d c1 f2 g2 ~ g2 f4 e d2. e4 f\breve
    }
    \repeat volta 2 {
     d1 g2 f g g, a a bf c f,1 g\breve e'1 d2 d g g,4 a bf1 a2. bf4 c1 a\breve
@@ -2091,19 +2092,19 @@ xscMusicOne = \relative c'' {
 
 xscMusicTwoName = "Contratenor"
 xscMusicTwoClefOrig = \clef alto
-xscMusicTwoClefModern = \clef "g_8" 
+xscMusicTwoClefModern = \clef "G_8" 
 xscMusicTwo =  \relative c' {  
    \repeat volta 2 {
     c1. d4 e f1 f2 f c a c1 c\breve c1. d4 e f2. e4 d1 c2 bf c1 a\breve
    }
    \repeat volta 2 {
-    f1 c'2 c a1 r2 d2. c4 c1 bf2 c\breve
+    f1 c'2 c a1 r2 d2~ d4 c4 c1 bf2 c\breve
    }
    \repeat volta 2 {
     c2. c4 c2 g g1 r2 c e c c1 a\breve
    }
    \repeat volta 2 {
-    g'1 a2 f f1. d2 d1 f c\breve g'1 a2 f2. e4 d1 e2 f bf, c1 a\breve
+    g'1 a2 f f1. d2 d1 f c\breve g'1 a2 f2 ~ f4 e4 d1 e2 f bf, c1 a\breve
    }
 }
 
@@ -2152,6 +2153,7 @@ xscChordLine = \chordmode {
 }
 
 
+%A part measure 6 Contratenor flatted e to match held eflat in tenor line
 yscTempo = #(ly:make-moment 165 2)
 
 yscGlobal = {
@@ -2173,13 +2175,13 @@ yscMusicOneClefModern = \clef treble
 yscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-    g2. a4 bf2 c bf2. a4 g2 bf a g1 f2 g\breve c2. c4 bf2 a g2. a4 bf2 bf a2. g8 f g1 f\breve
+    g2. a4 bf2 c bf2. a4 g2 bf a g1 \ficta fs2 g\breve c2. c4 bf2 a g2. a4 bf2 bf a2. g8 f g1 f\breve
    }
    \repeat volta 2 {
-    f2. g4 a2 f bf2. a4 g2 a bf d1 c2 d\breve g,2 g c a bf2. a4 g2 a bf c2. bf4 a g a\breve
+    f2. g4 a2 f bf2. a4 g2 a bf d1 \ficta cs2 d\breve g,2 g c a bf2. a4 g2 a bf c2. bf4 a g a\breve
    }
    \repeat volta 2 {
-    g1 g2 g bf1 bf2 bf a c2. bf4 a g f\breve g2. a4 bf2 bf a2. bf4 c2 bf2. a4 g1 f2 g\breve
+    g1 g2 g bf1 bf2 bf a c2. bf4 a g f\breve g2. a4 bf2 bf a2. bf4 c2 bf2 ~ bf4 a4 g1 \ficta fs2 g\breve
    }
    
 }
@@ -2187,16 +2189,16 @@ yscMusicOne = \relative c'' {
 
 yscMusicTwoName = "Contratenor"
 yscMusicTwoClefOrig = \clef alto 
-yscMusicTwoClefModern = \clef treble 
+yscMusicTwoClefModern = \clef "G_8" 
 yscMusicTwo =  \relative c' {  
    \repeat volta 2 {
-    bf2. c4 d2 e d2. c4 bf c d bf c bf a g a1 g\breve g2. a4 bf c d2 bf4 c d e f2 e4 d c2 d1 c2 d\breve
+    bf2. c4 d2 e d2. c4 bf c d bf c bf a g a1 g\breve g2. a4 bf c d2 bf4 c d ef f2 e4 d c2 d1 c2 d\breve
    }
    \repeat volta 2 {
-    a1 a2 a bf2. c4 d e f2 d1 e d\breve bf2 c1 d2. c4 bf2. g4 d'1 c2 d2. c8 bf c\breve
+    a1 a2 a bf2. c4 d e f2 d1 e d\breve bf2 c1 d2 ~ d4 c4 bf2. g4 d'2 ~ d2 c2 d2. c8 bf c\breve
    }
    \repeat volta 2 {
-    c1 c2 c bf1 bf2 bf c2. bf4 a2 g a\breve bf2. c4 d2 c4 bf c2. d4 e2 d2. c4 bf2 a1 g\breve
+    c1 c2 c bf1 bf2 bf c2. bf4 a2 g a\breve bf2. c4 d2 c4 bf c2. d4 e2 d2~ d4 c4 bf2 a1 g\breve
    }
 }
 yscMusicThreeName = "Tenor"
@@ -2224,7 +2226,7 @@ yscMusicFour = \relative c' {
     d4 c bf c d e f2 d e1 d\breve
    }
    \repeat volta 2 {
-    d1 d2 d g1 g2 f g bf a1 d,2 d g1. e2 f f g2. f4 e2 d g a g1 f\breve
+    d1 d2 d g1 g2 f g bf a1 d,2 d g1 ~ g2 e2 f f g2. f4 e2 d g a g1 f\breve
    }
    \repeat volta 2 {
     c1 c2 c g'1 g2 g a2. g4 f2 e d\breve g1 g2 g f2. e8 d c2 g' f g d1 g,\breve
@@ -2237,6 +2239,7 @@ yscChordLine = \chordmode {
 }
 
 
+%Superius A part flatted e in measure 6 to match the bassus ef
 zscTempo = #(ly:make-moment 165 2)
 
 zscGlobal = {
@@ -2244,7 +2247,7 @@ zscGlobal = {
   \time 4/2
 }
 
-zscTitle = "18 Pavane"
+zscTitle = "18 Pavane 'Dellestarpe'"
 zscSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 zscMeter = ""
 zscPoet = ""
@@ -2258,13 +2261,13 @@ zscMusicOneClefModern = \clef treble
 zscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-    g\breve f1 g4 a bf g a1. g2 f f g4 a bf g a1. g2 f4 g a bf a g f e f\breve f1 r
+    g\breve f1 g4 a bf g a1. g2 f f g4 a bf g a1. g2 f4 g a bf a g f ef f\breve f1 r
    }
    \repeat volta 2 {
     bf1 bf2 a4 g a2 d c a bf1 bf2 a4 g a2 d c a bf1 bf2 a4 g a1 g f\breve f1 r
    }
    \repeat volta 2 {
-    a1 c2. bf4 a1d2. c4 bf2 d c2. bf4 a1 d2. c4 bf2 d c2. bf4 a2 g1 f2 g\breve g1 g
+    a1 c2. bf4 a1d2. c4 bf2 d c2. bf4 a1 d2. c4 bf2 d c2. bf4 a2 g1 \ficta fs2 g\breve g1 g
    }
    
 }
@@ -2272,7 +2275,7 @@ zscMusicOne = \relative c'' {
 
 zscMusicTwoName = "Contratenor"
 zscMusicTwoClefOrig = \clef alto 
-zscMusicTwoClefModern = \clef treble 
+zscMusicTwoClefModern = \clef "G_8" 
 zscMusicTwo =  \relative c' {  
    \repeat volta 2 {
     d\breve d1 d4 c d e f1 f2 e d1 d4 c d e f1 f2 e d1 bf2 c d\breve d1 r
@@ -2295,7 +2298,7 @@ zscMusicThree = \relative c' {
     bf4 a bf c d2 d c bf c1 bf4 a bf c d2 d c bf c1 bf4 a bf c d2 bf a d d c d1 d d r
    }
    \repeat volta 2 {
-    c1. c2 f2. e4 d1 g2. f4 e2 g f2. e4 d2 d g2. f4 e d c1 bf2 a1 g2 bf2. a4 bf c d\breve
+    c1. c2 f2. e4 d1 g2. f4 e2 g f2. e4 d2 d g2. f4 e d c2 ~ c2 bf2 a1 g2 bf2. a4 bf c d\breve
    }
 }
 
@@ -2321,6 +2324,8 @@ zscChordLine = \chordmode {
 }
 
 
+%Superius B part Measure 12 breve instead of semibreve
+%Bassus C part measure 18 ef to match contratenor ef
 aascTempo = #(ly:make-moment 165 2)
 
 aascGlobal = {
@@ -2343,14 +2348,14 @@ aascMusicOne = \relative c'' {
    
    \repeat volta 2 {
      g1 g2 g2 | d'1 d2 d2 | c2. bf4 a2 bf2 | g\breve 
-     bf2. c4 d2 bf2 | c d bf2 g | a g1 f2 | g\breve 
+     bf2. c4 d2 bf2 | c d bf2 g | a g1 \ficta fs2 | g\breve 
    }
    \repeat volta 2 {
-     a1. bf2 | a1. f2 | g a bf bf | a\breve %changed from orig semibreve
+     a1. bf2 | a1. f2 | g a bf bf | a\breve 
    }
    \repeat volta 2 {
       d1 bf2 c d1 c2 c c2. bf4 a2 g f\breve
-      d'1 d2 c4 bf a2 bf2 g a f g1 f2 g\breve
+      d'1 d2 c4 bf a2 bf2 g a f g1 \ficta fs2 g\breve
    }
 }
 
@@ -2402,7 +2407,7 @@ aascMusicFour = \relative c' {
    }
    \repeat volta 2 {
       d1 g2 e2 | d4 c d e f2 g | c,\breve | d\breve
-      d1. e2 | f bf,2 \ficta ef2 c2 | d e d1 | g\breve %ef in contratenor
+      d1. e2 | f bf,2 ef2 c2 | d e d1 | g\breve
    }
 }
 
@@ -2413,7 +2418,7 @@ aascChordLine = \chordmode {
 
 
 %added half rest at end of bottom 3 parts.
-%tiny modification for fun.
+
 abscTempo = #(ly:make-moment 165 2)
 
 abscGlobal= {
@@ -2438,9 +2443,9 @@ abscMusicOne = \relative c'' {
          f1 f2
    }
    \repeat volta 2 {
-      a2 a a | b4 a g a b c | d1 c2 | d2. d4 c2
+      a2 a a | b4 a g a b c | d1 \ficta cs2 | d2. d4 c2
       b2 c4 b a g | f2 d2 e2~ | e2 d1 | d1 d2 | a'2 a a | b4 a g a b c | d1 
-         c2 | d2. d4 c2 | b2 c4 b a g | f2 d2 e4 f | g1 f2 | g1 g2
+         c2 | d2. d4 c2 | b2 c4 b a g | f2 d2 e4 f | g1 \ficta fs2 | g1 g2
    }
    
 }
@@ -2517,7 +2522,7 @@ acscMusicOne = \relative c'' {
    }
    \repeat volta 2 {
       a2. c4 bf2 | a1 a2~ | a2 g1 | f1 r2 | d'1 c2
-      bf2 a1 | g f2 | g1 g2
+      bf2 a1 | g \ficta fs2 | g1 g2
    }
    \repeat volta 2 {
       c2 c d | c2. c4 bf2 | a2. g4 f2 | e a2. g4 | f1 e2 | f1 f2
@@ -2528,7 +2533,7 @@ acscMusicOne = \relative c'' {
 
 acscMusicTwoName = "Contratenor"
 acscMusicTwoClefOrig = \clef alto
-acscMusicTwoClefModern = \clef treble
+acscMusicTwoClefModern = \clef "G_8"
 acscMusicTwo =  \relative c'' {  
    \repeat volta 2 {
       g2 f e | d1 d2 | d1 e4 f | g2 bf2. a4 | g4 f g1 | e e2
@@ -2616,7 +2621,7 @@ adscMusicOne = \relative c' {
 
 adscMusicTwoName = "Contratenor"
 adscMusicTwoClefOrig = \clef alto
-adscMusicTwoClefModern = \clef treble
+adscMusicTwoClefModern = \clef "G_8"
 adscMusicTwo =  \relative c' {  
    \repeat volta 2 {
       c2 f f e d1 g1 e2 c ef2. d4 c bf c1 a1 a2
@@ -2626,7 +2631,7 @@ adscMusicTwo =  \relative c' {
       c2 bf c1 r2 c2 c c a1 a2
    }
    \repeat volta 2 {
-      f'2 f4 f d2 d e1 ef2 e4 e c2 d g,2 c2 g2 g4 g g2 g2 r2 a2 d c c4 bf a g a1
+      f'2 f4 f d2 d e1 ef2 ef4 ef c2 d g,2 c2 g2 g4 g g2 g2 r2 a2 d c c4 bf a g a1
    }
 }
 adscMusicThreeName = "Tenor"
@@ -2657,7 +2662,7 @@ adscMusicFour = \relative c {
       c'2 f,2 c'2 c f,1 f2
    }
    \repeat volta 2 {
-      f'2 f4 f g2 g c,1 ef2 e4 e f2 d c f,2 c'2 c4 c g2 g c a bf f c'2 c f,1
+      f'2 f4 f g2 g c,1 ef2 ef4 ef f2 d c f,2 c'2 c4 c g2 g c a bf f c'2 c f,1
    }
 }
 
@@ -2667,10 +2672,9 @@ adscChordLine = \chordmode {
 }
 
 
+%Superius measure 22 ef because of Tenor ef.
 %made first measure a pickup. 
-%Moved rest at beginning of B part to end of A. 
-%added rest to superious, tenor and bass parts at end of B.
-%contratenor whole note in 23 may want to be a half note. Left it as whole for now. 
+%contratenor B part measure 20 made removed dot from dotted whole
 
 aescTempo = #(ly:make-moment 165 2)
 
@@ -2691,13 +2695,14 @@ aescMusicOneName = "Superius"
 aescMusicOneClefOrig = \clef soprano
 aescMusicOneClefModern = \clef treble
 aescMusicOne = \relative c'' {  
-   \repeat volta 2 {
-      \partial 2 a4 bf4 c1. c2. a4 bf c d1. d2 ef2 d c1 c2 c1 bf4 a 
+  \partial 2
+  \repeat volta 2 {
+       a4 bf4 c1. c2. a4 bf c d1. d2 ef2 d c1 c2 c1 bf4 a 
          bf1 bf2 bf1 a4 bf c1. c2 c4 a bf c d1. d2
-      ef2 d2 c1. bf4 a c2 bf2 c1 c2 c1 r2
+      ef2 d2 c1. bf4 a c2 bf2 c1 c2 c1 
    }
    \repeat volta 2 {
-      ef1 ef2 d1 d c bf bf2 bf1 d4 ef f1 \set suggestAccidentals = ##t ef2 \set suggestAccidentals = ##f c1 bf2 c1 c2 c1 r2
+      r2 ef1 ef2 d1 d2 ~ d2 c1 bf bf2 bf1 d4 ef f1 ef2 c1 bf2 c1 c2 c1 
    }
    
 }
@@ -2707,25 +2712,27 @@ aescMusicTwoName = "Contratenor"
 aescMusicTwoClefOrig = \clef mezzosoprano
 aescMusicTwoClefModern = \clef treble
 aescMusicTwo =  \relative c' {  
-   \repeat volta 2 {
-      \partial 2 f2 ef1. e2 e e d1 d2 d g2 f e1. e2 e c d1 d2 d1 c2 g'1. g2 g a bf1 bf2
-      bf2 bf bf g1 g2 g1 g2 e1 e2 c1 r2
+  \partial 2
+  \repeat volta 2 {
+       f2 ef1. ef2 ef ef d1 d2 d g2 f e1. e2 e c d1 d2 d1 c2 g'1. g2 g a bf1 bf2
+      bf2 bf bf g1 g2 g1 g2 e1 e2 c1 
    }
    \repeat volta 2 {
-      c'1 bf2 bf1 bf g2 g g1. g2 g1 bf2 bf1 g2 a g1 e1 e2 e1
+      r2 c'1 bf2 bf1 bf2 ~ bf g2 g g1 g2 g1 bf2 bf1 g2 a g1 e1 e2 e1
    }
 }
 aescMusicThreeName = "Tenor"
 aescMusicThreeClefOrig = \clef alto 
 aescMusicThreeClefModern = \clef "G_8"
 aescMusicThree = \relative c {
+   \partial 2
    \repeat volta 2 {
-      \partial 2 f2 g1. g2 g g bf1 bf2 bf bf bf g1. g2 g g g1 g2 g1 d'2 
-         ef1. e2 e1 f f2 f g f
-      e1 e2 d1 d2 c1 c2 c1 r2
+       f2 g1. g2 g g bf1 bf2 bf bf bf g1. g2 g g g1 g2 g1 d'2 
+         ef1. ef2 ef1 f f2 f g f
+      e1 e2 d1 d2 c1 c2 c1 
    }
    \repeat volta 2 {
-      g'1 g2 f1 f ef2 e d1 d2 d1 g2 f d ef2 f d1 c1 c2 c1 r2
+     r2 g'1 g2 f1 f2 ~ f2 ef2 ef d1 d2 d1 g2 f d ef2 f d1 c1 c2 c1 
    }
 }
 
@@ -2733,12 +2740,13 @@ aescMusicFourName = "Bassus"
 aescMusicFourClefOrig = \clef bass
 aescMusicFourClefModern = \clef bass
 aescMusicFour = \relative c {
-   \repeat volta 2 {
-      \partial 2 d2 c1. c2 c c bf1 bf2 bf ef bf c1. c2 c c g1 g2 g1 g2 c1. c2 c1 bf1 bf2
-      bf2 ef2 bf c1 c2 g1 g2 c1 c2 c1 r2
+  \partial 2
+  \repeat volta 2 {
+       d2 c1. c2 c c bf1 bf2 bf ef bf c1. c2 c c g1 g2 g1 g2 c1. c2 c1 bf1 bf2
+      bf2 ef2 bf c1 c2 g1 g2 c1 c2 c1 
    }
    \repeat volta 2 {
-       c1 ef2 bf1 bf c2 c g1 g2 g1 g2 bf1 c2 f,2 g1 c c2 c1 r2
+     r2  c1 ef2 bf1 bf2 ~ bf c2 c g1 g2 g1 g2 bf1 c2 f,2 g1 c c2 c1 
    }
 }
 
@@ -2774,7 +2782,7 @@ afscMusicOne = \relative c'' {
       d1 c2 d4 c4 b2 a b2 c1 b2 a1
    }
    \repeat volta 2 {
-      r2 b2 b b c2. b4 a2 g1 f2 g1
+      r2 b2 b b c2. b4 a2 g1 \ficta fs2 g1
    }
 }
 
@@ -2789,7 +2797,7 @@ afscMusicTwo =  \relative c' {
       a1 a2 a g f g a1 g2 f1
    }
    \repeat volta 2 {
-      r2 d2 g g g1 f4 e d c d1 b1
+      r2 d2 g g g1 f4 e d c d2 ~ d2 b1
    }
 }
 afscMusicThreeName = "Tenor"
@@ -2803,7 +2811,7 @@ afscMusicThree = \relative c' {
       f1 f2 f d d d f1 d2 d1
    }
    \repeat volta 2 {
-      r2 b2 d d e2. d4 c2 b a1 g1
+      r2 b2 d d e2. d4 c2 b a2 ~ a2 g1
    }
 }
 
@@ -2818,7 +2826,7 @@ afscMusicFour = \relative c' {
       d1 f2 f g d g f1 g2 d1
    }
    \repeat volta 2 {
-      r2 g2 g4 f e d c2 c f2 g d1 g,1
+      r2 g2 g4 f e d c2 c f2 g d2 ~ d2 g,1
    }
 }
 
@@ -2850,12 +2858,12 @@ agscMusicOneClefOrig = \clef treble
 agscMusicOneClefModern = \clef treble
 agscMusicOne = \relative c'' {  
    \repeat volta 2 {
-      d2 d g f2. f4 e2 d c bf a2. d4 c2 bf2 a2. g4 f2. e4 d1 d d d2 
+      d2 d g f2. f4 e2 d c bf a2. d4 c2 bf2 a2. g4 f2. e4 d2 ~ d2 d1 d d2 
    }
    \repeat volta 2 {
       c'2 d c bf2. c4 bf2 a g2 g 
       f1 f2 bf2 bf c d1 c2 bf1 a2 bf1 r2 d2^\signumcongruentiae d4 d c2 c 
-         bf1 c2 c4 bf4 a2 g2 f bf2 a g1 f2 g1
+         bf1 c2 c4 bf4 a2 g2 f bf2 a g1 \ficta fs2 g1
    }
    
 }
@@ -2863,16 +2871,16 @@ agscMusicOne = \relative c'' {
 
 agscMusicTwoName = "Contratenor"
 agscMusicTwoClefOrig = \clef alto
-agscMusicTwoClefModern = \clef treble 
+agscMusicTwoClefModern = \clef "G_8" 
 agscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
-      bf2 bf g2 a2. a'4 a2 f2 a g f2. f4 f2 f f d d2. c4 bf1 a bf bf2
+      bf2 bf g2 a2. a'4 a2 f2 a g f2. f4 f2 f f d d2. c4 bf2 ~ bf a1 bf bf2
    }
    \repeat volta 2 {
       f'2 f f d1. d2 g,2 g a1 a2
       d2 d f f1 f2 e f1 d r2 bf'2^\signumcongruentiae bf4 bf a2 a 
-         g1 e2 f f d d f e c d1 bf1
+         g1 e2 f f d d f e c d2 ~ d2 bf1
    }
 }
 agscMusicThreeName = "Tenor"
@@ -2886,7 +2894,7 @@ agscMusicThree = \relative c' {
    \repeat volta 2 {
       a2 a a bf2. a4 bf4 c d1 c2 d1 d2
       f,2 g a bf1 a2 bf2 c1 bf1 r2 f'2^\signumcongruentiae f4 f f g f e 
-         d1 c2 c4 d c a bf c d2. d4 c bf a g a1 g 
+         d1 c2 c4 d c a bf c d2. d4 c bf a g a2 ~ a2 g1
    }
 }
 
@@ -2900,7 +2908,7 @@ agscMusicFour = \relative c' {
    \repeat volta 2 {
       f'2 f f g1 g2 f2 
       e2 e d1 d2 d g f bf,4 c d e f2 g f1 bf,1 r2 bf2^\signumcongruentiae bf4 bf 
-         f'2 f g1 c,2 f2 f g d bf c e d1 g,1
+         f'2 f g1 c,2 f2 f g d bf c e d2 ~ d2 g,1
    }
    \repeat volta 2 {
    }
@@ -2936,10 +2944,10 @@ ahscMusicOneClefModern = \clef treble
 ahscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      g4 a bf2 c d1 bf2 d4 e f2 g2 f2. e4 d2 bf4 c d2 d c2. bf4 a2 g1 f2 g1 r2
+      g4 a bf2 c d1 bf2 d4 e f2 g2 f2. e4 d2 bf4 c d2 d c2. bf4 a2 g1 \ficta fs2 g1 r2
    }
    \repeat volta 2 {
-      g2 a bf c2. bf4 a g bf2 bf a bf1 bf2 d d c bf2. bf4 a2 g1 f2 g1 r2
+      g2 a bf c2. bf4 a g bf2 bf a bf1 bf2 d d c bf2. bf4 a2 g1 \ficta fs2 g1 r2
    }
    
 }
@@ -2947,7 +2955,7 @@ ahscMusicOne = \relative c'' {
 
 ahscMusicTwoName = "Contratenor"
 ahscMusicTwoClefOrig = \clef alto
-ahscMusicTwoClefModern = \clef treble 
+ahscMusicTwoClefModern = \clef "G_8" 
 ahscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
@@ -2989,6 +2997,7 @@ ahscChordLine = \chordmode {
 }
 
 
+%Moved rests to the end of the line
 aiscTempo = #(ly:make-moment 165 2)
 
 aiscGlobal= {
@@ -3010,13 +3019,13 @@ aiscMusicOneClefModern = \clef treble
 aiscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      r2 d2 d c bf2. a4 g2 a g2. f4 e1. a2 bf g a g2. f4 f1 e2 f1
+       d2 d c bf2. a4 g2 a g2. f4 e1. a2 bf g a g2. f4 f1 e2 f1 r2
    }
    \repeat volta 2 {
-      r2 c'2 c bf a1. g1 f2 g1
+       c'2 c bf a1. g1 f2 g1 r2
    }
    \repeat volta 2 {
-      r2 a2 bf g a g2. f4 f1 e2 f1
+       a2 bf g a g2. f4 f1 e2 f1r 2
    }
    
 }
@@ -3024,17 +3033,17 @@ aiscMusicOne = \relative c'' {
 
 aiscMusicTwoName = "Contratenor"
 aiscMusicTwoClefOrig = \clef alto
-aiscMusicTwoClefModern = \clef treble 
+aiscMusicTwoClefModern = \clef "G_8" 
 aiscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
-      r2 f2 f f bf,2. c4 d e f2 e d c1. a2 d2 e f d c bf c1 a1
+       f2 f f bf,2. c4 d e f2 e d c1. a2 d2 e f d c bf c1 a1 r2
    }
    \repeat volta 2 {
-      r2 f'2 f d f1. d2 d d bf1
+       f'2 f d f1. d2 d d bf1 r2
    }
    \repeat volta 2 {
-      r2 d2 d d f e2. d4 c bf c1 a
+       d2 d d f e2. d4 c bf c1 a r2
    }
 }
 aiscMusicThreeName = "Tenor"
@@ -3043,13 +3052,13 @@ aiscMusicThreeClefModern = \clef "G_8"
 aiscMusicThree = \relative c' {
 
    \repeat volta 2 {
-      r2 bf2 bf a d2. c4 bf2 c2 c bf c1. c2 bf c a2 bf a g4 f g1 f1
+       bf2 bf a d2. c4 bf2 c2 c bf c1. c2 bf c a2 bf a g4 f g1 f1 r2
    }
    \repeat volta 2 {
-      r2 a2 a bf c1. bf2 a a g1
+       a2 a bf c1. bf2 a a g1 r2
    }
    \repeat volta 2 {
-      r2 f2 g bf a4 bf c a bf a g f g2 g2 f1
+       f2 g bf a4 bf c a bf a g f g2 g2 f1 r2
    }
 }
 
@@ -3059,13 +3068,13 @@ aiscMusicFourClefModern = \clef bass
 aiscMusicFour = \relative c {
 
    \repeat volta 2 {
-      r2 bf bf f' g1 g2 f g2 g2 c,1. f2 g c,2 f bf,2 c d c1 f1
+       bf bf f' g1 g2 f g2 g2 c,1. f2 g c,2 f bf,2 c d c1 f1 r2
    }
    \repeat volta 2 {
-      r2 f2 f g f1. g2 d2 d g,1
+       f2 f g f1. g2 d2 d g,1 r2
    }
    \repeat volta 2 {
-      r2 d'2 g,2 g'2 f c e f c1 f1
+       d'2 g,2 g'2 f c e f c1 f1 r2
    }
 }
 
@@ -3074,6 +3083,9 @@ aiscChordLine = \chordmode {
 
 }
 
+
+%Bassus B part last three gs, made semibreve minim semibreve to match other parts
+%Pickup for beginning
 
 ajscTempo = #(ly:make-moment 165 2)
 
@@ -3094,13 +3106,13 @@ ajscMusicOneName = "Superius"
 ajscMusicOneClefOrig = \clef soprano
 ajscMusicOneClefModern = \clef treble
 ajscMusicOne = \relative c'' {  
-   
+   \partial 2
    \repeat volta 2 {
-      r2 r2 g4^\signumcongruentiae a bf1 bf2 bf c2 c d1 d2 d1 ef2 d1 c2 bf1 a2 bf1 bf2 bf1
+      g4^\signumcongruentiae a bf1 bf2 bf c2 c d1 d2 d1 ef2 d1 c2 bf1 a2 bf1 bf2 bf1
    }
    \repeat volta 2 {
       bf4 c d1. d2 d d c1. c2 c c d1
-         c2 bf a g f1 f2 f1 bf4 c d1. d2 d d c1. c2 c c bf1 a2 g1 f2 g1 g2 g1
+         c2 bf a g f1 f2 f1 bf4 c d1. d2 d d c1. c2 c c bf1 a2 g1 \ficta fs2 g1 g2 g1
    }
    
 }
@@ -3110,9 +3122,9 @@ ajscMusicTwoName = "Contratenor"
 ajscMusicTwoClefOrig = \clef alto
 ajscMusicTwoClefModern = \clef treble 
 ajscMusicTwo =  \relative c' {  
-
+    \partial 2
    \repeat volta 2 {
-      r2 r2 d2 d1. d2 f2 f f1 f2 f1 g2 f1 f2 d2 f1 d1 d2 d1
+     d2 d1. d2 f2 f f1 f2 f1 g2 f1 f2 d2 f1 d1 d2 d1
    }
    \repeat volta 2 {
       r2 f1. f2 f f f1. f2 f f f1. d2 e e d1
@@ -3125,9 +3137,9 @@ ajscMusicThreeName = "Tenor"
 ajscMusicThreeClefOrig = \clef alto
 ajscMusicThreeClefModern = \clef "G_8" 
 ajscMusicThree = \relative c' {
-
+    \partial 2
    \repeat volta 2 {
-      r2 r2 bf2 bf1. bf2 a2 a bf1 bf2 bf1 g4 a bf1 a2 bf2 c1 bf1 bf2 bf1
+       bf2 bf1. bf2 a2 a bf1 bf2 bf1 g4 a bf1 a2 bf2 c1 bf1 bf2 bf1
    }
    \repeat volta 2 {
       r2 bf1. bf2 bf bf a1. a2 a a bf1 a2 g2 
@@ -3141,13 +3153,13 @@ ajscMusicFourName = "Bassus"
 ajscMusicFourClefOrig = \clef bass
 ajscMusicFourClefModern = \clef bass
 ajscMusicFour = \relative c' {
-
+    \partial 2
    \repeat volta 2 {
-      r2 r2 g2^\signumcongruentiae g1. g2 f2 f bf,1 bf2 bf1 ef2 bf1 f'2 g f1 bf,1 bf2 bf1
+       g2^\signumcongruentiae g1. g2 f2 f bf,1 bf2 bf1 ef2 bf1 f'2 g f1 bf,1 bf2 bf1
    }
    \repeat volta 2 {
       r2 bf1. bf2 bf bf f'1. f2 f f bf,1 f'2 g 
-         c,2 c d1 d2 d1 bf2 bf1. bf2 bf bf f'1. f2 f2 f2 g1 c,2 e2 d1 g,2 g1 g2
+         c,2 c d1 d2 d1 bf2 bf1. bf2 bf bf f'1. f2 f2 f2 g1 c,2 e2 d1 g,1 g2 g1
    }
 }
 
@@ -3189,7 +3201,7 @@ akscMusicOne = \relative c' {
 
 akscMusicTwoName = "Contratenor"
 akscMusicTwoClefOrig = \clef alto
-akscMusicTwoClefModern = \clef treble 
+akscMusicTwoClefModern = \clef "G_8" 
 akscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
@@ -3252,7 +3264,7 @@ alscMusicOneClefModern = \clef treble
 alscMusicOne = \relative c' {  
    
    \repeat volta 2 {
-      e2 f g1 g2 f1 f2 e1 e2 r2 %last rest to make it fit
+     r2  e2 f g1 g2 f1 f2 e1 e2 
    }
    \repeat volta 2 {
       a2 a g f2. f4 e2 d2 d c d1 d2 a'2^\signumcongruentiae a g f4 g a f g f e d a'2 a f1 f2
@@ -3265,11 +3277,11 @@ alscMusicOne = \relative c' {
 
 alscMusicTwoName = "Contratenor"
 alscMusicTwoClefOrig = \clef alto
-alscMusicTwoClefModern = \clef treble 
+alscMusicTwoClefModern = \clef "G_8" 
 alscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
-      c2 d e1 c2 d1 bf2 c1 c2 r2
+      r2 c2 d e1 c2 d1 bf2 c1 c2 
    }
    \repeat volta 2 {
       f2 f e d a4 bf c bf a g a1 f1 f2 f'2^\signumcongruentiae f e d4 e f d e d d1 c2 d1 d2
@@ -3283,7 +3295,7 @@ alscMusicThreeClefModern = \clef "G_8"
 alscMusicThree = \relative c' {
 
    \repeat volta 2 {
-      g2 a c1 g2 a1 f2 g1 g2 r2 %last rest to make it fit
+     r2  g2 a c1 g2 a1 f2 g1 g2  
    }
    \repeat volta 2 {
       c2 c c a2 f g f e1 d1 d2 c'2^\signumcongruentiae c c a2 f c'2 bf a1 a a2
@@ -3298,7 +3310,7 @@ alscMusicFourClefModern = \clef bass
 alscMusicFour = \relative c {
 
    \repeat volta 2 {
-      c2 f c1 e2 d1 d2 c1 c2 r2 %last rest to make it fit
+     r2 c2 f c1 e2 d1 d2 c1 c2 
    }
    \repeat volta 2 {
       f2 f c2 d2. d4 c2 d2 a1 d1 d2 f2^\signumcongruentiae f c d2. d4 c2 d a1 d1 d2
@@ -3313,10 +3325,11 @@ alscChordLine = \chordmode {
 }
 
 
+%removed flat from key signature on contratenor
 amscTempo = #(ly:make-moment 165 2)
 
 amscGlobal= {
-  \key g \dorian
+  \key c \major
   \time 3/2
 }
 
@@ -3337,7 +3350,7 @@ amscMusicOne = \relative c' {
       e2 e d e2. f4 g2 a g4 f e d e1 e2
    }
    \repeat volta 2 {
-      c'2 c c b1 a2 g2 g f2 g1 g2
+      c'2 c c b1 a2 g2 g \ficta fs2 g1 g2
    }
    
 }
@@ -3345,14 +3358,14 @@ amscMusicOne = \relative c' {
 
 amscMusicTwoName = "Contratenor"
 amscMusicTwoClefOrig = \clef alto
-amscMusicTwoClefModern = \clef treble 
+amscMusicTwoClefModern = \clef "G_8" 
 amscMusicTwo =  \relative c'' {  
 
    \repeat volta 2 {
       g2 g f2 g4 f e d e2 f2 d1 c1 c2
    }
    \repeat volta 2 {
-      g'2 g g g d f4 e d c d1 bf1 bf2
+      g'2 g g g d f4 e d c d1 b1 b2
    }
    \repeat volta 2 {
    }
@@ -3389,6 +3402,8 @@ amscChordLine = \chordmode {
 }
 
 
+%c part moved rests to front of Tenor and Bassus
+%add flat to key signature of bassus
 anscTempo = #(ly:make-moment 165 2)
 
 anscGlobal= {
@@ -3424,7 +3439,7 @@ anscMusicOne = \relative c' {
 
 anscMusicTwoName = "Contratenor"
 anscMusicTwoClefOrig = \clef alto
-anscMusicTwoClefModern = \clef treble 
+anscMusicTwoClefModern = \clef "G_8" 
 anscMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
@@ -3449,7 +3464,7 @@ anscMusicThree = \relative c' {
       c2 c a a c c4 bf a g a1 f1 r2
    }
    \repeat volta 2 {
-     a2 a c1 c2 a1 a2 a1 a2 r2
+     r2 a2 a c1 c2 a1 a2 a1 a2 
    }
 }
 
@@ -3462,10 +3477,10 @@ anscMusicFour = \relative c {
       a2 a a d1 d2 c1 c2 f,2 f r2
    }
    \repeat volta 2 {
-      f2 c'2 d a2. b4 c2 d a1 d1 r2
+      f2 c'2 d a2. bf4 c2 d a1 d1 r2
    }
    \repeat volta 2 {
-     a2 d c1 c2 d1 d2 a1 a2 r2  
+    r2  a2 d c1 c2 d1 d2 a1 a2   
    }
 }
 
@@ -3496,24 +3511,24 @@ aoscMusicOneClefModern = \clef treble
 aoscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      r2 b2 b b b1. b2 b4 g a b c1. c2 c b2 a b1 a g2 a1
+       b2 b b b1. b2 b4 g a b c1. c2 c b2 a b1 a \ficta gs2 a1 r2
    }
    \repeat volta 2 {
-      r2 b2 b b b1 b a g1 r2 c2. b4 b a8 g8 a2 b2. a4 a1 g2 a1
+       b2 b b b1 b2 ~ b2 a1 g1 r2 c2. b4 b a8 g8 a2 b2. a4 a1 \ficta gs2 a1
    }
    
 }
 
 aoscMusicTwoName = "Contratenor"
 aoscMusicTwoClefOrig = \clef alto
-aoscMusicTwoClefModern = \clef treble 
+aoscMusicTwoClefModern = \clef "G_8" 
 aoscMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      r2 d2 d d g1. g2 g g c,1. e2 c g'2 e g2. f4 e d e1 c1 
+       d2 d d g1. g2 g g c,1. e2 c g'2 e g2. f4 e d e1 c1 r2
    }
    \repeat volta 2 {
-      r2 d2 d d g1 g e2 e e1 r2 e1 e2 e4 d e f g2 e e2. d4 c1
+        d2 d d g1 g2 ~ g2 e2 e e1 r2 e1 e2 e4 d e f g2 e e2. d4 c1
    }
 }
 
@@ -3524,10 +3539,10 @@ aoscMusicThreeClefModern = \clef "G_8"
 aoscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
-      r2 b2 b b d1. d2 d d c1. g2 a b c d2. c4 b a b2 b a1
+       b2 b b d1. d2 d d c1. g2 a b c d2. c4 b a b2 b a1 r2
    }
    \repeat volta 2 {
-      r2 b2 b4 a b c d1 b1 c2 c b1 r2 a1 g2 c2 b g2 a b b a1 
+       b2 b4 a b c d1 b2 ~ b2 c2 c b1 r2 a1 g2 c2 b g2 a b b a1 
    }
 }
 aoscMusicFourName = "Bassus"
@@ -3536,10 +3551,10 @@ aoscMusicFourClefModern = \clef bass
 aoscMusicFour = \relative c {
 
    \repeat volta 2 {
-      r2 g2 g g g1. g2 g g c1. c2 c g a g1 a2 e'2 e a,1 
+       g2 g g g1. g2 g g c1. c2 c g a g1 a2 e'2 e a,1 r2
    }
    \repeat volta 2 {
-      r2 g2 g g g1 g a e' r2 a,1 e'2 a,2 e'1 a,2 e'2 e a,1
+       g2 g g g1 g2 ~ g2 a1 e' r2 a,1 e'2 a,2 e'1 a,2 e'2 e a,1
    }
 }
 
@@ -3570,10 +3585,10 @@ apscMusicOneClefModern = \clef treble
 apscMusicOne = \relative c' {  
    
    \repeat volta 2 {
-      f2 g a1 a2 g1 f2 e1 e2 r2
+    r2  f2 g a1 a2 g1 f2 e1 e2 
    }
    \repeat volta 2 {
-      e2 f g1 g2 g2. e4 f g a1 a g2 f e2. f4 e2 d2 a'2. g4 a1 a2 r2
+    r2  e2 f g1 g2 g2. e4 f g a1 a2 ~ a2 g2 f e2. f4 e2 d2 a'2. g4 a1 a2 
    }
    \repeat volta 2 {
    }
@@ -3582,14 +3597,14 @@ apscMusicOne = \relative c' {
 
 apscMusicTwoName = "Contratenor"
 apscMusicTwoClefOrig = \clef alto
-apscMusicTwoClefModern = \clef treble 
+apscMusicTwoClefModern = \clef "G_8" 
 apscMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      d2 e f1 f2 e1 d2 c1 c2 r2
+     r2 d2 e f1 f2 e1 d2 c1 c2 
    }
    \repeat volta 2 {
-      c2 d e1 e2 e1 e2 f1 f e2 d c1 e2 d1 c2 d1 d2 r2
+    r2  c2 d e1 e2 e1 e2 f1 f2 ~ f2 e2 d c1 e2 d1 c2 d1 d2 
    }
 }
 
@@ -3599,10 +3614,10 @@ apscMusicThreeClefModern = \clef "G_8"
 apscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
-      a2 c c1 c2 c2. b4 a g a1 a2 r2
+     r2 a2 c c1 c2 c2. b4 a g a1 a2 
    }
    \repeat volta 2 {
-      a2 bf2 c1 c2 c1 c2 c1 c c2 bf2 a1 c4 b a g a1 a a2 r2
+    r2  a2 bf2 c1 c2 c1 c2 c1 c2 ~ c2 c2 bf2 a1 c4 b a g a1 a a2 
    }
 }
 
@@ -3612,17 +3627,14 @@ apscMusicFourClefModern = \clef bass
 apscMusicFour = \relative c {
 
    \repeat volta 2 {
-      d2 c f1 f,2 c'1 d2 a1 a2 r2
+     r2 d2 c f1 f,2 c'1 d2 a1 a2 
    }
    \repeat volta 2 {
-      a2 d c1 c2 c1 c2 f,1 f c'2 d a2. b4 c2 d a1 d1 d2 r2
+     r2 a2 d c1 c2 c1 c2 f,1 f2 ~ f2 c'2 d a2. b4 c2 d a1 d1 d2 
    }
 }
 
 
-apscChordLine = \chordmode {
-
-}
 
 
 aqscTempo = #(ly:make-moment 165 2)
@@ -3659,7 +3671,7 @@ aqscMusicOne = \relative c'' {
 
 aqscMusicTwoName = "Contratenor"
 aqscMusicTwoClefOrig = \clef alto
-aqscMusicTwoClefModern = \clef treble 
+aqscMusicTwoClefModern = \clef "G_8" 
 aqscMusicTwo = \relative c' {
 
    \repeat volta 2 {
@@ -3738,8 +3750,8 @@ arscMusicOne = \relative c'' {
       g1 g2 | g a g | a1 a2 | g1 g2
    }
    \repeat volta 2 {
-      r2 c2 b | a d2. c4 | b2 a g | f e2. d4 | c2 c'2 b | a g2. a4 | b2 a1 | 
-         g2 a1
+       c2 b a d2. c4  b2 a g  f e2. d4  c2 c'2 b  a g2. a4  b2 a1  
+         \ficta gs2 a1 r2
    }
    
 }
@@ -3756,7 +3768,7 @@ arscMusicTwo = \relative c' {
       e1 e2 | e2 f g | f1 f2 | e1 e2
    }
    \repeat volta 2 {
-      r2 c2 g'2 | f f1 | g2 f g | a g1 | g2 g g | f e1 | d2 f2 e2~ | e2 c1
+       c2 g'2  f f1  g2 f g  a g1  g2 g g  f e1  d2 f2 e1 c1 r2
    }
 }
 
@@ -3772,8 +3784,8 @@ arscMusicThree =  \relative c' {
       c1 g2 | c2 a b | a2. b4 c a | b1 b2 
    }
    \repeat volta 2 {
-      r2 e2. d4 | c b a1 | g2 a2 b4 c | a b c2. d4 | e2 c2 d | a2 b1~ | 
-         b2 c2 b2~ | b2 a1
+       e2. d4  c b a1  g2 a2 b4 c  a b c2. d4  e2 c2 d  a2 b1. 
+         c2 b1 a1 r2
    }
 }
 
@@ -3789,7 +3801,7 @@ arscMusicFour = \relative c {
       c1 c2 | c f e | f2. g4 a2 | e1 e2
    }
    \repeat volta 2 {
-      r2 c2 e | f d1 | e2 f e | f c1 | c2 c2 g'2 | a e2. f4 | g2 a e2~ | e2 a,1
+       c2 e  f d1  e2 f e  f c1  c2 c2 g'2  a e2. f4  g2 a e1 a,1 r2
    }
 }
 
@@ -3820,13 +3832,13 @@ asscMusicOneClefModern = \clef treble
 asscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      r2 g2 g | g e1 | g2 a1 | g2 f1
+       g2 g  g e1  g2 a1  g2 f1 r2
    }
    \repeat volta 2 {
-      r2 f2 f | f g2. f4 | g a b1 | b2 a1
+       f2 f  f g2. f4  g a b1  b2 a1 r2
    }
    \repeat volta 2 {
-      r2 g2 g | g e4 f g e | f2 g1 | f2 g1
+       g2 g  g e4 f g e  f2 g1  \ficta fs2 g1 r2
    }
    
 }
@@ -3837,13 +3849,13 @@ asscMusicTwoClefModern = \clef "G_8"
 asscMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      r2 d2 d2 | d c1 | d2 a1 | d2 d d
+       d2 d2  d c1  d2 a1  d2 d d r2
    }
    \repeat volta 2 {
-      r2 a2 a | a c1 | c2 d1 | d2 a1
+       a2 a  a c1  c2 d1  d2 a1 r2
    }
    \repeat volta 2 {
-      r2 d2 d | d g,1 | d'2 c d2~ | d2 b1
+       d2 d  d g,1  d'2 c d1 b1 r2
    }
 }
 
@@ -3854,13 +3866,13 @@ asscMusicThreeClefModern = \clef "G_8"
 asscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
-      r2 b2 b | b g1 | b2 c1 | b2 a1
+       b2 b  b g1  b2 c1  b2 a1 r2
    }
    \repeat volta 2 {
-      r2 d2 d | d e1 | e2 fs1 | g2 f1 
+       d2 d  d e1  e2 fs1 g2 f1  r2
    }
    \repeat volta 2 {
-      r2 b,2 b | b c2. b4 | a2 g2 a2~ | a2 g1
+       b,2 b  b c2. b4  a2 g2 a1 g1 r2
    }
 }
 asscMusicFourName = "Bassus"
@@ -3869,22 +3881,19 @@ asscMusicFourClefModern = \clef bass
 asscMusicFour = \relative c' {
 
    \repeat volta 2 {
-      r2 g2 g | g c,1 | g'2 f1 | g2 d1
+       g2 g  g c,1  g'2 f1  g2 d1 r2
    }
    \repeat volta 2 {
-      r2 d2 d | d c1 | c2 b1 | g2 d'1
+       d2 d  d c1  c2 b1  g2 d'1 r2
    }
    \repeat volta 2 {
-      r2 g,2 g | g c1 | d2 e2 d2~ | d2 g,1
+       g,2 g  g c1  d2 e2 d1 g,1 r2
    }
 }
 
 
-asscChordLine = \chordmode {
 
-}
-
-
+%Moved rests to the end of the line
 atscTempo = #(ly:make-moment 165 2)
 
 atscGlobal= {
@@ -3906,11 +3915,11 @@ atscMusicOneClefModern = \clef treble
 atscMusicOne = \relative c' {  
    
    \repeat volta 2 {
-      r2 e2 e | g e2. f4 | g2 g f | d d1
+       e2 e  g e2. f4  g2 g f  d d1 r2
    }
    \repeat volta 2 {
-      r2 g2 g | a4 b c1 | b2 a a | a g1 | g2 f2 f | e4 d c d e f | 
-         g2 f g2~ | g2  e1
+       g2 g  a4 b c1  b2 a a  a g1  g2 f2 f  e4 d c d e f  
+         g2 f g1  e1 r2
    }
    
 }
@@ -3921,10 +3930,10 @@ atscMusicTwoClefModern = \clef "G_8"
 atscMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      r2 c2 c | d e c4 d | e f g1 | f2 g1
+       c2 c  d e c4 d  e f g1  f2 g1 r2
    }
    \repeat volta 2 {
-      r2 d2 d2 | f e1 | d2 c2. b4 | c a b2 | g2 r2 d'2 | d f2 e1 | d2 c1 | b2 c1
+       d2 d2  f e1  d2 c2. b4  c a b2  g2 r2 d'2  d f2 e1  d2 c1  b2 c1 r2
    }
 }
 
@@ -3934,10 +3943,10 @@ atscMusicThreeClefModern = \clef "G_8"
 atscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
-      r2 a2 a | b c b4 a | g2 bf2 a2~ | a2 g1
+      a2 a  b c b4 a  g2 bf2 a1 g1 r2
    }
    \repeat volta 2 {
-      r2 g2 g | f2 g1 | g2 e'2 e | f d1 | g,2 f2 f | f g2. a4 | b2 a2 b | g g1
+       g2 g  f2 g1  g2 e'2 e  f d1  g,2 f2 f  f g2. a4  b2 a2 b  g g1 r2
    }
 }
 
@@ -3947,10 +3956,10 @@ atscMusicFourClefModern = \clef bass
 atscMusicFour = \relative c {
 
    \repeat volta 2 {
-      r2 a2 a | g c1 | c2 g2 d'2~ | d2 g,1
+       a2 a  g c1  c2 g2 d'1 g,1 r2
    }
    \repeat volta 2 {
-      r2 g2 g | d'2 c1 | g2 a a | f g1 | g2 bf2 bf | f2 c'1 | g2 a g2~ | g2 c1
+       g2 g  d'2 c1  g2 a a  f g1  g2 bf2 bf  f2 c'1  g2 a g1 c1 r2
    }
 }
 
@@ -3960,6 +3969,7 @@ atscChordLine = \chordmode {
 }
 
 
+%Moved rests to the end of the line
 auscTempo = #(ly:make-moment 165 2)
 
 auscGlobal= {
@@ -3980,13 +3990,13 @@ auscMusicOneClefOrig = \clef soprano
 auscMusicOneClefModern = \clef treble
 auscMusicOne = \relative c'' {  
    \repeat volta 2 {
-      r2 e2 e | d c1 | b2 a g2 | f e1 | r2 c'2 c | c c1 | b2 a1 | g2 a1
+       e2 e  d c1  b2 a g2  f e1  r2 c'2 c  c c1  b2 a1  \ficta gs2 a1 r2
    }
    \repeat volta 2 {
-      r2 b2 b | b b1 | c2 b2 a4 c | b a g1
+       b2 b  b b1  c2 b2 a4 c  b a g1 r2
    }
    \repeat volta 2 {
-     r2 c1 | c2 b1 | b2 a1 | a2 g1 | r2 c2 c | c b c2~ | c4 b4 a1 | g2 a1
+      c1  c2 b1  b2 a1  a2 g1  r2 c2 c  c b c2. b4 a1  \ficta gs2 a1 r2
    }
    
 }
@@ -3996,13 +4006,13 @@ auscMusicTwoClefOrig = \clef alto
 auscMusicTwoClefModern = \clef treble
 auscMusicTwo = \relative c'' {
    \repeat volta 2 {
-      r2 g2 g | g g1 | g2 e e | c c1 | r2 c2 c | c c1 | f2 d2 e2~ | e2 c1
+       g2 g  g g1  g2 e e  c c1  r2 c2 c  c c1  f2 d2 e1 c1 r2
    }
    \repeat volta 2 {
-      r2 g'2 g | g g1 | g2 g e2~ | e2 e1
+       g'2 g  g g1  g2 g e1 e1 r2
    }
    \repeat volta 2 {
-      r2 g1 | g2 g1 | g2 e1 | e2 e1 | r2 g2 g | g g4 f e d | e2 f e2~ | e2 c1
+       g1  g2 g1  g2 e1  e2 e1  r2 g2 g  g g4 f e d  e2 f e1 c1 r2
    }
 }
 
@@ -4011,13 +4021,13 @@ auscMusicThreeClefOrig = \clef tenor
 auscMusicThreeClefModern = \clef "G_8" 
 auscMusicThree =  \relative c' {  
    \repeat volta 2 {
-      r2 c2 c | d e1 | d2 c b | a g1 | r2 e'2 e | e e1 | d4 c b a b2~ | b2 a1
+       c2 c  d e1  d2 c b  a g1  r2 e'2 e  e e1  d4 c b a b1 a1 r2
    }
    \repeat volta 2 {
-      r2 d2 d | d d1 | e2 d c2~ | c2 b1
+       d2 d  d d1  e2 d c1 b1 r2
    }
    \repeat volta 2 {
-      r2 e1 | e2 d1 | d2 c1 | c2 b1 | r2 e2 e | e d c2~ | c2 d2 b2~ | b2 a1
+       e1  e2 d1  d2 c1  c2 b1  r2 e2 e  e d c1 d2 b1 a1 r2
    }
 }
 
@@ -4026,20 +4036,17 @@ auscMusicFourClefOrig = \clef bass
 auscMusicFourClefModern = \clef bass
 auscMusicFour = \relative c {
    \repeat volta 2 {
-      r2 c2 c | g'2 c,1 | g'2 a2 e | f c1 | r2 c2 c | c c1 | d2 f2 e2~ | e2 a,1
+       c2 c  g'2 c,1  g'2 a2 e  f c1  r2 c2 c  c c1  d2 f2 e1 a,1 r2
    }
    \repeat volta 2 {
-      r2 g'2 g | g g1 | c,2 g'2 a2~ | a2 e1
+       g'2 g  g g1  c,2 g'2 a1 e1 r2
    }
    \repeat volta 2 {
-      r2 c1 | c2 g'1 | g2 a1 | a2 e1 | r2 c2 c | c g'2 a2~ | a2 d,2 e2~ | e2 a,1
+       c1  c2 g'1  g2 a1  a2 e1  r2 c2 c  c g'2 a1 d,2 e1 a,1 r2
    }
 }
 
 
-auscChordLine = \chordmode {
-
-}
 
 
 avscTempo = #(ly:make-moment 165 2)
@@ -4063,30 +4070,30 @@ avscMusicOneClefModern = \clef treble
 avscMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      r2 c2 c | c b4 a b c | d2 c c | b c1
+       c2 c  c b4 a b c  d2 c c  b c1 r2
    }
    \repeat volta 2 {
-     r2 g2 a | b c2. b4 | a2 g2 f2~ | f2 e1
+      g2 a  b c2. b4  a2 g2 f1 e1 r2
    }
    \repeat volta 2 {
-     r2 c'2 c | b a b2~ | b4 a4 a1 | g2 a1
+      c'2 c  b a b2. a4 a1  \ficta gs2 a1 r2
    }
    
 }
 
 avscMusicTwoName = "Contratenor"
 avscMusicTwoClefOrig = \clef alto
-avscMusicTwoClefModern = \clef treble 
+avscMusicTwoClefModern = \clef "G_8" 
 avscMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      r2 e2 f | e4 f g2 d2 | a'2 g a | g e1
+       e2 f  e4 f g2 d2  a'2 g a  g e1 r2
    }
    \repeat volta 2 {
-      r2 e2 e | g g c,2~ | c4 d4 e2 d2~ | d2 c1
+       e2 e  g g c,2. d4 e2 d1 c1 r2
    }
    \repeat volta 2 {
-      r2 c2 c | g'2 f d4 e | f2 d2 e2~ | e2 c1
+       c2 c  g'2 f d4 e  f2 d2 e1 c1 r2
    }
 }
 
@@ -4096,13 +4103,13 @@ avscMusicThreeClefModern = \clef "G_8"
 avscMusicThree =  \relative c' {  
 
    \repeat volta 2 {
-      r2 e2 a,4 b | c d e f g2 | f2 e d1 c1
+       e2 a,4 b  c d e f g2  f2 e d1 c1 r2
    }
    \repeat volta 2 {
-      r2 c2 c | d e a,2~ | a4 b4 c2 a2~ | a2 a1
+       c2 c  d e a,2. b4 c2 a1 a1 r2
    }
    \repeat volta 2 {
-      r2 e'2 e2~ | e4 d4 c2 b | d4 c b a b2~ | b2 a1
+       e'2 e2. d4 c2 b  d4 c b a b1 a1 r2
    }
 }
 
@@ -4112,13 +4119,13 @@ avscMusicFourClefModern = \clef bass
 avscMusicFour = \relative c {
 
    \repeat volta 2 {
-      r2 c2 f | a g1 | d2 e f | g c,1
+       c2 f  a g1  d2 e f  g c,1 r2
    }
    \repeat volta 2 {
-      r2 c2 a | g c2 f2~ | f2 c2 d2~ | d2 a1
+       c2 a  g c2 f1 c2 d1 a1 r2
    }
    \repeat volta 2 {
-      r2 a4 b c d | e2 f g | d2 f e2~ | e2 a,1
+      a4 b c d  e2 f g  d2 f e1 a,1 r2
    }
 }
 
@@ -4148,14 +4155,14 @@ awscMusicOneName = "Superius"
 awscMusicOneClefOrig = \clef soprano
 awscMusicOneClefModern = \clef treble
 awscMusicOne = \relative c'' {  
-   
+    \partial 2 
    \repeat volta 2 {
-      \partial 2 a4 b | c1 c2 | c2 c2 d4 c | b1 b2 | b1 g2 g1 g2 | g2. e4 f g4 | 
+     a4 b | c1 c2 | c2 c2 d4 c | b1 b2 | b1 g2 g1 g2 | g2. e4 f g4 | 
       a1 e2 | e1 c'2 | b1 a2 | g f1 | e2. d4 e f | e1
    }
    \repeat volta 2 {
      c'4 d | e1 e2 | e e e |
-     d1 d2 | d2. c4 b a | g1 g2 | g2. f4 e d | e2. f4 g2 | a a g | a1 a2 | a1
+     d1 d2 | d2. c4 b a | g1 g2 | g2. f4 e d | e2. f4 g2 | a a \ficta gs | a1 a2 | a1
    }
    
 }
@@ -4165,8 +4172,9 @@ awscMusicTwoName = "Contratenor"
 awscMusicTwoClefOrig = \clef alto
 awscMusicTwoClefModern = \clef "G_8" 
 awscMusicTwo = \relative c' {
+   \partial 2 
    \repeat volta 2 {
-      \partial 2 e4 f | g1 g2 | g g g | g1 g2 | g g g | e1 e2 | e1 d2 | c1 c2 | 
+      e4 f | g1 g2 | g g g | g1 g2 | g g g | e1 e2 | e1 d2 | c1 c2 | 
          g1 g'2 | g1 f2 | e d c4 b | c1 c2 | c1
    }
    \repeat volta 2 {
@@ -4179,8 +4187,9 @@ awscMusicThreeName = "Tenor"
 awscMusicThreeClefOrig = \clef tenor
 awscMusicThreeClefModern = \clef "G_8"
 awscMusicThree =  \relative c' {  
-   \repeat volta 2 {
-      \partial 2 c4 d | e1 e2 | e2 e2 e2 | d1 d2 | b2 b b | c1 c2 | c1 
+  \partial 2
+  \repeat volta 2 {
+       c4 d | e1 e2 | e2 e2 e2 | d1 d2 | b2 b b | c1 c2 | c1 
       a2 | a1 g2 | c1 e2 | d1 c2 | b a1 | g g2 | g1
    }
    \repeat volta 2 {
@@ -4193,8 +4202,9 @@ awscMusicFourName = "Bassus"
 awscMusicFourClefOrig = \clef bass
 awscMusicFourClefModern = \clef bass
 awscMusicFour = \relative c {
-   \repeat volta 2 {
-      \partial 2 c2 | c1 c2 | c c c | g'1 g2 | g,2 g g | c1 c2 | c1 d2 | a1 c2 | 
+  \partial 2
+  \repeat volta 2 {
+       c2 | c1 c2 | c c c | g'1 g2 | g,2 g g | c1 c2 | c1 d2 | a1 c2 | 
          c1 c2 | g'1 a2 | e2 f1 | c1 c2 | c1
    }
    \repeat volta 2 {
@@ -4228,15 +4238,16 @@ axscMusicOneName = "Superius"
 axscMusicOneClefOrig = \clef soprano
 axscMusicOneClefModern = \clef treble 
 axscMusicOne = \relative c'' {  
+   \partial 2
    \repeat volta 2 {
-      c2 c1 | c2 c c | b4 a b1 | b2 b1 | c2 b1 | a2 g g |
-      f2 g1 | g2 g1
+      c2 c1  c2 c c  b4 a b1  b2 b1  c2 b1  a2 g g 
+      \ficta fs2 g1  g2 g1
    }
    \repeat volta 2 {
-      e2 e1 | e2 e2 d | f e1 | e2 e f | f e1 | d2 c c | b c1 | c2 c1 
+      e2 e1  e2 e2 d  f e1  e2 e f  f e1  d2 c c  b c1  c2 c1 
    }
    \repeat volta 2 {
-      g'2 f1~ | f2 e2 d | f e1 | e2 e1 
+      g'2 f1. e2 d  f e1  e2 e1 
    }
    
 }
@@ -4245,15 +4256,17 @@ axscMusicTwoName = "Contratenor"
 axscMusicTwoClefOrig = \clef alto
 axscMusicTwoClefModern = \clef "G_8"
 axscMusicTwo = \relative c'' {
+  \partial 2
    \repeat volta 2 {
-      g2 g1 | g2 g g | g g1 | g2 g1 |
-      g2 g1 | f4 e d c d2~ | d2 b1 | b2 b1
+      g2 g1  g2 g g  g g1  g2 g1 
+      g2 g1  f4 e d c d1 b1  b2 b1
+   }
+   
+   \repeat volta 2 {
+      c2 c1  c2 c2 a  b c1  c2 c c  c c1  b2 c d  d e1  e2 e1
    }
    \repeat volta 2 {
-      c2 c1 | c2 c2 a | b c1 | c2 c c | c c1 | b2 c d | d e1 | e2 e1
-   }
-   \repeat volta 2 {
-      e2 d1~ | d2 c2 a | b c1 | c2 c1
+      e2 d1. c2 a  b c1  c2 c1
    }
 }
 
@@ -4261,15 +4274,16 @@ axscMusicThreeName = "Tenor"
 axscMusicThreeClefOrig = \clef tenor
 axscMusicThreeClefModern = \clef "G_8" 
 axscMusicThree =  \relative c' {  
+   \partial 2
    \repeat volta 2 {
-      e2 e1 | e2 e2 e | e d1 | d2 d1 | c2 d2. c4 | d2 
-      b2 a2~| a2 g1 | g2 g1
+      e2 e1  e2 e2 e  e d1  d2 d1  c2 d2. c4  d2 
+      b2 a1 g1  g2 g1
    }
    \repeat volta 2 {
-      g2 g1 | g2 a f | f g1 | g2 g a | a g2. f4 | g2 e2 g | g g1 | g2 g1
+      g2 g1  g2 a f  f g1  g2 g a  a g2. f4  g2 e2 g  g g1  g2 g1
    }
    \repeat volta 2 {
-      c2 a1~| a2 a2 f2 | f g1 | g2 g1
+      c2 a1. a2 f2  f g1  g2 g1
    }
 }
 
@@ -4277,15 +4291,16 @@ axscMusicFourName = "Bassus"
 axscMusicFourClefOrig = \clef bass
 axscMusicFourClefModern = \clef bass 
 axscMusicFour = \relative c {
+   \partial 2
    \repeat volta 2 {
-      c2 c1 | c2 c c | c g1 | g2 g1
-      c2 g1 | d'2 g, d'2~ | d2 g,1 | g2 g1
+      c2 c1  c2 c c  c g1  g2 g1
+      c2 g1  d'2 g, d'1 g,1  g2 g1
    }
    \repeat volta 2 {
-      c2 c1 | c2 a d | d c1 | c2 c f,4 g | a b c1 | g2 a g2~ |g2 c1 | c2 c1
+      c2 c1  c2 a d  d c1  c2 c f,4 g  a b c1  g2 a g1 c1  c2 c1
    }
    \repeat volta 2 {
-      c2 d1~ | d2 a2 d | d c1 | c2 c1
+      c2 d1. a2 d  d c1  c2 c1
    }
 }
 
@@ -4296,2475 +4311,4803 @@ axscChordLine = \chordmode {
 
 
 \book {
-  \bookOutputName "part_book_cantus_orig_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Cantus Part in Original Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicOneClefOrig \ascMusicOne >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicOneClefOrig \bscMusicOne >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicOneClefOrig \cscMusicOne >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicOneClefOrig \dscMusicOne >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicOneClefOrig \escMusicOne >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicOneClefOrig \fscMusicOne >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicOneClefOrig \gscMusicOne >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicOneClefOrig \hscMusicOne >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicOneClefOrig \iscMusicOne >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicOneClefOrig \jscMusicOne >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicOneClefOrig \kscMusicOne >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicOneClefOrig \lscMusicOne >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicOneClefOrig \mscMusicOne >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicOneClefOrig \nscMusicOne >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicOneClefOrig \oscMusicOne >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicOneClefOrig \pscMusicOne >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicOneClefOrig \qscMusicOne >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicOneClefOrig \rscMusicOne >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicOneClefOrig \sscMusicOne >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicOneClefOrig \tscMusicOne >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicOneClefOrig \uscMusicOne >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicOneClefOrig \vscMusicOne >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicOneClefOrig \wscMusicOne >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicOneClefOrig \xscMusicOne >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicOneClefOrig \yscMusicOne >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicOneClefOrig \zscMusicOne >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicOneClefOrig \aascMusicOne >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicOneClefOrig \abscMusicOne >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicOneClefOrig \acscMusicOne >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicOneClefOrig \adscMusicOne >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicOneClefOrig \aescMusicOne >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicOneClefOrig \afscMusicOne >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicOneClefOrig \agscMusicOne >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicOneClefOrig \ahscMusicOne >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicOneClefOrig \aiscMusicOne >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicOneClefOrig \ajscMusicOne >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicOneClefOrig \akscMusicOne >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicOneClefOrig \alscMusicOne >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicOneClefOrig \amscMusicOne >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicOneClefOrig \anscMusicOne >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicOneClefOrig \aoscMusicOne >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicOneClefOrig \apscMusicOne >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicOneClefOrig \aqscMusicOne >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicOneClefOrig \arscMusicOne >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicOneClefOrig \asscMusicOne >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicOneClefOrig \atscMusicOne >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicOneClefOrig \auscMusicOne >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicOneClefOrig \avscMusicOne >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicOneClefOrig \awscMusicOne >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicOneClefOrig \axscMusicOne >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\book {
-  \bookOutputName "part_book_altus_orig_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Contratenor Part in Original Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicTwoClefOrig \ascMusicTwo >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicTwoClefOrig \bscMusicTwo >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicTwoClefOrig \cscMusicTwo >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicTwoClefOrig \dscMusicTwo >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicTwoClefOrig \escMusicTwo >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicTwoClefOrig \fscMusicTwo >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicTwoClefOrig \gscMusicTwo >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicTwoClefOrig \hscMusicTwo >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicTwoClefOrig \iscMusicTwo >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicTwoClefOrig \jscMusicTwo >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicTwoClefOrig \kscMusicTwo >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicTwoClefOrig \lscMusicTwo >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicTwoClefOrig \mscMusicTwo >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicTwoClefOrig \nscMusicTwo >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicTwoClefOrig \oscMusicTwo >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicTwoClefOrig \pscMusicTwo >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicTwoClefOrig \qscMusicTwo >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicTwoClefOrig \rscMusicTwo >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicTwoClefOrig \sscMusicTwo >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicTwoClefOrig \tscMusicTwo >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicTwoClefOrig \uscMusicTwo >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicTwoClefOrig \vscMusicTwo >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicTwoClefOrig \wscMusicTwo >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicTwoClefOrig \xscMusicTwo >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicTwoClefOrig \yscMusicTwo >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicTwoClefOrig \zscMusicTwo >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicTwoClefOrig \aascMusicTwo >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicTwoClefOrig \abscMusicTwo >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicTwoClefOrig \acscMusicTwo >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicTwoClefOrig \adscMusicTwo >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicTwoClefOrig \aescMusicTwo >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicTwoClefOrig \afscMusicTwo >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicTwoClefOrig \agscMusicTwo >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicTwoClefOrig \ahscMusicTwo >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicTwoClefOrig \aiscMusicTwo >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicTwoClefOrig \ajscMusicTwo >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicTwoClefOrig \akscMusicTwo >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicTwoClefOrig \alscMusicTwo >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicTwoClefOrig \amscMusicTwo >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicTwoClefOrig \anscMusicTwo >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicTwoClefOrig \aoscMusicTwo >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicTwoClefOrig \apscMusicTwo >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicTwoClefOrig \aqscMusicTwo >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicTwoClefOrig \arscMusicTwo >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicTwoClefOrig \asscMusicTwo >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicTwoClefOrig \atscMusicTwo >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicTwoClefOrig \auscMusicTwo >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicTwoClefOrig \avscMusicTwo >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicTwoClefOrig \awscMusicTwo >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicTwoClefOrig \axscMusicTwo >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\book {
-  \bookOutputName "part_book_tenor_orig_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Tenor Part in Original Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicThreeClefOrig \ascMusicThree >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicThreeClefOrig \bscMusicThree >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicThreeClefOrig \cscMusicThree >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicThreeClefOrig \dscMusicThree >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicThreeClefOrig \escMusicThree >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicThreeClefOrig \fscMusicThree >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicThreeClefOrig \gscMusicThree >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicThreeClefOrig \hscMusicThree >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicThreeClefOrig \iscMusicThree >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicThreeClefOrig \jscMusicThree >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicThreeClefOrig \kscMusicThree >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicThreeClefOrig \lscMusicThree >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicThreeClefOrig \mscMusicThree >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicThreeClefOrig \nscMusicThree >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicThreeClefOrig \oscMusicThree >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicThreeClefOrig \pscMusicThree >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicThreeClefOrig \qscMusicThree >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicThreeClefOrig \rscMusicThree >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicThreeClefOrig \sscMusicThree >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicThreeClefOrig \tscMusicThree >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicThreeClefOrig \uscMusicThree >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicThreeClefOrig \vscMusicThree >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicThreeClefOrig \wscMusicThree >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicThreeClefOrig \xscMusicThree >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicThreeClefOrig \yscMusicThree >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicThreeClefOrig \zscMusicThree >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicThreeClefOrig \aascMusicThree >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicThreeClefOrig \abscMusicThree >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicThreeClefOrig \acscMusicThree >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicThreeClefOrig \adscMusicThree >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicThreeClefOrig \aescMusicThree >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicThreeClefOrig \afscMusicThree >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicThreeClefOrig \agscMusicThree >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicThreeClefOrig \ahscMusicThree >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicThreeClefOrig \aiscMusicThree >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicThreeClefOrig \ajscMusicThree >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicThreeClefOrig \akscMusicThree >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicThreeClefOrig \alscMusicThree >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicThreeClefOrig \amscMusicThree >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicThreeClefOrig \anscMusicThree >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicThreeClefOrig \aoscMusicThree >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicThreeClefOrig \apscMusicThree >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicThreeClefOrig \aqscMusicThree >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicThreeClefOrig \arscMusicThree >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicThreeClefOrig \asscMusicThree >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicThreeClefOrig \atscMusicThree >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicThreeClefOrig \auscMusicThree >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicThreeClefOrig \avscMusicThree >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicThreeClefOrig \awscMusicThree >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicThreeClefOrig \axscMusicThree >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\book {
-  \bookOutputName "part_book_bassus_orig_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Bassus Part in Original Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicFourClefOrig \ascMusicFour >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicFourClefOrig \bscMusicFour >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicFourClefOrig \cscMusicFour >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicFourClefOrig \dscMusicFour >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicFourClefOrig \escMusicFour >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicFourClefOrig \fscMusicFour >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicFourClefOrig \gscMusicFour >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicFourClefOrig \hscMusicFour >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicFourClefOrig \iscMusicFour >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicFourClefOrig \jscMusicFour >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicFourClefOrig \kscMusicFour >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicFourClefOrig \lscMusicFour >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicFourClefOrig \mscMusicFour >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicFourClefOrig \nscMusicFour >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicFourClefOrig \oscMusicFour >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicFourClefOrig \pscMusicFour >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicFourClefOrig \qscMusicFour >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicFourClefOrig \rscMusicFour >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicFourClefOrig \sscMusicFour >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicFourClefOrig \tscMusicFour >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicFourClefOrig \uscMusicFour >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicFourClefOrig \vscMusicFour >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicFourClefOrig \wscMusicFour >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicFourClefOrig \xscMusicFour >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicFourClefOrig \yscMusicFour >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicFourClefOrig \zscMusicFour >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicFourClefOrig \aascMusicFour >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicFourClefOrig \abscMusicFour >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicFourClefOrig \acscMusicFour >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicFourClefOrig \adscMusicFour >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicFourClefOrig \aescMusicFour >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicFourClefOrig \afscMusicFour >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicFourClefOrig \agscMusicFour >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicFourClefOrig \ahscMusicFour >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicFourClefOrig \aiscMusicFour >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicFourClefOrig \ajscMusicFour >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicFourClefOrig \akscMusicFour >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicFourClefOrig \alscMusicFour >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicFourClefOrig \amscMusicFour >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicFourClefOrig \anscMusicFour >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicFourClefOrig \aoscMusicFour >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicFourClefOrig \apscMusicFour >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicFourClefOrig \aqscMusicFour >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicFourClefOrig \arscMusicFour >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicFourClefOrig \asscMusicFour >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicFourClefOrig \atscMusicFour >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicFourClefOrig \auscMusicFour >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicFourClefOrig \avscMusicFour >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicFourClefOrig \awscMusicFour >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicFourClefOrig \axscMusicFour >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\book {
-  \bookOutputName "part_book_cantus_modern_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Cantus Part in Modern Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicOneClefModern \ascMusicOne >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicOneClefModern \bscMusicOne >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicOneClefModern \cscMusicOne >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicOneClefModern \dscMusicOne >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicOneClefModern \escMusicOne >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicOneClefModern \fscMusicOne >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicOneClefModern \gscMusicOne >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicOneClefModern \hscMusicOne >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicOneClefModern \iscMusicOne >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicOneClefModern \jscMusicOne >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicOneClefModern \kscMusicOne >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicOneClefModern \lscMusicOne >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicOneClefModern \mscMusicOne >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicOneClefModern \nscMusicOne >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicOneClefModern \oscMusicOne >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicOneClefModern \pscMusicOne >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicOneClefModern \qscMusicOne >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicOneClefModern \rscMusicOne >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicOneClefModern \sscMusicOne >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicOneClefModern \tscMusicOne >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicOneClefModern \uscMusicOne >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicOneClefModern \vscMusicOne >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicOneClefModern \wscMusicOne >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicOneClefModern \xscMusicOne >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicOneClefModern \yscMusicOne >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicOneClefModern \zscMusicOne >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicOneClefModern \aascMusicOne >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicOneClefModern \abscMusicOne >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicOneClefModern \acscMusicOne >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicOneClefModern \adscMusicOne >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicOneClefModern \aescMusicOne >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicOneClefModern \afscMusicOne >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicOneClefModern \agscMusicOne >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicOneClefModern \ahscMusicOne >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicOneClefModern \aiscMusicOne >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicOneClefModern \ajscMusicOne >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicOneClefModern \akscMusicOne >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicOneClefModern \alscMusicOne >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicOneClefModern \amscMusicOne >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicOneClefModern \anscMusicOne >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicOneClefModern \aoscMusicOne >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicOneClefModern \apscMusicOne >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicOneClefModern \aqscMusicOne >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicOneClefModern \arscMusicOne >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicOneClefModern \asscMusicOne >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicOneClefModern \atscMusicOne >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicOneClefModern \auscMusicOne >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicOneClefModern \avscMusicOne >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicOneClefModern \awscMusicOne >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicOneClefModern \axscMusicOne >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\book {
-  \bookOutputName "part_book_altus_modern_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Contratenor Part in Modern Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicTwoClefModern \ascMusicTwo >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicTwoClefModern \bscMusicTwo >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicTwoClefModern \cscMusicTwo >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicTwoClefModern \dscMusicTwo >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicTwoClefModern \escMusicTwo >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicTwoClefModern \fscMusicTwo >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicTwoClefModern \gscMusicTwo >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicTwoClefModern \hscMusicTwo >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicTwoClefModern \iscMusicTwo >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicTwoClefModern \jscMusicTwo >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicTwoClefModern \kscMusicTwo >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicTwoClefModern \lscMusicTwo >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicTwoClefModern \mscMusicTwo >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicTwoClefModern \nscMusicTwo >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicTwoClefModern \oscMusicTwo >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicTwoClefModern \pscMusicTwo >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicTwoClefModern \qscMusicTwo >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicTwoClefModern \rscMusicTwo >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicTwoClefModern \sscMusicTwo >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicTwoClefModern \tscMusicTwo >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicTwoClefModern \uscMusicTwo >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicTwoClefModern \vscMusicTwo >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicTwoClefModern \wscMusicTwo >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicTwoClefModern \xscMusicTwo >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicTwoClefModern \yscMusicTwo >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicTwoClefModern \zscMusicTwo >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicTwoClefModern \aascMusicTwo >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicTwoClefModern \abscMusicTwo >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicTwoClefModern \acscMusicTwo >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicTwoClefModern \adscMusicTwo >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicTwoClefModern \aescMusicTwo >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicTwoClefModern \afscMusicTwo >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicTwoClefModern \agscMusicTwo >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicTwoClefModern \ahscMusicTwo >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicTwoClefModern \aiscMusicTwo >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicTwoClefModern \ajscMusicTwo >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicTwoClefModern \akscMusicTwo >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicTwoClefModern \alscMusicTwo >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicTwoClefModern \amscMusicTwo >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicTwoClefModern \anscMusicTwo >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicTwoClefModern \aoscMusicTwo >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicTwoClefModern \apscMusicTwo >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicTwoClefModern \aqscMusicTwo >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicTwoClefModern \arscMusicTwo >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicTwoClefModern \asscMusicTwo >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicTwoClefModern \atscMusicTwo >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicTwoClefModern \auscMusicTwo >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicTwoClefModern \avscMusicTwo >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicTwoClefModern \awscMusicTwo >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicTwoClefModern \axscMusicTwo >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\book {
-  \bookOutputName "part_book_tenor_modern_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Tenor Part in Modern Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicThreeClefModern \ascMusicThree >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicThreeClefModern \bscMusicThree >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicThreeClefModern \cscMusicThree >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicThreeClefModern \dscMusicThree >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicThreeClefModern \escMusicThree >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicThreeClefModern \fscMusicThree >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicThreeClefModern \gscMusicThree >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicThreeClefModern \hscMusicThree >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicThreeClefModern \iscMusicThree >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicThreeClefModern \jscMusicThree >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicThreeClefModern \kscMusicThree >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicThreeClefModern \lscMusicThree >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicThreeClefModern \mscMusicThree >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicThreeClefModern \nscMusicThree >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicThreeClefModern \oscMusicThree >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicThreeClefModern \pscMusicThree >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicThreeClefModern \qscMusicThree >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicThreeClefModern \rscMusicThree >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicThreeClefModern \sscMusicThree >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicThreeClefModern \tscMusicThree >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicThreeClefModern \uscMusicThree >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicThreeClefModern \vscMusicThree >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicThreeClefModern \wscMusicThree >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicThreeClefModern \xscMusicThree >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicThreeClefModern \yscMusicThree >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicThreeClefModern \zscMusicThree >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicThreeClefModern \aascMusicThree >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicThreeClefModern \abscMusicThree >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicThreeClefModern \acscMusicThree >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicThreeClefModern \adscMusicThree >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicThreeClefModern \aescMusicThree >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicThreeClefModern \afscMusicThree >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicThreeClefModern \agscMusicThree >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicThreeClefModern \ahscMusicThree >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicThreeClefModern \aiscMusicThree >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicThreeClefModern \ajscMusicThree >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicThreeClefModern \akscMusicThree >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicThreeClefModern \alscMusicThree >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicThreeClefModern \amscMusicThree >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicThreeClefModern \anscMusicThree >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicThreeClefModern \aoscMusicThree >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicThreeClefModern \apscMusicThree >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicThreeClefModern \aqscMusicThree >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicThreeClefModern \arscMusicThree >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicThreeClefModern \asscMusicThree >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicThreeClefModern \atscMusicThree >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicThreeClefModern \auscMusicThree >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicThreeClefModern \avscMusicThree >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicThreeClefModern \awscMusicThree >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicThreeClefModern \axscMusicThree >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\book {
-  \bookOutputName "part_book_bassus_modern_clef"
-  \header{
-    title = "Dances"
-    subtitle = "Bassus Part in Modern Clefs" 
-    composer = "Gervaise"
-    tagline = ""
-  }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ascGlobal \ascMusicFourClefModern \ascMusicFour >>
-       \header { piece = \ascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \bscGlobal \bscMusicFourClefModern \bscMusicFour >>
-       \header { piece = \bscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \cscGlobal \cscMusicFourClefModern \cscMusicFour >>
-       \header { piece = \cscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \dscGlobal \dscMusicFourClefModern \dscMusicFour >>
-       \header { piece = \dscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \escGlobal \escMusicFourClefModern \escMusicFour >>
-       \header { piece = \escTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \fscGlobal \fscMusicFourClefModern \fscMusicFour >>
-       \header { piece = \fscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \gscGlobal \gscMusicFourClefModern \gscMusicFour >>
-       \header { piece = \gscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \hscGlobal \hscMusicFourClefModern \hscMusicFour >>
-       \header { piece = \hscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \iscGlobal \iscMusicFourClefModern \iscMusicFour >>
-       \header { piece = \iscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \jscGlobal \jscMusicFourClefModern \jscMusicFour >>
-       \header { piece = \jscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \kscGlobal \kscMusicFourClefModern \kscMusicFour >>
-       \header { piece = \kscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \lscGlobal \lscMusicFourClefModern \lscMusicFour >>
-       \header { piece = \lscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \mscGlobal \mscMusicFourClefModern \mscMusicFour >>
-       \header { piece = \mscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \nscGlobal \nscMusicFourClefModern \nscMusicFour >>
-       \header { piece = \nscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \oscGlobal \oscMusicFourClefModern \oscMusicFour >>
-       \header { piece = \oscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \pscGlobal \pscMusicFourClefModern \pscMusicFour >>
-       \header { piece = \pscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \qscGlobal \qscMusicFourClefModern \qscMusicFour >>
-       \header { piece = \qscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \rscGlobal \rscMusicFourClefModern \rscMusicFour >>
-       \header { piece = \rscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \sscGlobal \sscMusicFourClefModern \sscMusicFour >>
-       \header { piece = \sscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \tscGlobal \tscMusicFourClefModern \tscMusicFour >>
-       \header { piece = \tscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \uscGlobal \uscMusicFourClefModern \uscMusicFour >>
-       \header { piece = \uscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \vscGlobal \vscMusicFourClefModern \vscMusicFour >>
-       \header { piece = \vscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \wscGlobal \wscMusicFourClefModern \wscMusicFour >>
-       \header { piece = \wscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \xscGlobal \xscMusicFourClefModern \xscMusicFour >>
-       \header { piece = \xscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \yscGlobal \yscMusicFourClefModern \yscMusicFour >>
-       \header { piece = \yscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \zscGlobal \zscMusicFourClefModern \zscMusicFour >>
-       \header { piece = \zscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aascGlobal \aascMusicFourClefModern \aascMusicFour >>
-       \header { piece = \aascTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \abscGlobal \abscMusicFourClefModern \abscMusicFour >>
-       \header { piece = \abscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \acscGlobal \acscMusicFourClefModern \acscMusicFour >>
-       \header { piece = \acscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \adscGlobal \adscMusicFourClefModern \adscMusicFour >>
-       \header { piece = \adscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aescGlobal \aescMusicFourClefModern \aescMusicFour >>
-       \header { piece = \aescTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \afscGlobal \afscMusicFourClefModern \afscMusicFour >>
-       \header { piece = \afscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \agscGlobal \agscMusicFourClefModern \agscMusicFour >>
-       \header { piece = \agscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ahscGlobal \ahscMusicFourClefModern \ahscMusicFour >>
-       \header { piece = \ahscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aiscGlobal \aiscMusicFourClefModern \aiscMusicFour >>
-       \header { piece = \aiscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \ajscGlobal \ajscMusicFourClefModern \ajscMusicFour >>
-       \header { piece = \ajscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \akscGlobal \akscMusicFourClefModern \akscMusicFour >>
-       \header { piece = \akscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \alscGlobal \alscMusicFourClefModern \alscMusicFour >>
-       \header { piece = \alscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \amscGlobal \amscMusicFourClefModern \amscMusicFour >>
-       \header { piece = \amscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \anscGlobal \anscMusicFourClefModern \anscMusicFour >>
-       \header { piece = \anscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aoscGlobal \aoscMusicFourClefModern \aoscMusicFour >>
-       \header { piece = \aoscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \apscGlobal \apscMusicFourClefModern \apscMusicFour >>
-       \header { piece = \apscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \aqscGlobal \aqscMusicFourClefModern \aqscMusicFour >>
-       \header { piece = \aqscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \arscGlobal \arscMusicFourClefModern \arscMusicFour >>
-       \header { piece = \arscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \asscGlobal \asscMusicFourClefModern \asscMusicFour >>
-       \header { piece = \asscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \atscGlobal \atscMusicFourClefModern \atscMusicFour >>
-       \header { piece = \atscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \auscGlobal \auscMusicFourClefModern \auscMusicFour >>
-       \header { piece = \auscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \avscGlobal \avscMusicFourClefModern \avscMusicFour >>
-       \header { piece = \avscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \awscGlobal \awscMusicFourClefModern \awscMusicFour >>
-       \header { piece = \awscTitle }
-       \layout { indent = 0\mm }
-   }
-   \score {
-       \new Staff \with { \consists "Ambitus_engraver" } 
-        << \axscGlobal \axscMusicFourClefModern \axscMusicFour >>
-       \header { piece = \axscTitle }
-       \layout { indent = 0\mm }
-   }
-}
-\version "2.12.0"  % necessary for upgrading to future LilyPond versions. 
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_superius_modern_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Superius Part in Modern Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicOneClefModern \ascMusicOne
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicOneClefModern \bscMusicOne
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicOneClefModern \cscMusicOne
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicOneClefModern \dscMusicOne
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicOneClefModern \escMusicOne
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicOneClefModern \fscMusicOne
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicOneClefModern \gscMusicOne
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicOneClefModern \hscMusicOne
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicOneClefModern \iscMusicOne
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicOneClefModern \jscMusicOne
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicOneClefModern \kscMusicOne
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicOneClefModern \lscMusicOne
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicOneClefModern \mscMusicOne
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicOneClefModern \nscMusicOne
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicOneClefModern \oscMusicOne
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicOneClefModern \pscMusicOne
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicOneClefModern \qscMusicOne
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicOneClefModern \rscMusicOne
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicOneClefModern \sscMusicOne
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicOneClefModern \tscMusicOne
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicOneClefModern \uscMusicOne
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicOneClefModern \vscMusicOne
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicOneClefModern \wscMusicOne
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicOneClefModern \xscMusicOne
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicOneClefModern \yscMusicOne
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicOneClefModern \zscMusicOne
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicOneClefModern \aascMusicOne
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicOneClefModern \abscMusicOne
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicOneClefModern \acscMusicOne
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicOneClefModern \adscMusicOne
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicOneClefModern \aescMusicOne
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicOneClefModern \afscMusicOne
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicOneClefModern \agscMusicOne
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicOneClefModern \ahscMusicOne
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicOneClefModern \aiscMusicOne
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicOneClefModern \ajscMusicOne
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicOneClefModern \akscMusicOne
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicOneClefModern \alscMusicOne
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicOneClefModern \amscMusicOne
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicOneClefModern \anscMusicOne
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicOneClefModern \aoscMusicOne
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicOneClefModern \apscMusicOne
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicOneClefModern \aqscMusicOne
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicOneClefModern \arscMusicOne
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicOneClefModern \asscMusicOne
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicOneClefModern \atscMusicOne
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicOneClefModern \auscMusicOne
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicOneClefModern \avscMusicOne
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicOneClefModern \awscMusicOne
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicOneClefModern \axscMusicOne
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_superius_orig_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Superius Part in Original Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicOneClefOrig \ascMusicOne
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicOneClefOrig \bscMusicOne
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicOneClefOrig \cscMusicOne
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicOneClefOrig \dscMusicOne
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicOneClefOrig \escMusicOne
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicOneClefOrig \fscMusicOne
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicOneClefOrig \gscMusicOne
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicOneClefOrig \hscMusicOne
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicOneClefOrig \iscMusicOne
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicOneClefOrig \jscMusicOne
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicOneClefOrig \kscMusicOne
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicOneClefOrig \lscMusicOne
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicOneClefOrig \mscMusicOne
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicOneClefOrig \nscMusicOne
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicOneClefOrig \oscMusicOne
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicOneClefOrig \pscMusicOne
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicOneClefOrig \qscMusicOne
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicOneClefOrig \rscMusicOne
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicOneClefOrig \sscMusicOne
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicOneClefOrig \tscMusicOne
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicOneClefOrig \uscMusicOne
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicOneClefOrig \vscMusicOne
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicOneClefOrig \wscMusicOne
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicOneClefOrig \xscMusicOne
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicOneClefOrig \yscMusicOne
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicOneClefOrig \zscMusicOne
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicOneClefOrig \aascMusicOne
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicOneClefOrig \abscMusicOne
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicOneClefOrig \acscMusicOne
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicOneClefOrig \adscMusicOne
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicOneClefOrig \aescMusicOne
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicOneClefOrig \afscMusicOne
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicOneClefOrig \agscMusicOne
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicOneClefOrig \ahscMusicOne
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicOneClefOrig \aiscMusicOne
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicOneClefOrig \ajscMusicOne
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicOneClefOrig \akscMusicOne
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicOneClefOrig \alscMusicOne
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicOneClefOrig \amscMusicOne
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicOneClefOrig \anscMusicOne
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicOneClefOrig \aoscMusicOne
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicOneClefOrig \apscMusicOne
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicOneClefOrig \aqscMusicOne
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicOneClefOrig \arscMusicOne
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicOneClefOrig \asscMusicOne
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicOneClefOrig \atscMusicOne
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicOneClefOrig \auscMusicOne
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicOneClefOrig \avscMusicOne
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicOneClefOrig \awscMusicOne
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicOneClefOrig \axscMusicOne
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_contratenor_modern_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Contratenor Part in Modern Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicTwoClefModern \ascMusicTwo
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicThreeClefModern \bscMusicThree
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicTwoClefModern \cscMusicTwo
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicThreeClefModern \dscMusicThree
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicTwoClefModern \escMusicTwo
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicTwoClefModern \fscMusicTwo
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicTwoClefModern \gscMusicTwo
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicTwoClefModern \hscMusicTwo
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicTwoClefModern \iscMusicTwo
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicTwoClefModern \jscMusicTwo
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicTwoClefModern \kscMusicTwo
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicTwoClefModern \lscMusicTwo
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicTwoClefModern \mscMusicTwo
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicTwoClefModern \nscMusicTwo
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicTwoClefModern \oscMusicTwo
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicTwoClefModern \pscMusicTwo
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicTwoClefModern \qscMusicTwo
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicTwoClefModern \rscMusicTwo
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicTwoClefModern \sscMusicTwo
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicTwoClefModern \tscMusicTwo
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicTwoClefModern \uscMusicTwo
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicTwoClefModern \vscMusicTwo
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicTwoClefModern \wscMusicTwo
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicTwoClefModern \xscMusicTwo
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicTwoClefModern \yscMusicTwo
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicTwoClefModern \zscMusicTwo
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicTwoClefModern \aascMusicTwo
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicTwoClefModern \abscMusicTwo
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicTwoClefModern \acscMusicTwo
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicTwoClefModern \adscMusicTwo
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicTwoClefModern \aescMusicTwo
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicTwoClefModern \afscMusicTwo
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicTwoClefModern \agscMusicTwo
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicTwoClefModern \ahscMusicTwo
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicTwoClefModern \aiscMusicTwo
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicTwoClefModern \ajscMusicTwo
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicTwoClefModern \akscMusicTwo
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicTwoClefModern \alscMusicTwo
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicTwoClefModern \amscMusicTwo
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicTwoClefModern \anscMusicTwo
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicTwoClefModern \aoscMusicTwo
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicTwoClefModern \apscMusicTwo
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicTwoClefModern \aqscMusicTwo
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicTwoClefModern \arscMusicTwo
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicTwoClefModern \asscMusicTwo
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicTwoClefModern \atscMusicTwo
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicTwoClefModern \auscMusicTwo
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicTwoClefModern \avscMusicTwo
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicTwoClefModern \awscMusicTwo
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicTwoClefModern \axscMusicTwo
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_contratenor_orig_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Contratenor Part in Original Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicTwoClefOrig \ascMusicTwo
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicThreeClefOrig \bscMusicThree
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicTwoClefOrig \cscMusicTwo
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicThreeClefOrig \dscMusicThree
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicTwoClefOrig \escMusicTwo
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicTwoClefOrig \fscMusicTwo
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicTwoClefOrig \gscMusicTwo
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicTwoClefOrig \hscMusicTwo
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicTwoClefOrig \iscMusicTwo
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicTwoClefOrig \jscMusicTwo
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicTwoClefOrig \kscMusicTwo
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicTwoClefOrig \lscMusicTwo
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicTwoClefOrig \mscMusicTwo
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicTwoClefOrig \nscMusicTwo
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicTwoClefOrig \oscMusicTwo
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicTwoClefOrig \pscMusicTwo
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicTwoClefOrig \qscMusicTwo
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicTwoClefOrig \rscMusicTwo
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicTwoClefOrig \sscMusicTwo
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicTwoClefOrig \tscMusicTwo
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicTwoClefOrig \uscMusicTwo
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicTwoClefOrig \vscMusicTwo
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicTwoClefOrig \wscMusicTwo
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicTwoClefOrig \xscMusicTwo
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicTwoClefOrig \yscMusicTwo
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicTwoClefOrig \zscMusicTwo
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicTwoClefOrig \aascMusicTwo
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicTwoClefOrig \abscMusicTwo
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicTwoClefOrig \acscMusicTwo
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicTwoClefOrig \adscMusicTwo
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicTwoClefOrig \aescMusicTwo
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicTwoClefOrig \afscMusicTwo
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicTwoClefOrig \agscMusicTwo
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicTwoClefOrig \ahscMusicTwo
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicTwoClefOrig \aiscMusicTwo
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicTwoClefOrig \ajscMusicTwo
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicTwoClefOrig \akscMusicTwo
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicTwoClefOrig \alscMusicTwo
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicTwoClefOrig \amscMusicTwo
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicTwoClefOrig \anscMusicTwo
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicTwoClefOrig \aoscMusicTwo
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicTwoClefOrig \apscMusicTwo
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicTwoClefOrig \aqscMusicTwo
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicTwoClefOrig \arscMusicTwo
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicTwoClefOrig \asscMusicTwo
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicTwoClefOrig \atscMusicTwo
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicTwoClefOrig \auscMusicTwo
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicTwoClefOrig \avscMusicTwo
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicTwoClefOrig \awscMusicTwo
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicTwoClefOrig \axscMusicTwo
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_tenor_modern_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Tenor Part in Modern Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicThreeClefModern \ascMusicThree
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicFourClefModern \bscMusicFour
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicThreeClefModern \cscMusicThree
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicFourClefModern \dscMusicFour
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicThreeClefModern \escMusicThree
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicThreeClefModern \fscMusicThree
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicThreeClefModern \gscMusicThree
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicThreeClefModern \hscMusicThree
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicThreeClefModern \iscMusicThree
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicThreeClefModern \jscMusicThree
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicThreeClefModern \kscMusicThree
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicThreeClefModern \lscMusicThree
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicThreeClefModern \mscMusicThree
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicThreeClefModern \nscMusicThree
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicThreeClefModern \oscMusicThree
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicThreeClefModern \pscMusicThree
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicThreeClefModern \qscMusicThree
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicThreeClefModern \rscMusicThree
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicThreeClefModern \sscMusicThree
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicThreeClefModern \tscMusicThree
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicThreeClefModern \uscMusicThree
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicThreeClefModern \vscMusicThree
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicThreeClefModern \wscMusicThree
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicThreeClefModern \xscMusicThree
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicThreeClefModern \yscMusicThree
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicThreeClefModern \zscMusicThree
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicThreeClefModern \aascMusicThree
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicThreeClefModern \abscMusicThree
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicThreeClefModern \acscMusicThree
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicThreeClefModern \adscMusicThree
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicThreeClefModern \aescMusicThree
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicThreeClefModern \afscMusicThree
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicThreeClefModern \agscMusicThree
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicThreeClefModern \ahscMusicThree
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicThreeClefModern \aiscMusicThree
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicThreeClefModern \ajscMusicThree
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicThreeClefModern \akscMusicThree
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicThreeClefModern \alscMusicThree
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicThreeClefModern \amscMusicThree
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicThreeClefModern \anscMusicThree
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicThreeClefModern \aoscMusicThree
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicThreeClefModern \apscMusicThree
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicThreeClefModern \aqscMusicThree
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicThreeClefModern \arscMusicThree
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicThreeClefModern \asscMusicThree
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicThreeClefModern \atscMusicThree
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicThreeClefModern \auscMusicThree
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicThreeClefModern \avscMusicThree
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicThreeClefModern \awscMusicThree
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicThreeClefModern \axscMusicThree
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_tenor_orig_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Tenor Part in Original Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicThreeClefOrig \ascMusicThree
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicFourClefOrig \bscMusicFour
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicThreeClefOrig \cscMusicThree
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicFourClefOrig \dscMusicFour
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicThreeClefOrig \escMusicThree
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicThreeClefOrig \fscMusicThree
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicThreeClefOrig \gscMusicThree
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicThreeClefOrig \hscMusicThree
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicThreeClefOrig \iscMusicThree
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicThreeClefOrig \jscMusicThree
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicThreeClefOrig \kscMusicThree
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicThreeClefOrig \lscMusicThree
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicThreeClefOrig \mscMusicThree
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicThreeClefOrig \nscMusicThree
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicThreeClefOrig \oscMusicThree
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicThreeClefOrig \pscMusicThree
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicThreeClefOrig \qscMusicThree
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicThreeClefOrig \rscMusicThree
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicThreeClefOrig \sscMusicThree
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicThreeClefOrig \tscMusicThree
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicThreeClefOrig \uscMusicThree
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicThreeClefOrig \vscMusicThree
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicThreeClefOrig \wscMusicThree
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicThreeClefOrig \xscMusicThree
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicThreeClefOrig \yscMusicThree
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicThreeClefOrig \zscMusicThree
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicThreeClefOrig \aascMusicThree
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicThreeClefOrig \abscMusicThree
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicThreeClefOrig \acscMusicThree
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicThreeClefOrig \adscMusicThree
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicThreeClefOrig \aescMusicThree
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicThreeClefOrig \afscMusicThree
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicThreeClefOrig \agscMusicThree
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicThreeClefOrig \ahscMusicThree
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicThreeClefOrig \aiscMusicThree
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicThreeClefOrig \ajscMusicThree
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicThreeClefOrig \akscMusicThree
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicThreeClefOrig \alscMusicThree
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicThreeClefOrig \amscMusicThree
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicThreeClefOrig \anscMusicThree
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicThreeClefOrig \aoscMusicThree
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicThreeClefOrig \apscMusicThree
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicThreeClefOrig \aqscMusicThree
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicThreeClefOrig \arscMusicThree
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicThreeClefOrig \asscMusicThree
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicThreeClefOrig \atscMusicThree
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicThreeClefOrig \auscMusicThree
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicThreeClefOrig \avscMusicThree
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicThreeClefOrig \awscMusicThree
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicThreeClefOrig \axscMusicThree
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_bassus_modern_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Bassus Part in Modern Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicFourClefModern \ascMusicFour
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicFiveClefModern \bscMusicFive
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicFourClefModern \cscMusicFour
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicFiveClefModern \dscMusicFive
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicFourClefModern \escMusicFour
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicFourClefModern \fscMusicFour
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicFourClefModern \gscMusicFour
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicFourClefModern \hscMusicFour
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicFourClefModern \iscMusicFour
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicFiveClefModern \jscMusicFive
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicFourClefModern \kscMusicFour
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicFourClefModern \lscMusicFour
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicFourClefModern \mscMusicFour
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicFourClefModern \nscMusicFour
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicFourClefModern \oscMusicFour
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicFourClefModern \pscMusicFour
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicFourClefModern \qscMusicFour
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicFourClefModern \rscMusicFour
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicFiveClefModern \sscMusicFive
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicFiveClefModern \tscMusicFive
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicFourClefModern \uscMusicFour
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicFourClefModern \vscMusicFour
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicFourClefModern \wscMusicFour
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicFourClefModern \xscMusicFour
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicFourClefModern \yscMusicFour
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicFourClefModern \zscMusicFour
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicFourClefModern \aascMusicFour
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicFourClefModern \abscMusicFour
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicFourClefModern \acscMusicFour
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicFourClefModern \adscMusicFour
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicFourClefModern \aescMusicFour
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicFourClefModern \afscMusicFour
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicFourClefModern \agscMusicFour
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicFourClefModern \ahscMusicFour
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicFourClefModern \aiscMusicFour
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicFourClefModern \ajscMusicFour
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicFourClefModern \akscMusicFour
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicFourClefModern \alscMusicFour
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicFourClefModern \amscMusicFour
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicFourClefModern \anscMusicFour
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicFourClefModern \aoscMusicFour
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicFourClefModern \apscMusicFour
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicFourClefModern \aqscMusicFour
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicFourClefModern \arscMusicFour
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicFourClefModern \asscMusicFour
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicFourClefModern \atscMusicFour
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicFourClefModern \auscMusicFour
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicFourClefModern \avscMusicFour
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicFourClefModern \awscMusicFour
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicFourClefModern \axscMusicFour
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_bassus_orig_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Bassus Part in Original Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ascGlobal \ascMusicFourClefOrig \ascMusicFour
+            }
+          }
+          \header {piece = \ascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicFiveClefOrig \bscMusicFive
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \cscGlobal \cscMusicFourClefOrig \cscMusicFour
+            }
+          }
+          \header {piece = \cscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicFiveClefOrig \dscMusicFive
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \escGlobal \escMusicFourClefOrig \escMusicFour
+            }
+          }
+          \header {piece = \escTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \fscGlobal \fscMusicFourClefOrig \fscMusicFour
+            }
+          }
+          \header {piece = \fscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \gscGlobal \gscMusicFourClefOrig \gscMusicFour
+            }
+          }
+          \header {piece = \gscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \hscGlobal \hscMusicFourClefOrig \hscMusicFour
+            }
+          }
+          \header {piece = \hscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \iscGlobal \iscMusicFourClefOrig \iscMusicFour
+            }
+          }
+          \header {piece = \iscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicFiveClefOrig \jscMusicFive
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \kscGlobal \kscMusicFourClefOrig \kscMusicFour
+            }
+          }
+          \header {piece = \kscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \lscGlobal \lscMusicFourClefOrig \lscMusicFour
+            }
+          }
+          \header {piece = \lscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \mscGlobal \mscMusicFourClefOrig \mscMusicFour
+            }
+          }
+          \header {piece = \mscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \nscGlobal \nscMusicFourClefOrig \nscMusicFour
+            }
+          }
+          \header {piece = \nscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \oscGlobal \oscMusicFourClefOrig \oscMusicFour
+            }
+          }
+          \header {piece = \oscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \pscGlobal \pscMusicFourClefOrig \pscMusicFour
+            }
+          }
+          \header {piece = \pscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \qscGlobal \qscMusicFourClefOrig \qscMusicFour
+            }
+          }
+          \header {piece = \qscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \rscGlobal \rscMusicFourClefOrig \rscMusicFour
+            }
+          }
+          \header {piece = \rscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicFiveClefOrig \sscMusicFive
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicFiveClefOrig \tscMusicFive
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicFourClefOrig \uscMusicFour
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \vscGlobal \vscMusicFourClefOrig \vscMusicFour
+            }
+          }
+          \header {piece = \vscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \wscGlobal \wscMusicFourClefOrig \wscMusicFour
+            }
+          }
+          \header {piece = \wscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \xscGlobal \xscMusicFourClefOrig \xscMusicFour
+            }
+          }
+          \header {piece = \xscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \yscGlobal \yscMusicFourClefOrig \yscMusicFour
+            }
+          }
+          \header {piece = \yscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \zscGlobal \zscMusicFourClefOrig \zscMusicFour
+            }
+          }
+          \header {piece = \zscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aascGlobal \aascMusicFourClefOrig \aascMusicFour
+            }
+          }
+          \header {piece = \aascTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \abscGlobal \abscMusicFourClefOrig \abscMusicFour
+            }
+          }
+          \header {piece = \abscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \acscGlobal \acscMusicFourClefOrig \acscMusicFour
+            }
+          }
+          \header {piece = \acscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \adscGlobal \adscMusicFourClefOrig \adscMusicFour
+            }
+          }
+          \header {piece = \adscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aescGlobal \aescMusicFourClefOrig \aescMusicFour
+            }
+          }
+          \header {piece = \aescTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \afscGlobal \afscMusicFourClefOrig \afscMusicFour
+            }
+          }
+          \header {piece = \afscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \agscGlobal \agscMusicFourClefOrig \agscMusicFour
+            }
+          }
+          \header {piece = \agscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ahscGlobal \ahscMusicFourClefOrig \ahscMusicFour
+            }
+          }
+          \header {piece = \ahscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aiscGlobal \aiscMusicFourClefOrig \aiscMusicFour
+            }
+          }
+          \header {piece = \aiscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \ajscGlobal \ajscMusicFourClefOrig \ajscMusicFour
+            }
+          }
+          \header {piece = \ajscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \akscGlobal \akscMusicFourClefOrig \akscMusicFour
+            }
+          }
+          \header {piece = \akscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \alscGlobal \alscMusicFourClefOrig \alscMusicFour
+            }
+          }
+          \header {piece = \alscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \amscGlobal \amscMusicFourClefOrig \amscMusicFour
+            }
+          }
+          \header {piece = \amscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \anscGlobal \anscMusicFourClefOrig \anscMusicFour
+            }
+          }
+          \header {piece = \anscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aoscGlobal \aoscMusicFourClefOrig \aoscMusicFour
+            }
+          }
+          \header {piece = \aoscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \apscGlobal \apscMusicFourClefOrig \apscMusicFour
+            }
+          }
+          \header {piece = \apscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \aqscGlobal \aqscMusicFourClefOrig \aqscMusicFour
+            }
+          }
+          \header {piece = \aqscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \arscGlobal \arscMusicFourClefOrig \arscMusicFour
+            }
+          }
+          \header {piece = \arscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \asscGlobal \asscMusicFourClefOrig \asscMusicFour
+            }
+          }
+          \header {piece = \asscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \atscGlobal \atscMusicFourClefOrig \atscMusicFour
+            }
+          }
+          \header {piece = \atscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \auscGlobal \auscMusicFourClefOrig \auscMusicFour
+            }
+          }
+          \header {piece = \auscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \avscGlobal \avscMusicFourClefOrig \avscMusicFour
+            }
+          }
+          \header {piece = \avscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \awscGlobal \awscMusicFourClefOrig \awscMusicFour
+            }
+          }
+          \header {piece = \awscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \axscGlobal \axscMusicFourClefOrig \axscMusicFour
+            }
+          }
+          \header {piece = \axscTitle }
+          \layout { indent = 0\mm }
+      }
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_quintus_modern_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Quintus Part in Modern Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicTwoClefModern \bscMusicTwo
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicTwoClefModern \dscMusicTwo
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+       
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicFourClefModern \jscMusicFour
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicFourClefModern \sscMusicFour
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicFourClefModern \tscMusicFour
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicFiveClefModern \uscMusicFive
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      
+    }
+  \book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "part_book_quintus_orig_clef"
+      \header{
+        title = "Dances"
+        subtitle = "Quintus Part in Original Clefs"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \bscGlobal \bscMusicTwoClefOrig \bscMusicTwo
+            }
+          }
+          \header {piece = \bscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \dscGlobal \dscMusicTwoClefOrig \dscMusicTwo
+            }
+          }
+          \header {piece = \dscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+       
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \jscGlobal \jscMusicFourClefOrig \jscMusicFour
+            }
+          }
+          \header {piece = \jscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \sscGlobal \sscMusicFourClefOrig \sscMusicFour
+            }
+          }
+          \header {piece = \sscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \tscGlobal \tscMusicFourClefOrig \tscMusicFour
+            }
+          }
+          \header {piece = \tscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \uscGlobal \uscMusicFiveClefOrig \uscMusicFive
+            }
+          }
+          \header {piece = \uscTitle }
+          \layout { indent = 0\mm }
+      }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      
+    }
+  

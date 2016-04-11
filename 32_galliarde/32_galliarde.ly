@@ -1,3 +1,5 @@
+%c part moved rests to front of Tenor and Bassus
+%add flat to key signature of bassus
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -37,7 +39,7 @@ scMusicOne = \relative c' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
 
    \repeat volta 2 {
@@ -62,7 +64,7 @@ scMusicThree = \relative c' {
       c2 c a a c c4 bf a g a1 f1 r2
    }
    \repeat volta 2 {
-     a2 a c1 c2 a1 a2 a1 a2 r2
+     r2 a2 a c1 c2 a1 a2 a1 a2 
    }
 }
 
@@ -75,10 +77,10 @@ scMusicFour = \relative c {
       a2 a a d1 d2 c1 c2 f,2 f r2
    }
    \repeat volta 2 {
-      f2 c'2 d a2. b4 c2 d a1 d1 r2
+      f2 c'2 d a2. bf4 c2 d a1 d1 r2
    }
    \repeat volta 2 {
-     a2 d c1 c2 d1 d2 a1 a2 r2  
+    r2  a2 d c1 c2 d1 d2 a1 a2   
    }
 }
 

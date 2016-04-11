@@ -9,7 +9,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "10 Pavane"
+scTitle = "10 Pavane 'O Foible Esprit'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -23,13 +23,13 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-       g\breve a2 g c1 b2 a g f e\breve c'1 c2 c a4 b c a b2 a2. g4 g1 f2 g\breve
+       g\breve a2 g c1 b2 a g f e\breve c'1 c2 c a4 b c a b2 a2~ a4 g4 g1 \ficta fs2 g\breve
    }
    \repeat volta 2 {
-       g1 g2 g a1 c b2 a g1 a\breve d1 c2 b a g f e2. d4 d1 c2 d\breve
+     g1 g2 g a1 c b2 a g1 a\breve d1 c2 b a g f e2 ~ e4 d4 d1 \ficta cs2 d\breve
    }
    \repeat volta 2 {
-       g1 g2 g a1 b2 d2. c4 c1 b2 c\breve c1 c2 c b4 a g f g2 a2. g4 g1 f2 g\breve
+       g1 g2 g a1 b2 d2~ d4 c4 c1 b2 c\breve c1 c2 c b4 a g f g2 a2 ~ a4 g4 g1 \ficta fs2 g\breve
    }
    
 }
@@ -37,7 +37,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
       e\breve f2 e c4 d e f g f e d e2 d c\breve
@@ -59,7 +59,7 @@ scMusicThree = \relative c' {
        c\breve c2 c c4 b c d e d c b c b a g a\breve a1 a2 a f g d'2 c2 c b a1 g\breve
    }
    \repeat volta 2 {
-       bf1 bf2 bf a1. g4 f g2 a b1 d\breve a1 a2 d2. c4 b2 a2. g4 f2 e4 d e1 d\breve
+       bf1 bf2 bf a1. g4 f g2 a b1 d\breve a1 a2 d2 ~ d4 c4 b2 a2. g4 f2 e4 d e1 d\breve
    }
    \repeat volta 2 {
        b'1 c2. d4 e2 d b1 c2 c d1 c\breve e1 e2 e d4 c b a b2 g2 c b a1 g\breve

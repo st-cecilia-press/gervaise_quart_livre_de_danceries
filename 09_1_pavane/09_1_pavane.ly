@@ -9,7 +9,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "09 Pavane"
+scTitle = "09 Pavane 'M'amye Est Tant Honneste et Saige'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -23,12 +23,12 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c' {  
    
    \repeat volta 2 {
-     e1 e2 f2 g1. g2 a2 g1 f2 g\breve
+     e1 e2 f2 g1. g2 a2 g1 \ficta fs2 g\breve
      g1 f2 e d2. e4 f e d c b2 c1 b2 c\breve
    }
    \repeat volta 2 {
-     d1 e2 g1 f2 g2 a g e f1 e\breve
-     g1 g2 g d f c4 d e f e d d1 c2 d\breve
+     d1 e2 g2 ~ g2 f2 g2 a g e f1 e\breve
+     g1 g2 g d f c4 d e f e d d1 \ficta cs2 d\breve
    }
    
 }
@@ -36,7 +36,7 @@ scMusicOne = \relative c' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
      c1 c2 c d1 e f2 d2 d1 b\breve

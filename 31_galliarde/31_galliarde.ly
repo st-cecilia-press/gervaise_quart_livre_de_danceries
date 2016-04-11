@@ -1,3 +1,4 @@
+%removed flat from key signature on contratenor
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -5,7 +6,7 @@
 scTempo = #(ly:make-moment 165 2)
 
 scGlobal= {
-  \key g \dorian
+  \key c \major
   \time 3/2
 }
 
@@ -26,7 +27,7 @@ scMusicOne = \relative c' {
       e2 e d e2. f4 g2 a g4 f e d e1 e2
    }
    \repeat volta 2 {
-      c'2 c c b1 a2 g2 g f2 g1 g2
+      c'2 c c b1 a2 g2 g \ficta fs2 g1 g2
    }
    
 }
@@ -34,14 +35,14 @@ scMusicOne = \relative c' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c'' {  
 
    \repeat volta 2 {
       g2 g f2 g4 f e d e2 f2 d1 c1 c2
    }
    \repeat volta 2 {
-      g'2 g g g d f4 e d c d1 bf1 bf2
+      g'2 g g g d f4 e d c d1 b1 b2
    }
    \repeat volta 2 {
    }

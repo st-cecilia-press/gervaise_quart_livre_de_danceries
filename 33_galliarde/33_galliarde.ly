@@ -23,24 +23,24 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-      r2 b2 b b b1. b2 b4 g a b c1. c2 c b2 a b1 a g2 a1
+       b2 b b b1. b2 b4 g a b c1. c2 c b2 a b1 a \ficta gs2 a1 r2
    }
    \repeat volta 2 {
-      r2 b2 b b b1 b a g1 r2 c2. b4 b a8 g8 a2 b2. a4 a1 g2 a1
+       b2 b b b1 b2 ~ b2 a1 g1 r2 c2. b4 b a8 g8 a2 b2. a4 a1 \ficta gs2 a1
    }
    
 }
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo = \relative c' {
 
    \repeat volta 2 {
-      r2 d2 d d g1. g2 g g c,1. e2 c g'2 e g2. f4 e d e1 c1 
+       d2 d d g1. g2 g g c,1. e2 c g'2 e g2. f4 e d e1 c1 r2
    }
    \repeat volta 2 {
-      r2 d2 d d g1 g e2 e e1 r2 e1 e2 e4 d e f g2 e e2. d4 c1
+        d2 d d g1 g2 ~ g2 e2 e e1 r2 e1 e2 e4 d e f g2 e e2. d4 c1
    }
 }
 
@@ -51,10 +51,10 @@ scMusicThreeClefModern = \clef "G_8"
 scMusicThree =  \relative c' {  
 
    \repeat volta 2 {
-      r2 b2 b b d1. d2 d d c1. g2 a b c d2. c4 b a b2 b a1
+       b2 b b d1. d2 d d c1. g2 a b c d2. c4 b a b2 b a1 r2
    }
    \repeat volta 2 {
-      r2 b2 b4 a b c d1 b1 c2 c b1 r2 a1 g2 c2 b g2 a b b a1 
+       b2 b4 a b c d1 b2 ~ b2 c2 c b1 r2 a1 g2 c2 b g2 a b b a1 
    }
 }
 scMusicFourName = "Bassus"
@@ -63,10 +63,10 @@ scMusicFourClefModern = \clef bass
 scMusicFour = \relative c {
 
    \repeat volta 2 {
-      r2 g2 g g g1. g2 g g c1. c2 c g a g1 a2 e'2 e a,1 
+       g2 g g g1. g2 g g c1. c2 c g a g1 a2 e'2 e a,1 r2
    }
    \repeat volta 2 {
-      r2 g2 g g g1 g a e' r2 a,1 e'2 a,2 e'1 a,2 e'2 e a,1
+       g2 g g g1 g2 ~ g2 a1 e' r2 a,1 e'2 a,2 e'1 a,2 e'2 e a,1
    }
 }
 

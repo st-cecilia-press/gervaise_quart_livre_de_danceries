@@ -1,0 +1,173 @@
+require 'erb'
+part_book_path = 'part_book.ly'
+def get_template()
+  %q{\book {
+      \paper {
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:minimal-breaking
+        page-breaking-system-system-spacing.padding = #18
+      }
+      \bookOutputName "<%=@bookName%>"
+      \header{
+        title = "Dances"
+        subtitle = "<%=@subtitle %>"
+        composer = "Gervaise"
+        tagline = ""
+      }
+      
+      <% @hsh.sort_by{|k, v| [k.length, k ] }.map do |index, parts| %> 
+      <% next if parts[@part].empty? %> 
+      \score {
+          \new Staff \with {\consists "Ambitus_engraver" } {
+            \new Voice {
+              \<%=index%>scGlobal \<%=index%>scMusic<%=parts[@part] %>Clef<%= @clefType %> \<%=index%>scMusic<%= parts[@part] %>
+            }
+          }
+          \header {piece = \<%=index%>scTitle }
+          \layout { indent = 0\mm }
+      }
+      <% end %>
+    }
+  }
+end
+
+class ScoreFile
+  include ERB::Util
+
+  def initialize(hsh, template)
+    @hsh = hsh
+    @template = template 
+  end
+
+  def render()
+    ERB.new(@template).result(binding)
+  end
+
+  def save(file)
+    File.open(file, "a+") do |f|
+      @bookName = "part_book_superius_modern_clef"
+      @part = :superius
+      @subtitle = "Superius Part in Modern Clefs"
+      @clefType = 'Modern'
+      f.write(render)
+
+      @bookName = "part_book_superius_orig_clef"
+      @part = :superius
+      @subtitle = "Superius Part in Original Clefs"
+      @clefType = 'Orig'
+      f.write(render)
+
+      @bookName = "part_book_contratenor_modern_clef"
+      @part = :contratenor
+      @subtitle = "Contratenor Part in Modern Clefs"
+      @clefType = 'Modern'
+      f.write(render)
+
+      @bookName = "part_book_contratenor_orig_clef"
+      @part = :contratenor
+      @subtitle = "Contratenor Part in Original Clefs"
+      @clefType = 'Orig'
+      f.write(render)
+
+      @bookName = "part_book_tenor_modern_clef"
+      @part = :tenor
+      @subtitle = "Tenor Part in Modern Clefs"
+      @clefType = 'Modern'
+      f.write(render)
+
+      @bookName = "part_book_tenor_orig_clef"
+      @part = :tenor
+      @subtitle = "Tenor Part in Original Clefs"
+      @clefType = 'Orig'
+      f.write(render)
+
+      @bookName = "part_book_bassus_modern_clef"
+      @part = :bassus
+      @subtitle = "Bassus Part in Modern Clefs"
+      @clefType = 'Modern'
+      f.write(render)
+
+      @bookName = "part_book_bassus_orig_clef"
+      @part = :bassus
+      @subtitle = "Bassus Part in Original Clefs"
+      @clefType = 'Orig'
+      f.write(render)
+
+      @bookName = "part_book_quintus_modern_clef"
+      @part = :quintus
+      @subtitle = "Quintus Part in Modern Clefs"
+      @clefType = 'Modern'
+      f.write(render)
+
+      @bookName = "part_book_quintus_orig_clef"
+      @part = :quintus
+      @subtitle = "Quintus Part in Original Clefs"
+      @clefType = 'Orig'
+      f.write(render)
+    end
+  end
+end
+
+hsh = Hash.new{ |h,k| h[k] = Hash.new(&h.default_proc) }
+
+intro = %q{
+  \include "./include/sc_functions.ly"
+  #(set-global-staff-size 18)
+  \include "english.ly"
+  #(set-default-paper-size "letter")
+}
+
+lilyFiles = Dir.glob("[0-9]**/*.ly").sort  
+File.open(part_book_path,"w") do |f|
+  index = 'a'
+  f.puts intro
+#Put in all variables from files with appropriate prefixes.
+  lilyFiles.each do |lily| 
+    open(lily, 'r').each do |l|
+      if  l =~ /include/ then
+         next
+      end
+      if  l =~ /version/ then
+         next
+      end
+      if  l =~ /set-default-paper-size/ then
+         next
+      end
+      if  l =~ /set-global-staff-size/ then
+         next
+      end
+      l.sub!('scGlobal',"#{index}scGlobal")
+      l.sub!('scTempo',"#{index}scTempo")
+      l.sub!('scMusic',"#{index}scMusic")
+      l.sub!('scTitle',"#{index}scTitle")
+      l.sub!('scSubtitle',"#{index}scSubtitle")
+      l.sub!('scMeter',"#{index}scMeter")
+      l.sub!('scPoet',"#{index}scPoet")
+      l.sub!('scComposer',"#{index}scCopyright")
+      l.sub!('scTagline',"#{index}scTagline")
+      l.sub!('scChordLine',"#{index}scChordLine")
+      match = /scMusic([[:upper:]][[:lower:]]+)Name/.match(l)
+      if match 
+        case l
+          when /Superius/ 
+            hsh[index][:superius] = match[1]
+          when /Contratenor/ 
+            hsh[index][:contratenor] = match[1]
+          when /Tenor/ 
+            hsh[index][:tenor] = match[1]
+          when /Bassus/ 
+            hsh[index][:bassus] = match[1]
+          when /Quintus/ 
+            hsh[index][:quintus] = match[1]
+        end
+      end
+       
+      f.puts l 
+    end 
+    index.next!
+  end
+end
+score = ScoreFile.new(hsh, get_template)
+score.save(part_book_path)

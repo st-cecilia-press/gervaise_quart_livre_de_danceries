@@ -1,3 +1,4 @@
+%Superius A part flatted e in measure 6 to match the bassus ef
 \include "../include/sc_functions.ly"
 \include "english.ly"
 #(set-default-paper-size "letter")
@@ -9,7 +10,7 @@ scGlobal = {
   \time 4/2
 }
 
-scTitle = "18 Pavane"
+scTitle = "18 Pavane 'Dellestarpe'"
 scSubtitle = \markup \italic "From Pierre Attaignant's Fourth Book of Dances"
 scMeter = ""
 scPoet = ""
@@ -23,13 +24,13 @@ scMusicOneClefModern = \clef treble
 scMusicOne = \relative c'' {  
    
    \repeat volta 2 {
-    g\breve f1 g4 a bf g a1. g2 f f g4 a bf g a1. g2 f4 g a bf a g f e f\breve f1 r
+    g\breve f1 g4 a bf g a1. g2 f f g4 a bf g a1. g2 f4 g a bf a g f ef f\breve f1 r
    }
    \repeat volta 2 {
     bf1 bf2 a4 g a2 d c a bf1 bf2 a4 g a2 d c a bf1 bf2 a4 g a1 g f\breve f1 r
    }
    \repeat volta 2 {
-    a1 c2. bf4 a1d2. c4 bf2 d c2. bf4 a1 d2. c4 bf2 d c2. bf4 a2 g1 f2 g\breve g1 g
+    a1 c2. bf4 a1d2. c4 bf2 d c2. bf4 a1 d2. c4 bf2 d c2. bf4 a2 g1 \ficta fs2 g\breve g1 g
    }
    
 }
@@ -37,7 +38,7 @@ scMusicOne = \relative c'' {
 
 scMusicTwoName = "Contratenor"
 scMusicTwoClefOrig = \clef alto 
-scMusicTwoClefModern = \clef treble 
+scMusicTwoClefModern = \clef "G_8" 
 scMusicTwo =  \relative c' {  
    \repeat volta 2 {
     d\breve d1 d4 c d e f1 f2 e d1 d4 c d e f1 f2 e d1 bf2 c d\breve d1 r
@@ -60,7 +61,7 @@ scMusicThree = \relative c' {
     bf4 a bf c d2 d c bf c1 bf4 a bf c d2 d c bf c1 bf4 a bf c d2 bf a d d c d1 d d r
    }
    \repeat volta 2 {
-    c1. c2 f2. e4 d1 g2. f4 e2 g f2. e4 d2 d g2. f4 e d c1 bf2 a1 g2 bf2. a4 bf c d\breve
+    c1. c2 f2. e4 d1 g2. f4 e2 g f2. e4 d2 d g2. f4 e d c2 ~ c2 bf2 a1 g2 bf2. a4 bf c d\breve
    }
 }
 

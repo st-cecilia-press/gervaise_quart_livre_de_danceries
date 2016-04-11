@@ -1,0 +1,132 @@
+require 'erb'
+book_path = 'score_book.ly'
+def get_template()
+  %q{\book {
+      \paper {
+        tocItemMarkup = \tocItemWithDotsMarkup
+        top-margin = 0.5\in
+        left-margin = 0.5\in
+        right-margin = 0.5\in
+        page-breaking = #ly:page-turn-breaking
+      }
+      \bookOutputName "<%=@bookName%>"
+      \header{
+        title = ""
+        tagline = ##f
+      }
+      \markuplist \table-of-contents
+      \pageBreak      
+
+      <% @hsh.sort_by{|k, v| [k.length, k ] }.map do |index, partsTotal| %> 
+      \tocItem \markup { \<%=index%>scTitle }
+      \score {
+        \new ChoirStaff <<
+          <% 0.upto(partsTotal) { |n|  %>
+          \new Staff <<
+            \new Voice {
+              \<%=index%>scGlobal \<%=index%>scMusic<%=@numbers[n] %>Clef<%= @clefType %> \<%=index%>scMusic<%=@numbers[n] %>
+            }
+          >>
+          <% } %>
+          >>
+          \header {piece = \<%=index%>scTitle }
+          \layout { 
+            indent = 0\mm 
+            \context {
+              \Staff
+              \consists "Ambitus_engraver"
+            }
+          }
+      }
+      <% end %>
+    }
+  }
+end
+
+class ScoreFile
+  include ERB::Util
+
+  def initialize(hsh, bookName, subtitle, clefType, template)
+    @hsh = hsh
+    @bookName = bookName
+    @subtitle = subtitle
+    @clefType = clefType
+    @template = template 
+    @numbers = ['One','Two','Three','Four','Five']
+  end
+
+  def render()
+    ERB.new(@template).result(binding)
+  end
+
+  def save(file)
+    File.open(file, "a+") do |f|
+      f.write(render)
+    end
+  end
+end
+
+
+
+
+def writeBook(path)
+  lilyFiles = Dir.glob("[0-9]**/*.ly").sort  
+  hsh = Hash.new{ |h,k| h[k] = Hash.new(&h.default_proc) }
+  intro = %q{
+    \include "./include/sc_functions.ly"
+    #(set-global-staff-size 18)
+    \include "english.ly"
+    #(set-default-paper-size "letter")
+  
+  }
+  File.open(path,"w") do |f|
+    index = 'a'
+    f.puts intro
+  #Put in all variables from files with appropriate prefixes.
+    lilyFiles.each do |lily| 
+      open(lily, 'r').each do |l|
+        if  l =~ /include/ then
+           next
+        end
+        if  l =~ /version/ then
+           next
+        end
+        if  l =~ /set-default-paper-size/ then
+           next
+        end
+        if  l =~ /set-global-staff-size/ then
+           next
+        end
+        l.sub!('scGlobal',"#{index}scGlobal")
+        l.sub!('scTempo',"#{index}scTempo")
+        l.sub!('scMusic',"#{index}scMusic")
+        l.sub!('scTitle',"#{index}scTitle")
+        l.sub!('scSubtitle',"#{index}scSubtitle")
+        l.sub!('scMeter',"#{index}scMeter")
+        l.sub!('scPoet',"#{index}scPoet")
+        l.sub!('scComposer',"#{index}scCopyright")
+        l.sub!('scTagline',"#{index}scTagline")
+        l.sub!('scChordLine',"#{index}scChordLine")
+        match = /scMusic([[:upper:]][[:lower:]]+)Name/.match(l)
+        if match 
+          if l =~ /Superius/
+            hsh[index] = 0 
+          else
+            hsh[index] =  hsh[index] + 1 
+          end
+        end
+        f.puts l 
+      end 
+      index.next!
+    end
+  end
+  return hsh
+end
+
+hsh = writeBook('score_book_modern.ly')
+score = ScoreFile.new(hsh, 'clefs_modern_1', 'Modern Clefs', 'Modern', get_template)
+score.save('score_book_modern.ly')
+
+hsh = writeBook('score_book_orig.ly')
+score = ScoreFile.new(hsh, 'clefs_orig', 'Original Clefs', 'Orig', get_template)
+score.save('score_book_orig.ly')
