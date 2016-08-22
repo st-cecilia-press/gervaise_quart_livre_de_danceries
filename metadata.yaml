@@ -1,0 +1,211 @@
+title: Quart Livre De Danceries
+composer: Claude Gervaise
+publisher: Pierre Attaignant
+date: 1550
+compilations:
+- original:
+  - title: Scores in Original Clef
+    filename: clefs_orig.pdf
+  - title: Superius Partbook in Original Clefs
+    filename: part_book_superius_original_clef.pdf
+  - title: Contratenor Partbook in Original Clefs
+    filename: part_book_contratenor_original_clef.pdf
+  - title: Tenor Partbook in Original Clefs
+    filename: part_book_tenor_original_clef.pdf
+  - title: Bassus Partbooks in Original Clefs
+    filename: part_book_bassus_original_clef.pdf
+  - title: Quintus Partbooks in Original Clefs
+    filename: part_book_quintus_original_clef.pdf
+- modern:
+  - title: Scores in Modern Clef
+    filename: clefs_modern.pdf
+  - title: Superius Partbook in Modern Clefs
+    filename: part_book_superius_modern_clef.pdf
+  - title: Contratenor Partbook in Modern Clefs
+    filename: part_book_contratenor_modern_clef.pdf
+  - title: Tenor Partbook in Modern Clefs
+    filename: part_book_tenor_modern_clef.pdf
+  - title: Bassus Partbooks in Modern Clefs
+    filename: part_book_bassus_modern_clef.pdf
+  - title: Quintus Partbooks in Modern Clefs
+    filename: part_book_quintus_modern_clef.pdf
+pieces:
+- slug: 01_pavane
+  title: La Venissienne
+  voicings:
+  - SATB
+  - SAAB
+  - STTB
+- slug: 02_1_pavane
+  voicings:
+  - SSATB
+- slug: 02_2_galliarde
+  voicings:
+  - SATB
+- slug: 03_1_pavane
+  voicings:
+  - SSATB
+  - SATTB 
+- slug: 03_2_galliarde
+  voicings:
+  - SATB
+  - AATB
+- slug: 04_1_pavane
+  voicings:
+  - SATB
+- slug: 04_2_galliarde
+  voicings:
+  - SATB
+- slug: 05_1_pavane
+  title: Qui Souhaitez
+  voicings:
+  - SATB
+  - AATB
+- slug: 05_2_galliarde
+  title: Qui Souhaitez
+  voicings:
+  - SATB
+  - AATB
+- slug: 06_1_pavane
+  voicings:
+  - SAABB
+  - SATBB
+- slug: 06_2_galliarde
+  voicings:
+  - SATB
+- slug: 07_1_pavane
+  title: Vous Qui Voulez
+  voicings:
+  - SATB
+- slug: 07_2_galliarde
+  title: Vous Qui Voulez
+  voicings:
+  - SATB
+- slug: 08_1_pavane
+  title: Plus Revenir
+  voicings:
+  - SATB
+- slug: 08_2_galliarde
+  title: Plus Revenir
+  voicings:
+  - SATB
+- slug: 09_1_pavane
+  title: M'amye Es Tant Honneste et Saige
+  voicings:
+  - ATTB
+- slug: 09_2_galliarde
+  title: M'amye Es Tant Honneste et Saige
+  voicings:
+  - ATTB
+- slug: 10_pavane
+  title: O Foible Esprit
+  voicings:
+  - ATTB
+- slug: 11_pavane
+  title: Le Bon Vouloir
+  voicings:
+  - SAABB
+  - ATTB
+- slug: 12_pavane
+  voicings:
+  - STTBB
+  - ATTBB
+- slug: 13_pavane
+  title: Pour Mon Plaisir
+  voicings:
+  - ATTB
+- slug: 14_pavane
+  voicings:
+  - ATTB
+- slug: 15_pavane
+  voicings:
+  - ATTB
+- slug: 16_pavane
+  voicings:
+  - ATTB
+- slug: 17_pavane
+  voicings:
+  - ATTB
+- slug: 18_pavane
+  title: Dellestarpe
+  voicings:
+  - SAAB
+  - SATB
+- slug: 19_pavane
+  voicings:
+  - SATB
+- slug: 20_galliarde
+  voicings:
+  - SATB
+- slug: 21_galliarde
+  voicings:
+  - SATB
+- slug: 22_galliarde
+  voicings:
+  - SATB
+- slug: 23_galliarde
+  voicings:
+  - SATB
+- slug: 24_galliarde
+  voicings:
+  - SATB
+- slug: 25_galliarde
+  voicings:
+  - SATB
+- slug: 26_galliarde
+  voicings:
+  - SAAB
+  - SATB
+- slug: 27_galliarde
+  voicings:
+  - SATB
+- slug: 28_galliarde
+  voicings:
+  - SAAB
+  - SATB
+- slug: 29_galliarde
+  voicings:
+  - SATB
+- slug: 30_galliarde
+  voicings:
+  - ATTB
+- slug: 31_galliarde
+  voicings:
+  - SATB
+- slug: 32_galliarde
+  voicings:
+  - SATB
+- slug: 33_galliarde
+  voicings:
+  - SAAB
+  - SATB
+- slug: 34_galliarde
+  voicings:
+  - SAAB
+  - SATB
+- slug: 35_galliarde
+  voicings:
+  - SATB
+- slug: 36_galliarde
+  voicings:
+  - SSAB
+- slug: 37_galliarde
+  voicings:
+  - SAAB
+- slug: 38_galliarde
+  voicings:
+  - SATB
+- slug: 39_galliarde
+  voicings:
+  - SAAB
+  - SATB
+- slug: 40_galliarde
+  voicings:
+  - SAAB
+  - SATB
+- slug: 41_galliarde
+  voicings:
+  - SAAB
+- slug: 42_galliarde
+  voicings:
+  - SATB
