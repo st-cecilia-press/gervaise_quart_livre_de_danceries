@@ -3,7 +3,7 @@ composer: Claude Gervaise
 publisher: Pierre Attaignant
 date: 1550
 compilations:
-- original:
+  original:
   - title: Scores in Original Clef
     filename: clefs_orig.pdf
   - title: Superius Partbook in Original Clefs
@@ -16,7 +16,7 @@ compilations:
     filename: part_book_bassus_original_clef.pdf
   - title: Quintus Partbooks in Original Clefs
     filename: part_book_quintus_original_clef.pdf
-- modern:
+  modern:
   - title: Scores in Modern Clef
     filename: clefs_modern.pdf
   - title: Superius Partbook in Modern Clefs
